@@ -1,0 +1,41 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	salitre: {
+		DisplayName: salitre
+		Tooltip:
+			'''
+			Template of an item
+			Replacing this tooltip is duty 
+			It's snowing on Mt.Fuji
+			'''
+	}
+
+	GatitoDePeluche: {
+		DisplayName: Gatito De Peluche
+		Tooltip: Un adorable gatito de peluche... a alguien le gustan gustan mucho los gatitos.
+	}
+}
+
+NPCs: {
+	KaraneInda: {
+		DisplayName: Karane Inda
+
+		TownNPCMood: {
+			Princess_LovesNPC: Me gusta {NPCName}.
+			LikeNPC_Princess: Me gusta {NPCName}.
+			HateCrowded: Detesto tener poco espacio.
+			DislikeCrowded: No me gusta tener tan poco espacio.
+			LoveSpace: Me encanta tener tanto espacio.
+			FarFromHome: Estoy demasiado lejos de casa.
+			NoHome: Detesto no tener un hogar.
+			Content: Estoy feliz.
+			LikeBiome: Me gusta el biomedio {BiomeName}.
+			DislikeBiome: No me gusta el biomedio {BiomeName}.
+		}
+
+		Census.SpawnCondition: The Eye of Cthulhu has been defeated
+	}
+}
+
+Projectiles.GatitoDePelucheProyectil.DisplayName: Gatito De Peluche Proyectil
