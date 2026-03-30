@@ -20,9 +20,15 @@ namespace Novias.Content.NPCs.Novias
     [AutoloadHead]
     public class KaraneInda : ModNPC
     {
+        private int TimerAnimacion = 0;
+        private const int VelocidadFrame = 8;
+        private int TimerAtaque = 0;
+        private const int CooldownAtaque = 60;
+        private bool EstaAtacando = false;
+
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[NPC.type] = 15;
+            Main.npcFrameCount[NPC.type] = 19;
             NPCID.Sets.ShimmerTownTransform[Type] = false;
             NPC.Happiness
                 .SetBiomeAffection<HallowBiome>(AffectionLevel.Like)
@@ -54,7 +60,55 @@ namespace Novias.Content.NPCs.Novias
             NPC.spriteDirection = NPC.direction;
 
             KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
-            if (!modPlayer.EstaSiguiendo) return;
+
+            TimerAtaque++;
+            if (TimerAtaque >= CooldownAtaque && !EstaAtacando)
+            {
+                NPC objetivo = null;
+                float distanciaMinima = 400f;
+                for (int i = 0; i < Main.maxNPCs; i++)
+                {
+                    NPC npc = Main.npc[i];
+                    if (npc.active && !npc.friendly && !npc.townNPC && npc.damage > 0)
+                    {
+                        float dist = NPC.Distance(npc.Center);
+                        if (dist < distanciaMinima)
+                        {
+                            distanciaMinima = dist;
+                            objetivo = npc;
+                        }
+                    }
+                }
+
+                if (objetivo != null)
+                {
+                    TimerAtaque = 0;
+                    EstaAtacando = true;
+
+                    Vector2 direccion = (objetivo.Center - NPC.Center).SafeNormalize(Vector2.UnitX);
+                    NPC.direction = direccion.X > 0 ? 1 : -1;
+                    NPC.spriteDirection = NPC.direction;
+                    NPC.frame.Y = 15 * NPC.frame.Height;
+
+                    Projectile.NewProjectile(
+                        NPC.GetSource_FromThis(),
+                        NPC.Center,
+                        direccion * 10f,
+                        ProjectileID.WoodenArrowFriendly,
+                        20,
+                        2f,
+                        Main.myPlayer
+                    );
+                }
+            }
+
+            if (!modPlayer.EstaSiguiendo)
+            {
+                if (EstaAtacando)
+                    NPC.velocity.X = 0f;
+                return;
+            }
+
             Main.LocalPlayer.AddBuff(BuffID.Wrath, 2);
 
             Player jugador = Main.LocalPlayer;
@@ -68,10 +122,8 @@ namespace Novias.Content.NPCs.Novias
                     d.color = new Color(255, 140, 0);
                     d.velocity *= 2f;
                 }
-
                 SoundEngine.PlaySound(SoundID.Item6, NPC.position);
                 NPC.Center = jugador.Center;
-
                 for (int i = 0; i < 20; i++)
                 {
                     Dust d = Dust.NewDustDirect(NPC.position, NPC.width, NPC.height, DustID.MagicMirror);
@@ -80,14 +132,15 @@ namespace Novias.Content.NPCs.Novias
                 }
                 return;
             }
+
             NPC.target = Main.myPlayer;
 
-            if (distancia > 60f)
+            if (distancia > 82f)
             {
-                float velocidad = System.Math.Clamp(distancia / 60f, 1f, 12f);
+                float velocidad = System.Math.Clamp(distancia / 50f, 2f, 12f);
                 float diferenciaX = jugador.Center.X - NPC.Center.X;
 
-                if (System.Math.Abs(diferenciaX) > 10f)
+                if (System.Math.Abs(diferenciaX) > 20f)
                 {
                     NPC.velocity.X = diferenciaX > 0 ? velocidad : -velocidad;
                     NPC.direction = diferenciaX > 0 ? 1 : -1;
@@ -107,25 +160,39 @@ namespace Novias.Content.NPCs.Novias
             }
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs)
-        {
-            return NPC.downedBoss2;
-        }
-
-        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
-        {
-            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
-            {
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
-            });
-        }
-
-        private int TimerAnimacion = 0;
-        private const int VelocidadFrame = 8;
-
         public override void FindFrame(int frameHeight)
         {
-            bool estaHablando = Main.LocalPlayer.talkNPC == NPC.whoAmI && NPC.velocity.X == 0f && NPC.velocity.Y == 0f;
+            int frameActual = NPC.frame.Y / frameHeight;
+            bool moviendose = System.Math.Abs(NPC.velocity.X) >= 0.5f;
+
+            if ((EstaAtacando || (frameActual >= 15 && frameActual <= 18)) && !moviendose)
+            {
+                if (frameActual < 15)
+                {
+                    NPC.frame.Y = frameHeight * 15;
+                    TimerAnimacion = 0;
+                    return;
+                }
+                TimerAnimacion++;
+                if (TimerAnimacion >= 8)
+                {
+                    TimerAnimacion = 0;
+                    frameActual++;
+                    if (frameActual > 18)
+                    {
+                        EstaAtacando = false;
+                        NPC.frame.Y = 0;
+                    }
+                    else
+                    {
+                        NPC.frame.Y = frameHeight * frameActual;
+                    }
+                }
+                return;
+            }
+            if (EstaAtacando && moviendose)
+                EstaAtacando = false;
+            bool estaHablando = Main.LocalPlayer.talkNPC == NPC.whoAmI && !moviendose && NPC.velocity.Y == 0f;
             if (estaHablando)
             {
                 NPC.frame.Y = frameHeight * 14;
@@ -137,14 +204,16 @@ namespace Novias.Content.NPCs.Novias
                 NPC.frame.Y = frameHeight * 1;
                 return;
             }
-            if (NPC.velocity.X == 0f)
+
+            if (!moviendose)
             {
                 NPC.frame.Y = frameHeight * 0;
                 TimerAnimacion = 0;
                 return;
             }
+            int velocidadAnimacion = (int)System.Math.Clamp(8f - System.Math.Abs(NPC.velocity.X) / 2f, 2f, 8f);
             TimerAnimacion++;
-            if (TimerAnimacion >= VelocidadFrame)
+            if (TimerAnimacion >= velocidadAnimacion)
             {
                 TimerAnimacion = 0;
                 int currentFrame = NPC.frame.Y / frameHeight;
@@ -162,27 +231,22 @@ namespace Novias.Content.NPCs.Novias
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
-            button = "Dialogo";
             KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
 
             if (!modPlayer.LeDioRegalo)
-                button2 = "Dar regalo";
+                button = "Dar regalo";
             else
-                button2 = modPlayer.EstaSiguiendo ? "Dejar de seguir" : "Seguir";
+                button = modPlayer.EstaSiguiendo ? "Dejar de seguir" : "Seguir";
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref string shop)
         {
-            if (firstButton)
-            {
-                Main.npcChatText = GetChat();
-                return;
-            }
+            if (!firstButton) return;
 
             Player jugador = Main.LocalPlayer;
             KaranePlayer modPlayer = jugador.GetModPlayer<KaranePlayer>();
 
-            if(!modPlayer.LeDioRegalo)
+            if (!modPlayer.LeDioRegalo)
             {
                 if (jugador.HasItem(ModContent.ItemType<GatitoDePeluche>()))
                 {
@@ -206,6 +270,7 @@ namespace Novias.Content.NPCs.Novias
                 }
                 return;
             }
+
             if (modPlayer.EstaSiguiendo)
             {
                 modPlayer.EstaSiguiendo = false;
@@ -228,6 +293,19 @@ namespace Novias.Content.NPCs.Novias
                 1 => "N-no te confundas, no vine a tu mundo por ti o algo parecido...",
                 _ => "¡¿Q-qué estás mirando?!"
             };
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
+            });
+        }
+
+        public override bool CanTownNPCSpawn(int numTownNPCs)
+        {
+            return NPC.downedBoss2;
         }
     }
 }
