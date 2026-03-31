@@ -15,6 +15,7 @@ using Microsoft.Xna.Framework;
 using Novias.GirlfriendsItems.KaraneInda;
 using Novias.Projectiles;
 using Novias.Animations;
+using Novias.WeaponsMelee;
 
 namespace Novias.NPCs.KaraneInda
 {
@@ -55,6 +56,99 @@ namespace Novias.NPCs.KaraneInda
             NPC.friendly = true;
         }
 
+        public override void AddShops()
+        {
+            var tienda = new NPCShop(Type, "Tienda");
+            // tienda.Add(ModContent.ItemType<GatitoMenso>());
+            // tienda.Add(ItemID.HealingPotion);
+            tienda.Register();
+        }
+
+        public override void SetChatButtons(ref string button, ref string button2)
+        {
+            KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
+
+            button = "Tienda";
+
+            if (!modPlayer.LeDioRegalo)
+                button2 = "Dar regalo";
+            else
+                button2 = modPlayer.EstaSiguiendo ? "Dejar de seguir" : "Seguir";
+        }
+
+        public override void OnChatButtonClicked(bool firstButton, ref string shop)
+        {
+            Player jugador = Main.LocalPlayer;
+            KaranePlayer modPlayer = jugador.GetModPlayer<KaranePlayer>();
+
+            if (firstButton)
+            {
+                shop = "Tienda";
+                return;
+            }
+
+            if (!modPlayer.LeDioRegalo)
+            {
+                if (jugador.HasItem(ModContent.ItemType<GatitoDePeluche>()))
+                {
+                    jugador.ConsumeItem(ModContent.ItemType<GatitoDePeluche>());
+                    modPlayer.LeDioRegalo = true;
+                    Main.npcChatText = "¿U-un gatito...? N-no es como si me alegrara o algo así... pero... gracias.";
+
+                    Projectile.NewProjectile(
+                        jugador.GetSource_FromThis(),
+                        jugador.Center,
+                        new Vector2(0f, -8f),
+                        ModContent.ProjectileType<KaraneLove>(),
+                        0,
+                        0f,
+                        jugador.whoAmI
+                    );
+                }
+                else
+                {
+                    Main.npcChatText = "¿Un regalo? No tengo tiempo tus bromas.";
+                }
+                return;
+            }
+
+            if (modPlayer.EstaSiguiendo)
+            {
+                modPlayer.EstaSiguiendo = false;
+                NPC.aiStyle = NPCAIStyleID.Passive;
+                Main.npcChatText = "Bien, como quieras.";
+            }
+            else
+            {
+                modPlayer.EstaSiguiendo = true;
+                NPC.aiStyle = 0;
+                Main.npcChatText = "N-no tengo de otra. N-no creas que lo hago porque quiera estar contigo.";
+            }
+        }
+
+        public override string GetChat()
+        {
+            return Main.rand.Next(3) switch
+            {
+                0 => "¡N-no es como si quisiera hablar contigo!",
+                1 => "N-no te confundas, no vine a tu mundo por ti o algo parecido...",
+                _ => "¡¿Q-qué estás mirando?!"
+            };
+        }
+
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
+            });
+        }
+
+        public override bool CanTownNPCSpawn(int numTownNPCs)
+        {
+            return NPC.downedBoss2;
+        }
+
         public override void AI()
         {
             base.AI();
@@ -66,7 +160,7 @@ namespace Novias.NPCs.KaraneInda
             if (TimerAtaque >= CooldownAtaque && !EstaAtacando)
             {
                 NPC objetivo = null;
-                float distanciaMinima = 400f;
+                float distanciaMinima = 700f;
                 for (int i = 0; i < Main.maxNPCs; i++)
                 {
                     NPC npc = Main.npc[i];
@@ -229,85 +323,6 @@ namespace Novias.NPCs.KaraneInda
                 }
                 NPC.frame.Y = frameHeight * currentFrame;
             }
-        }
-
-        public override void SetChatButtons(ref string button, ref string button2)
-        {
-            KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
-
-            if (!modPlayer.LeDioRegalo)
-                button = "Dar regalo";
-            else
-                button = modPlayer.EstaSiguiendo ? "Dejar de seguir" : "Seguir";
-        }
-
-        public override void OnChatButtonClicked(bool firstButton, ref string shop)
-        {
-            if (!firstButton) return;
-
-            Player jugador = Main.LocalPlayer;
-            KaranePlayer modPlayer = jugador.GetModPlayer<KaranePlayer>();
-
-            if (!modPlayer.LeDioRegalo)
-            {
-                if (jugador.HasItem(ModContent.ItemType<GatitoDePeluche>()))
-                {
-                    jugador.ConsumeItem(ModContent.ItemType<GatitoDePeluche>());
-                    modPlayer.LeDioRegalo = true;
-                    Main.npcChatText = "¿U-un gatito...? N-no es como si me alegrara o algo así... pero... gracias.";
-
-                    Projectile.NewProjectile(
-                        jugador.GetSource_FromThis(),
-                        jugador.Center,
-                        new Vector2(0f, -8f),
-                        ModContent.ProjectileType<KaraneLove>(),
-                        0,
-                        0f,
-                        jugador.whoAmI
-                    );
-                }
-                else
-                {
-                    Main.npcChatText = "¿Un regalo? No tengo tiempo tus bromas.";
-                }
-                return;
-            }
-
-            if (modPlayer.EstaSiguiendo)
-            {
-                modPlayer.EstaSiguiendo = false;
-                NPC.aiStyle = NPCAIStyleID.Passive;
-                Main.npcChatText = "Bien, como quieras.";
-            }
-            else
-            {
-                modPlayer.EstaSiguiendo = true;
-                NPC.aiStyle = 0;
-                Main.npcChatText = "N-no tengo de otra. N-no creas que lo hago porque quiera estar contigo.";
-            }
-        }
-
-        public override string GetChat()
-        {
-            return Main.rand.Next(3) switch
-            {
-                0 => "¡N-no es como si quisiera hablar contigo!",
-                1 => "N-no te confundas, no vine a tu mundo por ti o algo parecido...",
-                _ => "¡¿Q-qué estás mirando?!"
-            };
-        }
-
-        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
-        {
-            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
-            {
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
-            });
-        }
-
-        public override bool CanTownNPCSpawn(int numTownNPCs)
-        {
-            return NPC.downedBoss2;
         }
     }
 }
