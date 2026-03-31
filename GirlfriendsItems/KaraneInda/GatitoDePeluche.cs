@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
 
-namespace Novias.Content.GirlfriendsItems
+namespace Novias.GirlfriendsItems.KaraneInda
 {
     public class GatitoDePeluche : ModItem
     {

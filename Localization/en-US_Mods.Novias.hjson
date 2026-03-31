@@ -15,6 +15,11 @@ Items: {
 		DisplayName: Gatito De Peluche
 		Tooltip: Un adorable gatito de peluche... a alguien le gustan gustan mucho los gatitos.
 	}
+
+	GatitoMenso: {
+		DisplayName: Gatito Menso
+		Tooltip: ""
+	}
 }
 
 NPCs: {
@@ -38,4 +43,9 @@ NPCs: {
 	}
 }
 
-Projectiles.GatitoDePelucheProyectil.DisplayName: Gatito De Peluche Proyectil
+Projectiles: {
+	GatitoDePelucheProyectil.DisplayName: Gatito De Peluche Proyectil
+	KaraneProyectil.DisplayName: Karane Proyectil
+	GatitoMensoProyectil.DisplayName: Gatito Menso Proyectil
+	KaraneLove.DisplayName: Karane Love
+}

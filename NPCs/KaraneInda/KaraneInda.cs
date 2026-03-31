@@ -10,12 +10,13 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
-using Novias.Content.Players;
+using Novias.Players;
 using Microsoft.Xna.Framework;
-using Novias.Content.GirlfriendsItems;
-using Novias.Content.Projectiles;
+using Novias.GirlfriendsItems.KaraneInda;
+using Novias.Projectiles;
+using Novias.Animations;
 
-namespace Novias.Content.NPCs.Novias
+namespace Novias.NPCs.KaraneInda
 {
     [AutoloadHead]
     public class KaraneInda : ModNPC
@@ -23,7 +24,7 @@ namespace Novias.Content.NPCs.Novias
         private int TimerAnimacion = 0;
         private const int VelocidadFrame = 8;
         private int TimerAtaque = 0;
-        private const int CooldownAtaque = 60;
+        private const int CooldownAtaque = 30;
         private bool EstaAtacando = false;
 
         public override void SetStaticDefaults()
@@ -45,8 +46,8 @@ namespace Novias.Content.NPCs.Novias
             NPC.width = 20;
             NPC.height = 38;
             NPC.aiStyle = NPCAIStyleID.Passive;
-            NPC.lifeMax = 250;
-            NPC.defense = 50;
+            NPC.lifeMax = 1000;
+            NPC.defense = 75;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
             NPC.DeathSound = SoundID.NPCDeath20;
@@ -93,11 +94,12 @@ namespace Novias.Content.NPCs.Novias
                     Projectile.NewProjectile(
                         NPC.GetSource_FromThis(),
                         NPC.Center,
-                        direccion * 10f,
-                        ProjectileID.WoodenArrowFriendly,
-                        20,
+                        direccion * 20f,
+                        ModContent.ProjectileType<GatitoMensoProyectil>(),
+                        40,
                         2f,
-                        Main.myPlayer
+                        Main.myPlayer,
+                        NPC.whoAmI
                     );
                 }
             }
@@ -258,7 +260,7 @@ namespace Novias.Content.NPCs.Novias
                         jugador.GetSource_FromThis(),
                         jugador.Center,
                         new Vector2(0f, -8f),
-                        ModContent.ProjectileType<GatitoDePelucheProyectil>(),
+                        ModContent.ProjectileType<KaraneLove>(),
                         0,
                         0f,
                         jugador.whoAmI

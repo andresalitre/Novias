@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Novias.Content.Items
+namespace Novias.Items
 {
 	// This is a basic item template.
 	// Please see tModLoader's ExampleMod for every other example:

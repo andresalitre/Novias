@@ -5,9 +5,9 @@ using Terraria.Graphics.CameraModifiers;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Novias.Content.Projectiles
+namespace Novias.Animations
 {
-    public class GatitoDePelucheProyectil : ModProjectile
+    public class KaraneLove : ModProjectile
     {
         public override void SetDefaults()
         {

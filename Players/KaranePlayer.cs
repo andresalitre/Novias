@@ -1,7 +1,7 @@
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace Novias.Content.Players
+namespace Novias.Players
 {
     public class KaranePlayer : ModPlayer
     {
