@@ -49,3 +49,10 @@ Projectiles: {
 	GatitoMensoProyectil.DisplayName: Gatito Menso Proyectil
 	KaraneLove.DisplayName: Karane Love
 }
+
+Buffs: {
+	FuerzaDeTsundere: {
+		DisplayName: Fuerza de tsundere
+		Description: La fuerza del amor (ella nunca lo admitirá) aumenta tu daño cuerpo a cuerpo un 15%
+	}
+}

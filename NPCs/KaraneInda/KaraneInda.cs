@@ -16,6 +16,7 @@ using Novias.GirlfriendsItems.KaraneInda;
 using Novias.Projectiles;
 using Novias.Animations;
 using Novias.WeaponsMelee;
+using Novias.Effects;
 
 namespace Novias.NPCs.KaraneInda
 {
@@ -205,7 +206,7 @@ namespace Novias.NPCs.KaraneInda
                 return;
             }
 
-            Main.LocalPlayer.AddBuff(BuffID.Wrath, 2);
+            Main.LocalPlayer.AddBuff(ModContent.BuffType<FuerzaDeTsundere>(), 2);
 
             Player jugador = Main.LocalPlayer;
             float distancia = NPC.Distance(jugador.Center);
