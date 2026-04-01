@@ -5,7 +5,7 @@ using Terraria.Graphics.CameraModifiers;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Novias.Animations
+namespace Novias.Effects
 {
     public class KaraneLove : ModProjectile
     {

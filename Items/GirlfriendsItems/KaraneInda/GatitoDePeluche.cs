@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
 
-namespace Novias.GirlfriendsItems.KaraneInda
+namespace Novias.Items.GirlfriendsItems.KaraneInda
 {
     public class GatitoDePeluche : ModItem
     {
@@ -14,7 +14,7 @@ namespace Novias.GirlfriendsItems.KaraneInda
             Item.height = 32;
             Item.maxStack = 1;
             Item.value = Item.sellPrice(silver: 15);
-            Item.rare = ItemRarityID.Yellow;
+            Item.rare = ItemRarityID.Orange;
             Item.useTime = 20;
             Item.useAnimation = 20;
             Item.useStyle = ItemUseStyleID.HoldUp;

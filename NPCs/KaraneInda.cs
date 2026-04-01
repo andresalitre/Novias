@@ -12,13 +12,13 @@ using Terraria.ModLoader;
 using Terraria.Utilities;
 using Novias.Players;
 using Microsoft.Xna.Framework;
-using Novias.GirlfriendsItems.KaraneInda;
+using Novias.Items.GirlfriendsItems.KaraneInda;
 using Novias.Projectiles;
-using Novias.Animations;
-using Novias.WeaponsMelee;
 using Novias.Effects;
+using Novias.Items.Weapons.Melee;
+using Novias.Buffs;
 
-namespace Novias.NPCs.KaraneInda
+namespace Novias.NPCs
 {
     [AutoloadHead]
     public class KaraneInda : ModNPC

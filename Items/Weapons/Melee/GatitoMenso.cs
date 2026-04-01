@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Novias.Projectiles;
 
-namespace Novias.WeaponsMelee
+namespace Novias.Items.Weapons.Melee
 {
     public class GatitoMenso : ModItem
     {
@@ -19,7 +19,7 @@ namespace Novias.WeaponsMelee
             Item.noMelee = true;
             Item.knockBack = 5f;
             Item.value = Item.buyPrice(gold: 3);
-            Item.rare = ItemRarityID.Yellow;
+            Item.rare = ItemRarityID.Orange;
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<GatitoMensoProyectil>();
             Item.shootSpeed = 20f;
