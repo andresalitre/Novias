@@ -1,20 +1,20 @@
 Items: {
 	GatitoMenso: {
-		Tooltip: No quiere que lo lances... O eso dice.
+		Tooltip: No quiere que lo lances... O eso dice
 		DisplayName: Gatito Menso
 	}
 
 	GatitoDePeluche: {
 		DisplayName: Gatito De Peluche
-		Tooltip: Un adorable gatito de peluche... a alguien le gustan gustan mucho los gatitos.
+		Tooltip: Un adorable gatito de peluche... a alguien le gustan gustan mucho los gatitos
 	}
 
 	PocionDeTsundere: {
 		DisplayName: Poción De Tsundere
 		Tooltip:
 			'''
-			Un amor intensificado te hace más fuerte.
-			Aumenta un 15% de daño cuerpo a cuerpo
+			Un amor intensificado te hace más fuerte
+			Aumenta un 15% el daño y critico cuerpo a cuerpo
 			5 minuto(s) de duración
 			'''
 	}
@@ -23,7 +23,11 @@ Items: {
 Buffs: {
 	FuerzaDeTsundere: {
 		DisplayName: Fuerza de tsundere
-		Description: La fuerza del amor (ella nunca lo admitirá) aumenta tu daño cuerpo a cuerpo un 15%
+		Description:
+			'''
+			La fuerza del amor (ella nunca lo admitirá)
+			Aumenta tu daño y critico cuerpo a cuerpo
+			'''
 	}
 }
 
@@ -44,7 +48,7 @@ NPCs: {
 			Princess_LovesNPC: Me gusta {NPCName}.
 		}
 
-		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado.
+		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
 	}
 }
 

@@ -16,7 +16,7 @@ namespace Novias.Items.Potions
             Item.useTime = 15;
             Item.consumable = true;
             Item.maxStack = 9999;
-            Item.value = Item.buyPrice(silver: 5);
+            Item.value = Item.buyPrice(gold: 5);
             Item.rare = ItemRarityID.Orange;
         }
 

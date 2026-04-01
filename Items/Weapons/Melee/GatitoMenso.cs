@@ -18,7 +18,7 @@ namespace Novias.Items.Weapons.Melee
             Item.useStyle = ItemUseStyleID.Swing;
             Item.noMelee = true;
             Item.knockBack = 5f;
-            Item.value = Item.buyPrice(gold: 3);
+            Item.value = Item.buyPrice(gold: 25);
             Item.rare = ItemRarityID.Orange;
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<GatitoMensoProyectil>();

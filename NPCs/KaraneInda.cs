@@ -17,6 +17,7 @@ using Novias.Projectiles;
 using Novias.Effects;
 using Novias.Items.Weapons.Melee;
 using Novias.Buffs;
+using Novias.Items.Potions;
 
 namespace Novias.NPCs
 {
@@ -60,8 +61,8 @@ namespace Novias.NPCs
         public override void AddShops()
         {
             var tienda = new NPCShop(Type, "Tienda");
-            // tienda.Add(ModContent.ItemType<GatitoMenso>());
-            // tienda.Add(ItemID.HealingPotion);
+            tienda.Add(ModContent.ItemType<GatitoMenso>());
+            tienda.Add(ModContent.ItemType<PocionDeTsundere>());
             tienda.Register();
         }
 

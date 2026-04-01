@@ -14,7 +14,7 @@ namespace Novias.Buffs
         public override void Update(Player player, ref int buffIndex)
         {
             player.GetDamage(DamageClass.Melee) += 0.15f;
-            player.GetCritChance(DamageClass.Melee) += 10;
+            player.GetCritChance(DamageClass.Melee) += 15;
         }
     }
 }
