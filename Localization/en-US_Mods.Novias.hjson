@@ -18,6 +18,11 @@ Items: {
 			5 minuto(s) de duración
 			'''
 	}
+
+	RegaloHakari: {
+		DisplayName: Regalo Hakari
+		Tooltip: ""
+	}
 }
 
 Buffs: {
@@ -27,6 +32,16 @@ Buffs: {
 			'''
 			La fuerza del amor (ella nunca lo admitirá)
 			Aumenta tu daño y critico cuerpo a cuerpo
+			'''
+	}
+
+	ImpulsoSeductor: {
+		DisplayName: Impulso Seductor
+		Description:
+			'''
+			Un amor abrasador recupera tus heridas
+			Aumenta considerablemente tu regeneración de vida
+			5 minuto(s) de duración
 			'''
 	}
 }
@@ -46,6 +61,27 @@ NPCs: {
 			DislikeBiome: No me gusta el biomedio {BiomeName}.
 			LikeNPC_Princess: Me gusta {NPCName}.
 			Princess_LovesNPC: Me gusta {NPCName}.
+			LoveNPC: Adoro a {NPCName}.
+		}
+
+		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
+	}
+
+	HakariHanazono: {
+		DisplayName: Hakari Hanazono
+
+		TownNPCMood: {
+			Content: Estoy feliz.
+			NoHome: Detesto no tener un hogar.
+			FarFromHome: Estoy demasiado lejos de casa.
+			LoveSpace: Me encanta tener tanto espacio.
+			DislikeCrowded: No me gusta tener tan poco espacio.
+			HateCrowded: Detesto tener poco espacio.
+			LikeBiome: Me gusta el biomedio {BiomeName}.
+			DislikeBiome: No me gusta el biomedio {BiomeName}.
+			LikeNPC_Princess: Me gusta {NPCName}.
+			Princess_LovesNPC: Me gusta {NPCName}.
+			LoveNPC: Adoro a {NPCName}.
 		}
 
 		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
@@ -55,4 +91,6 @@ NPCs: {
 Projectiles: {
 	KaraneLove.DisplayName: Karane Love
 	GatitoMensoProyectil.DisplayName: Gatito Menso Proyectil
+	Generic.DisplayName: Generic
+	Corazon.DisplayName: Corazon
 }

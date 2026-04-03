@@ -12,7 +12,7 @@ using Terraria.ModLoader;
 using Terraria.Utilities;
 using Novias.Players;
 using Microsoft.Xna.Framework;
-using Novias.Items.GirlfriendsItems.Karane;
+using Novias.Items.GirlfriendsItems.Hakari;
 using Novias.Projectiles;
 using Novias.Items.Weapons.Melee;
 using Novias.Buffs;
@@ -22,12 +22,12 @@ using Novias.Effects;
 namespace Novias.NPCs
 {
     [AutoloadHead]
-    public class KaraneInda : ComportamientoNovia
+    public class HakariHanazono : ComportamientoNovia
     {
-        protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<KaranePlayer>().EstaSiguiendo;
-        protected override Color ColorPolvo => new Color(255, 140, 0);
-        protected override int BuffSeguimiento => ModContent.BuffType<FuerzaDeTsundere>();
-        protected override int CooldownAtaque => 20;
+        protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<HakariPlayer>().EstaSiguiendo;
+        protected override Color ColorPolvo => new Color(255, 105, 180);
+        protected override int BuffSeguimiento => ModContent.BuffType<ImpulsoSeductor>();
+        protected override int CooldownAtaque => 35;
         protected override int TipoProyectilRegalo => ModContent.ProjectileType<KaraneLove>();
 
         protected override void LanzarAtaque(Vector2 direccion)
@@ -38,7 +38,7 @@ namespace Novias.NPCs
                 NPC.Center,
                 direccion * 20f,
                 ModContent.ProjectileType<GatitoMensoProyectil>(),
-                45, 7f, Main.myPlayer, NPC.whoAmI
+                25, 2f, Main.myPlayer, NPC.whoAmI
             );
         }
 
@@ -47,7 +47,7 @@ namespace Novias.NPCs
             Main.npcFrameCount[NPC.type] = 20;
             NPCID.Sets.ShimmerTownTransform[Type] = false;
             NPC.Happiness
-                .SetNPCAffection<HakariHanazono>(AffectionLevel.Love);
+                .SetNPCAffection<KaraneInda>(AffectionLevel.Love);
             NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f
@@ -60,27 +60,27 @@ namespace Novias.NPCs
             NPC.width = 20;
             NPC.height = 38;
             NPC.aiStyle = NPCAIStyleID.Passive;
-            NPC.lifeMax = 1500;
-            NPC.defense = 75;
-            NPC.knockBackResist = 0.8f;
+            NPC.lifeMax = 1250;
+            NPC.defense = 50;
+            NPC.knockBackResist = 0.5f;
             NPC.HitSound = SoundID.NPCHit18;
             NPC.DeathSound = SoundID.NPCDeath20;
             NPC.townNPC = true;
             NPC.friendly = true;
-            NPC.lifeRegen = 5;
+            NPC.lifeRegen += 5;
         }
 
         public override void AddShops()
         {
             var tienda = new NPCShop(Type, "Tienda");
-            tienda.Add(ModContent.ItemType<GatitoMenso>());
-            tienda.Add(ModContent.ItemType<PocionDeTsundere>());
+            // tienda.Add(ModContent.ItemType<GatitoMenso>());
+            // tienda.Add(ModContent.ItemType<PocionDeTsundere>());
             tienda.Register();
         }
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
-            KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
+            HakariPlayer modPlayer = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
             button = "Tienda";
             if (!modPlayer.LeDioRegalo)
                 button2 = "Dar regalo";
@@ -91,7 +91,7 @@ namespace Novias.NPCs
         public override void OnChatButtonClicked(bool firstButton, ref string shop)
         {
             Player jugador = Main.LocalPlayer;
-            KaranePlayer modPlayer = jugador.GetModPlayer<KaranePlayer>();
+            HakariPlayer modPlayer = jugador.GetModPlayer<HakariPlayer>();
 
             if (firstButton)
             {
@@ -101,16 +101,16 @@ namespace Novias.NPCs
 
             if (!modPlayer.LeDioRegalo)
             {
-                if (jugador.HasItem(ModContent.ItemType<GatitoDePeluche>()))
+                if (jugador.HasItem(ModContent.ItemType<RegaloHakari>()))
                 {
-                    jugador.ConsumeItem(ModContent.ItemType<GatitoDePeluche>());
+                    jugador.ConsumeItem(ModContent.ItemType<RegaloHakari>());
                     modPlayer.LeDioRegalo = true;
-                    Main.npcChatText = "¿U-un gatito...? N-no es como si me alegrara o algo así... pero... gracias.";
+                    Main.npcChatText = "¡¿E-esto es para mí?! Lo voy a guardar como un tesoro y lo abrazare cada noche pensando en ti… ¡Gracias!";
                     DarRegalo(jugador);
                 }
                 else
                 {
-                    Main.npcChatText = "¿Un regalo? No tengo tiempo tus bromas.";
+                    Main.npcChatText = "¿No tienes nada? No es necesario algo... solo acercate...";
                 }
                 return;
             }
@@ -119,13 +119,13 @@ namespace Novias.NPCs
             {
                 modPlayer.EstaSiguiendo = false;
                 NPC.aiStyle = NPCAIStyleID.Passive;
-                Main.npcChatText = "Bien, como quieras.";
+                Main.npcChatText = "E-eh…? ¿Ya no hace falta?";
             }
             else
             {
                 modPlayer.EstaSiguiendo = true;
                 NPC.aiStyle = 0;
-                Main.npcChatText = "N-no tengo de otra. N-no creas que lo hago porque quiera estar contigo.";
+                Main.npcChatText = "¿Seguirte? ¡Claro que sí! Donde tú vayas, iré pegadita a tu lado";
             }
         }
 
@@ -133,9 +133,9 @@ namespace Novias.NPCs
         {
             return Main.rand.Next(3) switch
             {
-                0 => "¡N-no es como si quisiera hablar contigo!",
-                1 => "N-no te confundas, no vine a tu mundo para estar contigo o algo parecido...",
-                _ => "¡¿Q-qué estás mirando?!"
+                0 => "Si sigues hablandome, voy a empezar a pensar que soy tu favorita... me gusta esa idea.",
+                1 => "Así que aquí es donde vives… me alegra haber llegado, ahora podré estar cerca de ti todo el tiempo.",
+                _ => "Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo."
             };
         }
 

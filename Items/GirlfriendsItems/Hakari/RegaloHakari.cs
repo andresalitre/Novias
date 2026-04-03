@@ -4,9 +4,9 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
 
-namespace Novias.Items.GirlfriendsItems.KaraneInda
+namespace Novias.Items.GirlfriendsItems.Hakari
 {
-    public class GatitoDePeluche : ModItem
+    public class RegaloHakari : ModItem
     {
         public override void SetDefaults()
         {

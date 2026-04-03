@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace Novias.Effects
 {
-    public class KaraneLove : ModProjectile
+    public class Corazon : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -43,12 +43,13 @@ namespace Novias.Effects
             for (int i = 0; i < 25; i++)
             {
                 Dust polvo = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.TreasureSparkle);
-                polvo.color = new Color(225, 140, 60);
+                polvo.color = new Color(225, 0, 0);
                 polvo.velocity = Main.rand.NextVector2Circular(4f, 4f);
                 polvo.scale = 1.5f;
             }
 
-            SoundEngine.PlaySound(SoundID.Item58, Projectile.position);
+            SoundEngine.PlaySound(SoundID.Item4, Projectile.position);
+            Main.instance.CameraModifiers.Add(new PunchCameraModifier(Projectile.Center, Vector2.UnitY, 15f, 8f, 25));
         }
     }
 }
