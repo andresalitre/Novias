@@ -19,7 +19,7 @@ namespace Novias.Items.Ammo
             Item.shootSpeed = 1f;
             Item.damage = 10;
             Item.DamageType = DamageClass.Ranged;
-            Item.rare = ItemRarityID.Pink;
+            Item.rare = ItemRarityID.White;
         }
     }
 }

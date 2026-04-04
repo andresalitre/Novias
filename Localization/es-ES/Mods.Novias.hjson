@@ -94,9 +94,8 @@ NPCs: {
 			Princess_LovesNPC: Me gusta {NPCName}.
 		}
 
-		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
+		Census.SpawnCondition: El Cerebro de Cthulhu o el Devoramundos sido derrotado
 	}
-
 	HakariHanazono: {
 		DisplayName: Hakari Hanazono
 
@@ -114,7 +113,7 @@ NPCs: {
 			Princess_LovesNPC: Me gusta {NPCName}.
 		}
 
-		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
+		Census.SpawnCondition: El Ojo de Cthulhu sido derrotado
 	}
 }
 

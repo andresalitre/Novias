@@ -153,7 +153,7 @@ namespace Novias.NPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
         {
-            return NPC.downedBoss2;
+            return NPC.downedBoss1;
         }
     }
 }
