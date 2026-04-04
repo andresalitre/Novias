@@ -74,11 +74,11 @@ namespace Novias.NPCs
 
         public override void AddShops()
         {
-            var tienda = new NPCShop(Type, "Tienda");
+            var tienda = new NPCShop(Type, "Shop");
             tienda.Add(ModContent.ItemType<CañonDeLeche>());
             tienda.Add(ModContent.ItemType<LecheHakariMunicion>());
-            tienda.Add(ModContent.ItemType<PocionDeSeduccion>());
             tienda.Add(ItemID.Peach);
+            tienda.Add(ModContent.ItemType<PocionDeSeduccion>(), new Condition("", () => Main.LocalPlayer.GetModPlayer<HakariPlayer>().LeDioRegalo));
             tienda.Add(ModContent.ItemType<RefrescoDeMelocoton>(), new Condition("", () => Main.LocalPlayer.GetModPlayer<HakariPlayer>().LeDioRegalo));
             tienda.Register();
         }
@@ -86,11 +86,13 @@ namespace Novias.NPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             HakariPlayer modPlayer = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
-            button = "Tienda";
+            button = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.BotonTienda");
             if (!modPlayer.LeDioRegalo)
-                button2 = "Dar regalo";
+                button2 = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.BotonRegalo");
             else
-                button2 = modPlayer.EstaSiguiendo ? "Dejar de seguir" : "Seguir";
+                button2 = modPlayer.EstaSiguiendo
+                    ? Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.BotonDejarSeguir")
+                    : Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.BotonSeguir");
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref string shop)
@@ -100,7 +102,7 @@ namespace Novias.NPCs
 
             if (firstButton)
             {
-                shop = "Tienda";
+                shop = "Shop";
                 return;
             }
 
@@ -110,12 +112,12 @@ namespace Novias.NPCs
                 {
                     jugador.ConsumeItem(ModContent.ItemType<MedioRefrescoDeMelocoton>());
                     modPlayer.LeDioRegalo = true;
-                    Main.npcChatText = "Ya bebiste de aquí? E-entonces… esto sería un beso indirecto…";
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.RegaloRecibido");
                     DarRegalo(jugador);
                 }
                 else
                 {
-                    Main.npcChatText = "¿No tienes nada? No es necesario algo... solo acercate...";
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.SinRegalo");
                 }
                 return;
             }
@@ -124,24 +126,21 @@ namespace Novias.NPCs
             {
                 modPlayer.EstaSiguiendo = false;
                 NPC.aiStyle = NPCAIStyleID.Passive;
-                Main.npcChatText = "E-eh…? ¿Ya no hace falta?";
+                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.DejarDeSeguir");
             }
             else
             {
                 modPlayer.EstaSiguiendo = true;
                 NPC.aiStyle = 0;
-                Main.npcChatText = "¿Seguirte? ¡Claro que sí! Donde tú vayas, iré pegadita a tu lado";
+                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.Seguir");
             }
         }
 
         public override string GetChat()
         {
-            return Main.rand.Next(3) switch
-            {
-                0 => "Estaba pensando en algo... un poco sucio sobre nosotros dos.",
-                1 => "Así que aquí es donde vives… ahora podré estar cerca de ti todo el tiempo.",
-                _ => "Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo."
-            };
+            HakariPlayer modPlayer = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
+            string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
+            return Language.GetTextValue($"Mods.Novias.NPCDialogue.HakariHanazono.{prefijo}{Main.rand.Next(3)}");
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

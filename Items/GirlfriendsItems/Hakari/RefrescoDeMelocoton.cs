@@ -16,7 +16,7 @@ namespace Novias.Items.GirlfriendsItems.Hakari
             Item.useTime = 15;
             Item.consumable = true;
             Item.maxStack = 9999;
-            Item.value = Item.buyPrice(silver: 40);
+            Item.value = Item.buyPrice(gold: 4);
             Item.rare = ItemRarityID.Pink;
             Item.buffType = BuffID.WellFed2;
             Item.buffTime = 60 * 300;
@@ -31,12 +31,19 @@ namespace Novias.Items.GirlfriendsItems.Hakari
 
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.BottledWater);
-            recipe.AddIngredient(ItemID.SilverBar, 3);
-            recipe.AddIngredient(ItemID.Peach);
-            recipe.AddTile(TileID.Bottles);
-            recipe.Register();
+            Recipe recipe1 = CreateRecipe();
+            recipe1.AddIngredient(ItemID.BottledWater);
+            recipe1.AddIngredient(ItemID.CopperBar, 3);
+            recipe1.AddIngredient(ItemID.Peach);
+            recipe1.AddTile(TileID.Bottles);
+            recipe1.Register();
+
+            Recipe recipe2 = CreateRecipe();
+            recipe2.AddIngredient(ItemID.BottledWater);
+            recipe2.AddIngredient(ItemID.TinBar, 3);
+            recipe2.AddIngredient(ItemID.Peach);
+            recipe2.AddTile(TileID.Bottles);
+            recipe2.Register();
         }
     }
 }

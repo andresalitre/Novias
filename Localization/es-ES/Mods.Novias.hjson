@@ -1,7 +1,7 @@
 Items: {
 	GatitoMenso: {
-		Tooltip: No quiere que lo lances... O eso dice
 		DisplayName: Gatito Menso
+		Tooltip: No quiere que lo lances... O eso dice
 	}
 
 	GatitoDePeluche: {
@@ -23,36 +23,36 @@ Items: {
 	}
 
 	RefrescoDeMelocoton: {
-		Tooltip: Un exquisito refresco sabor melocotón
 		DisplayName: Refresco De Melocotón
+		Tooltip: Un exquisito refresco sabor melocotón
 	}
 
 	MedioRefrescoDeMelocoton: {
+		DisplayName: Medio Refresco De Melocotón
 		Tooltip:
 			'''
 			La mitad de un exquisito refresco sabor melocotón
 			"A alguien le podria interesar un beso indirecto".
 			'''
-		DisplayName: Medio Refresco De Melocotón
 	}
 
 	CañonDeLeche: {
-		Tooltip: Hakari lo cargó con mucho cariño... y otras cosas
 		DisplayName: Cañon de Leche
+		Tooltip: Hakari lo cargó con mucho cariño... y otras cosas
 	}
 
 	LecheHakariMunicion: {
-		Tooltip: Directamente traida de la granja. No preguntes de cuál.
 		DisplayName: Leche Hakari
+		Tooltip: Directamente traida de la granja. No preguntes de cuál.
 	}
 
 	PocionDeSeduccion: {
+		DisplayName: Poción de Seducción
 		Tooltip:
 			'''
 			Un amor abrasador recupera tus heridas
 			Aumenta tu regeneración
 			'''
-		DisplayName: Poción de Seducción
 	}
 }
 
@@ -72,7 +72,6 @@ Buffs: {
 			'''
 			Tu cuerpo empieza a calentarse
 			Aumenta considerablemente tu regeneración de vida
-			5 minuto(s) de duración
 			'''
 	}
 }
@@ -82,17 +81,17 @@ NPCs: {
 		DisplayName: Karane Inda
 
 		TownNPCMood: {
+			LikeBiome: Me gusta el biomedio {BiomeName}.
+			DislikeBiome: No me gusta el biomedio {BiomeName}.
 			Content: Estoy feliz.
 			NoHome: Detesto no tener un hogar.
 			FarFromHome: Estoy demasiado lejos de casa.
 			LoveSpace: Me encanta tener tanto espacio.
 			DislikeCrowded: No me gusta tener tan poco espacio.
 			HateCrowded: Detesto tener poco espacio.
-			LikeBiome: Me gusta el biomedio {BiomeName}.
-			DislikeBiome: No me gusta el biomedio {BiomeName}.
+			LoveNPC: Adoro a {NPCName}.
 			LikeNPC_Princess: Me gusta {NPCName}.
 			Princess_LovesNPC: Me gusta {NPCName}.
-			LoveNPC: Adoro a {NPCName}.
 		}
 
 		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
@@ -102,26 +101,62 @@ NPCs: {
 		DisplayName: Hakari Hanazono
 
 		TownNPCMood: {
+			LikeBiome: Me gusta el biomedio {BiomeName}.
+			DislikeBiome: No me gusta el biomedio {BiomeName}.
 			Content: Estoy feliz.
 			NoHome: Detesto no tener un hogar.
 			FarFromHome: Estoy demasiado lejos de casa.
 			LoveSpace: Me encanta tener tanto espacio.
 			DislikeCrowded: No me gusta tener tan poco espacio.
 			HateCrowded: Detesto tener poco espacio.
-			LikeBiome: Me gusta el biomedio {BiomeName}.
-			DislikeBiome: No me gusta el biomedio {BiomeName}.
+			LoveNPC: Adoro a {NPCName}.
 			LikeNPC_Princess: Me gusta {NPCName}.
 			Princess_LovesNPC: Me gusta {NPCName}.
-			LoveNPC: Adoro a {NPCName}.
 		}
 
 		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
 	}
 }
 
+NPCDialogue: {
+	HakariHanazono: {
+		PreRegalo0: ¿Acaso nos conocemos de otra parte?
+		PreRegalo1: ¿Ah, hola? ¿Necesitas algo?
+		PreRegalo2: Este mundo es tan extraño. Nunca había visto algo así antes.
+		Chat0: Estaba pensando algo... un poco sucio sobre nosotros dos.
+		Chat1: Así que aquí es donde vives… ahora podré estar cerca de ti todo el tiempo.
+		Chat2: Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo.
+		RegaloRecibido: ¿Ya bebiste de aquí? Entonces esto sería un beso indirecto…
+		SinRegalo: Estoy tan sedienta...
+		Seguir: ¿Seguirte? ¡Claro que sí! Donde tú vayas, te acompañare.
+		DejarDeSeguir: ¿E-eh…? ¿Ya no hace falta?
+		BotonTienda: Tienda
+		BotonRegalo: Dar regalo
+		BotonSeguir: Seguir
+		BotonDejarSeguir: Dejar de seguir
+	}
+
+	KaraneInda: {
+		PreRegalo0: ¿Q-qué quieres? No tengo tiempo para charlas.
+		PreRegalo1: No me mires así.
+		PreRegalo2: Este mundo es muy diferente a lo que estaba acostumbrada.
+		Chat0: ¡¿Q-qué estás mirando?! ¡No me mires con esa cara tan amable!
+		Chat1: ¡N-no te confundas, no vine a tu mundo para estar contigo o algo parecido!
+		Chat2: ¡N-no te acerques tanto! No es que me moleste… solo hace calor, ¿ok?!
+		RegaloRecibido: ¿U-un gatito...? N-no es como si me alegrara o algo así...
+		SinRegalo: Hay algo que me gustaría tener... algo suave y pequeño.
+		Seguir: N-no tengo de otra. N-no creas que lo hago porque quiera estar contigo.
+		DejarDeSeguir: Bien, como quieras.
+		BotonTienda: Tienda
+		BotonRegalo: Dar regalo
+		BotonSeguir: Seguir
+		BotonDejarSeguir: Dejar de seguir
+	}
+}
+
 Projectiles: {
+	Corazon.DisplayName: Corazon
 	KaraneLove.DisplayName: Karane Love
 	GatitoMensoProyectil.DisplayName: Gatito Menso Proyectil
-	Corazon.DisplayName: Corazon
 	LecheHakari.DisplayName: Leche Hakari
 }

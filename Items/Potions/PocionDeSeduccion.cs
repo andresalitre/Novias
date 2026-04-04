@@ -16,7 +16,7 @@ namespace Novias.Items.Potions
             Item.useTime = 15;
             Item.consumable = true;
             Item.maxStack = 9999;
-            Item.value = Item.buyPrice(gold: 5);
+            Item.value = Item.buyPrice(gold: 8);
             Item.rare = ItemRarityID.Orange;
             Item.buffType = ModContent.BuffType<ImpulsoSeductor>();
             Item.buffTime = 60 * 300;

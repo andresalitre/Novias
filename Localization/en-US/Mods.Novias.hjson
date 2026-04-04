@@ -1,0 +1,162 @@
+Items: {
+	GatitoMenso: {
+		DisplayName: Silly Kitty
+		Tooltip: It doesn't want to be thrown... Or so it says.
+	}
+
+	GatitoDePeluche: {
+		DisplayName: Kitty plush
+		Tooltip:
+			'''
+			An adorable kitty plush
+			"Someone really loves kitties."
+			'''
+	}
+
+	PocionDeTsundere: {
+		DisplayName: Tsundere Potion
+		Tooltip:
+			'''
+			An intense love makes you stronger
+			Increases melee damage and crit chance by 15%
+			'''
+	}
+
+	RefrescoDeMelocoton: {
+		DisplayName: Peach Soda
+		Tooltip: A delicious peach flavored soda.
+	}
+
+	MedioRefrescoDeMelocoton: {
+		DisplayName: Half Peach Soda
+		Tooltip:
+			'''
+			Half of a delicious peach flavored soda
+			"Someone might be interested in an indirect kiss."
+			'''
+	}
+
+	CañonDeLeche: {
+		DisplayName: Milk Cannon
+		Tooltip: Hakari loaded it with a lot of care... and other things.
+	}
+
+	LecheHakariMunicion: {
+		DisplayName: Hakari Milk
+		Tooltip: Straight from the farm. Don't ask which one.
+	}
+
+	PocionDeSeduccion: {
+		DisplayName: Seduction Potion
+		Tooltip:
+			'''
+			A burning love heals your wounds
+			Increases your life regeneration
+			'''
+	}
+}
+
+Buffs: {
+	FuerzaDeTsundere: {
+		DisplayName: Tsundere Strength
+		Description:
+			'''
+			Your body fills with tsundere energy
+			Increases melee damage and crit chance
+			'''
+	}
+
+	ImpulsoSeductor: {
+		DisplayName: Seductive Impulse
+		Description:
+			'''
+			Your body starts to warm up
+			Considerably increases your life regeneration
+			'''
+	}
+}
+
+NPCs: {
+	KaraneInda: {
+		DisplayName: Karane Inda
+
+		TownNPCMood: {
+			LikeBiome: I like the {BiomeName} biome.
+			DislikeBiome: I don't like the {BiomeName} biome.
+			Content: I'm happy.
+			NoHome: I hate not having a home.
+			FarFromHome: I'm too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I don't like having so little space.
+			HateCrowded: I hate having so little space.
+			LoveNPC: I adore {NPCName}.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+
+		Census.SpawnCondition: The Eye of Cthulhu has been defeated.
+	}
+
+	HakariHanazono: {
+		DisplayName: Hakari Hanazono
+
+		TownNPCMood: {
+			LikeBiome: I like the {BiomeName} biome.
+			DislikeBiome: I don't like the {BiomeName} biome.
+			Content: I'm happy.
+			NoHome: I hate not having a home.
+			FarFromHome: I'm too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I don't like having so little space.
+			HateCrowded: I hate having so little space.
+			LoveNPC: I adore {NPCName}.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+
+		Census.SpawnCondition: The Eye of Cthulhu has been defeated.
+	}
+}
+
+NPCDialogue: {
+	HakariHanazono: {
+		PreRegalo0: Do we know each other from somewhere?
+		PreRegalo1: Oh, hi? Do you need something?
+		PreRegalo2: This world is so strange. I've never seen anything like it before.
+		Chat0: I was thinking about something... a little dirty about the two of us.
+		Chat1: So this is where you live… now I can be close to you all the time.
+		Chat2: I think I twisted my ankle… could you help me walk? I promise not to let go of your arm.
+		RegaloRecibido: Did you already drink from here? Then this would be an indirect kiss…
+		SinRegalo: I'm so thirsty...
+		Seguir: Follow you? Of course! Wherever you go, I'll be right there with you.
+		DejarDeSeguir: E-eh…? Is it not needed anymore?
+		BotonTienda: Shop
+		BotonRegalo: Give gift
+		BotonSeguir: Follow
+		BotonDejarSeguir: Stop following
+	}
+
+	KaraneInda: {
+		PreRegalo0: W-what do you want? I don't have time for small talk.
+		PreRegalo1: Don't look at me like that.
+		PreRegalo2: This world is very different from what I was used to...
+		Chat0: W-what are you staring at?! Don't look at me with that kind face!
+		Chat1: D-don't get the wrong idea, I didn't come to your world to be with you or anything like that!
+		Chat2: D-don't get so close! It's not like it bothers me… it's just hot, okay?!
+		RegaloRecibido: A-a kitty...? It's not like I'm happy or anything...
+		SinRegalo: There's something I'd like to have... something soft and small.
+		Seguir: I-I have no choice. Don't think I'm doing this because I want to be with you.
+		DejarDeSeguir: Fine, whatever.
+		BotonTienda: Shop
+		BotonRegalo: Give gift
+		BotonSeguir: Follow
+		BotonDejarSeguir: Stop following
+	}
+}
+
+Projectiles: {
+	Corazon.DisplayName: Heart
+	KaraneLove.DisplayName: Karane Love
+	GatitoMensoProyectil.DisplayName: Silly Kitty Projectile
+	LecheHakari.DisplayName: Hakari Milk
+}

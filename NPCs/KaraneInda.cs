@@ -73,20 +73,22 @@ namespace Novias.NPCs
 
         public override void AddShops()
         {
-            var tienda = new NPCShop(Type, "Tienda");
+            var tienda = new NPCShop(Type, "Shop");
             tienda.Add(ModContent.ItemType<GatitoMenso>());
-            tienda.Add(ModContent.ItemType<PocionDeTsundere>());
+            tienda.Add(ModContent.ItemType<PocionDeTsundere>(), new Condition("", () => Main.LocalPlayer.GetModPlayer<KaranePlayer>().LeDioRegalo));
             tienda.Register();
         }
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
             KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
-            button = "Tienda";
+            button = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.BotonTienda");
             if (!modPlayer.LeDioRegalo)
-                button2 = "Dar regalo";
+                button2 = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.BotonRegalo");
             else
-                button2 = modPlayer.EstaSiguiendo ? "Dejar de seguir" : "Seguir";
+                button2 = modPlayer.EstaSiguiendo
+                    ? Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.BotonDejarSeguir")
+                    : Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.BotonSeguir");
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref string shop)
@@ -96,7 +98,7 @@ namespace Novias.NPCs
 
             if (firstButton)
             {
-                shop = "Tienda";
+                shop = "Shop";
                 return;
             }
 
@@ -106,12 +108,12 @@ namespace Novias.NPCs
                 {
                     jugador.ConsumeItem(ModContent.ItemType<GatitoDePeluche>());
                     modPlayer.LeDioRegalo = true;
-                    Main.npcChatText = "¿U-un gatito...? N-no es como si me alegrara o algo así... pero... gracias.";
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.RegaloRecibido");
                     DarRegalo(jugador);
                 }
                 else
                 {
-                    Main.npcChatText = "¿Un regalo? No tengo tiempo tus bromas.";
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.SinRegalo");
                 }
                 return;
             }
@@ -120,24 +122,21 @@ namespace Novias.NPCs
             {
                 modPlayer.EstaSiguiendo = false;
                 NPC.aiStyle = NPCAIStyleID.Passive;
-                Main.npcChatText = "Bien, como quieras.";
+                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.DejarDeSeguir");
             }
             else
             {
                 modPlayer.EstaSiguiendo = true;
                 NPC.aiStyle = 0;
-                Main.npcChatText = "N-no tengo de otra. N-no creas que lo hago porque quiera estar contigo.";
+                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.Seguir");
             }
         }
 
         public override string GetChat()
         {
-            return Main.rand.Next(3) switch
-            {
-                0 => "¡¿Q-qué estás mirando?! ¡No me mires con esa cara tan amable! ¡Me dan ganas de golpearte!",
-                1 => "N-no te confundas, no vine a tu mundo para estar contigo o algo parecido...",
-                _ => "¡N-no te acerques tanto! No es que me moleste… solo hace calor, ¿ok?!"
-            };
+            KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
+            string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
+            return Language.GetTextValue($"Mods.Novias.NPCDialogue.KaraneInda.{prefijo}{Main.rand.Next(3)}");
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
