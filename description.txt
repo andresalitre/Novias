@@ -1,1 +1,28 @@
-Modify this file with a description of your mod.
+The girlfriends who really Really love you in terraria!
+
+Adds the girlfriends who really REALLY love you as interactive NPCs, you can buy new items like weapons or potions with new effects. They will also give you new buffs when they accompany you!
+
+Hakari Hanazono arrives after defeating the Eye of Cthulhu, she is really thirsty, but she won't drink more than 175ml.
+
+Karane Inda arrives after defeating the corruption boss of the world, she is looking for something small and soft to hug, apparently she likes kitties.
+
+NO MULTIPLAYER TEST!
+
+Version 2.0.0
+1. Adds Hakari Hanazono
+2. Adds Milk Cannon
+3. Adds Hakari Milk
+4. Adds Seduction Potion
+5. New buff for new potion
+6. Adds Peach Soda and Half Peach Soda
+
+Future plans:
+- Improve gift effect
+- Add Shizuka Yoshimoto
+- Add new effects
+- Add new NPC arrival system
+
+Credits:
+- Nakamura Rikito - Original manga author
+- Nozawa Yukiko - Original manga illustrator
+- Thank you for creating the 100 goddesses

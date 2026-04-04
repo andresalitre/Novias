@@ -96,6 +96,7 @@ NPCs: {
 
 		Census.SpawnCondition: El Cerebro de Cthulhu o el Devoramundos sido derrotado
 	}
+
 	HakariHanazono: {
 		DisplayName: Hakari Hanazono
 
