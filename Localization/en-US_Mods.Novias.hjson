@@ -47,7 +47,7 @@ Items: {
 	}
 
 	PocionDeSeduccion: {
-		Tooltip: 
+		Tooltip:
 			'''
 			Un amor abrasador recupera tus heridas
 			Aumenta tu regeneración
