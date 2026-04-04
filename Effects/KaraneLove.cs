@@ -33,8 +33,8 @@ namespace Novias.Effects
             else
             {
                 Projectile.velocity = Vector2.Zero;
-                Projectile.position.X += Main.rand.Next(-4, 8);
-                Projectile.position.Y += Main.rand.Next(-2, 4);
+                Projectile.position.X += Main.rand.Next(-2, 4);
+                Projectile.position.Y += Main.rand.Next(-1, 2);
             }
         }
 

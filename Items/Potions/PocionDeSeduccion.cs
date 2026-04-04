@@ -5,7 +5,7 @@ using Novias.Buffs;
 
 namespace Novias.Items.Potions
 {
-    public class PocionDeTsundere : ModItem
+    public class PocionDeSeduccion : ModItem
     {
         public override void SetDefaults()
         {
@@ -18,7 +18,7 @@ namespace Novias.Items.Potions
             Item.maxStack = 9999;
             Item.value = Item.buyPrice(gold: 5);
             Item.rare = ItemRarityID.Orange;
-            Item.buffType = ModContent.BuffType<FuerzaDeTsundere>();
+            Item.buffType = ModContent.BuffType<ImpulsoSeductor>();
             Item.buffTime = 60 * 300;
         }
 

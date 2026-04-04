@@ -27,8 +27,9 @@ namespace Novias.NPCs
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<KaranePlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(255, 140, 0);
         protected override int BuffSeguimiento => ModContent.BuffType<FuerzaDeTsundere>();
-        protected override int CooldownAtaque => 20;
-        protected override int TipoProyectilRegalo => ModContent.ProjectileType<KaraneLove>();
+        protected override int CooldownAtaque => 30;
+        protected override int TipoProyectilRegalo => ModContent.ProjectileType<Corazon>();
+        protected override int RegeneracionVida => 5;
 
         protected override void LanzarAtaque(Vector2 direccion)
         {
@@ -60,14 +61,14 @@ namespace Novias.NPCs
             NPC.width = 20;
             NPC.height = 38;
             NPC.aiStyle = NPCAIStyleID.Passive;
-            NPC.lifeMax = 1500;
-            NPC.defense = 75;
+            NPC.lifeMax = 2500;
+            NPC.defense = 85;
+            NPC.lifeRegen = 7;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
             NPC.DeathSound = SoundID.NPCDeath20;
             NPC.townNPC = true;
             NPC.friendly = true;
-            NPC.lifeRegen = 5;
         }
 
         public override void AddShops()
@@ -133,9 +134,9 @@ namespace Novias.NPCs
         {
             return Main.rand.Next(3) switch
             {
-                0 => "¡N-no es como si quisiera hablar contigo!",
+                0 => "¡¿Q-qué estás mirando?! ¡No me mires con esa cara tan amable! ¡Me dan ganas de golpearte!",
                 1 => "N-no te confundas, no vine a tu mundo para estar contigo o algo parecido...",
-                _ => "¡¿Q-qué estás mirando?!"
+                _ => "¡N-no te acerques tanto! No es que me moleste… solo hace calor, ¿ok?!"
             };
         }
 

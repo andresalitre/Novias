@@ -22,6 +22,7 @@ namespace Novias.NPCs
         protected abstract int BuffSeguimiento { get; }
         protected abstract int TipoProyectilRegalo { get; }
         protected abstract void LanzarAtaque(Vector2 direccion);
+        protected abstract int RegeneracionVida { get; }
 
         protected virtual int TipoProyectilCorazon => ModContent.ProjectileType<Corazon>();
 
@@ -270,6 +271,12 @@ namespace Novias.NPCs
                 polvo.velocity *= 2f;
             }
         }
+
+        public override void UpdateLifeRegen(ref int damage)
+        {
+            NPC.lifeRegen += RegeneracionVida * 2;
+        }
+
 
         public override void HitEffect(NPC.HitInfo hit) { }
         public override bool? CanFallThroughPlatforms() => false;

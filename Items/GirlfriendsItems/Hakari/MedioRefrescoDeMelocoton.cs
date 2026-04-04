@@ -1,24 +1,22 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Novias.Buffs;
 
-namespace Novias.Items.Potions
+namespace Novias.Items.GirlfriendsItems.Hakari
 {
-    public class PocionDeTsundere : ModItem
+    public class MedioRefrescoDeMelocoton : ModItem
     {
         public override void SetDefaults()
         {
             Item.width = 20;
-            Item.height = 26;
+            Item.height = 32;
             Item.useStyle = ItemUseStyleID.DrinkLiquid;
-            Item.useAnimation = 15;
-            Item.useTime = 15;
+            Item.useAnimation = 17;
+            Item.useTime = 17;
             Item.consumable = true;
             Item.maxStack = 9999;
-            Item.value = Item.buyPrice(gold: 5);
-            Item.rare = ItemRarityID.Orange;
-            Item.buffType = ModContent.BuffType<FuerzaDeTsundere>();
+            Item.rare = ItemRarityID.Pink;
+            Item.buffType = BuffID.WellFed2;
             Item.buffTime = 60 * 300;
         }
 

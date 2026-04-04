@@ -6,22 +6,53 @@ Items: {
 
 	GatitoDePeluche: {
 		DisplayName: Gatito De Peluche
-		Tooltip: Un adorable gatito de peluche... a alguien le gustan gustan mucho los gatitos
+		Tooltip:
+			'''
+			Un adorable gatito de peluche
+			"A alguien le gustan gustan mucho los gatitos".
+			'''
 	}
 
 	PocionDeTsundere: {
-		DisplayName: Poción De Tsundere
+		DisplayName: Poción de Tsundere
 		Tooltip:
 			'''
 			Un amor intensificado te hace más fuerte
 			Aumenta un 15% el daño y critico cuerpo a cuerpo
-			5 minuto(s) de duración
 			'''
 	}
 
-	RegaloHakari: {
-		DisplayName: Regalo Hakari
-		Tooltip: ""
+	RefrescoDeMelocoton: {
+		Tooltip: Un exquisito refresco sabor melocotón
+		DisplayName: Refresco De Melocotón
+	}
+
+	MedioRefrescoDeMelocoton: {
+		Tooltip:
+			'''
+			La mitad de un exquisito refresco sabor melocotón
+			"A alguien le podria interesar un beso indirecto".
+			'''
+		DisplayName: Medio Refresco De Melocotón
+	}
+
+	CañonDeLeche: {
+		Tooltip: Hakari lo cargó con mucho cariño... y otras cosas
+		DisplayName: Cañon de Leche
+	}
+
+	LecheHakariMunicion: {
+		Tooltip: Directamente traida de la granja. No preguntes de cuál.
+		DisplayName: Leche Hakari
+	}
+
+	PocionDeSeduccion: {
+		Tooltip: 
+			'''
+			Un amor abrasador recupera tus heridas
+			Aumenta tu regeneración
+			'''
+		DisplayName: Poción de Seducción
 	}
 }
 
@@ -30,7 +61,7 @@ Buffs: {
 		DisplayName: Fuerza de tsundere
 		Description:
 			'''
-			La fuerza del amor (ella nunca lo admitirá)
+			Tu cuerpo se llena de energia tsundere
 			Aumenta tu daño y critico cuerpo a cuerpo
 			'''
 	}
@@ -39,7 +70,7 @@ Buffs: {
 		DisplayName: Impulso Seductor
 		Description:
 			'''
-			Un amor abrasador recupera tus heridas
+			Tu cuerpo empieza a calentarse
 			Aumenta considerablemente tu regeneración de vida
 			5 minuto(s) de duración
 			'''
@@ -91,6 +122,6 @@ NPCs: {
 Projectiles: {
 	KaraneLove.DisplayName: Karane Love
 	GatitoMensoProyectil.DisplayName: Gatito Menso Proyectil
-	Generic.DisplayName: Generic
 	Corazon.DisplayName: Corazon
+	LecheHakari.DisplayName: Leche Hakari
 }
