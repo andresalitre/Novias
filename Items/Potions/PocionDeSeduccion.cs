@@ -19,7 +19,7 @@ namespace Novias.Items.Potions
             Item.value = Item.buyPrice(gold: 8);
             Item.rare = ItemRarityID.Orange;
             Item.buffType = ModContent.BuffType<ImpulsoSeductor>();
-            Item.buffTime = 60 * 300;
+            Item.buffTime = 60 * 500;
         }
 
         public override bool? UseItem(Player player)

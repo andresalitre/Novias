@@ -127,7 +127,7 @@ NPCDialogue: {
 		Chat1: Así que aquí es donde vives… ahora podré estar cerca de ti todo el tiempo.
 		Chat2: Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo.
 		RegaloRecibido: ¿Ya bebiste de aquí? Entonces esto sería un beso indirecto…
-		SinRegalo: Estoy tan sedienta...
+		SinRegalo: Estoy tan sedienta... Se me antoja un refresco de melocotón.
 		Seguir: ¿Seguirte? ¡Claro que sí! Donde tú vayas, te acompañare.
 		DejarDeSeguir: ¿E-eh…? ¿Ya no hace falta?
 		BotonTienda: Tienda
@@ -139,7 +139,7 @@ NPCDialogue: {
 	KaraneInda: {
 		PreRegalo0: ¿Q-qué quieres? No tengo tiempo para charlas.
 		PreRegalo1: No me mires así.
-		PreRegalo2: Este mundo es muy diferente a lo que estaba acostumbrada.
+		PreRegalo2: Este mundo es muy diferente. ¿Esto pertenece al canon del manga?
 		Chat0: ¡¿Q-qué estás mirando?! ¡No me mires con esa cara tan amable!
 		Chat1: ¡N-no te confundas, no vine a tu mundo para estar contigo o algo parecido!
 		Chat2: ¡N-no te acerques tanto! No es que me moleste… solo hace calor, ¿ok?!
