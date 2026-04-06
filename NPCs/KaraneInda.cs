@@ -28,7 +28,7 @@ namespace Novias.NPCs
         protected override Color ColorPolvo => new Color(255, 140, 0);
         protected override int BuffSeguimiento => ModContent.BuffType<FuerzaDeTsundere>();
         protected override int CooldownAtaque => 30;
-        protected override int TipoProyectilRegalo => ModContent.ProjectileType<Corazon>();
+        protected override int EfectoNovia => ModContent.ProjectileType<Corazon>();
         protected override int RegeneracionVida => 5;
 
         protected override void LanzarAtaque(Vector2 direccion)
@@ -39,7 +39,7 @@ namespace Novias.NPCs
                 NPC.Center,
                 direccion * 20f,
                 ModContent.ProjectileType<GatitoMensoProyectil>(),
-                45, 7f, Main.myPlayer, NPC.whoAmI
+                40, 7f, Main.myPlayer, NPC.whoAmI
             );
         }
 
@@ -48,7 +48,8 @@ namespace Novias.NPCs
             Main.npcFrameCount[NPC.type] = 20;
             NPCID.Sets.ShimmerTownTransform[Type] = false;
             NPC.Happiness
-                .SetNPCAffection<HakariHanazono>(AffectionLevel.Love);
+                .SetNPCAffection<HakariHanazono>(AffectionLevel.Like)
+                .SetNPCAffection<ShizukaYoshimoto>(AffectionLevel.Like);
             NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f
@@ -62,8 +63,7 @@ namespace Novias.NPCs
             NPC.height = 38;
             NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.lifeMax = 2500;
-            NPC.defense = 85;
-            NPC.lifeRegen = 7;
+            NPC.defense = 50;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
             NPC.DeathSound = SoundID.NPCDeath20;

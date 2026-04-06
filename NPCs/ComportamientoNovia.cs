@@ -20,11 +20,9 @@ namespace Novias.NPCs
         protected abstract bool EstaSiguiendo { get; }
         protected abstract Color ColorPolvo { get; }
         protected abstract int BuffSeguimiento { get; }
-        protected abstract int TipoProyectilRegalo { get; }
+        protected abstract int EfectoNovia { get; }
         protected abstract void LanzarAtaque(Vector2 direccion);
         protected abstract int RegeneracionVida { get; }
-
-        protected virtual int TipoProyectilCorazon => ModContent.ProjectileType<Corazon>();
 
         protected void DarRegalo(Player jugador)
         {
@@ -32,7 +30,7 @@ namespace Novias.NPCs
                 jugador.GetSource_FromThis(),
                 jugador.Center,
                 new Vector2(0f, -8f),
-                TipoProyectilRegalo,
+                EfectoNovia,
                 0, 0f, jugador.whoAmI
             );
 
@@ -40,7 +38,7 @@ namespace Novias.NPCs
                 NPC.GetSource_FromThis(),
                 NPC.Center,
                 new Vector2(0f, -8f),
-                TipoProyectilCorazon,
+                ModContent.ProjectileType<Corazon>(),
                 0, 0f, jugador.whoAmI
             );
         }

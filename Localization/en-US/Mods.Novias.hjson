@@ -5,11 +5,11 @@ Items: {
 	}
 
 	GatitoDePeluche: {
-		DisplayName: Kitty plush
+		DisplayName: Kitty Plush
 		Tooltip:
 			'''
 			An adorable kitty plush
-			"Someone really loves kitties".
+			"Someone really loves kitties."
 			'''
 	}
 
@@ -32,7 +32,7 @@ Items: {
 		Tooltip:
 			'''
 			Half of a delicious peach flavored soda
-			"Someone might be interested in an indirect kiss".
+			"Someone might be interested in an indirect kiss."
 			'''
 	}
 
@@ -52,6 +52,29 @@ Items: {
 			'''
 			A burning love heals your wounds
 			Increases your life regeneration
+			'''
+	}
+
+	ElRomanceDeLaDiadema: {
+		DisplayName: The Romance of the Diadem
+		Tooltip: Magically imbued with the song of a silent voice.
+	}
+
+	TelefonoDeShizuka: {
+		DisplayName: Shizuka's Phone
+		Tooltip:
+			'''
+			Technology from another world! Apparently not.
+			"Shizuka will be very happy to talk with you."
+			'''
+	}
+
+	PocionDeEcosDeAmor: {
+		DisplayName: Echoes of Love Potion
+		Tooltip:
+			'''
+			A silent love pushes you beyond your magical limits
+			Increases your mana regeneration and maximum mana
 			'''
 	}
 }
@@ -74,6 +97,15 @@ Buffs: {
 			Considerably increases your life regeneration
 			'''
 	}
+
+	ArmoniaMagica: {
+		DisplayName: Magical Harmony
+		Description:
+			'''
+			A beautiful voice flows through your veins
+			Increases your magical abilities
+			'''
+	}
 }
 
 NPCs: {
@@ -92,9 +124,10 @@ NPCs: {
 			LoveNPC: I adore {NPCName}.
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
+			LikeNPC: Me gusta {NPCName}.
 		}
 
-		Census.SpawnCondition: When Eater of World or Brain of Cthulhu has been defeated
+		Census.SpawnCondition: The Eater of Worlds or Brain of Cthulhu has been defeated
 	}
 
 	HakariHanazono: {
@@ -112,9 +145,29 @@ NPCs: {
 			LoveNPC: I adore {NPCName}.
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
+			LikeNPC: Me gusta {NPCName}.
 		}
 
 		Census.SpawnCondition: The Eye of Cthulhu has been defeated
+	}
+
+	ShizukaYoshimoto: {
+		DisplayName: Shizuka Yoshimoto
+
+		TownNPCMood: {
+			Content: I'm happy.
+			NoHome: I hate not having a home.
+			FarFromHome: I'm too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I don't like having so little space.
+			HateCrowded: I hate having so little space.
+			LoveNPC: I adore {NPCName}.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+			LikeNPC: Me gusta {NPCName}.
+		}
+
+		Census.SpawnCondition: 2 girlfriends must be present and the player must have 5 books in their inventory
 	}
 }
 
@@ -123,13 +176,13 @@ NPCDialogue: {
 		PreRegalo0: Do we know each other from somewhere?
 		PreRegalo1: Oh, hi? Do you need something?
 		PreRegalo2: This world is so strange. I've never seen anything like it before.
-		Chat0: I was thinking about something... a little dirty about the two of us.
+		Chat0: I was thinking about something... a little dirty about the two of us. Did the developer really let me say that?
 		Chat1: So this is where you live… now I can be close to you all the time.
 		Chat2: I think I twisted my ankle… could you help me walk? I promise not to let go of your arm.
 		RegaloRecibido: Did you already drink from here? Then this would be an indirect kiss…
-		SinRegalo: I'm so thirsty...
+		SinRegalo: I'm so thirsty... I could really go for a peach soda.
 		Seguir: Follow you? Of course! Wherever you go, I'll be right there with you.
-		DejarDeSeguir: E-eh…? Is it not needed anymore?
+		DejarDeSeguir: E-eh…? Is it not needed anymore? Who wrote this sad dialogue?
 		BotonTienda: Shop
 		BotonRegalo: Give gift
 		BotonSeguir: Follow
@@ -139,14 +192,31 @@ NPCDialogue: {
 	KaraneInda: {
 		PreRegalo0: W-what do you want? I don't have time for small talk.
 		PreRegalo1: Don't look at me like that.
-		PreRegalo2: This world is very different from what I was used to...
-		Chat0: W-what are you staring at?! Don't look at me with that kind face!
+		PreRegalo2: This world is very different. Does this belong to the manga's canon?
+		Chat0: W-what are you staring at?! Stop reading my dialogue!
 		Chat1: D-don't get the wrong idea, I didn't come to your world to be with you or anything like that!
 		Chat2: D-don't get so close! It's not like it bothers me… it's just hot, okay?!
 		RegaloRecibido: A-a kitty...? It's not like I'm happy or anything...
-		SinRegalo: There's something I'd like to have... something soft and small.
+		SinRegalo: There's something I'd like to have... something soft and small. Are there no kitties in this world?
 		Seguir: I-I have no choice. Don't think I'm doing this because I want to be with you.
-		DejarDeSeguir: Fine, whatever.
+		DejarDeSeguir: Fine, whatever... Why does this feel so bad if it's just a game?
+		BotonTienda: Shop
+		BotonRegalo: Give gift
+		BotonSeguir: Follow
+		BotonDejarSeguir: Stop following
+	}
+
+	ShizukaYoshimoto: {
+		PreRegalo0: ...
+		PreRegalo1: *Points at a book*
+		PreRegalo2: *Looks at you in silence and lowers her gaze*
+		Chat0: *Phone: My lord... This unknown world, could it be our dreamed paradise?*
+		Chat1: *Phone: May I stay close to you for a moment, my lord?*
+		Chat2: *Phone: According to the manga, something romantic should happen here.*
+		RegaloRecibido: *Phone: Thank you, now I can talk to you. I love you, my lord.*
+		SinRegalo: *Writes on paper: "If you had some technology... I could communicate with you."*
+		Seguir: *Phone: I yearn to be of help in your adventure.*
+		DejarDeSeguir: *Phone: I will be here waiting for your return.*
 		BotonTienda: Shop
 		BotonRegalo: Give gift
 		BotonSeguir: Follow
@@ -156,7 +226,7 @@ NPCDialogue: {
 
 Projectiles: {
 	Corazon.DisplayName: Heart
-	KaraneLove.DisplayName: Karane Love
 	GatitoMensoProyectil.DisplayName: Silly Kitty Projectile
 	LecheHakari.DisplayName: Hakari Milk
+	NotaDeCanto.DisplayName: Singing Note
 }

@@ -20,7 +20,7 @@ namespace Novias.Projectiles
             Projectile.ignoreWater = true;
             Projectile.timeLeft = 360;
             Projectile.penetrate = -1;
-            Projectile.DamageType = DamageClass.Melee;
+            Projectile.DamageType = DamageClass.Ranged;
         }
 
         public override void OnSpawn(Terraria.DataStructures.IEntitySource source)

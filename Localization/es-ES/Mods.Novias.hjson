@@ -9,7 +9,7 @@ Items: {
 		Tooltip:
 			'''
 			Un adorable gatito de peluche
-			"A alguien le gustan gustan mucho los gatitos".
+			"A alguien le gustan mucho los gatitos".
 			'''
 	}
 
@@ -18,7 +18,7 @@ Items: {
 		Tooltip:
 			'''
 			Un amor intensificado te hace más fuerte
-			Aumenta un 15% el daño y critico cuerpo a cuerpo
+			Aumenta un 15% el daño y crítico cuerpo a cuerpo
 			'''
 	}
 
@@ -32,18 +32,18 @@ Items: {
 		Tooltip:
 			'''
 			La mitad de un exquisito refresco sabor melocotón
-			"A alguien le podria interesar un beso indirecto".
+			"A alguien le podría interesar un beso indirecto".
 			'''
 	}
 
 	CañonDeLeche: {
-		DisplayName: Cañon de Leche
+		DisplayName: Cañón de Leche
 		Tooltip: Hakari lo cargó con mucho cariño... y otras cosas
 	}
 
 	LecheHakariMunicion: {
 		DisplayName: Leche Hakari
-		Tooltip: Directamente traida de la granja. No preguntes de cuál.
+		Tooltip: Directamente traída de la granja. No preguntes de cuál.
 	}
 
 	PocionDeSeduccion: {
@@ -51,18 +51,41 @@ Items: {
 		Tooltip:
 			'''
 			Un amor abrasador recupera tus heridas
-			Aumenta tu regeneración
+			Aumenta tu regeneración de vida
+			'''
+	}
+
+	ElRomanceDeLaDiadema: {
+		DisplayName: El Romance De La Diadema
+		Tooltip: Imbuido mágicamente con el canto de una voz silenciosa.
+	}
+
+	TelefonoDeShizuka: {
+		DisplayName: Teléfono De Shizuka
+		Tooltip:
+			'''
+			¡Una tecnología de otro mundo! Al parecer no.
+			"Shizuka estará muy feliz de poder hablar contigo."
+			'''
+	}
+
+	PocionDeEcosDeAmor: {
+		DisplayName: Poción de Ecos de Amor
+		Tooltip:
+			'''
+			Un amor silencioso te hace sobrepasar tus límites mágicos
+			Aumenta tu regeneración de maná y tu maná máximo
 			'''
 	}
 }
 
 Buffs: {
 	FuerzaDeTsundere: {
-		DisplayName: Fuerza de tsundere
+		DisplayName: Fuerza de Tsundere
 		Description:
 			'''
-			Tu cuerpo se llena de energia tsundere
-			Aumenta tu daño y critico cuerpo a cuerpo
+			Tu cuerpo se llena de energía tsundere
+			Aumenta tu daño y crítico cuerpo a cuerpo
 			'''
 	}
 
@@ -72,6 +95,15 @@ Buffs: {
 			'''
 			Tu cuerpo empieza a calentarse
 			Aumenta considerablemente tu regeneración de vida
+			'''
+	}
+
+	ArmoniaMagica: {
+		DisplayName: Armonía Mágica
+		Description:
+			'''
+			Una hermosa voz fluye por tus venas
+			Aumenta tus capacidades mágicas
 			'''
 	}
 }
@@ -92,9 +124,10 @@ NPCs: {
 			LoveNPC: Adoro a {NPCName}.
 			LikeNPC_Princess: Me gusta {NPCName}.
 			Princess_LovesNPC: Me gusta {NPCName}.
+			// LikeNPC: Me gusta {NPCName}.
 		}
 
-		Census.SpawnCondition: El Cerebro de Cthulhu o el Devoramundos sido derrotado
+		Census.SpawnCondition: El Cerebro de Cthulhu o el Devoramundos ha sido derrotado
 	}
 
 	HakariHanazono: {
@@ -112,9 +145,29 @@ NPCs: {
 			LoveNPC: Adoro a {NPCName}.
 			LikeNPC_Princess: Me gusta {NPCName}.
 			Princess_LovesNPC: Me gusta {NPCName}.
+			// LikeNPC: Me gusta {NPCName}.
 		}
 
-		Census.SpawnCondition: El Ojo de Cthulhu sido derrotado
+		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
+	}
+
+	ShizukaYoshimoto: {
+		DisplayName: Shizuka Yoshimoto
+
+		TownNPCMood: {
+			Content: Estoy feliz.
+			NoHome: Detesto no tener un hogar.
+			FarFromHome: Estoy demasiado lejos de casa.
+			LoveSpace: Me encanta tener tanto espacio.
+			DislikeCrowded: No me gusta tener tan poco espacio.
+			HateCrowded: Detesto tener poco espacio.
+			LoveNPC: Adoro a {NPCName}.
+			LikeNPC_Princess: Me gusta {NPCName}.
+			Princess_LovesNPC: Me gusta {NPCName}.
+			// LikeNPC: Me gusta {NPCName}.
+		}
+
+		Census.SpawnCondition: Que haya 2 novias presentes y el jugador tenga 5 libros en su inventario
 	}
 }
 
@@ -123,13 +176,13 @@ NPCDialogue: {
 		PreRegalo0: ¿Acaso nos conocemos de otra parte?
 		PreRegalo1: ¿Ah, hola? ¿Necesitas algo?
 		PreRegalo2: Este mundo es tan extraño. Nunca había visto algo así antes.
-		Chat0: Estaba pensando algo... un poco sucio sobre nosotros dos.
+		Chat0: Estaba pensando algo... un poco sucio sobre nosotros dos. ¿El desarrollador me dejó decir eso?
 		Chat1: Así que aquí es donde vives… ahora podré estar cerca de ti todo el tiempo.
 		Chat2: Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo.
 		RegaloRecibido: ¿Ya bebiste de aquí? Entonces esto sería un beso indirecto…
 		SinRegalo: Estoy tan sedienta... Se me antoja un refresco de melocotón.
-		Seguir: ¿Seguirte? ¡Claro que sí! Donde tú vayas, te acompañare.
-		DejarDeSeguir: ¿E-eh…? ¿Ya no hace falta?
+		Seguir: ¿Seguirte? ¡Claro que sí! Donde tú vayas, te acompañaré.
+		DejarDeSeguir: ¿E-eh…? ¿Ya no hace falta? ¿Quién escribió este diálogo tan triste?
 		BotonTienda: Tienda
 		BotonRegalo: Dar regalo
 		BotonSeguir: Seguir
@@ -140,13 +193,30 @@ NPCDialogue: {
 		PreRegalo0: ¿Q-qué quieres? No tengo tiempo para charlas.
 		PreRegalo1: No me mires así.
 		PreRegalo2: Este mundo es muy diferente. ¿Esto pertenece al canon del manga?
-		Chat0: ¡¿Q-qué estás mirando?! ¡No me mires con esa cara tan amable!
+		Chat0: ¡¿Q-qué estás mirando?! ¡Deja de leer mis diálogos!
 		Chat1: ¡N-no te confundas, no vine a tu mundo para estar contigo o algo parecido!
 		Chat2: ¡N-no te acerques tanto! No es que me moleste… solo hace calor, ¿ok?!
 		RegaloRecibido: ¿U-un gatito...? N-no es como si me alegrara o algo así...
-		SinRegalo: Hay algo que me gustaría tener... algo suave y pequeño.
+		SinRegalo: Hay algo que me gustaría tener... Algo suave y pequeño. ¿No hay gatitos en este mundo?
 		Seguir: N-no tengo de otra. N-no creas que lo hago porque quiera estar contigo.
-		DejarDeSeguir: Bien, como quieras.
+		DejarDeSeguir: Bien, como quieras... ¿Por qué se siente tan mal esto si solo es un juego?
+		BotonTienda: Tienda
+		BotonRegalo: Dar regalo
+		BotonSeguir: Seguir
+		BotonDejarSeguir: Dejar de seguir
+	}
+
+	ShizukaYoshimoto: {
+		PreRegalo0: ...
+		PreRegalo1: *Señala un libro*
+		PreRegalo2: *Te mira en silencio y baja la vista*
+		Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
+		Chat1: *Teléfono: ¿Puedo quedarme cerca de ti un momento, mi señor?*
+		Chat2: *Teléfono: Según el manga, aquí debería pasar algo romántico.*
+		RegaloRecibido: *Teléfono: Gracias, ahora podré hablar contigo. Te quiero, mi señor.*
+		SinRegalo: *Escribe en un papel: "Si tuvieras algo tecnológico... podría comunicarme contigo."*
+		Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
+		DejarDeSeguir: *Teléfono: Estaré aquí esperando tu regreso.*
 		BotonTienda: Tienda
 		BotonRegalo: Dar regalo
 		BotonSeguir: Seguir
@@ -155,8 +225,8 @@ NPCDialogue: {
 }
 
 Projectiles: {
-	Corazon.DisplayName: Corazon
-	KaraneLove.DisplayName: Karane Love
+	Corazon.DisplayName: Corazón
 	GatitoMensoProyectil.DisplayName: Gatito Menso Proyectil
 	LecheHakari.DisplayName: Leche Hakari
+	NotaDeCanto.DisplayName: Nota De Canto
 }

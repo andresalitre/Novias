@@ -9,7 +9,7 @@ namespace Novias.Items.Weapons.Melee
     {
         public override void SetDefaults()
         {
-            Item.damage = 40;
+            Item.damage = 30;
             Item.DamageType = DamageClass.Melee;
             Item.width = 40;
             Item.height = 40;

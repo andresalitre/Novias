@@ -12,25 +12,24 @@ using Terraria.ModLoader;
 using Terraria.Utilities;
 using Novias.Players;
 using Microsoft.Xna.Framework;
-using Novias.Items.GirlfriendsItems.Hakari;
-using Novias.Items.Weapons.Ranged;
+using Novias.Items.GirlfriendsItems.Shizuka;
 using Novias.Projectiles;
+using Novias.Items.Weapons.Mage;
 using Novias.Buffs;
 using Novias.Items.Potions;
 using Novias.Effects;
-using Novias.Items.Ammo;
 
 namespace Novias.NPCs
 {
     [AutoloadHead]
-    public class HakariHanazono : ComportamientoNovia
+    public class ShizukaYoshimoto : ComportamientoNovia
     {
-        protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<HakariPlayer>().EstaSiguiendo;
-        protected override Color ColorPolvo => new Color(255, 105, 180);
-        protected override int BuffSeguimiento => ModContent.BuffType<ImpulsoSeductor>();
-        protected override int CooldownAtaque => 45;
+        protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().EstaSiguiendo;
+        protected override Color ColorPolvo => new Color(178, 255, 255);
+        protected override int BuffSeguimiento => ModContent.BuffType<ArmoniaMagica>();
+        protected override int CooldownAtaque => 35;
         protected override int EfectoNovia => ModContent.ProjectileType<Corazon>();
-        protected override int RegeneracionVida => 8;
+        protected override int RegeneracionVida => 5;
 
         protected override void LanzarAtaque(Vector2 direccion)
         {
@@ -39,8 +38,8 @@ namespace Novias.NPCs
                 NPC.GetSource_FromThis(),
                 NPC.Center,
                 direccion * 20f,
-                ModContent.ProjectileType<LecheHakari>(),
-                20, 2f, Main.myPlayer, NPC.whoAmI
+                ModContent.ProjectileType<NotaDeCanto>(),
+                30, 7f, Main.myPlayer, NPC.whoAmI
             );
         }
 
@@ -49,8 +48,8 @@ namespace Novias.NPCs
             Main.npcFrameCount[NPC.type] = 20;
             NPCID.Sets.ShimmerTownTransform[Type] = false;
             NPC.Happiness
-                .SetNPCAffection<KaraneInda>(AffectionLevel.Like)
-                .SetNPCAffection<ShizukaYoshimoto>(AffectionLevel.Like);
+                .SetNPCAffection<HakariHanazono>(AffectionLevel.Like)
+                .SetNPCAffection<KaraneInda>(AffectionLevel.Like);
             NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f
@@ -64,7 +63,7 @@ namespace Novias.NPCs
             NPC.height = 38;
             NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.lifeMax = 2000;
-            NPC.defense = 70;
+            NPC.defense = 40;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
             NPC.DeathSound = SoundID.NPCDeath20;
@@ -75,30 +74,27 @@ namespace Novias.NPCs
         public override void AddShops()
         {
             var tienda = new NPCShop(Type, "Shop");
-            tienda.Add(ModContent.ItemType<CañonDeLeche>());
-            tienda.Add(ModContent.ItemType<LecheHakariMunicion>());
-            tienda.Add(ItemID.Peach);
-            tienda.Add(ModContent.ItemType<PocionDeSeduccion>(), new Condition("", () => Main.LocalPlayer.GetModPlayer<HakariPlayer>().LeDioRegalo));
-            tienda.Add(ModContent.ItemType<RefrescoDeMelocoton>(), new Condition("", () => Main.LocalPlayer.GetModPlayer<HakariPlayer>().LeDioRegalo));
+            tienda.Add(ModContent.ItemType<ElRomanceDeLaDiadema>());
+            tienda.Add(ModContent.ItemType<PocionDeEcosDeAmor>(), new Condition("", () => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().LeDioRegalo));
             tienda.Register();
         }
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
-            HakariPlayer modPlayer = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
-            button = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.BotonTienda");
+            ShizukaPlayer modPlayer = Main.LocalPlayer.GetModPlayer<ShizukaPlayer>();
+            button = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.BotonTienda");
             if (!modPlayer.LeDioRegalo)
-                button2 = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.BotonRegalo");
+                button2 = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.BotonRegalo");
             else
                 button2 = modPlayer.EstaSiguiendo
-                    ? Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.BotonDejarSeguir")
-                    : Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.BotonSeguir");
+                    ? Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.BotonDejarSeguir")
+                    : Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.BotonSeguir");
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref string shop)
         {
             Player jugador = Main.LocalPlayer;
-            HakariPlayer modPlayer = jugador.GetModPlayer<HakariPlayer>();
+            ShizukaPlayer modPlayer = jugador.GetModPlayer<ShizukaPlayer>();
 
             if (firstButton)
             {
@@ -108,16 +104,16 @@ namespace Novias.NPCs
 
             if (!modPlayer.LeDioRegalo)
             {
-                if (jugador.HasItem(ModContent.ItemType<MedioRefrescoDeMelocoton>()))
+                if (jugador.HasItem(ModContent.ItemType<TelefonoDeShizuka>()))
                 {
-                    jugador.ConsumeItem(ModContent.ItemType<MedioRefrescoDeMelocoton>());
+                    jugador.ConsumeItem(ModContent.ItemType<TelefonoDeShizuka>());
                     modPlayer.LeDioRegalo = true;
-                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.RegaloRecibido");
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.RegaloRecibido");
                     DarRegalo(jugador);
                 }
                 else
                 {
-                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.SinRegalo");
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.SinRegalo");
                 }
                 return;
             }
@@ -126,21 +122,21 @@ namespace Novias.NPCs
             {
                 modPlayer.EstaSiguiendo = false;
                 NPC.aiStyle = NPCAIStyleID.Passive;
-                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.DejarDeSeguir");
+                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.DejarDeSeguir");
             }
             else
             {
                 modPlayer.EstaSiguiendo = true;
                 NPC.aiStyle = 0;
-                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.Seguir");
+                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.Seguir");
             }
         }
 
         public override string GetChat()
         {
-            HakariPlayer modPlayer = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
+            ShizukaPlayer modPlayer = Main.LocalPlayer.GetModPlayer<ShizukaPlayer>();
             string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
-            return Language.GetTextValue($"Mods.Novias.NPCDialogue.HakariHanazono.{prefijo}{Main.rand.Next(3)}");
+            return Language.GetTextValue($"Mods.Novias.NPCDialogue.ShizukaYoshimoto.{prefijo}{Main.rand.Next(3)}");
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -153,7 +149,25 @@ namespace Novias.NPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
         {
-            return NPC.downedBoss1;
+            int noviasPresentes = 0;
+            for (int i = 0; i < Main.maxNPCs; i++)
+            {
+                NPC npc = Main.npc[i];
+                if (npc.active && npc.ModNPC is ComportamientoNovia)
+                    noviasPresentes++;
+            }
+
+            if (noviasPresentes < 2)
+                return false;
+
+            int libros = 0;
+            for (int i = 0; i < Main.LocalPlayer.inventory.Length; i++)
+            {
+                if (Main.LocalPlayer.inventory[i].type == ItemID.Book)
+                    libros += Main.LocalPlayer.inventory[i].stack;
+            }
+
+            return libros >= 5;
         }
     }
 }
