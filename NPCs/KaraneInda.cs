@@ -113,7 +113,7 @@ namespace Novias.NPCs
                 }
                 else
                 {
-                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.SinRegalo");
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.SinRegalo") + $"\n[i:{ModContent.ItemType<GatitoDePeluche>()}]";
                 }
                 return;
             }

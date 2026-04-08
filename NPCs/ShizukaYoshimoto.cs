@@ -18,6 +18,7 @@ using Novias.Items.Weapons.Mage;
 using Novias.Buffs;
 using Novias.Items.Potions;
 using Novias.Effects;
+using Novias.Items.Paintings;
 
 namespace Novias.NPCs
 {
@@ -76,6 +77,7 @@ namespace Novias.NPCs
             var tienda = new NPCShop(Type, "Shop");
             tienda.Add(ModContent.ItemType<ElRomanceDeLaDiadema>());
             tienda.Add(ModContent.ItemType<PocionDeEcosDeAmor>(), new Condition("", () => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().LeDioRegalo));
+            tienda.Add(ModContent.ItemType<Familia>());
             tienda.Register();
         }
 
@@ -113,7 +115,7 @@ namespace Novias.NPCs
                 }
                 else
                 {
-                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.SinRegalo");
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.SinRegalo") + $"\n[i:{ModContent.ItemType<TelefonoDeShizuka>()}]";
                 }
                 return;
             }
@@ -147,8 +149,12 @@ namespace Novias.NPCs
             });
         }
 
+        public bool llego = false;
         public override bool CanTownNPCSpawn(int numTownNPCs)
         {
+            if (llego)
+                return true;
+
             int noviasPresentes = 0;
             for (int i = 0; i < Main.maxNPCs; i++)
             {
@@ -167,7 +173,13 @@ namespace Novias.NPCs
                     libros += Main.LocalPlayer.inventory[i].stack;
             }
 
-            return libros >= 5;
+            if (libros >= 5)
+            {
+                llego = true;
+                return true;
+            }
+
+            return false;
         }
     }
 }

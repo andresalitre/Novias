@@ -17,7 +17,7 @@ Items: {
 		DisplayName: Poción de Tsundere
 		Tooltip:
 			'''
-			Un amor intensificado te hace más fuerte
+			Un fuerte amor intensifica tu fuerza
 			Aumenta un 15% el daño y crítico cuerpo a cuerpo
 			'''
 	}
@@ -77,6 +77,16 @@ Items: {
 			Aumenta tu regeneración de maná y tu maná máximo
 			'''
 	}
+
+	Familia: {
+		Tooltip: '''"La familia es primero".'''
+		DisplayName: Familia
+	}
+
+	PocionDeEficiencia: {
+		// DisplayName: Pocion De Eficiencia
+		// Tooltip: ""
+	}
 }
 
 Buffs: {
@@ -106,6 +116,11 @@ Buffs: {
 			Aumenta tus capacidades mágicas
 			'''
 	}
+
+	Eficiencia: {
+		// Description: Mods.Novias.Buffs.Eficiencia.Description
+		// DisplayName: Eficiencia
+	}
 }
 
 NPCs: {
@@ -124,7 +139,7 @@ NPCs: {
 			LoveNPC: Adoro a {NPCName}.
 			LikeNPC_Princess: Me gusta {NPCName}.
 			Princess_LovesNPC: Me gusta {NPCName}.
-			// LikeNPC: Me gusta {NPCName}.
+			LikeNPC: Me cae bien {NPCName}.
 		}
 
 		Census.SpawnCondition: El Cerebro de Cthulhu o el Devoramundos ha sido derrotado
@@ -145,7 +160,7 @@ NPCs: {
 			LoveNPC: Adoro a {NPCName}.
 			LikeNPC_Princess: Me gusta {NPCName}.
 			Princess_LovesNPC: Me gusta {NPCName}.
-			// LikeNPC: Me gusta {NPCName}.
+			LikeNPC: Me cae bien {NPCName}.
 		}
 
 		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
@@ -164,7 +179,7 @@ NPCs: {
 			LoveNPC: Adoro a {NPCName}.
 			LikeNPC_Princess: Me gusta {NPCName}.
 			Princess_LovesNPC: Me gusta {NPCName}.
-			// LikeNPC: Me gusta {NPCName}.
+			LikeNPC: Me cae bien {NPCName}.
 		}
 
 		Census.SpawnCondition: Que haya 2 novias presentes y el jugador tenga 5 libros en su inventario
@@ -180,7 +195,7 @@ NPCDialogue: {
 		Chat1: Así que aquí es donde vives… ahora podré estar cerca de ti todo el tiempo.
 		Chat2: Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo.
 		RegaloRecibido: ¿Ya bebiste de aquí? Entonces esto sería un beso indirecto…
-		SinRegalo: Estoy tan sedienta... Se me antoja un refresco de melocotón.
+		SinRegalo: Estoy tan sedienta... Se me antoja un refresco de melocotón, pero no podría con una lata entera.
 		Seguir: ¿Seguirte? ¡Claro que sí! Donde tú vayas, te acompañaré.
 		DejarDeSeguir: ¿E-eh…? ¿Ya no hace falta? ¿Quién escribió este diálogo tan triste?
 		BotonTienda: Tienda
@@ -194,7 +209,7 @@ NPCDialogue: {
 		PreRegalo1: No me mires así.
 		PreRegalo2: Este mundo es muy diferente. ¿Esto pertenece al canon del manga?
 		Chat0: ¡¿Q-qué estás mirando?! ¡Deja de leer mis diálogos!
-		Chat1: ¡N-no te confundas, no vine a tu mundo para estar contigo o algo parecido!
+		Chat1: ¡N-no te confundas, no vine a tu mundo para estar contigo o algo parecido! ¿Ya, enserio, esto es parte del canon?
 		Chat2: ¡N-no te acerques tanto! No es que me moleste… solo hace calor, ¿ok?!
 		RegaloRecibido: ¿U-un gatito...? N-no es como si me alegrara o algo así...
 		SinRegalo: Hay algo que me gustaría tener... Algo suave y pequeño. ¿No hay gatitos en este mundo?

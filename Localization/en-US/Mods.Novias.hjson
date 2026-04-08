@@ -56,7 +56,7 @@ Items: {
 	}
 
 	ElRomanceDeLaDiadema: {
-		DisplayName: The Romance of the Diadem
+		DisplayName: Circlet Love Story
 		Tooltip: Magically imbued with the song of a silent voice.
 	}
 
@@ -76,6 +76,20 @@ Items: {
 			A silent love pushes you beyond your magical limits
 			Increases your mana regeneration and maximum mana
 			'''
+	}
+
+	Familia: {
+		Tooltip:
+			'''
+			"La familia es lo primero"
+			(Yes, it's Spanish)
+			'''
+		DisplayName: Familia
+	}
+
+	PocionDeEficiencia: {
+		DisplayName: Pocion De Eficiencia
+		Tooltip: ""
 	}
 }
 
@@ -106,6 +120,11 @@ Buffs: {
 			Increases your magical abilities
 			'''
 	}
+
+	Eficiencia: {
+		Description: Mods.Novias.Buffs.Eficiencia.Description
+		DisplayName: Eficiencia
+	}
 }
 
 NPCs: {
@@ -124,7 +143,7 @@ NPCs: {
 			LoveNPC: I adore {NPCName}.
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
-			LikeNPC: Me gusta {NPCName}.
+			LikeNPC: I like {NPCName}.
 		}
 
 		Census.SpawnCondition: The Eater of Worlds or Brain of Cthulhu has been defeated
@@ -145,7 +164,7 @@ NPCs: {
 			LoveNPC: I adore {NPCName}.
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
-			LikeNPC: Me gusta {NPCName}.
+			LikeNPC: I like {NPCName}.
 		}
 
 		Census.SpawnCondition: The Eye of Cthulhu has been defeated
@@ -164,7 +183,7 @@ NPCs: {
 			LoveNPC: I adore {NPCName}.
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
-			LikeNPC: Me gusta {NPCName}.
+			LikeNPC: I like {NPCName}.
 		}
 
 		Census.SpawnCondition: 2 girlfriends must be present and the player must have 5 books in their inventory

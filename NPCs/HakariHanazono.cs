@@ -117,7 +117,7 @@ namespace Novias.NPCs
                 }
                 else
                 {
-                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.SinRegalo");
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.SinRegalo") + $"\n[i:{ModContent.ItemType<MedioRefrescoDeMelocoton>()}]";
                 }
                 return;
             }
