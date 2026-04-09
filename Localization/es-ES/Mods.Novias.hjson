@@ -84,8 +84,12 @@ Items: {
 	}
 
 	PocionDeEficiencia: {
-		// DisplayName: Pocion De Eficiencia
-		// Tooltip: ""
+		DisplayName: Poción De Eficiencia
+		Tooltip:
+			'''
+			Un amor eficiente aumenta tu eficacia, valga la madre
+			Aumenta tu velocidad de movimiento, ataque y minería
+			'''
 	}
 }
 
@@ -118,8 +122,12 @@ Buffs: {
 	}
 
 	Eficiencia: {
-		// Description: Mods.Novias.Buffs.Eficiencia.Description
-		// DisplayName: Eficiencia
+		Description:
+			'''
+			No hubiera sido eficiente pensar en una mejor descripción para este buff
+			Aumenta la velocidad de todo
+			'''
+		DisplayName: Eficiencia
 	}
 }
 
@@ -184,6 +192,41 @@ NPCs: {
 
 		Census.SpawnCondition: Que haya 2 novias presentes y el jugador tenga 5 libros en su inventario
 	}
+
+	NanoEiai: {
+		DisplayName: Nano Eiai
+
+		TownNPCMood: {
+			Content: Estoy feliz.
+			NoHome: Detesto no tener un hogar.
+			FarFromHome: Estoy demasiado lejos de casa.
+			LoveSpace: Me encanta tener tanto espacio.
+			DislikeCrowded: No me gusta tener tan poco espacio.
+			HateCrowded: Detesto tener poco espacio.
+			LoveNPC: Adoro a {NPCName}.
+			LikeNPC: Me cae bien {NPCName}.
+			LikeNPC_Princess: Me gusta {NPCName}.
+			Princess_LovesNPC: Me gusta {NPCName}.
+		}
+
+		Census.SpawnCondition: Ayuda a Nano Asustada a bajar de las alturas
+	}
+
+	NanoAsustada: {
+		TownNPCMood: {
+			NoHome: Detesto no tener un hogar.
+			Content: Estoy feliz.
+			FarFromHome: Estoy demasiado lejos de casa.
+			LoveSpace: Me encanta tener tanto espacio.
+			DislikeCrowded: No me gusta tener tan poco espacio.
+			HateCrowded: Detesto tener poco espacio.
+			LikeNPC_Princess: Me gusta {NPCName}.
+			Princess_LovesNPC: Me gusta {NPCName}.
+		}
+
+		DisplayName: Nano Eiai Asustada
+		Census.SpawnCondition: Cuando haya 2 novias, Nano aparecera asustada en las islas del cielo
+	}
 }
 
 NPCDialogue: {
@@ -234,6 +277,26 @@ NPCDialogue: {
 		DejarDeSeguir: *Teléfono: Estaré aquí esperando tu regreso.*
 		BotonTienda: Tienda
 		BotonRegalo: Dar regalo
+		BotonSeguir: Seguir
+		BotonDejarSeguir: Dejar de seguir
+	}
+
+	NanoAsustada: {
+		PreCondicion0: qwe
+		PreCondicion1: qaewqeqwe
+		PreCondicion2: 123123123
+		SinPocion: la poti we
+		Ayuda: gracias we
+		BotonAyudar: Ayudar
+	}
+
+	NanoEiai: {
+		Chat0: xd
+		Chat1: 321
+		Chat2: 123
+		Seguir: ok we
+		DejarDeSeguir: Ya no we
+		BotonTienda: Tienda
 		BotonSeguir: Seguir
 		BotonDejarSeguir: Dejar de seguir
 	}

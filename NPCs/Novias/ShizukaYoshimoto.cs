@@ -20,7 +20,7 @@ using Novias.Items.Potions;
 using Novias.Effects;
 using Novias.Items.Paintings;
 
-namespace Novias.NPCs
+namespace Novias.NPCs.Novias
 {
     [AutoloadHead]
     public class ShizukaYoshimoto : ComportamientoNovia
@@ -111,7 +111,7 @@ namespace Novias.NPCs
                     jugador.ConsumeItem(ModContent.ItemType<TelefonoDeShizuka>());
                     modPlayer.LeDioRegalo = true;
                     Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.RegaloRecibido");
-                    DarRegalo(jugador);
+                    Animacion(jugador);
                 }
                 else
                 {

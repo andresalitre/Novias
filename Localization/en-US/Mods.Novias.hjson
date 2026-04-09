@@ -188,6 +188,41 @@ NPCs: {
 
 		Census.SpawnCondition: 2 girlfriends must be present and the player must have 5 books in their inventory
 	}
+
+	NanoEiai: {
+		DisplayName: Nano Eiai
+
+		TownNPCMood: {
+			Content: I am content.
+			NoHome: I hate not having a home.
+			FarFromHome: I am too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I dislike how crowded I am.
+			HateCrowded: I hate how crowded I am.
+			LoveNPC: I love {NPCName}.
+			LikeNPC: I like {NPCName}.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+
+		Census.SpawnCondition: Conditions unknown
+	}
+
+	NanoAsustada: {
+		TownNPCMood: {
+			NoHome: I hate not having a home.
+			Content: I am content.
+			FarFromHome: I am too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I dislike how crowded I am.
+			HateCrowded: I hate how crowded I am.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+
+		DisplayName: Nano Asustada
+		Census.SpawnCondition: Conditions unknown
+	}
 }
 
 NPCDialogue: {
@@ -238,6 +273,26 @@ NPCDialogue: {
 		DejarDeSeguir: *Phone: I will be here waiting for your return.*
 		BotonTienda: Shop
 		BotonRegalo: Give gift
+		BotonSeguir: Follow
+		BotonDejarSeguir: Stop following
+	}
+
+	NanoAsustada: {
+		PreCondicion0: I-I'm not scared! I just... don't want to move from here...
+		PreCondicion1: P-please don't come any closer! What if we both fall?!
+		PreCondicion2: This place is so high up... my legs won't stop shaking...
+		SinPocion: Maybe if I had something to help me get down...
+		Ayuda: I-I can't believe it... we're finally on the ground...
+		BotonAyudar: Help
+	}
+
+	NanoEiai: {
+		Chat0: I still get a little dizzy when I look up at the sky...
+		Chat1: Thank you for helping me down. I won't forget it.
+		Chat2: Being on the ground feels so much safer with you around.
+		Seguir: I'll stay close to you. Don't worry about me!
+		DejarDeSeguir: O-oh... okay. I'll be here if you need me.
+		BotonTienda: Shop
 		BotonSeguir: Follow
 		BotonDejarSeguir: Stop following
 	}

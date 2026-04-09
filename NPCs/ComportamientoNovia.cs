@@ -24,7 +24,7 @@ namespace Novias.NPCs
         protected abstract void LanzarAtaque(Vector2 direccion);
         protected abstract int RegeneracionVida { get; }
 
-        protected void DarRegalo(Player jugador)
+        protected void Animacion(Player jugador)
         {
             Projectile.NewProjectile(
                 jugador.GetSource_FromThis(),
