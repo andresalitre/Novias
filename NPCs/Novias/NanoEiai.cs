@@ -11,6 +11,8 @@ using Novias.Buffs;
 using Novias.Items.Potions;
 using Novias.Effects;
 using Novias.Projectiles;
+using Novias.Items.GirlfriendsItems.Nano;
+using Novias.Items.Weapons.Ranged;
 
 namespace Novias.NPCs.Novias
 {
@@ -30,9 +32,9 @@ namespace Novias.NPCs.Novias
             Projectile.NewProjectile(
                 NPC.GetSource_FromThis(),
                 NPC.Center,
-                direccion * 20f,
-                ProjectileID.ThrowingKnife,
-                25, 7f, Main.myPlayer, NPC.whoAmI
+                direccion * 18f,
+                ModContent.ProjectileType<CutterProyectil>(),
+                15, 18f, Main.myPlayer, NPC.whoAmI
             );
         }
 
@@ -60,17 +62,18 @@ namespace Novias.NPCs.Novias
             NPC.defense = 65;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
-            NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.DeathSound = SoundID.NPCDeath20;
             NPC.townNPC = true;
             NPC.friendly = true;
         }
 
         public override bool CheckConditions(int left, int top, int right, int bottom)
-            => Main.LocalPlayer.GetModPlayer<NanoPlayer>().Ayudada;
+            => NoviasWorld.NanoAyudada;
 
         public override void AddShops()
         {
             var tienda = new NPCShop(Type, "Shop");
+            tienda.Add(ModContent.ItemType<Cutter>());
             tienda.Add(ModContent.ItemType<PocionDeEficiencia>());
             tienda.Register();
         }
@@ -85,7 +88,7 @@ namespace Novias.NPCs.Novias
                 Animacion(Main.LocalPlayer);
             }
 
-            if (modPlayer.EsperandoDialogo)
+            if (NoviasWorld.NanoEsperandoDialogo)
             {
                 NPC.velocity.X = 0f;
 
@@ -156,9 +159,9 @@ namespace Novias.NPCs.Novias
         {
             NanoPlayer modPlayer = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
 
-            if (modPlayer.EsperandoDialogo)
+            if (NoviasWorld.NanoEsperandoDialogo)
             {
-                modPlayer.EsperandoDialogo = false;
+                NoviasWorld.NanoEsperandoDialogo = false;
                 return Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.Gracias");
             }
 
@@ -174,6 +177,6 @@ namespace Novias.NPCs.Novias
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
-            => Main.LocalPlayer.GetModPlayer<NanoPlayer>().Ayudada;
+            => NoviasWorld.NanoAyudada;
     }
 }

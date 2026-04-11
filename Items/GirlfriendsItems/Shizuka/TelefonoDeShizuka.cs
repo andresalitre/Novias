@@ -26,7 +26,7 @@ namespace Novias.Items.GirlfriendsItems.Shizuka
             recipe1.AddIngredient(ItemID.PlatinumBar, 5);
             recipe1.AddIngredient(ItemID.Glass, 5);
             recipe1.AddIngredient(ItemID.Book);
-            recipe1.AddIngredient(ItemID.Sapphire, 3);
+            recipe1.AddIngredient(ItemID.MeteoriteBar, 3);
             recipe1.AddTile(TileID.Anvils);
             recipe1.Register();
 
@@ -34,7 +34,7 @@ namespace Novias.Items.GirlfriendsItems.Shizuka
             recipe2.AddIngredient(ItemID.GoldBar, 5);
             recipe2.AddIngredient(ItemID.Glass, 5);
             recipe2.AddIngredient(ItemID.Book);
-            recipe2.AddIngredient(ItemID.Sapphire, 3);
+            recipe2.AddIngredient(ItemID.MeteoriteBar, 3);
             recipe2.AddTile(TileID.Anvils);
             recipe2.Register();
         }

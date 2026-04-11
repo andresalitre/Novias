@@ -1,28 +1,29 @@
-The girlfriends who really Really love you in terraria!
+The Girlfriends Who Really Really Love You!
 
 Adds the girlfriends who really REALLY love you as interactive NPCs, you can buy new items like weapons or potions with new effects. They will also give you new buffs when they accompany you!
 
-Hakari Hanazono arrives after defeating the Eye of Cthulhu, she is really thirsty, but she won't drink more than 175ml.
+Hakari Hanazono arrives after defeating the Eye of Cthulhu, she is really thirsty, help her drink a soda.
 
-Karane Inda arrives after defeating the corruption boss of the world, she is looking for something small and soft to hug, apparently she likes kitties.
+Karane Inda arrives after defeating the evil biome boss, she is looking for something small and soft to hug, apparently she likes kitties.
 
-NO MULTIPLAYER TEST!
+Shizuka Yoshimoto arrives after 2 girlfriends have moved in and the player has 5 books, apparently she lost her phone and is unable to talk to us.
 
-Version 2.0.0
-1. Adds Hakari Hanazono
-2. Adds Milk Cannon
-3. Adds Hakari Milk
-4. Adds Seduction Potion
-5. New buff for new potion
-6. Adds Peach Soda and Half Peach Soda
+Nano Eiai arrives after 2 girlfriends have moved in, she will be found scared on a sky island, go help her!
+
+Version 2.2.0
+
+Adds:
+-Nano Eiai
+
+Changes:
+-Minor changes oriented towards multiplayer compatibility
 
 Future plans:
-- Improve gift effect
-- Add Shizuka Yoshimoto
-- Add new effects
-- Add new NPC arrival system
+-Add Kusuri Yakuzen
+-Sprite Fixes
 
 Credits:
-- Nakamura Rikito - Original manga author
-- Nozawa Yukiko - Original manga illustrator
-- Thank you for creating the 100 goddesses
+
+Nakamura Rikito - Original manga author
+Nozawa Yukiko - Original manga illustrator
+Thank you for creating the 100 goddesses

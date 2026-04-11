@@ -5,7 +5,10 @@ using Terraria.GameContent.Bestiary;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using Novias.Players;
+using Novias.Systems;
 using Novias.NPCs.Novias;
+using Novias.Items.GirlfriendsItems.Nano;
+
 
 namespace Novias.NPCs
 {
@@ -33,7 +36,7 @@ namespace Novias.NPCs
             NPC.defense = 65;
             NPC.knockBackResist = 0f;
             NPC.HitSound = SoundID.NPCHit18;
-            NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.DeathSound = SoundID.NPCDeath6;
             NPC.townNPC = true;
             NPC.friendly = true;
         }
@@ -52,6 +55,7 @@ namespace Novias.NPCs
             if (caida > 16 * 10)
             {
                 NPC.life = 0;
+                Terraria.Audio.SoundEngine.PlaySound(SoundID.NPCDeath6, NPC.position);
                 NPC.checkDead();
                 NPC.active = false;
             }
@@ -96,12 +100,12 @@ namespace Novias.NPCs
 
             if (!firstButton) return;
 
-            if (jugador.HasItem(ItemID.RecallPotion))
+            if (jugador.HasItem(ModContent.ItemType<SuperPocionDeRecuperacion>()))
             {
-                jugador.ConsumeItem(ItemID.RecallPotion);
-                modPlayer.Ayudada = true;
+                jugador.ConsumeItem(ModContent.ItemType<SuperPocionDeRecuperacion>());
+                NoviasWorld.NanoAyudada = true;
+                NoviasWorld.NanoEsperandoDialogo = true;
                 modPlayer.HacerAnimacion = true;
-                modPlayer.EsperandoDialogo = true;
 
                 Vector2 spawnPos;
                 if (jugador.SpawnX > 0 && jugador.SpawnY > 0)
@@ -122,7 +126,7 @@ namespace Novias.NPCs
             }
             else
             {
-                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.NanoAsustada.SinPocion");
+                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.NanoAsustada.SinPocion") + $"\n[i:{ModContent.ItemType<SuperPocionDeRecuperacion>()}]";
             }
         }
 

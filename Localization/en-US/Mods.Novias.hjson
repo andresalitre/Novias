@@ -79,21 +79,34 @@ Items: {
 	}
 
 	Familia: {
+		DisplayName: Familia
 		Tooltip:
 			'''
 			"La familia es lo primero"
 			(Yes, it's Spanish)
 			'''
-		DisplayName: Familia
 	}
 
 	PocionDeEficiencia: {
 		DisplayName: Efficiency Potion
 		Tooltip:
 			'''
-			     		An efficient love increases your efficiency, for lack of a better word
-			   			Increases your movement, attack and mining speed
-			     		
+			An efficient love increases your efficiency, for lack of a better word
+			Increases your movement, attack and mining speed
+			'''
+	}
+
+	Cutter: {
+		DisplayName: Cutter
+		Tooltip: Sharp, fast, precise and efficient. Also cold, like its owner.
+	}
+
+	SuperPocionDeRecuperacion: {
+		DisplayName: Super Recovery Potion
+		Tooltip:
+			'''
+			The most efficient way to get back home, though you can't use it alone.
+			"Nano will be at peace."
 			'''
 	}
 }
@@ -127,12 +140,12 @@ Buffs: {
 	}
 
 	Eficiencia: {
+		DisplayName: Efficiency
 		Description:
 			'''
 			It wouldn't have been efficient to think of a better description for this buff
-			    			Increases the speed of everything
+			Increases the speed of everything
 			'''
-		DisplayName: Efficiency
 	}
 }
 
@@ -214,10 +227,12 @@ NPCs: {
 			Princess_LovesNPC: I like {NPCName}.
 		}
 
-		Census.SpawnCondition: Conditions unknown
+		Census.SpawnCondition: Help Scared Nano down from the sky islands
 	}
 
 	NanoAsustada: {
+		DisplayName: Scared Nano Eiai
+
 		TownNPCMood: {
 			NoHome: I hate not having a home.
 			Content: I am content.
@@ -229,8 +244,7 @@ NPCs: {
 			Princess_LovesNPC: I like {NPCName}.
 		}
 
-		DisplayName: Nano Asustada
-		Census.SpawnCondition: Conditions unknown
+		Census.SpawnCondition: Once 2 girlfriends move in, Nano will appear scared on a sky island
 	}
 }
 
@@ -316,4 +330,5 @@ Projectiles: {
 	GatitoMensoProyectil.DisplayName: Silly Kitty Projectile
 	LecheHakari.DisplayName: Hakari Milk
 	NotaDeCanto.DisplayName: Singing Note
+	CutterProyectil.DisplayName: Cutter Projectile
 }

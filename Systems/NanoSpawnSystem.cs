@@ -2,7 +2,8 @@ using Terraria;
 using Terraria.ModLoader;
 using Novias.NPCs;
 using Novias.NPCs.Novias;
-using Novias.Players;
+using Novias.Systems;
+
 namespace Novias.Systems
 {
     public class NanoSpawnSystem : ModSystem
@@ -11,8 +12,7 @@ namespace Novias.Systems
 
         public override void PostUpdateNPCs()
         {
-            NanoPlayer modPlayer = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
-            if (modPlayer.Ayudada)
+            if (NoviasWorld.NanoAyudada)
                 return;
 
             timer++;

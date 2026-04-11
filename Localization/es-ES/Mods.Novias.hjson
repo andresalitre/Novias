@@ -79,8 +79,8 @@ Items: {
 	}
 
 	Familia: {
-		Tooltip: '''"La familia es primero".'''
 		DisplayName: Familia
+		Tooltip: '''"La familia es primero".'''
 	}
 
 	PocionDeEficiencia: {
@@ -89,6 +89,20 @@ Items: {
 			'''
 			Un amor eficiente aumenta tu eficacia, valga la madre
 			Aumenta tu velocidad de movimiento, ataque y minería
+			'''
+	}
+
+	Cutter: {
+		DisplayName: Cutter
+		Tooltip: Afilado, rápido, preciso y eficiente. También frío, como su dueña.
+	}
+
+	SuperPocionDeRecuperacion: {
+		DisplayName: Super Poción De Recuperación
+		Tooltip:
+			'''
+			La manera más eficiente de poder regresar a casa, claro, no la puedes usar solo.
+			"Nano podrá estar tranquila."
 			'''
 	}
 }
@@ -122,12 +136,12 @@ Buffs: {
 	}
 
 	Eficiencia: {
+		DisplayName: Eficiencia
 		Description:
 			'''
 			No hubiera sido eficiente pensar en una mejor descripción para este buff
 			Aumenta la velocidad de todo
 			'''
-		DisplayName: Eficiencia
 	}
 }
 
@@ -213,6 +227,8 @@ NPCs: {
 	}
 
 	NanoAsustada: {
+		DisplayName: Nano Eiai Asustada
+
 		TownNPCMood: {
 			NoHome: Detesto no tener un hogar.
 			Content: Estoy feliz.
@@ -224,7 +240,6 @@ NPCs: {
 			Princess_LovesNPC: Me gusta {NPCName}.
 		}
 
-		DisplayName: Nano Eiai Asustada
 		Census.SpawnCondition: Cuando haya 2 novias, Nano aparecera asustada en las islas del cielo
 	}
 }
@@ -311,4 +326,5 @@ Projectiles: {
 	GatitoMensoProyectil.DisplayName: Gatito Menso Proyectil
 	LecheHakari.DisplayName: Leche Hakari
 	NotaDeCanto.DisplayName: Nota De Canto
+	CutterProyectil.DisplayName: Cutter Proyectil
 }

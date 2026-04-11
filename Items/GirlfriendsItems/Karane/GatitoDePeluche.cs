@@ -23,7 +23,7 @@ namespace Novias.Items.GirlfriendsItems.Karane
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.Silk, 15);
+            recipe.AddIngredient(ItemID.Silk, 20);
             recipe.AddTile(TileID.Loom);
             recipe.Register();
         }

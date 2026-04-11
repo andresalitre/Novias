@@ -9,6 +9,8 @@ namespace Novias.Systems
         public static int HakariSiguiendo = -1;
         public static int ShizukaSiguiendo = -1;
         public static int NanoSiguiendo = -1;
+        public static bool NanoAyudada = false;
+        public static bool NanoEsperandoDialogo = false;
 
         public override void SaveWorldData(TagCompound tag)
         {
@@ -16,6 +18,8 @@ namespace Novias.Systems
             tag["HakariSiguiendo"] = HakariSiguiendo;
             tag["ShizukaSiguiendo"] = ShizukaSiguiendo;
             tag["NanoSiguiendo"] = NanoSiguiendo;
+            tag["NanoAyudada"] = NanoAyudada;
+            tag["NanoEsperandoDialogo"] = NanoEsperandoDialogo;
         }
 
         public override void LoadWorldData(TagCompound tag)
@@ -24,14 +28,8 @@ namespace Novias.Systems
             HakariSiguiendo = tag.GetInt("HakariSiguiendo");
             ShizukaSiguiendo = tag.GetInt("ShizukaSiguiendo");
             NanoSiguiendo = tag.GetInt("NanoSiguiendo");
-        }
-
-        public override void OnWorldLoad()
-        {
-            KaraneSiguiendo = -1;
-            HakariSiguiendo = -1;
-            ShizukaSiguiendo = -1;
-            NanoSiguiendo = -1;
+            NanoAyudada = tag.GetBool("NanoAyudada");
+            NanoEsperandoDialogo = tag.GetBool("NanoEsperandoDialogo");
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Novias.Items.Potions
             Item.consumable = true;
             Item.maxStack = 9999;
             Item.value = Item.buyPrice(gold: 8);
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ItemRarityID.LightPurple;
             Item.buffType = ModContent.BuffType<Eficiencia>();
             Item.buffTime = 60 * 500;
         }
