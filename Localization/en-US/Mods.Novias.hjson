@@ -88,8 +88,13 @@ Items: {
 	}
 
 	PocionDeEficiencia: {
-		DisplayName: Pocion De Eficiencia
-		Tooltip: ""
+		DisplayName: Efficiency Potion
+		Tooltip:
+			'''
+			     		An efficient love increases your efficiency, for lack of a better word
+			   			Increases your movement, attack and mining speed
+			     		
+			'''
 	}
 }
 
@@ -122,8 +127,12 @@ Buffs: {
 	}
 
 	Eficiencia: {
-		Description: Mods.Novias.Buffs.Eficiencia.Description
-		DisplayName: Eficiencia
+		Description:
+			'''
+			It wouldn't have been efficient to think of a better description for this buff
+			    			Increases the speed of everything
+			'''
+		DisplayName: Efficiency
 	}
 }
 
@@ -227,16 +236,17 @@ NPCs: {
 
 NPCDialogue: {
 	HakariHanazono: {
-		PreRegalo0: Do we know each other from somewhere?
-		PreRegalo1: Oh, hi? Do you need something?
-		PreRegalo2: This world is so strange. I've never seen anything like it before.
-		Chat0: I was thinking about something... a little dirty about the two of us. Did the developer really let me say that?
-		Chat1: So this is where you live… now I can be close to you all the time.
+		PreRegalo0: Do we know each other from somewhere? Your face seems familiar...
+		PreRegalo1: Oh, hi? Wasn't expecting a visitor... though I'm not complaining.
+		PreRegalo2: This world is so strange. I had never seen anything like this before.
+		Chat0: I was thinking something... a little dirty about the two of us. Did the developer let me say that?
+		Chat1: I feel like fate brought us together... or maybe it was a love god with too much free time.
 		Chat2: I think I twisted my ankle… could you help me walk? I promise not to let go of your arm.
 		RegaloRecibido: Did you already drink from here? Then this would be an indirect kiss…
-		SinRegalo: I'm so thirsty... I could really go for a peach soda.
+		SinRegalo: I'm so thirsty... I really want a peach soda, but I couldn't finish a whole can by myself.
 		Seguir: Follow you? Of course! Wherever you go, I'll be right there with you.
-		DejarDeSeguir: E-eh…? Is it not needed anymore? Who wrote this sad dialogue?
+		DejarDeSeguir: E-eh…? Is it not needed anymore? Who wrote such a sad line?
+		Ocupada: Hehehe, sorry, but I'm already with someone. Maybe next time!
 		BotonTienda: Shop
 		BotonRegalo: Give gift
 		BotonSeguir: Follow
@@ -245,15 +255,16 @@ NPCDialogue: {
 
 	KaraneInda: {
 		PreRegalo0: W-what do you want? I don't have time for small talk.
-		PreRegalo1: Don't look at me like that.
+		PreRegalo1: Don't look at me like that. Do I seem interesting to you or something? Because I'm not!
 		PreRegalo2: This world is very different. Does this belong to the manga's canon?
-		Chat0: W-what are you staring at?! Stop reading my dialogue!
-		Chat1: D-don't get the wrong idea, I didn't come to your world to be with you or anything like that!
-		Chat2: D-don't get so close! It's not like it bothers me… it's just hot, okay?!
-		RegaloRecibido: A-a kitty...? It's not like I'm happy or anything...
-		SinRegalo: There's something I'd like to have... something soft and small. Are there no kitties in this world?
+		Chat0: W-what are you staring at?! Stop reading my dialogue! We're not in a visual novel!
+		Chat1: D-don't get the wrong idea! I didn't come to your world just to be with you. This isn't some generic isekai... Wait, is this actually part of the canon?
+		Chat2: D-don't get so close! The tsundere manual says I should back away... but it doesn't say I want to.
+		RegaloRecibido: A-a kitty...? I-it's not like I'm happy or anything...
+		SinRegalo: There's something I'd like to have... Something soft and small. Are there no kitties in this world?
 		Seguir: I-I have no choice. Don't think I'm doing this because I want to be with you.
 		DejarDeSeguir: Fine, whatever... Why does this feel so bad if it's just a game?
+		Ocupada: Don't get the wrong idea! I'm already with someone... so just go away!
 		BotonTienda: Shop
 		BotonRegalo: Give gift
 		BotonSeguir: Follow
@@ -266,11 +277,12 @@ NPCDialogue: {
 		PreRegalo2: *Looks at you in silence and lowers her gaze*
 		Chat0: *Phone: My lord... This unknown world, could it be our dreamed paradise?*
 		Chat1: *Phone: May I stay close to you for a moment, my lord?*
-		Chat2: *Phone: According to the manga, something romantic should happen here.*
+		Chat2: *Phone: According to chapter 5 of the manga, something romantic should happen here.*
 		RegaloRecibido: *Phone: Thank you, now I can talk to you. I love you, my lord.*
 		SinRegalo: *Writes on paper: "If you had some technology... I could communicate with you."*
 		Seguir: *Phone: I yearn to be of help in your adventure.*
 		DejarDeSeguir: *Phone: I will be here waiting for your return.*
+		Ocupada: *Phone: Forgive me... I am already accompanying someone right now.*
 		BotonTienda: Shop
 		BotonRegalo: Give gift
 		BotonSeguir: Follow
@@ -278,20 +290,21 @@ NPCDialogue: {
 	}
 
 	NanoAsustada: {
-		PreCondicion0: I-I'm not scared! I just... don't want to move from here...
-		PreCondicion1: P-please don't come any closer! What if we both fall?!
-		PreCondicion2: This place is so high up... my legs won't stop shaking...
-		SinPocion: Maybe if I had something to help me get down...
-		Ayuda: I-I can't believe it... we're finally on the ground...
+		PreCondicion0: 3.14159265358979... 3.14159265358979...
+		PreCondicion1: Probability of survival if I jump: 0%. I will stay here.
+		PreCondicion2: It is normal to fear an elevation that puts one's life in danger...
+		SinPocion: If you had some sort of instant recall mechanism, this would be resolved efficiently.
 		BotonAyudar: Help
 	}
 
 	NanoEiai: {
-		Chat0: I still get a little dizzy when I look up at the sky...
-		Chat1: Thank you for helping me down. I won't forget it.
-		Chat2: Being on the ground feels so much safer with you around.
-		Seguir: I'll stay close to you. Don't worry about me!
-		DejarDeSeguir: O-oh... okay. I'll be here if you need me.
+		Chat0: This world lacks logic. You are the exception.
+		Chat1: I have processed 14,000,605 possible scenarios. Being here with you is the optimal one.
+		Chat2: 3.14159265... I whisper it when I'm unsettled. Lately I say it a lot when you're around.
+		Seguir: It is logical. Following you is the most efficient way to ensure your progress.
+		DejarDeSeguir: Calculated. Though my data indicates this reduces my efficiency by 47.3%.
+		Ocupada: It would not be efficient to follow two players at the same time.
+		Gracias: Thank you for your assistance. I have detected emotions directed at you. Logical conclusion: starting a relationship would not be efficient. Actual conclusion: impossible.
 		BotonTienda: Shop
 		BotonSeguir: Follow
 		BotonDejarSeguir: Stop following

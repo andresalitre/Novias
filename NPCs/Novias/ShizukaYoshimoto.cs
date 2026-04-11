@@ -1,23 +1,18 @@
-using ReLogic.Content;
 using Terraria;
-using Terraria.Audio;
-using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
 using Novias.Players;
+using Novias.Systems;
 using Microsoft.Xna.Framework;
 using Novias.Items.GirlfriendsItems.Shizuka;
-using Novias.Projectiles;
 using Novias.Items.Weapons.Mage;
 using Novias.Buffs;
 using Novias.Items.Potions;
 using Novias.Effects;
+using Novias.Projectiles;
 using Novias.Items.Paintings;
 
 namespace Novias.NPCs.Novias
@@ -25,6 +20,8 @@ namespace Novias.NPCs.Novias
     [AutoloadHead]
     public class ShizukaYoshimoto : ComportamientoNovia
     {
+        private bool dialogoBoton = false;
+
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(178, 255, 255);
         protected override int BuffSeguimiento => ModContent.BuffType<ArmoniaMagica>();
@@ -67,7 +64,7 @@ namespace Novias.NPCs.Novias
             NPC.defense = 40;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
-            NPC.DeathSound = SoundID.NPCDeath20;
+            NPC.DeathSound = SoundID.NPCDeath1;
             NPC.townNPC = true;
             NPC.friendly = true;
         }
@@ -110,6 +107,7 @@ namespace Novias.NPCs.Novias
                 {
                     jugador.ConsumeItem(ModContent.ItemType<TelefonoDeShizuka>());
                     modPlayer.LeDioRegalo = true;
+                    dialogoBoton = true;
                     Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.RegaloRecibido");
                     Animacion(jugador);
                 }
@@ -120,16 +118,24 @@ namespace Novias.NPCs.Novias
                 return;
             }
 
+            dialogoBoton = true;
             if (modPlayer.EstaSiguiendo)
             {
                 modPlayer.EstaSiguiendo = false;
                 NPC.aiStyle = NPCAIStyleID.Passive;
+                NoviasWorld.ShizukaSiguiendo = -1;
                 Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.DejarDeSeguir");
             }
             else
             {
+                if (NoviasWorld.ShizukaSiguiendo != -1 && NoviasWorld.ShizukaSiguiendo != jugador.whoAmI)
+                {
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.Ocupada");
+                    return;
+                }
                 modPlayer.EstaSiguiendo = true;
                 NPC.aiStyle = 0;
+                NoviasWorld.ShizukaSiguiendo = jugador.whoAmI;
                 Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.Seguir");
             }
         }
@@ -137,6 +143,13 @@ namespace Novias.NPCs.Novias
         public override string GetChat()
         {
             ShizukaPlayer modPlayer = Main.LocalPlayer.GetModPlayer<ShizukaPlayer>();
+
+            if (dialogoBoton)
+            {
+                dialogoBoton = false;
+                return Main.npcChatText;
+            }
+
             string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
             return Language.GetTextValue($"Mods.Novias.NPCDialogue.ShizukaYoshimoto.{prefijo}{Main.rand.Next(3)}");
         }
@@ -149,12 +162,8 @@ namespace Novias.NPCs.Novias
             });
         }
 
-        public bool llego = false;
         public override bool CanTownNPCSpawn(int numTownNPCs)
         {
-            if (llego)
-                return true;
-
             int noviasPresentes = 0;
             for (int i = 0; i < Main.maxNPCs; i++)
             {
@@ -163,20 +172,13 @@ namespace Novias.NPCs.Novias
                     noviasPresentes++;
             }
 
-            if (noviasPresentes < 2)
-                return false;
+            if (noviasPresentes < 2) return false;
 
-            int libros = 0;
             for (int i = 0; i < Main.LocalPlayer.inventory.Length; i++)
             {
-                if (Main.LocalPlayer.inventory[i].type == ItemID.Book)
-                    libros += Main.LocalPlayer.inventory[i].stack;
-            }
-
-            if (libros >= 5)
-            {
-                llego = true;
-                return true;
+                if (Main.LocalPlayer.inventory[i].type == ItemID.Book &&
+                    Main.LocalPlayer.inventory[i].stack >= 5)
+                    return true;
             }
 
             return false;

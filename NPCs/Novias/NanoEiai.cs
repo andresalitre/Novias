@@ -1,22 +1,16 @@
-using ReLogic.Content;
 using Terraria;
-using Terraria.Audio;
-using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
 using Novias.Players;
+using Novias.Systems;
 using Microsoft.Xna.Framework;
-using Novias.Items.GirlfriendsItems;
-using Novias.Projectiles;
 using Novias.Buffs;
 using Novias.Items.Potions;
 using Novias.Effects;
+using Novias.Projectiles;
 
 namespace Novias.NPCs.Novias
 {
@@ -66,16 +60,13 @@ namespace Novias.NPCs.Novias
             NPC.defense = 65;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
-            NPC.DeathSound = SoundID.NPCDeath20;
+            NPC.DeathSound = SoundID.NPCDeath1;
             NPC.townNPC = true;
             NPC.friendly = true;
         }
 
         public override bool CheckConditions(int left, int top, int right, int bottom)
-        {
-            NanoPlayer modPlayer = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
-            return modPlayer.Ayudada;
-        }
+            => Main.LocalPlayer.GetModPlayer<NanoPlayer>().Ayudada;
 
         public override void AddShops()
         {
@@ -97,6 +88,23 @@ namespace Novias.NPCs.Novias
             if (modPlayer.EsperandoDialogo)
             {
                 NPC.velocity.X = 0f;
+
+                Player jugadorCercano = null;
+                float distanciaMinima = 300f;
+                foreach (Player player in Main.ActivePlayers)
+                {
+                    float distancia = NPC.Distance(player.Center);
+                    if (distancia < distanciaMinima)
+                    {
+                        distanciaMinima = distancia;
+                        jugadorCercano = player;
+                    }
+                }
+                if (jugadorCercano != null)
+                {
+                    NPC.direction = jugadorCercano.Center.X > NPC.Center.X ? 1 : -1;
+                    NPC.spriteDirection = NPC.direction;
+                }
                 return;
             }
 
@@ -106,14 +114,6 @@ namespace Novias.NPCs.Novias
         public override void SetChatButtons(ref string button, ref string button2)
         {
             NanoPlayer modPlayer = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
-
-            if (modPlayer.EsperandoDialogo)
-            {
-                button = Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.BotonHablar");
-                button2 = "";
-                return;
-            }
-
             button = Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.BotonTienda");
             button2 = modPlayer.EstaSiguiendo
                 ? Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.BotonDejarSeguir")
@@ -125,14 +125,6 @@ namespace Novias.NPCs.Novias
             Player jugador = Main.LocalPlayer;
             NanoPlayer modPlayer = jugador.GetModPlayer<NanoPlayer>();
 
-            if (modPlayer.EsperandoDialogo)
-            {
-                if (!firstButton) return;
-                modPlayer.EsperandoDialogo = false;
-                Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.Gracias");
-                return;
-            }
-
             if (firstButton)
             {
                 shop = "Shop";
@@ -143,12 +135,19 @@ namespace Novias.NPCs.Novias
             {
                 modPlayer.EstaSiguiendo = false;
                 NPC.aiStyle = NPCAIStyleID.Passive;
+                NoviasWorld.NanoSiguiendo = -1;
                 Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.DejarDeSeguir");
             }
             else
             {
+                if (NoviasWorld.NanoSiguiendo != -1 && NoviasWorld.NanoSiguiendo != jugador.whoAmI)
+                {
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.Ocupada");
+                    return;
+                }
                 modPlayer.EstaSiguiendo = true;
                 NPC.aiStyle = 0;
+                NoviasWorld.NanoSiguiendo = jugador.whoAmI;
                 Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.Seguir");
             }
         }
@@ -156,8 +155,13 @@ namespace Novias.NPCs.Novias
         public override string GetChat()
         {
             NanoPlayer modPlayer = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
+
             if (modPlayer.EsperandoDialogo)
-                return Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.EsperandoDialogo");
+            {
+                modPlayer.EsperandoDialogo = false;
+                return Language.GetTextValue("Mods.Novias.NPCDialogue.NanoEiai.Gracias");
+            }
+
             return Language.GetTextValue($"Mods.Novias.NPCDialogue.NanoEiai.Chat{Main.rand.Next(3)}");
         }
 
@@ -170,8 +174,6 @@ namespace Novias.NPCs.Novias
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
-        {
-            return Main.LocalPlayer.GetModPlayer<NanoPlayer>().Ayudada;
-        }
+            => Main.LocalPlayer.GetModPlayer<NanoPlayer>().Ayudada;
     }
 }

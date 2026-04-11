@@ -1,30 +1,27 @@
-using ReLogic.Content;
 using Terraria;
-using Terraria.Audio;
-using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
 using Novias.Players;
+using Novias.Systems;
 using Microsoft.Xna.Framework;
 using Novias.Items.GirlfriendsItems.Hakari;
 using Novias.Items.Weapons.Ranged;
-using Novias.Projectiles;
 using Novias.Buffs;
 using Novias.Items.Potions;
 using Novias.Effects;
 using Novias.Items.Ammo;
+using Novias.Projectiles;
 
 namespace Novias.NPCs.Novias
 {
     [AutoloadHead]
     public class HakariHanazono : ComportamientoNovia
     {
+        private bool dialogoBoton = false;
+
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<HakariPlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(255, 105, 180);
         protected override int BuffSeguimiento => ModContent.BuffType<ImpulsoSeductor>();
@@ -67,7 +64,7 @@ namespace Novias.NPCs.Novias
             NPC.defense = 70;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
-            NPC.DeathSound = SoundID.NPCDeath20;
+            NPC.DeathSound = SoundID.NPCDeath1;
             NPC.townNPC = true;
             NPC.friendly = true;
         }
@@ -112,6 +109,7 @@ namespace Novias.NPCs.Novias
                 {
                     jugador.ConsumeItem(ModContent.ItemType<MedioRefrescoDeMelocoton>());
                     modPlayer.LeDioRegalo = true;
+                    dialogoBoton = true;
                     Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.RegaloRecibido");
                     Animacion(jugador);
                 }
@@ -122,16 +120,24 @@ namespace Novias.NPCs.Novias
                 return;
             }
 
+            dialogoBoton = true;
             if (modPlayer.EstaSiguiendo)
             {
                 modPlayer.EstaSiguiendo = false;
                 NPC.aiStyle = NPCAIStyleID.Passive;
+                NoviasWorld.HakariSiguiendo = -1;
                 Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.DejarDeSeguir");
             }
             else
             {
+                if (NoviasWorld.HakariSiguiendo != -1 && NoviasWorld.HakariSiguiendo != jugador.whoAmI)
+                {
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.Ocupada");
+                    return;
+                }
                 modPlayer.EstaSiguiendo = true;
                 NPC.aiStyle = 0;
+                NoviasWorld.HakariSiguiendo = jugador.whoAmI;
                 Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.Seguir");
             }
         }
@@ -139,6 +145,13 @@ namespace Novias.NPCs.Novias
         public override string GetChat()
         {
             HakariPlayer modPlayer = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
+
+            if (dialogoBoton)
+            {
+                dialogoBoton = false;
+                return Main.npcChatText;
+            }
+
             string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
             return Language.GetTextValue($"Mods.Novias.NPCDialogue.HakariHanazono.{prefijo}{Main.rand.Next(3)}");
         }
@@ -151,9 +164,6 @@ namespace Novias.NPCs.Novias
             });
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs)
-        {
-            return NPC.downedBoss1;
-        }
+        public override bool CanTownNPCSpawn(int numTownNPCs) => NPC.downedBoss1;
     }
 }

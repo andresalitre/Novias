@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
@@ -9,20 +10,6 @@ namespace Novias.Players
         public bool EstaSiguiendo = false;
         public bool HacerAnimacion = false;
         public bool EsperandoDialogo = false;
-        public int TimerBloqueo = 0;
-
-        public override void PreUpdate()
-        {
-            if (TimerBloqueo > 0)
-            {
-                TimerBloqueo--;
-                Player.controlLeft = false;
-                Player.controlRight = false;
-                Player.controlJump = false;
-                Player.controlDown = false;
-                Player.controlUseItem = false;
-            }
-        }
 
         public override void SaveData(TagCompound tag)
         {

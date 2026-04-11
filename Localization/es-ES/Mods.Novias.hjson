@@ -231,16 +231,17 @@ NPCs: {
 
 NPCDialogue: {
 	HakariHanazono: {
-		PreRegalo0: ¿Acaso nos conocemos de otra parte?
-		PreRegalo1: ¿Ah, hola? ¿Necesitas algo?
+		PreRegalo0: ¿Acaso nos conocemos de otra parte? Tu cara me resulta familiar...
+		PreRegalo1: ¿Ah, hola? No esperaba visita... aunque no me quejo.
 		PreRegalo2: Este mundo es tan extraño. Nunca había visto algo así antes.
 		Chat0: Estaba pensando algo... un poco sucio sobre nosotros dos. ¿El desarrollador me dejó decir eso?
-		Chat1: Así que aquí es donde vives… ahora podré estar cerca de ti todo el tiempo.
+		Chat1: Siento que el destino nos unió... o quizás fue un dios del amor con demasiado tiempo libre.
 		Chat2: Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo.
 		RegaloRecibido: ¿Ya bebiste de aquí? Entonces esto sería un beso indirecto…
 		SinRegalo: Estoy tan sedienta... Se me antoja un refresco de melocotón, pero no podría con una lata entera.
 		Seguir: ¿Seguirte? ¡Claro que sí! Donde tú vayas, te acompañaré.
 		DejarDeSeguir: ¿E-eh…? ¿Ya no hace falta? ¿Quién escribió este diálogo tan triste?
+		Ocupada: Jejeje, lo siento, pero ya estoy acompañando a alguien. ¡Quizás en otra ocasión!
 		BotonTienda: Tienda
 		BotonRegalo: Dar regalo
 		BotonSeguir: Seguir
@@ -249,15 +250,16 @@ NPCDialogue: {
 
 	KaraneInda: {
 		PreRegalo0: ¿Q-qué quieres? No tengo tiempo para charlas.
-		PreRegalo1: No me mires así.
+		PreRegalo1: No me mires así. ¿Acaso te parezco interesante o algo? ¡Porque no lo soy!
 		PreRegalo2: Este mundo es muy diferente. ¿Esto pertenece al canon del manga?
-		Chat0: ¡¿Q-qué estás mirando?! ¡Deja de leer mis diálogos!
-		Chat1: ¡N-no te confundas, no vine a tu mundo para estar contigo o algo parecido! ¿Ya, enserio, esto es parte del canon?
-		Chat2: ¡N-no te acerques tanto! No es que me moleste… solo hace calor, ¿ok?!
+		Chat0: ¡¿Q-qué estás mirando?! ¡Deja de leer mis diálogos! ¡No estamos en una novela visual!
+		Chat1: ¡N-no te confundas! No vine a tu mundo solo para estar contigo. Esto no es un isekai genérico... ¿Ya, enserio, esto es parte del canon?
+		Chat2: ¡N-no te acerques tanto! El manual del tsundere dice que debo alejarme... pero no dice que quiera hacerlo.
 		RegaloRecibido: ¿U-un gatito...? N-no es como si me alegrara o algo así...
 		SinRegalo: Hay algo que me gustaría tener... Algo suave y pequeño. ¿No hay gatitos en este mundo?
 		Seguir: N-no tengo de otra. N-no creas que lo hago porque quiera estar contigo.
 		DejarDeSeguir: Bien, como quieras... ¿Por qué se siente tan mal esto si solo es un juego?
+		Ocupada: ¡No te hagas ideas equivocadas! Ya estoy con alguien... ¡así que vete!
 		BotonTienda: Tienda
 		BotonRegalo: Dar regalo
 		BotonSeguir: Seguir
@@ -270,11 +272,12 @@ NPCDialogue: {
 		PreRegalo2: *Te mira en silencio y baja la vista*
 		Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
 		Chat1: *Teléfono: ¿Puedo quedarme cerca de ti un momento, mi señor?*
-		Chat2: *Teléfono: Según el manga, aquí debería pasar algo romántico.*
+		Chat2: *Teléfono: Según el capítulo 5 del manga, aquí debería pasar algo romántico.*
 		RegaloRecibido: *Teléfono: Gracias, ahora podré hablar contigo. Te quiero, mi señor.*
 		SinRegalo: *Escribe en un papel: "Si tuvieras algo tecnológico... podría comunicarme contigo."*
 		Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
 		DejarDeSeguir: *Teléfono: Estaré aquí esperando tu regreso.*
+		Ocupada: *Teléfono: Discúlpame... Ya estoy acompañando a alguien ahora mismo.*
 		BotonTienda: Tienda
 		BotonRegalo: Dar regalo
 		BotonSeguir: Seguir
@@ -282,20 +285,21 @@ NPCDialogue: {
 	}
 
 	NanoAsustada: {
-		PreCondicion0: qwe
-		PreCondicion1: qaewqeqwe
-		PreCondicion2: 123123123
-		SinPocion: la poti we
-		Ayuda: gracias we
+		PreCondicion0: 3.14159265358979... 3.14159265358979...
+		PreCondicion1: Probabilidad de supervivencia si salto: 0%. Me quedaré aquí.
+		PreCondicion2: Es normal temerle a una elevación que pone la vida en peligro...
+		SinPocion: Si tuvieras algún mecanismo de regreso instantáneo esto se resolvería eficientemente.
 		BotonAyudar: Ayudar
 	}
 
 	NanoEiai: {
-		Chat0: xd
-		Chat1: 321
-		Chat2: 123
-		Seguir: ok we
-		DejarDeSeguir: Ya no we
+		Chat0: Este mundo carece de lógica. Tú eres la excepción.
+		Chat1: He procesado 14,000,605 escenarios posibles. Estar aquí contigo es el escenario perfecto.
+		Chat2: 3.14159265... Lo susurro cuando me altero. Últimamente lo digo mucho a tu lado.
+		Seguir: Es lógico, seguirte es lo más eficiente para que puedas progresar.
+		DejarDeSeguir: Calculado. Aunque mis datos indican que esto reduce mi eficiencia en un 47.3%.
+		Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
+		Gracias: Gracias por tu ayuda. He detectado emociones hacia ti. Conclusión lógica: No sería eficiente comenzar una relación. Conclusión real: imposible.
 		BotonTienda: Tienda
 		BotonSeguir: Seguir
 		BotonDejarSeguir: Dejar de seguir

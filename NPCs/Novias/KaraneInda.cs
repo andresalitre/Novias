@@ -1,16 +1,11 @@
-using ReLogic.Content;
 using Terraria;
-using Terraria.Audio;
-using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.Utilities;
 using Novias.Players;
+using Novias.Systems;
 using Microsoft.Xna.Framework;
 using Novias.Items.GirlfriendsItems.Karane;
 using Novias.Projectiles;
@@ -24,6 +19,8 @@ namespace Novias.NPCs.Novias
     [AutoloadHead]
     public class KaraneInda : ComportamientoNovia
     {
+        private bool dialogoBoton = false;
+
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<KaranePlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(255, 140, 0);
         protected override int BuffSeguimiento => ModContent.BuffType<FuerzaDeTsundere>();
@@ -66,7 +63,7 @@ namespace Novias.NPCs.Novias
             NPC.defense = 50;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
-            NPC.DeathSound = SoundID.NPCDeath20;
+            NPC.DeathSound = SoundID.NPCDeath1;
             NPC.townNPC = true;
             NPC.friendly = true;
         }
@@ -108,6 +105,7 @@ namespace Novias.NPCs.Novias
                 {
                     jugador.ConsumeItem(ModContent.ItemType<GatitoDePeluche>());
                     modPlayer.LeDioRegalo = true;
+                    dialogoBoton = true;
                     Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.RegaloRecibido");
                     Animacion(jugador);
                 }
@@ -118,16 +116,24 @@ namespace Novias.NPCs.Novias
                 return;
             }
 
+            dialogoBoton = true;
             if (modPlayer.EstaSiguiendo)
             {
                 modPlayer.EstaSiguiendo = false;
                 NPC.aiStyle = NPCAIStyleID.Passive;
+                NoviasWorld.KaraneSiguiendo = -1;
                 Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.DejarDeSeguir");
             }
             else
             {
+                if (NoviasWorld.KaraneSiguiendo != -1 && NoviasWorld.KaraneSiguiendo != jugador.whoAmI)
+                {
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.Ocupada");
+                    return;
+                }
                 modPlayer.EstaSiguiendo = true;
                 NPC.aiStyle = 0;
+                NoviasWorld.KaraneSiguiendo = jugador.whoAmI;
                 Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.Seguir");
             }
         }
@@ -135,6 +141,13 @@ namespace Novias.NPCs.Novias
         public override string GetChat()
         {
             KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
+
+            if (dialogoBoton)
+            {
+                dialogoBoton = false;
+                return Main.npcChatText;
+            }
+
             string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
             return Language.GetTextValue($"Mods.Novias.NPCDialogue.KaraneInda.{prefijo}{Main.rand.Next(3)}");
         }
@@ -147,9 +160,6 @@ namespace Novias.NPCs.Novias
             });
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs)
-        {
-            return NPC.downedBoss2;
-        }
+        public override bool CanTownNPCSpawn(int numTownNPCs) => NPC.downedBoss2;
     }
 }
