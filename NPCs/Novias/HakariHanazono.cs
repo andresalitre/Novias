@@ -20,8 +20,6 @@ namespace Novias.NPCs.Novias
     [AutoloadHead]
     public class HakariHanazono : ComportamientoNovia
     {
-        private bool dialogoBoton = false;
-
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<HakariPlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(255, 105, 180);
         protected override int BuffSeguimiento => ModContent.BuffType<ImpulsoSeductor>();
@@ -109,18 +107,17 @@ namespace Novias.NPCs.Novias
                 {
                     jugador.ConsumeItem(ModContent.ItemType<MedioRefrescoDeMelocoton>());
                     modPlayer.LeDioRegalo = true;
-                    dialogoBoton = true;
                     Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.RegaloRecibido");
                     Animacion(jugador);
                 }
                 else
                 {
-                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.SinRegalo") + $"\n[i:{ModContent.ItemType<MedioRefrescoDeMelocoton>()}]";
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.SinRegalo")
+                        + $"\n[i:{ModContent.ItemType<MedioRefrescoDeMelocoton>()}]";
                 }
                 return;
             }
 
-            dialogoBoton = true;
             if (modPlayer.EstaSiguiendo)
             {
                 modPlayer.EstaSiguiendo = false;
@@ -145,13 +142,6 @@ namespace Novias.NPCs.Novias
         public override string GetChat()
         {
             HakariPlayer modPlayer = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
-
-            if (dialogoBoton)
-            {
-                dialogoBoton = false;
-                return Main.npcChatText;
-            }
-
             string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
             return Language.GetTextValue($"Mods.Novias.NPCDialogue.HakariHanazono.{prefijo}{Main.rand.Next(3)}");
         }

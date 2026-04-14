@@ -20,8 +20,6 @@ namespace Novias.NPCs.Novias
     [AutoloadHead]
     public class ShizukaYoshimoto : ComportamientoNovia
     {
-        private bool dialogoBoton = false;
-
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(178, 255, 255);
         protected override int BuffSeguimiento => ModContent.BuffType<ArmoniaMagica>();
@@ -107,18 +105,17 @@ namespace Novias.NPCs.Novias
                 {
                     jugador.ConsumeItem(ModContent.ItemType<TelefonoDeShizuka>());
                     modPlayer.LeDioRegalo = true;
-                    dialogoBoton = true;
                     Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.RegaloRecibido");
                     Animacion(jugador);
                 }
                 else
                 {
-                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.SinRegalo") + $"\n[i:{ModContent.ItemType<TelefonoDeShizuka>()}]";
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.ShizukaYoshimoto.SinRegalo")
+                        + $"\n[i:{ModContent.ItemType<TelefonoDeShizuka>()}]";
                 }
                 return;
             }
 
-            dialogoBoton = true;
             if (modPlayer.EstaSiguiendo)
             {
                 modPlayer.EstaSiguiendo = false;
@@ -143,13 +140,6 @@ namespace Novias.NPCs.Novias
         public override string GetChat()
         {
             ShizukaPlayer modPlayer = Main.LocalPlayer.GetModPlayer<ShizukaPlayer>();
-
-            if (dialogoBoton)
-            {
-                dialogoBoton = false;
-                return Main.npcChatText;
-            }
-
             string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
             return Language.GetTextValue($"Mods.Novias.NPCDialogue.ShizukaYoshimoto.{prefijo}{Main.rand.Next(3)}");
         }

@@ -1,8 +1,9 @@
 using Terraria;
 using Terraria.ModLoader;
-using Novias.NPCs;
 using Novias.NPCs.Novias;
+using Novias.NPCs.NanoSystem;
 using Novias.Systems;
+using Novias.NPCs;
 
 namespace Novias.Systems
 {

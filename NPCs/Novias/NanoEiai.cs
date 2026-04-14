@@ -67,9 +67,6 @@ namespace Novias.NPCs.Novias
             NPC.friendly = true;
         }
 
-        public override bool CheckConditions(int left, int top, int right, int bottom)
-            => NoviasWorld.NanoAyudada;
-
         public override void AddShops()
         {
             var tienda = new NPCShop(Type, "Shop");
@@ -80,12 +77,14 @@ namespace Novias.NPCs.Novias
 
         public override void AI()
         {
-            NanoPlayer modPlayer = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
-
-            if (modPlayer.HacerAnimacion)
+            if (Main.netMode != NetmodeID.Server)
             {
-                modPlayer.HacerAnimacion = false;
-                Animacion(Main.LocalPlayer);
+                NanoPlayer modPlayer = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
+                if (modPlayer.HacerAnimacion)
+                {
+                    modPlayer.HacerAnimacion = false;
+                    Animacion(Main.LocalPlayer);
+                }
             }
 
             if (NoviasWorld.NanoEsperandoDialogo)
@@ -157,8 +156,6 @@ namespace Novias.NPCs.Novias
 
         public override string GetChat()
         {
-            NanoPlayer modPlayer = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
-
             if (NoviasWorld.NanoEsperandoDialogo)
             {
                 NoviasWorld.NanoEsperandoDialogo = false;

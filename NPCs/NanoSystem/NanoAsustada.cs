@@ -10,7 +10,7 @@ using Novias.NPCs.Novias;
 using Novias.Items.GirlfriendsItems.Nano;
 
 
-namespace Novias.NPCs
+namespace Novias.NPCs.NanoSystem
 {
     [AutoloadHead]
     public class NanoAsustada : ModNPC

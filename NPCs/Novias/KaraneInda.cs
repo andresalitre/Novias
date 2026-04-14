@@ -19,8 +19,6 @@ namespace Novias.NPCs.Novias
     [AutoloadHead]
     public class KaraneInda : ComportamientoNovia
     {
-        private bool dialogoBoton = false;
-
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<KaranePlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(255, 140, 0);
         protected override int BuffSeguimiento => ModContent.BuffType<FuerzaDeTsundere>();
@@ -105,18 +103,17 @@ namespace Novias.NPCs.Novias
                 {
                     jugador.ConsumeItem(ModContent.ItemType<GatitoDePeluche>());
                     modPlayer.LeDioRegalo = true;
-                    dialogoBoton = true;
                     Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.RegaloRecibido");
                     Animacion(jugador);
                 }
                 else
                 {
-                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.SinRegalo") + $"\n[i:{ModContent.ItemType<GatitoDePeluche>()}]";
+                    Main.npcChatText = Language.GetTextValue("Mods.Novias.NPCDialogue.KaraneInda.SinRegalo")
+                        + $"\n[i:{ModContent.ItemType<GatitoDePeluche>()}]";
                 }
                 return;
             }
 
-            dialogoBoton = true;
             if (modPlayer.EstaSiguiendo)
             {
                 modPlayer.EstaSiguiendo = false;
@@ -141,13 +138,6 @@ namespace Novias.NPCs.Novias
         public override string GetChat()
         {
             KaranePlayer modPlayer = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
-
-            if (dialogoBoton)
-            {
-                dialogoBoton = false;
-                return Main.npcChatText;
-            }
-
             string prefijo = modPlayer.LeDioRegalo ? "Chat" : "PreRegalo";
             return Language.GetTextValue($"Mods.Novias.NPCDialogue.KaraneInda.{prefijo}{Main.rand.Next(3)}");
         }
