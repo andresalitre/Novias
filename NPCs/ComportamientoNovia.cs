@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Novias.Effects;
+using Novias.UI;
 
 namespace Novias.NPCs
 {
@@ -19,10 +20,10 @@ namespace Novias.NPCs
         protected abstract int CooldownAtaque { get; }
         protected abstract bool EstaSiguiendo { get; }
         protected abstract Color ColorPolvo { get; }
-        protected abstract int BuffSeguimiento { get; }
         protected abstract int EfectoNovia { get; }
         protected abstract void LanzarAtaque(Vector2 direccion);
         protected abstract int RegeneracionVida { get; }
+        protected virtual bool EstaHablandoConInterfaz => false;
 
         protected void Animacion(Player jugador)
         {
@@ -93,27 +94,22 @@ namespace Novias.NPCs
                 }
                 base.AI();
                 NPC.spriteDirection = NPC.direction;
-                if (EstaAtacando)
-                    NPC.velocity.X = 0f;
+                if (EstaAtacando) NPC.velocity.X = 0f;
                 return;
             }
 
             if (!EnFila)
             {
                 EnFila = OrdenFila.RegistrarEnFila(NPC.whoAmI);
-                if (!EnFila)
-                    return;
+                if (!EnFila) return;
             }
 
             Player player = Main.LocalPlayer;
-            player.AddBuff(BuffSeguimiento, 2);
 
-            if (CooldownSalto > 0)
-                CooldownSalto--;
+            if (CooldownSalto > 0) CooldownSalto--;
 
             NPC.velocity.Y += 0.4f;
-            if (NPC.velocity.Y > 16f)
-                NPC.velocity.Y = 16f;
+            if (NPC.velocity.Y > 16f) NPC.velocity.Y = 16f;
 
             OrdenFila.ObtenerIndice(NPC.whoAmI, out int indice);
             Vector2 posicionObjetivo = OrdenFila.ObtenerPosicionEnFila(indice, NPC.Center.Y);
@@ -174,7 +170,9 @@ namespace Novias.NPCs
             int frameActual = NPC.frame.Y / frameHeight;
             bool moviendose = System.Math.Abs(NPC.velocity.X) >= 0.5f;
             bool enElAire = !NPC.IsABestiaryIconDummy && (NPC.velocity.Y < -0.1f || NPC.velocity.Y > 0.5f);
-            bool estaHablando = Main.LocalPlayer.talkNPC == NPC.whoAmI && !moviendose && !enElAire;
+
+            bool estaHablandoConInterfaz = Main.LocalPlayer.talkNPC == -1 && EstaHablandoConInterfaz;
+            bool estaHablando = Main.LocalPlayer.talkNPC == NPC.whoAmI && !moviendose && !enElAire && !estaHablandoConInterfaz;
             bool estaSentado = NPC.ai[0] == 5f;
 
             if (EstaAtacando && !moviendose && !enElAire)
@@ -196,15 +194,12 @@ namespace Novias.NPCs
                         NPC.frame.Y = 0;
                     }
                     else
-                    {
                         NPC.frame.Y = frameHeight * frameActual;
-                    }
                 }
                 return;
             }
 
-            if (EstaAtacando)
-                EstaAtacando = false;
+            if (EstaAtacando) EstaAtacando = false;
 
             if (enElAire)
             {
@@ -216,6 +211,14 @@ namespace Novias.NPCs
             if (estaSentado)
             {
                 NPC.frame.Y = frameHeight * 15;
+                TimerAnimacion = 0;
+                return;
+            }
+
+            if (estaHablandoConInterfaz)
+            {
+                NPC.velocity.X = 0f;
+                NPC.frame.Y = frameHeight * 0;
                 TimerAnimacion = 0;
                 return;
             }
@@ -244,8 +247,7 @@ namespace Novias.NPCs
                 else
                 {
                     frameActual++;
-                    if (frameActual > 13)
-                        frameActual = 2;
+                    if (frameActual > 13) frameActual = 2;
                 }
                 NPC.frame.Y = frameHeight * frameActual;
             }
@@ -274,7 +276,6 @@ namespace Novias.NPCs
         {
             NPC.lifeRegen += RegeneracionVida * 2;
         }
-
 
         public override void HitEffect(NPC.HitInfo hit) { }
         public override bool? CanFallThroughPlatforms() => false;

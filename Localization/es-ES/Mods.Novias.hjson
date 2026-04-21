@@ -146,178 +146,104 @@ Buffs: {
 }
 
 NPCs: {
-	KaraneInda: {
-		DisplayName: Karane Inda
-
-		TownNPCMood: {
-			LikeBiome: Me gusta el biomedio {BiomeName}.
-			DislikeBiome: No me gusta el biomedio {BiomeName}.
-			Content: Estoy feliz.
-			NoHome: Detesto no tener un hogar.
-			FarFromHome: Estoy demasiado lejos de casa.
-			LoveSpace: Me encanta tener tanto espacio.
-			DislikeCrowded: No me gusta tener tan poco espacio.
-			HateCrowded: Detesto tener poco espacio.
-			LoveNPC: Adoro a {NPCName}.
-			LikeNPC_Princess: Me gusta {NPCName}.
-			Princess_LovesNPC: Me gusta {NPCName}.
-			LikeNPC: Me cae bien {NPCName}.
-		}
-
-		Census.SpawnCondition: El Cerebro de Cthulhu o el Devoramundos ha sido derrotado
-	}
-
 	HakariHanazono: {
-		DisplayName: Hakari Hanazono
+		// DisplayName: Hakari Hanazono
 
 		TownNPCMood: {
-			LikeBiome: Me gusta el biomedio {BiomeName}.
-			DislikeBiome: No me gusta el biomedio {BiomeName}.
-			Content: Estoy feliz.
-			NoHome: Detesto no tener un hogar.
-			FarFromHome: Estoy demasiado lejos de casa.
-			LoveSpace: Me encanta tener tanto espacio.
-			DislikeCrowded: No me gusta tener tan poco espacio.
-			HateCrowded: Detesto tener poco espacio.
-			LoveNPC: Adoro a {NPCName}.
-			LikeNPC_Princess: Me gusta {NPCName}.
-			Princess_LovesNPC: Me gusta {NPCName}.
-			LikeNPC: Me cae bien {NPCName}.
+			// LikeBiome: I like the {BiomeName} biome.
+			// DislikeBiome: I don't like the {BiomeName} biome.
+			// Content: I'm happy.
+			// NoHome: I hate not having a home.
+			// FarFromHome: I'm too far from home.
+			// LoveSpace: I love having so much space.
+			// DislikeCrowded: I don't like having so little space.
+			// HateCrowded: I hate having so little space.
+			// LoveNPC: I adore {NPCName}.
+			// LikeNPC_Princess: I like {NPCName}.
+			// Princess_LovesNPC: I like {NPCName}.
+			// LikeNPC: I like {NPCName}.
 		}
 
-		Census.SpawnCondition: El Ojo de Cthulhu ha sido derrotado
-	}
-
-	ShizukaYoshimoto: {
-		DisplayName: Shizuka Yoshimoto
-
-		TownNPCMood: {
-			Content: Estoy feliz.
-			NoHome: Detesto no tener un hogar.
-			FarFromHome: Estoy demasiado lejos de casa.
-			LoveSpace: Me encanta tener tanto espacio.
-			DislikeCrowded: No me gusta tener tan poco espacio.
-			HateCrowded: Detesto tener poco espacio.
-			LoveNPC: Adoro a {NPCName}.
-			LikeNPC_Princess: Me gusta {NPCName}.
-			Princess_LovesNPC: Me gusta {NPCName}.
-			LikeNPC: Me cae bien {NPCName}.
-		}
-
-		Census.SpawnCondition: Que haya 2 novias presentes y el jugador tenga 5 libros en su inventario
-	}
-
-	NanoEiai: {
-		DisplayName: Nano Eiai
-
-		TownNPCMood: {
-			Content: Estoy feliz.
-			NoHome: Detesto no tener un hogar.
-			FarFromHome: Estoy demasiado lejos de casa.
-			LoveSpace: Me encanta tener tanto espacio.
-			DislikeCrowded: No me gusta tener tan poco espacio.
-			HateCrowded: Detesto tener poco espacio.
-			LoveNPC: Adoro a {NPCName}.
-			LikeNPC: Me cae bien {NPCName}.
-			LikeNPC_Princess: Me gusta {NPCName}.
-			Princess_LovesNPC: Me gusta {NPCName}.
-		}
-
-		Census.SpawnCondition: Ayuda a Nano Asustada a bajar de las alturas
-	}
-
-	NanoAsustada: {
-		DisplayName: Nano Eiai Asustada
-
-		TownNPCMood: {
-			NoHome: Detesto no tener un hogar.
-			Content: Estoy feliz.
-			FarFromHome: Estoy demasiado lejos de casa.
-			LoveSpace: Me encanta tener tanto espacio.
-			DislikeCrowded: No me gusta tener tan poco espacio.
-			HateCrowded: Detesto tener poco espacio.
-			LikeNPC_Princess: Me gusta {NPCName}.
-			Princess_LovesNPC: Me gusta {NPCName}.
-		}
-
-		Census.SpawnCondition: Cuando haya 2 novias, Nano aparecera asustada en las islas del cielo
+		// Census.SpawnCondition: The Eye of Cthulhu has been defeated
 	}
 }
 
 NPCDialogue: {
 	HakariHanazono: {
-		PreRegalo0: ¿Acaso nos conocemos de otra parte? Tu cara me resulta familiar...
-		PreRegalo1: ¿Ah, hola? No esperaba visita... aunque no me quejo.
-		PreRegalo2: Este mundo es tan extraño. Nunca había visto algo así antes.
+		PreMision0: ¿Acaso nos conocemos de otra parte? Tu cara me resulta familiar...
+		PreMision1: ¿Ah, hola? No esperaba visita... aunque no me quejo.
+		PreMision2: Este mundo es tan extraño. Nunca había visto algo así antes.
 		Chat0: Estaba pensando algo... un poco sucio sobre nosotros dos. ¿El desarrollador me dejó decir eso?
 		Chat1: Siento que el destino nos unió... o quizás fue un dios del amor con demasiado tiempo libre.
 		Chat2: Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo.
-		RegaloRecibido: ¿Ya bebiste de aquí? Entonces esto sería un beso indirecto…
-		SinRegalo: Estoy tan sedienta... Se me antoja un refresco de melocotón, pero no podría con una lata entera.
+		Chat3: Chat4:
+		// Chat4: I dreamed we were doing something together. I won't tell you what. Just know I woke up smiling.
 		Seguir: ¿Seguirte? ¡Claro que sí! Donde tú vayas, te acompañaré.
 		DejarDeSeguir: ¿E-eh…? ¿Ya no hace falta? ¿Quién escribió este diálogo tan triste?
 		Ocupada: Jejeje, lo siento, pero ya estoy acompañando a alguien. ¡Quizás en otra ocasión!
-		BotonTienda: Tienda
-		BotonRegalo: Dar regalo
-		BotonSeguir: Seguir
-		BotonDejarSeguir: Dejar de seguir
+		Beso: ¡La sensación es increíble! ¡Jamás había sentido algo igual!, {0}, {0}, {0}, {0}...
 	}
+}
 
-	KaraneInda: {
-		PreRegalo0: ¿Q-qué quieres? No tengo tiempo para charlas.
-		PreRegalo1: No me mires así. ¿Acaso te parezco interesante o algo? ¡Porque no lo soy!
-		PreRegalo2: Este mundo es muy diferente. ¿Esto pertenece al canon del manga?
-		Chat0: ¡¿Q-qué estás mirando?! ¡Deja de leer mis diálogos! ¡No estamos en una novela visual!
-		Chat1: ¡N-no te confundas! No vine a tu mundo solo para estar contigo. Esto no es un isekai genérico... ¿Ya, enserio, esto es parte del canon?
-		Chat2: ¡N-no te acerques tanto! El manual del tsundere dice que debo alejarme... pero no dice que quiera hacerlo.
-		RegaloRecibido: ¿U-un gatito...? N-no es como si me alegrara o algo así...
-		SinRegalo: Hay algo que me gustaría tener... Algo suave y pequeño. ¿No hay gatitos en este mundo?
-		Seguir: N-no tengo de otra. N-no creas que lo hago porque quiera estar contigo.
-		DejarDeSeguir: Bien, como quieras... ¿Por qué se siente tan mal esto si solo es un juego?
-		Ocupada: ¡No te hagas ideas equivocadas! Ya estoy con alguien... ¡así que vete!
-		BotonTienda: Tienda
-		BotonRegalo: Dar regalo
-		BotonSeguir: Seguir
-		BotonDejarSeguir: Dejar de seguir
-	}
+UI: {
+	Tienda: Tienda
+	Mision: Misión
+	Seguir: Seguir
+	DejarSeguir: No seguir
+	Besar: Besar
+	Volver: Volver
+	Saltar: Saltar
+	Siguiente: Siguiente
+	AceptarMision: Aceptar misión
+	Completar: Completar
+	Cerrar: Cerrar
+	MisionCompleta: ¡Misión completada!
+	Felicidad: Felicidad
+	FelicidadDefault: Me alegra tenerte cerca.
+	TiendaDesbloqueada: "{0}: ¡Nueva mercancia disponible en tienda de {1}!"
+	SeguimientoDesbloqueado: "{0}: ¡Se desbloqueo el seguimiento de {1}!"
+	BesoDesbloqueado: "{0}: ¡Se desbloqueo el beso con {1}!"
+	Hablar: Hablar
+}
 
-	ShizukaYoshimoto: {
-		PreRegalo0: ...
-		PreRegalo1: *Señala un libro*
-		PreRegalo2: *Te mira en silencio y baja la vista*
-		Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
-		Chat1: *Teléfono: ¿Puedo quedarme cerca de ti un momento, mi señor?*
-		Chat2: *Teléfono: Según el capítulo 5 del manga, aquí debería pasar algo romántico.*
-		RegaloRecibido: *Teléfono: Gracias, ahora podré hablar contigo. Te quiero, mi señor.*
-		SinRegalo: *Escribe en un papel: "Si tuvieras algo tecnológico... podría comunicarme contigo."*
-		Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
-		DejarDeSeguir: *Teléfono: Estaré aquí esperando tu regreso.*
-		Ocupada: *Teléfono: Discúlpame... Ya estoy acompañando a alguien ahora mismo.*
-		BotonTienda: Tienda
-		BotonRegalo: Dar regalo
-		BotonSeguir: Seguir
-		BotonDejarSeguir: Dejar de seguir
-	}
+Misiones: {
+	Hakari: {
+		Mision1: {
+			Titulo: Un beso indirecto
+			Descripcion: Tráele a Hakari medio refresco de melocotón.
+			Dialogo0: Deseo con tantas ganas un refresco de melocotón. Pero siempre me cuesta acabarme una lata yo sola...
+			Dialogo1: En caso de que consiguieras una... ¿Quisieras compartirla conmigo?
+			Dialogo2: *Pensamientos de Hakari: ¡Es el plan perfecto! ¡Podré darle un beso indirecto! ¡Qué lista soy!
+			Recompensa: ¿Ya bebiste de aquí? Entonces esto sería un beso indirecto…
+			Completacion0: Toma, con este medio refresco de melocotón debería bastar.
+			Completacion1: Muchas gracias.
+			Completacion2: ¡¿No es un beso indirecto!?
+			Completacion3: Un beso indirecto... de {0}.
+			Completacion4: ...
+			Completacion5: ¿Eh? ¿Hanazono?
+			Completacion6: "{0}... ¡Me gustas! ¡Salgamos juntos!"
+			Completacion7: ¡¿Qué?!
+			Completacion8: Lo siento, sé que es muy repentino, pero creo que estoy enamorada de ti.
+			Completacion9: Y creo que no soy la única que siente algo así.
+		}
 
-	NanoAsustada: {
-		PreCondicion0: 3.14159265358979... 3.14159265358979...
-		PreCondicion1: Probabilidad de supervivencia si salto: 0%. Me quedaré aquí.
-		PreCondicion2: Es normal temerle a una elevación que pone la vida en peligro...
-		SinPocion: Si tuvieras algún mecanismo de regreso instantáneo esto se resolvería eficientemente.
-		BotonAyudar: Ayudar
-	}
+		Mision2: {
+			Titulo: Misión 2
+			Descripcion: Descripción pendiente.
+			Dialogo0: Diálogo pendiente.
+			Dialogo1: Diálogo pendiente.
+			Dialogo2: Diálogo pendiente.
+			Recompensa: Recompensa pendiente.
+		}
 
-	NanoEiai: {
-		Chat0: Este mundo carece de lógica. Tú eres la excepción.
-		Chat1: He procesado 14,000,605 escenarios posibles. Estar aquí contigo es el escenario perfecto.
-		Chat2: 3.14159265... Lo susurro cuando me altero. Últimamente lo digo mucho a tu lado.
-		Seguir: Es lógico, seguirte es lo más eficiente para que puedas progresar.
-		DejarDeSeguir: Calculado. Aunque mis datos indican que esto reduce mi eficiencia en un 47.3%.
-		Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
-		Gracias: Gracias por tu ayuda. He detectado emociones hacia ti. Conclusión lógica: No sería eficiente comenzar una relación. Conclusión real: imposible.
-		BotonTienda: Tienda
-		BotonSeguir: Seguir
-		BotonDejarSeguir: Dejar de seguir
+		Mision3: {
+			Titulo: Misión 3
+			Descripcion: Descripción pendiente.
+			Dialogo0: Diálogo pendiente.
+			Dialogo1: Diálogo pendiente.
+			Dialogo2: Diálogo pendiente.
+			Recompensa: Recompensa pendiente.
+		}
 	}
 }
 
@@ -328,3 +254,5 @@ Projectiles: {
 	NotaDeCanto.DisplayName: Nota De Canto
 	CutterProyectil.DisplayName: Cutter Proyectil
 }
+
+Condiciones.MisionCompletada: Mods.Novias.Condiciones.MisionCompletada

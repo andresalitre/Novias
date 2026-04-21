@@ -150,27 +150,6 @@ Buffs: {
 }
 
 NPCs: {
-	KaraneInda: {
-		DisplayName: Karane Inda
-
-		TownNPCMood: {
-			LikeBiome: I like the {BiomeName} biome.
-			DislikeBiome: I don't like the {BiomeName} biome.
-			Content: I'm happy.
-			NoHome: I hate not having a home.
-			FarFromHome: I'm too far from home.
-			LoveSpace: I love having so much space.
-			DislikeCrowded: I don't like having so little space.
-			HateCrowded: I hate having so little space.
-			LoveNPC: I adore {NPCName}.
-			LikeNPC_Princess: I like {NPCName}.
-			Princess_LovesNPC: I like {NPCName}.
-			LikeNPC: I like {NPCName}.
-		}
-
-		Census.SpawnCondition: The Eater of Worlds or Brain of Cthulhu has been defeated
-	}
-
 	HakariHanazono: {
 		DisplayName: Hakari Hanazono
 
@@ -191,137 +170,84 @@ NPCs: {
 
 		Census.SpawnCondition: The Eye of Cthulhu has been defeated
 	}
-
-	ShizukaYoshimoto: {
-		DisplayName: Shizuka Yoshimoto
-
-		TownNPCMood: {
-			Content: I'm happy.
-			NoHome: I hate not having a home.
-			FarFromHome: I'm too far from home.
-			LoveSpace: I love having so much space.
-			DislikeCrowded: I don't like having so little space.
-			HateCrowded: I hate having so little space.
-			LoveNPC: I adore {NPCName}.
-			LikeNPC_Princess: I like {NPCName}.
-			Princess_LovesNPC: I like {NPCName}.
-			LikeNPC: I like {NPCName}.
-		}
-
-		Census.SpawnCondition: 2 girlfriends must be present and the player must have 5 books in their inventory
-	}
-
-	NanoEiai: {
-		DisplayName: Nano Eiai
-
-		TownNPCMood: {
-			Content: I am content.
-			NoHome: I hate not having a home.
-			FarFromHome: I am too far from home.
-			LoveSpace: I love having so much space.
-			DislikeCrowded: I dislike how crowded I am.
-			HateCrowded: I hate how crowded I am.
-			LoveNPC: I love {NPCName}.
-			LikeNPC: I like {NPCName}.
-			LikeNPC_Princess: I like {NPCName}.
-			Princess_LovesNPC: I like {NPCName}.
-		}
-
-		Census.SpawnCondition: Help Scared Nano down from the sky islands
-	}
-
-	NanoAsustada: {
-		DisplayName: Scared Nano Eiai
-
-		TownNPCMood: {
-			NoHome: I hate not having a home.
-			Content: I am content.
-			FarFromHome: I am too far from home.
-			LoveSpace: I love having so much space.
-			DislikeCrowded: I dislike how crowded I am.
-			HateCrowded: I hate how crowded I am.
-			LikeNPC_Princess: I like {NPCName}.
-			Princess_LovesNPC: I like {NPCName}.
-		}
-
-		Census.SpawnCondition: Once 2 girlfriends move in, Nano will appear scared on a sky island
-	}
 }
 
 NPCDialogue: {
 	HakariHanazono: {
-		PreRegalo0: Do we know each other from somewhere? Your face seems familiar...
-		PreRegalo1: Oh, hi? Wasn't expecting a visitor... though I'm not complaining.
-		PreRegalo2: This world is so strange. I had never seen anything like this before.
+		PreMision0: Do we know each other from somewhere? Your face seems familiar...
+		PreMision1: Oh, hi? Wasn't expecting a visit... though I'm not complaining.
+		PreMision2: This world is so strange. I'd never seen anything like it before.
 		Chat0: I was thinking something... a little dirty about the two of us. Did the developer let me say that?
 		Chat1: I feel like fate brought us together... or maybe it was a love god with too much free time.
-		Chat2: I think I twisted my ankle… could you help me walk? I promise not to let go of your arm.
-		RegaloRecibido: Did you already drink from here? Then this would be an indirect kiss…
-		SinRegalo: I'm so thirsty... I really want a peach soda, but I couldn't finish a whole can by myself.
-		Seguir: Follow you? Of course! Wherever you go, I'll be right there with you.
-		DejarDeSeguir: E-eh…? Is it not needed anymore? Who wrote such a sad line?
-		Ocupada: Hehehe, sorry, but I'm already with someone. Maybe next time!
-		BotonTienda: Shop
-		BotonRegalo: Give gift
-		BotonSeguir: Follow
-		BotonDejarSeguir: Stop following
+		Chat2: I think I twisted my ankle… could you help me walk? I promise I won't let go of your arm.
+		Chat3: You know? Sometimes I wonder if this is real... but then I see you and it doesn't matter anymore.
+		Chat4: I dreamed we were doing something together. I won't tell you what. Just know I woke up smiling.
+		Seguir: Follow you? Of course! Wherever you go, I'll be right there.
+		DejarDeSeguir: H-huh…? You don't need me anymore? Who wrote this sad dialogue?
+		Ocupada: Hehe, sorry, but I'm already following someone. Maybe next time!
+		Beso: The feeling is incredible! I've never felt anything like it!, {0}, {0}, {0}, {0}...
 	}
+}
 
-	KaraneInda: {
-		PreRegalo0: W-what do you want? I don't have time for small talk.
-		PreRegalo1: Don't look at me like that. Do I seem interesting to you or something? Because I'm not!
-		PreRegalo2: This world is very different. Does this belong to the manga's canon?
-		Chat0: W-what are you staring at?! Stop reading my dialogue! We're not in a visual novel!
-		Chat1: D-don't get the wrong idea! I didn't come to your world just to be with you. This isn't some generic isekai... Wait, is this actually part of the canon?
-		Chat2: D-don't get so close! The tsundere manual says I should back away... but it doesn't say I want to.
-		RegaloRecibido: A-a kitty...? I-it's not like I'm happy or anything...
-		SinRegalo: There's something I'd like to have... Something soft and small. Are there no kitties in this world?
-		Seguir: I-I have no choice. Don't think I'm doing this because I want to be with you.
-		DejarDeSeguir: Fine, whatever... Why does this feel so bad if it's just a game?
-		Ocupada: Don't get the wrong idea! I'm already with someone... so just go away!
-		BotonTienda: Shop
-		BotonRegalo: Give gift
-		BotonSeguir: Follow
-		BotonDejarSeguir: Stop following
-	}
+UI: {
+	Tienda: Shop
+	Mision: Quest
+	Seguir: Follow
+	DejarSeguir: Stop following
+	Besar: Kiss
+	Volver: Back
+	Saltar: Skip
+	Siguiente: Next
+	AceptarMision: Accept quest
+	Completar: Complete
+	Cerrar: Close
+	MisionCompleta: Quest complete!
+	Felicidad: Happiness
+	FelicidadDefault: I'm glad to have you around.
+	TiendaDesbloqueada: "{0}: New items unlocked in {1}'s shop!"
+	SeguimientoDesbloqueado: "{0}: {1} following unlocked!"
+	BesoDesbloqueado: "{0}: {1} kiss unlocked!"
+	Hablar: Talk
+}
 
-	ShizukaYoshimoto: {
-		PreRegalo0: ...
-		PreRegalo1: *Points at a book*
-		PreRegalo2: *Looks at you in silence and lowers her gaze*
-		Chat0: *Phone: My lord... This unknown world, could it be our dreamed paradise?*
-		Chat1: *Phone: May I stay close to you for a moment, my lord?*
-		Chat2: *Phone: According to chapter 5 of the manga, something romantic should happen here.*
-		RegaloRecibido: *Phone: Thank you, now I can talk to you. I love you, my lord.*
-		SinRegalo: *Writes on paper: "If you had some technology... I could communicate with you."*
-		Seguir: *Phone: I yearn to be of help in your adventure.*
-		DejarDeSeguir: *Phone: I will be here waiting for your return.*
-		Ocupada: *Phone: Forgive me... I am already accompanying someone right now.*
-		BotonTienda: Shop
-		BotonRegalo: Give gift
-		BotonSeguir: Follow
-		BotonDejarSeguir: Stop following
-	}
+Misiones: {
+	Hakari: {
+		Mision1: {
+			Titulo: Un refresco de melocotón
+			Descripcion: Consigue un medio refresco de melocotón para Hakari.
+			Dialogo0: Oye, {0}... ¿puedo pedirte un favor?
+			Dialogo1: Últimamente tengo muchas ganas de tomar un refresco de melocotón, pero no tengo los ingredientes...
+			Dialogo2: ¿Me podrías traer un medio refresco de melocotón? ¡Por favor!
+			Recompensa: ¡Gracias! Aquí tienes algo a cambio.
+			Completacion0: Toma, con este medio refresco de melocotón debería bastar.
+			Completacion1: Muchas gracias.
+			Completacion2: ¡¿No es un beso indirecto!?
+			Completacion3: Un beso indirecto... de {0}.
+			Completacion4: ...
+			Completacion5: ¿Eh? ¿Hanazono?
+			Completacion6: "{0}... ¡Me gustas! ¡Salgamos juntos!"
+			Completacion7: ¡¿Qué?!
+			Completacion8: Lo siento, sé que es muy repentino, pero creo que estoy enamorada de ti.
+			Completacion9: Y creo que no soy la única que siente algo así.
+		}
 
-	NanoAsustada: {
-		PreCondicion0: 3.14159265358979... 3.14159265358979...
-		PreCondicion1: Probability of survival if I jump: 0%. I will stay here.
-		PreCondicion2: It is normal to fear an elevation that puts one's life in danger...
-		SinPocion: If you had some sort of instant recall mechanism, this would be resolved efficiently.
-		BotonAyudar: Help
-	}
+		Mision2: {
+			Titulo: Quest 2
+			Descripcion: Description pending.
+			Dialogo0: Dialogue pending.
+			Dialogo1: Dialogue pending.
+			Dialogo2: Dialogue pending.
+			Recompensa: Reward pending.
+		}
 
-	NanoEiai: {
-		Chat0: This world lacks logic. You are the exception.
-		Chat1: I have processed 14,000,605 possible scenarios. Being here with you is the optimal one.
-		Chat2: 3.14159265... I whisper it when I'm unsettled. Lately I say it a lot when you're around.
-		Seguir: It is logical. Following you is the most efficient way to ensure your progress.
-		DejarDeSeguir: Calculated. Though my data indicates this reduces my efficiency by 47.3%.
-		Ocupada: It would not be efficient to follow two players at the same time.
-		Gracias: Thank you for your assistance. I have detected emotions directed at you. Logical conclusion: starting a relationship would not be efficient. Actual conclusion: impossible.
-		BotonTienda: Shop
-		BotonSeguir: Follow
-		BotonDejarSeguir: Stop following
+		Mision3: {
+			Titulo: Quest 3
+			Descripcion: Description pending.
+			Dialogo0: Dialogue pending.
+			Dialogo1: Dialogue pending.
+			Dialogo2: Dialogue pending.
+			Recompensa: Reward pending.
+		}
 	}
 }
 
@@ -332,3 +258,5 @@ Projectiles: {
 	NotaDeCanto.DisplayName: Singing Note
 	CutterProyectil.DisplayName: Cutter Projectile
 }
+
+Condiciones.MisionCompletada: Mods.Novias.Condiciones.MisionCompletada

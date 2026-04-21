@@ -1,0 +1,61 @@
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using Novias.Players;
+using Novias.Systems;
+using Novias.NPCs.Novias;
+using Novias.NPCs.Misiones;
+using Novias.Buffs;
+
+namespace Novias.UI
+{
+    public class HakariInterfaz : InterfazNovias
+    {
+        public static HakariInterfaz Instance => ModContent.GetInstance<HakariInterfaz>();
+
+        protected override NoviaUIState CrearEstado() => new HakariUIState();
+        protected override bool EsEstaNovia(NPC npc) => npc.ModNPC is HakariHanazono;
+    }
+
+    public class HakariUIState : NoviaUIState
+    {
+        protected override Color ColorFondo => new Color(28, 16, 38);
+        protected override Color ColorBorde => new Color(200, 90, 150);
+        protected override Color ColorTitulo => new Color(255, 190, 230);
+
+        protected override int BuffBeso => ModContent.BuffType<ImpulsoSeductor>();
+
+        protected override string NombreNPC => "Hakari";
+
+        protected override NoviasPlayerBase ObtenerPlayer() =>
+            Main.LocalPlayer.GetModPlayer<HakariPlayer>();
+
+        protected override MisionData[] ObtenerMisiones() =>
+            HakariMisiones.ObtenerMisiones();
+
+        protected override string ObtenerDialogoChat()
+        {
+            var player = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
+            if (player.Fase < 1)
+            {
+                int idx = Main.rand.Next(3);
+                return Language.GetTextValue($"Mods.Novias.NPCDialogue.HakariHanazono.PreMision{idx}");
+            }
+            else
+            {
+                int idx = Main.rand.Next(5);
+                return Language.GetTextValue($"Mods.Novias.NPCDialogue.HakariHanazono.Chat{idx}");
+            }
+        }
+
+        protected override string ObtenerDialogoBeso() =>
+            Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.Beso", Main.LocalPlayer.name);
+
+        protected override string ObtenerDialogoSeguir() =>
+            Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.Seguir");
+
+        protected override string ObtenerDialogoDejarSeguir() =>
+            Language.GetTextValue("Mods.Novias.NPCDialogue.HakariHanazono.DejarDeSeguir");
+    }
+}
