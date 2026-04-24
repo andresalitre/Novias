@@ -1,0 +1,132 @@
+Hakari: {
+	Mision1: {
+		Titulo: An Indirect Kiss
+		Descripcion: Bring Hakari half a peach soda.
+		Dialogo0: I'm craving a peach soda so much. Although, I could never finish a whole can all by myself...
+		Dialogo1: In case you happened to find one... Do you... think that you could split it with me?
+		Dialogo2: *Hakari's thoughts: It's the perfect scheme! I'm so smooth! I'm totally about to land my first indirect kiss!*
+		Completacion0: Here, this feels about right.
+		Completacion1: Thank you so much!
+		Completacion2: Wait! Isn't this an... indirect kiss?
+		Completacion3: His lips... have been right there...
+		Completacion4: ...
+		Completacion5: Huh? Hanazono?
+		Completacion6: Listen to me... I... I love you! Please, {0}, please go out with me!
+		Completacion7: Huh?! Really?!
+		Completacion8: I'm sorry, I know this is so sudden.
+		Completacion9: But I feel like I've already fallen head over heels for you.
+		Completacion10: I don't think I'm the only one who loves you, so I wanted to say something while I can.
+		Completacion11: I would rather embarrass myself than regret not trying.
+	}
+
+	Mision2: {
+		Titulo: A Complicated Mother
+		Descripcion: Descripción pendiente.
+		Bloqueado: A Complicated Mother: Coming Soon...
+		Dialogo0: Diálogo pendiente.
+		Dialogo1: Diálogo pendiente.
+		Dialogo2: Diálogo pendiente.
+		Recompensa: Recompensa pendiente.
+	}
+}
+
+Karane: {
+	Mision1: {
+		Titulo: The Tsundere's Forgiveness
+		Descripcion: Get Karane a cute kitty plushie.
+		Dialogo0: You idiot! Why are you letting Hakari take the lead?!
+		Dialogo1: Don't go thinking that I like you or anything like that, okay?!
+		Dialogo2: This adaptation isn't 100% faithful to the anime, so don't think I'll forgive you that easily.
+		Dialogo3: You'll have to work hard so I'm not mad at you anymore.
+		Bloqueado: Required: Complete Hakari's 'An Indirect Kiss'.
+		Completacion0: Here you go, I got you something I think you'll like.
+		Completacion1: A-a kitty plushie...? I-it's not like it makes me happy or anything...
+		Completacion2: Hmph! But, if you really insist, then I suppose I could be yout girlfriend, if you beg me or whatever.
+		Completacion3: *Thoughts: That was the most passive aggresive confession in the history of mankind*
+		Completacion4: Argh, what I'm trying to say is if...
+		Completacion5: I-If I was in live with you, too, then, {0}, would you go out with me?
+	}
+
+	Mision2: {
+		Titulo: Farewell... Tsundere Energy:
+		Descripcion: Descripción pendiente.
+		Bloqueado: Farewell... Tsundere Energy
+		Dialogo0: Diálogo pendiente.
+		Dialogo1: Diálogo pendiente.
+		Dialogo2: Diálogo pendiente.
+		Recompensa: Recompensa pendiente.
+	}
+}
+
+CompartidaHakariKarane: {
+	Mision1: {
+		Titulo: You must choose only one, or maybe not?
+		Descripcion: Get a special gift for both girls; using a scythe on the grass might help.
+		Bloqueado: Requires: Complete Karane's "The Tsundere's Forgiveness." Hakari and Karane must be following the player. Progress is shared by both.
+		Dialogo0: Well {0}... Who will you fall madly in love with?
+		Dialogo1: Huh? You...
+		Dialogo2: can find out after this short break!
+		Dialogo3: I'm gonna kick your ass!
+		Dialogo4: *Thought: I... I can't possibly choose!*
+		Completacion0: So, what's your answer? We are dying to know!
+		Completacion1: Yeah.
+		Completacion2: I want both of you to be my girlfriends!
+		Completacion3: HUUUUUUUUUUUUuuuuuuuuh??!!
+		Completacion4: You wanna date us both?? Did you wake up on the stupid side of the bed?!
+		Completacion5: Maybe I did.
+		Completacion6: And maybe my idea's not the typical solution, but...
+		Completacion7: I know better than anyone. It takes a hell of a lot of courage to confess to that special someone you love!
+		Completacion8: I thought about it all night and couldn't decide! Because I'm falling in love with both of you!
+		Completacion9: There's no way I can pick just one! I may be two-timing, but I'll never hurt you! I vow to give it my all!
+		Completacion10: I'm going to make you the happiest girls alive! So, I'm begging you! Please say you'll be my girlfriends!
+		Completacion11: ...
+		Completacion12: Huh?
+		Completacion13: You can sweet-talk me all you want, but two-timing's not on the table—
+		Completacion14: esta linea no sirve de nada xd
+		Completacion15: Huh?
+		Completacion16: Huh?
+		Completacion17: Pink four-leaf clovers! We looked for those for hours! We could not manage to find even one, and somehow you have two!
+		Completacion18: Jeez! You're seriously dense! You should have left that dumb, baby superstition crap back in middle school, you loser!
+		Completacion19: Inda, please calm down. Your words are coming back to bite both you and me.
+		Completacion20: Hah! I bet you're trying to show off how much you care for us!
+		Completacion21: I'm still not letting you talk me into accepting something as trashy as two-timing!
+		Completacion22: Huh! Oh, sorry. That's not what I was going for at all.
+		Completacion23: THEN WHAT THE HELL ARE YOU TRYING TO DO??!!
+		Completacion24: I figured if I gave you these clovers along with my answer, then maybe I might get to see those beautiful smiles.
+		Completacion25: WUAAAAAAAAAAA!!
+		Completacion26: I-I appreciate it and I accept.
+		Completacion27: HUhhh??!! Don't tell me that you caught the dumb disease, too!
+		Completacion28: My feelings are real. I'm hopelessly in love with you.
+		Completacion29: I cannot imagine falling for someone else. You are all I will ever want!
+		Completacion30: WUUUAAAIIIAAAAAA!!!
+		Completacion31: Hey, that all goes for me, too! If you don't treat me right, I cross my heart I'll make you pay!
+		Completacion32: Yeah, I promise. You're gonna be the happiest girls in the world!
+	}
+
+	Mision2: {
+		Titulo: A three-way kiss
+		Descripcion: Have an incredible adventure with your first girlfriends!
+		Bloqueado: Requires: Complete "You must choose only one, or maybe not?". Hakari and Karane must be following the player. Progress is shared by both.
+		Dialogo0: Uh, weird but... speaking of kissing, you have had your first kiss, have you not?
+		Dialogo1: Huh? Not yet. You two are my first-ever girlfriends, y'know.
+		Dialogo2: *Thoughts: That means whoever acts first won't only be the first to kiss him, but his first kiss of all time!*
+		Dialogo3: You know I can see your dialogue windows and read what you're thinking, right?
+		Dialogo4: The script is already written; there will be a kiss, but first we must complete a special mission!
+		Dialogo5: And what special mission would we have to overcome, {0}?
+		Dialogo6: You'll have to join me on an adventure and kill 50 creatures!
+		Dialogo7: WHO WAS IN CHARGE OF DESIGNING THIS TRASH MISSION?!
+		Dialogo8: I have no idea! But that's how the dev wants it!
+		Dialogo9: There's NO time to lose, girls! LET'S GO!
+		Completacion0: We finally completed the objective!
+		Completacion1: Karane, what's next in the script? Is our little kiss coming up? Mehehe.
+		Completacion2: *Reading the script*
+		Completacion3: We do it at the same time?!
+		Completacion4: Yep, a three-way kiss.
+		Completacion5: It wouldn't only be a special moment with me. You would also be kissing each other.
+		Completacion6: WUUUUUUUAAAA!!!!
+		Completacion7: At first, I figured you wouldn't be up for it if you were on bad terms.
+		Completacion8: But it'll be okay. I believe in you. Actually, I should say I believe in us!
+		Completacion9: Okay, don't get too hyped up here now, you weirdo...
+		Completacion10: Hurry up, hit the complete button and KISS US FAST!!
+	}
+}

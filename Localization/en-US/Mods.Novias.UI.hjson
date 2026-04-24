@@ -1,0 +1,18 @@
+Tienda: Shop
+Mision: Quest
+Seguir: Follow
+DejarSeguir: Stop following
+Besar: Kiss
+Volver: Back
+Saltar: Skip
+Siguiente: Next
+AceptarMision: Accept quest
+Completar: Complete
+Cerrar: Close
+MisionCompleta: Quest complete!
+Felicidad: Happiness
+FelicidadDefault: I'm glad to have you around.
+TiendaDesbloqueada: "{0}: New items unlocked in {1}'s shop!"
+SeguimientoDesbloqueado: "{0}: {1} following unlocked!"
+BesoDesbloqueado: "{0}: {1} kiss unlocked!"
+Hablar: Talk

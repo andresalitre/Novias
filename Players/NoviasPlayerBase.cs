@@ -4,56 +4,49 @@ using Terraria.ModLoader.IO;
 
 namespace Novias.Players
 {
-
-    // fase actual (0-3), misión activa (0-2), seguimiento.
-
-    //  Fases:
-    //   0 — NPC recién llegada          → [Tienda] [Misión]
-    //   1 — Misión 1 completada         → [Tienda] [Seguir] [Misión]
-    //   2 — Misión 2 completada         → [Tienda] [Seguir] [Besar] [Misión]
-    //   3 — Misión 3 completada         → [Tienda] [Seguir] [Besar] [Habilidad]
     public abstract class NoviasPlayerBase : ModPlayer
     {
-
         public int Fase = 0;
+        public bool Mision1CompartidaCompletada = false;
 
-        // Índice de la misión actualmente activa (0, 1, 2).
-        // -1 significa que ya no hay misiones pendientes (fase 3).
-        public int MisionActual => Fase < 3 ? Fase : -1;
-
-        // ¿Está esta NPC siguiendo al jugador?
-        public bool EstaSiguiendo = false;
-
-
-
-        public bool UIAbierta = false;
-
-        /// Avanza a la siguiente fase. Máximo 3.
-        public void CompletarMision()
+        public int MisionActual
         {
-            if (Fase < 3) Fase++;
+            get
+            {
+                if (Fase >= 3) return -1;
+                if (Fase == 1 && Mision1CompartidaCompletada) return 2;
+                if (Fase == 2) return 3;
+                return Fase;
+            }
         }
 
-        public bool MisionCompletada(int indiceMision) => Fase > indiceMision;
-
+        public bool EstaSiguiendo = false;
+        public bool CompletacionPendiente = false;
+        public bool UIAbierta = false;
+        public int ContadorEnemigosMision2 = 0;
 
         protected string PrefixoGuardado { get; }
+        protected NoviasPlayerBase(string prefixo) { PrefixoGuardado = prefixo; }
 
-        protected NoviasPlayerBase(string prefixo)
-        {
-            PrefixoGuardado = prefixo;
-        }
+        public void CompletarMision() { if (Fase < 3) Fase++; }
+        public bool MisionCompletada(int indice) => Fase > indice;
 
         public override void SaveData(TagCompound tag)
         {
             tag[$"{PrefixoGuardado}_Fase"] = Fase;
             tag[$"{PrefixoGuardado}_Siguiendo"] = EstaSiguiendo;
+            tag[$"{PrefixoGuardado}_CompPendiente"] = CompletacionPendiente;
+            tag[$"{PrefixoGuardado}_ContadorM2"] = ContadorEnemigosMision2;
+            tag[$"{PrefixoGuardado}_M1Compartida"] = Mision1CompartidaCompletada;
         }
 
         public override void LoadData(TagCompound tag)
         {
             Fase = tag.GetInt($"{PrefixoGuardado}_Fase");
             EstaSiguiendo = tag.GetBool($"{PrefixoGuardado}_Siguiendo");
+            CompletacionPendiente = tag.GetBool($"{PrefixoGuardado}_CompPendiente");
+            ContadorEnemigosMision2 = tag.GetInt($"{PrefixoGuardado}_ContadorM2");
+            Mision1CompartidaCompletada = tag.GetBool($"{PrefixoGuardado}_M1Compartida");
         }
     }
 }

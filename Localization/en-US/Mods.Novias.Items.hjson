@@ -1,0 +1,119 @@
+GatitoMenso: {
+	DisplayName: Silly Kitty
+	Tooltip: It doesn't want to be thrown... Or so it says
+}
+
+GatitoDePeluche: {
+	DisplayName: Kitty Plush
+	Tooltip:
+		'''
+		An adorable kitty plush
+		"Someone really loves kitties"
+		'''
+}
+
+RefrescoDeMelocoton: {
+	DisplayName: Peach Soda
+	Tooltip: A delicious peach flavored soda
+}
+
+MedioRefrescoDeMelocoton: {
+	DisplayName: Half Peach Soda
+	Tooltip:
+		'''
+		Half of a delicious peach flavored soda
+		"Someone might be interested in an indirect kiss"
+		'''
+}
+
+CañonDeLeche: {
+	DisplayName: Milk Cannon
+	Tooltip: Hakari loaded it with a lot of care... and other things
+}
+
+LecheHakariMunicion: {
+	DisplayName: Hakari Milk
+	Tooltip: Straight from the farm. Don't ask which one
+}
+
+ElRomanceDeLaDiadema: {
+	DisplayName: Circlet Love Story
+	Tooltip: Magically imbued with the song of a angelic voice
+}
+
+TelefonoDeShizuka: {
+	DisplayName: Shizuka's Phone
+	Tooltip:
+		'''
+		Technology from another world! Apparently not
+		"Shizuka will be very happy to talk with you"
+		'''
+}
+
+Familia: {
+	DisplayName: Familia
+	Tooltip:
+		'''
+		"La familia es lo primero"
+		(Yes, it's Spanish)
+		'''
+}
+
+Cutter: {
+	DisplayName: Cutter
+	Tooltip: Sharp, fast, precise and efficient. Also cold, like its owner
+}
+
+SuperPocionDeRecuperacion: {
+	DisplayName: Super Recovery Potion
+	Tooltip:
+		'''
+		The most efficient way to get back home, though you can't use it alone
+		"Nano will be at peace"
+		'''
+}
+
+PocionDeTsundere: {
+	DisplayName: Tsundere Potion
+	Tooltip:
+		'''
+		An intense love makes you stronger
+		Increases melee damage and crit chance by 15%
+		'''
+}
+
+PocionDeSeduccion: {
+	DisplayName: Seduction Potion
+	Tooltip:
+		'''
+		A burning love heals your wounds
+		Increases your life regeneration
+		'''
+}
+
+PocionDeEcosDeAmor: {
+	DisplayName: Echoes of Love Potion
+	Tooltip:
+		'''
+		A silent love pushes you beyond your magical limits
+		Increases your mana regeneration and maximum mana
+		'''
+}
+
+PocionDeEficiencia: {
+	DisplayName: Efficiency Potion
+	Tooltip:
+		'''
+		An efficient love increases your efficiency, for lack of a better word
+		Increases your movement, attack and mining speed
+		'''
+}
+
+TrebolDe4Hojas: {
+	Tooltip:
+		'''
+		According to legend, ask someone out with it, they'll for sure say yes!
+		"That sound like a dumb story for little kids!"
+		'''
+	DisplayName: Four-leaf clover
+}

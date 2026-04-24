@@ -13,20 +13,25 @@ namespace Novias.UI
     public class KaraneInterfaz : InterfazNovias
     {
         public static KaraneInterfaz Instance => ModContent.GetInstance<KaraneInterfaz>();
-
         protected override NoviaUIState CrearEstado() => new KaraneUIState();
         protected override bool EsEstaNovia(NPC npc) => npc.ModNPC is KaraneInda;
     }
 
     public class KaraneUIState : NoviaUIState
     {
-        protected override Color ColorFondo => new Color(28, 16, 38);
-        protected override Color ColorBorde => new Color(200, 90, 150);
-        protected override Color ColorTitulo => new Color(255, 190, 230);
-
+        protected override Color ColorFondo => new Color(31, 16, 1);
+        protected override Color ColorBorde => new Color(255, 165, 0);
+        protected override Color ColorTitulo => new Color(239, 178, 97);
+        protected override Color ColorDialogoNPC => new Color(239, 178, 97);
+        protected override string NombreNPC => "Karane";
         protected override int BuffBeso => ModContent.BuffType<FuerzaDeTsundere>();
 
-        protected override string NombreNPC => "Karane";
+        protected override Color ColorParaNombre(string nombre)
+        {
+            if (nombre == Main.LocalPlayer.name) return ColorDialogoJugador;
+            if (nombre == "Hakari") return new Color(255, 105, 180);
+            return ColorDialogoNPC;
+        }
 
         protected override NoviasPlayerBase ObtenerPlayer() =>
             Main.LocalPlayer.GetModPlayer<KaranePlayer>();
@@ -36,17 +41,10 @@ namespace Novias.UI
 
         protected override string ObtenerDialogoChat()
         {
-            var player = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
-            if (player.Fase < 1)
-            {
-                int idx = Main.rand.Next(3);
-                return Language.GetTextValue($"Mods.Novias.NPCDialogue.KaraneInda.PreMision{idx}");
-            }
-            else
-            {
-                int idx = Main.rand.Next(5);
-                return Language.GetTextValue($"Mods.Novias.NPCDialogue.KaraneInda.Chat{idx}");
-            }
+            var p = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
+            int idx = p.Fase < 1 ? Main.rand.Next(3) : Main.rand.Next(5);
+            string cat = p.Fase < 1 ? "PreMision" : "Chat";
+            return Language.GetTextValue($"Mods.Novias.NPCDialogue.KaraneInda.{cat}{idx}");
         }
 
         protected override string ObtenerDialogoBeso() =>

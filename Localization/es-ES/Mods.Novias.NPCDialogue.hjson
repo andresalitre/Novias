@@ -1,0 +1,29 @@
+HakariHanazono: {
+	PreMision0: ¿Acaso nos conocemos de otra parte? Tu cara me resulta familiar... ¿Quizás de algún sueño compartido?
+	PreMision1: ¿Ah, hola? No esperaba visita... aunque no me quejo.
+	PreMision2: Este mundo es tan extraño. Nunca había visto algo así antes.
+	Chat0: Estaba pensando algo... un poco sucio sobre nosotros dos... ¿El desarrollador me dejó decir eso?
+	Chat1: Siento que el destino nos unió... o quizás fue un dios del amor con demasiado tiempo libre.
+	Chat2: Creo que me torcí el tobillo… ¿podrías ayudarme a caminar? Prometo no soltarme de tu brazo.
+	Chat3: Si te quedas mirando la pantalla tanto tiempo, voy a empezar a creer que quieres que salgamos de aquí juntos.
+	Chat4: ¡Uf! ¿Qué calor hace dentro de este PC, verdad? Siento que mi ropa empieza a estorbar... ¿Te molestaría si me pongo un poco más cómoda?
+	Seguir: ¿Seguirte? ¡Claro que sí! Donde tú vayas, te acompañaré.
+	DejarDeSeguir: ¿E-eh…? ¿Ya no hace falta? ¿Quién escribió este diálogo tan triste?
+	Ocupada: Jejeje, lo siento, pero ya estoy acompañando a alguien. ¡Quizás en otra ocasión!
+	Beso: ¡La sensación es increíble! ¡Jamás había sentido algo igual! {0}, {0}, {0}, {0}...
+}
+
+KaraneInda: {
+	PreMision0: No me mires así. ¿Acaso te parezco interesante o algo? ¡Porque no lo soy!
+	PreMision1: ¡Esa Hakari! ¿Por qué se me adelanta? ¡¿Eh?! ¡Que ni se te ocurra pensar que dije que me gustas o algo parecido!
+	PreMision2: Este mundo es muy diferente. ¿Esto pertenece al canon del manga?
+	Chat0: ¡No pienses que estoy aquí porque quiero! ¡Es solo que el código me obliga a spawnear cerca de ti!
+	Chat1: ¿Por qué abres tanto mi chat? ¡Ni que fuera la protagonista de este arco! Pero ya, en serio... ¿esto es parte del canon?
+	Chat2: ¡N-no te acerques tanto! El manual de tsundere dice que debo alejarme... pero no dice que quiera hacerlo.
+	Chat3: ¡¿Q-qué estás mirando?! ¡Deja de leer mis diálogos! ¡No estamos en una novela visual!
+	Chat4: ¡N-no te confundas! ...No vine a tu mundo solo para estar contigo. ¡Esto no es un isekai!
+	Seguir: ¡N-no tengo de otra! N-no creas que lo hago porque quiera estar contigo.
+	DejarDeSeguir: Bien, como quieras... ¿Por qué se siente tan mal esto si solo es un juego?
+	Ocupada: ¡No te hagas ideas equivocadas! Ya estoy con alguien... ¡así que vete!
+	Beso: ¡Amo a {0}! ¡Bésame más! ¡Nunca dejes de besarme! ¡¿Eh?! ¡No creas que lo estaba disfrutando!
+}

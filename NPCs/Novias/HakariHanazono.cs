@@ -100,6 +100,6 @@ namespace Novias.NPCs.Novias
             });
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs) => NPC.downedBoss1;
+        public override bool CanTownNPCSpawn(int numTownNPCs) => true;
     }
 }

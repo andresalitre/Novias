@@ -1,0 +1,115 @@
+GatitoMenso: {
+	DisplayName: Gatito Menso
+	Tooltip: No quiere que lo lances... O eso dice
+}
+
+GatitoDePeluche: {
+	DisplayName: Gatito De Peluche
+	Tooltip:
+		'''
+		Un adorable gatito de peluche
+		"A alguien le gustan mucho los gatitos".
+		'''
+}
+
+RefrescoDeMelocoton: {
+	DisplayName: Refresco De Melocotón
+	Tooltip: Un exquisito refresco sabor melocotón
+}
+
+MedioRefrescoDeMelocoton: {
+	DisplayName: Medio Refresco De Melocotón
+	Tooltip:
+		'''
+		La mitad de un exquisito refresco sabor melocotón
+		"A alguien le podría interesar un beso indirecto".
+		'''
+}
+
+CañonDeLeche: {
+	DisplayName: Cañón de Leche
+	Tooltip: Hakari lo cargó con mucho cariño... y otras cosas
+}
+
+LecheHakariMunicion: {
+	DisplayName: Leche Hakari
+	Tooltip: Directamente traída de la granja. No preguntes de cuál.
+}
+
+ElRomanceDeLaDiadema: {
+	DisplayName: El Romance De La Diadema
+	Tooltip: Imbuido mágicamente con el canto de una voz angelical.
+}
+
+TelefonoDeShizuka: {
+	DisplayName: Teléfono De Shizuka
+	Tooltip:
+		'''
+		¡Una tecnología de otro mundo! Al parecer no.
+		"Shizuka estará muy feliz de poder hablar contigo."
+		'''
+}
+
+Familia: {
+	DisplayName: Familia
+	Tooltip: '''"La familia es primero".'''
+}
+
+Cutter: {
+	DisplayName: Cutter
+	Tooltip: Afilado, rápido, preciso y eficiente. También frío, como su dueña.
+}
+
+SuperPocionDeRecuperacion: {
+	DisplayName: Super Poción De Recuperación
+	Tooltip:
+		'''
+		La manera más eficiente de poder regresar a casa, claro, no la puedes usar solo.
+		"Nano podrá estar tranquila."
+		'''
+}
+
+PocionDeTsundere: {
+	DisplayName: Poción de Tsundere
+	Tooltip:
+		'''
+		Un amor poderoso intensifica tu fuerza
+		Aumenta un 15% el daño y crítico cuerpo a cuerpo
+		'''
+}
+
+PocionDeSeduccion: {
+	DisplayName: Poción de Seducción
+	Tooltip:
+		'''
+		Un amor abrasador recupera tus heridas
+		Aumenta tu regeneración de vida
+		'''
+}
+
+PocionDeEcosDeAmor: {
+	DisplayName: Poción de Ecos de Amor
+	Tooltip:
+		'''
+		Un amor silencioso te hace sobrepasar tus límites mágicos
+		Aumenta tu regeneración de maná y tu maná máximo
+		'''
+}
+
+PocionDeEficiencia: {
+	DisplayName: Poción De Eficiencia
+	Tooltip:
+		'''
+		Un amor eficiente aumenta tu eficacia, valga la madre
+		Aumenta tu velocidad de movimiento, ataque y minería
+		'''
+}
+
+TrebolDe4Hojas: {
+	Tooltip:
+		'''
+		Dicen que, si das uno al declararte, es seguro que te dirán que sí
+		"Parece cuento de jardín de niños"
+		'''
+	DisplayName: Trébol rosa de cuatro hojas
+}

@@ -1,0 +1,132 @@
+Hakari: {
+	Mision1: {
+		Titulo: Un beso indirecto
+		Descripcion: Tráele a Hakari medio refresco de melocotón.
+		Dialogo0: Deseo con tantas ganas un refresco de melocotón. Pero, la verdad, me cuesta mucho terminarme una lata si la tomo yo sola...
+		Dialogo1: En caso de que consiguieras una... ¿No te gustaría que la compartiéramos?
+		Dialogo2: *Pensamientos de Hakari: ¡Este plan es perfecto! ¡Podré darle un beso indirecto! ¡Estoy super nerviosa pero qué lista soy!*
+		Completacion0: Toma, con este medio refresco de melocotón debería ser suficiente.
+		Completacion1: Muchas gracias.
+		Completacion2: ¡¿Eh, eso no es un beso indirecto?!
+		Completacion3: Un beso indirecto... de mi {0}. ¡¡Un besitoooo indirectooo!!
+		Completacion4: ...
+		Completacion5: ¿Eh? ¿Hanazono?
+		Completacion6: Escucha, {0}... ¡Me gustas! ¡Por favor, seamos novios!
+		Completacion7: ¡¿Q-qué?!
+		Completacion8: L-lo siento mucho, s-sé que es muy repentino, p-pero creo que me enamoré de ti.
+		Completacion9: Desde el primer momento en el que nos cruzamos...
+		Completacion10: Y además, supongo que no soy la única que también siente lo mismo por ti.
+		Completacion11: Y si no te lo digo ahora, sé que me arrepentiré para siempre.
+	}
+
+	Mision2: {
+		Titulo: Una madre complicada
+		Descripcion: Descripción pendiente.
+		Bloqueado: Una madre complicada: Próximamente...
+		Dialogo0: Diálogo pendiente.
+		Dialogo1: Diálogo pendiente.
+		Dialogo2: Diálogo pendiente.
+		Recompensa: Recompensa pendiente.
+	}
+}
+
+Karane: {
+	Mision1: {
+		Titulo: Perdón de la tsundere
+		Descripcion: Consíguele a Karane un lindo gatito de peluche.
+		Dialogo0: ¡Eres un tonto! ¿Por qué dejas que Hakari tome la delantera?
+		Dialogo1: ¡No vayas a creer que me gustas ni nada de eso, ¿eh?!
+		Dialogo2: Esta adaptación no es 100% fiel al anime, así que no creas que te lo perdonaré tan fácil.
+		Dialogo3: Tendrás que esforzarte para que ya no esté enfadada contigo.
+		Bloqueado: Perdón de la tsundere: Requiere: Completar "Un beso indirecto" de Hakari.
+		Completacion0: Aquí tienes, te conseguí algo que creo que te gustará.
+		Completacion1: ¿U-un gatito de peluche...? N-no es como si me alegrara o algo así...
+		Completacion2: ¡Ha! ¿Pero qué más da? Si tantas ganas tienes de ser mi novio, entonces no hay de otra.
+		Completacion3: *Pensamientos: Lo dice como si me estuviera haciendo un favor, eso es nuevo*
+		Completacion4: ¡Argh!, lo que quiero decir es que...
+		Completacion5: La verdad, a mí también me gustas mucho, {0}... ¿Te gustaría ser mi novio?
+	}
+
+	Mision2: {
+		Titulo: Adiós... Energía tsundere
+		Descripcion: Descripción pendiente.
+		Bloqueado: Adiós... Energía tsundere: Próximamente...
+		Dialogo0: Diálogo pendiente.
+		Dialogo1: Diálogo pendiente.
+		Dialogo2: Diálogo pendiente.
+		Recompensa: Recompensa pendiente.
+	}
+}
+
+CompartidaHakariKarane: {
+	Mision1: {
+		Titulo: Debes escoger solo a una, ¿o quizas no?
+		Descripcion: Consigue un regalo especial para ambas chicas, usar una hoz en el césped puede ayudar.
+		Bloqueado: Debes escoger solo a una, ¿o quizas no?: Requiere: Completar "Perdón de la tsundere" de Karane. Hakari y Karane deben estar siguiendo al jugador. El progreso de esta misión es compartido por ambas.
+		Dialogo0: Debes decidir a quien de nosotras vas a elegir...
+		Dialogo1: Prefiero...
+		Dialogo2: ¡Decirlo despues de la pausa comercial!
+		Dialogo3: ¡Ni te ocurra tonto!
+		Dialogo4: Pensamiento: Yo... no se a quien elegir, ¿por que me pasa esto a mi?
+		Completacion0: Entonces, ¿por fin tomaste una decision? ¿aclaraste tu mente?
+		Completacion1: Si...
+		Completacion2: ¡¡POR FAVOR, PERMITANME SALIR CON LAS 2!!
+		Completacion3: ¡¡¡¡QUEEEEEEEEE!!!!???
+		Completacion4: ¡¡¿¿Como que con las 2!!?? ¡¿Entiendes la estupidez que acabas de decir?!
+		Completacion5: Ya se... parece una horrible y estupida idea...
+		Completacion6: Pero... ¡las dos se armaron de valor para decirme lo que en verdad sienten!
+		Completacion7: ¡Y yo mejor que nadie... se lo dificil que es expresarle tus sentimientos a la persona que te gusta!
+		Completacion8: ¡Las dos me gustan mucho y por eso no puedo elegir a solo una de las dos!
+		Completacion9: Se que esto parece una especie de infidelidad... ¡Pero les prometo que me esforzare y ambas seran muy felices a mi lado!
+		Completacion10: ¡Les suplico que lo piensen! ¡Quiero que ambas sean mis novias!
+		Completacion11: ...
+		Completacion12: ...
+		Completacion13: Aunque eso suena muy bonito... salir con las dos a la vez... eso es...
+		Completacion14: esta linea no sirve de nada xd
+		Completacion15: ¡¿Eh?!
+		Completacion16: ¡¿Oh?!
+		Completacion17: ¿Esos son... treboles de 4 hojas? ¡¿y ademas encontro 2?!
+		Completacion18: ¡¿Que?! ¡Pero si seras idiota! ¡¿Tan grande y todavia sigues creyendo en esas ridiculeces?!
+		Completacion19: Oye Karane... mejor ya no hables, nosotras tambien nos arrastramos buscando uno para el
+		Completacion20: ¡Aja! ¡¿Quieres ganarte nuestro aprecio con esas tonterias?!
+		Completacion21: De una vez te digo que no me convenseras para compartirte con otra chica
+		Completacion22: ¡Ah! ¡No! perdon, creo que estas malinterpretandome...
+		Completacion23: ¡¡¡¿Y COMO QUIERES QUE LO INTERPRETE?!!!
+		Completacion24: Crei que si se los daba junto con mi respuesta entonces ustedes quizas se alegrarian aun que sea un poco
+		Completacion25: ¡¡¡¡WUUUUUUUAAAAAA!!!!!!!!!!!!!
+		Completacion26: Si, esta bien, acepto tu propuesta, a mi no me importa tener que compartirte
+		Completacion27: ¡¡¡¿QUEEEEeeee!!!!?? ¿En serio aceptaras su propuesta indecente?
+		Completacion28: Estoy locamente enamorada de {0}, asi que no importa con quien mas este
+		Completacion29: No me imagino enamorandome de otra persona que no se trate de el
+		Completacion30: ¡¡¡¡AAAAAA!!!!
+		Completacion31: ¡¡En ese caso yo tambien!! ¡Pero si no me tratas bien te prometo que me las pagaras!
+		Completacion32: ¡Es una promesa! ¡Las hare las chicas mas felices del mundo!
+	}
+
+	Mision2: {
+		Titulo: Un beso de tres
+		Descripcion: ¡Ten una aventura increíble con tus primeras novias!
+		Bloqueado: Requiere: Completar "Debes escoger solo a una, ¿o quizás no?". Hakari y Karane deben estar siguiendo al jugador. El progreso de esta misión es compartido por ambas.
+		Dialogo0: Oye, me surgió una duda {0}... ¿has besado a alguien antes de conocernos?
+		Dialogo1: ¿Eh? No, son mis primeras novias en toda mi vida.
+		Dialogo2: *Pensamientos: ¡¿Mhh?! ¡O sea que la más rápida se llevará el primer beso y marcará sus labios primero!*
+		Dialogo3: ¿Saben que puedo ver sus ventanas de diálogo y leer lo que están pensando?
+		Dialogo4: El guion ya está escrito, habrá beso, ¡pero primero debemos cumplir con una misión especial!
+		Dialogo5: ¿Y qué misión especial tendríamos que superar {0}?
+		Dialogo6: ¡Tendrán que acompañarme en una aventura y matar a 50 criaturas!
+		Dialogo7: ¡¿QUIÉN FUE EL ENCARGADO DE DISEÑAR ESTA MISIÓN BASURA?!
+		Dialogo8: ¡No tengo idea! ¡Pero así lo quiere el desarrollador!
+		Dialogo9: ¡NO hay tiempo que perder chicas! ¡VAMOS!
+		Completacion0: ¡Por fin completamos el objetivo!
+		Completacion1: Karane, ¿qué sigue en el guion? ¿Se viene nuestro besito? Mehehe.
+		Completacion2: *Leyendo el guion*
+		Completacion3: ¡¡¿¿Nos besaremos todos a la vez??!!
+		Completacion4: Sí, será un beso de tres.
+		Completacion5: Pero no solo me besarán a mí, sino también la una a la otra.
+		Completacion6: ¡¡¡¡WUUUUUUUAAAA!!!!
+		Completacion7: La verdad pensé que se negarían porque creía que se llevaban mal...
+		Completacion8: ¡Pero saldrá bien! ¡Confío en ustedes! ¡NO! ¡Confío en nosotros tres!
+		Completacion9: Oye, no te emociones tanto...
+		Completacion10: Apresúrate, dale al botón de completar y ¡¡BÉSANOS RÁPIDO!!
+	}
+}

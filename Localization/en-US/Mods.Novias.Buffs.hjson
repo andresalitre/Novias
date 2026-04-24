@@ -1,0 +1,35 @@
+FuerzaDeTsundere: {
+	DisplayName: Tsundere Strength
+	Description:
+		'''
+		Your body fills with tsundere energy
+		Increases melee damage and crit chance
+		'''
+}
+
+ImpulsoSeductor: {
+	DisplayName: Seductive Impulse
+	Description:
+		'''
+		Your body starts to warm up
+		Considerably increases your life regeneration
+		'''
+}
+
+ArmoniaMagica: {
+	DisplayName: Magical Harmony
+	Description:
+		'''
+		A beautiful voice flows through your veins
+		Increases your magical abilities
+		'''
+}
+
+Eficiencia: {
+	DisplayName: Efficiency
+	Description:
+		'''
+		It wouldn't have been efficient to think of a better description for this buff
+		Increases the speed of everything
+		'''
+}

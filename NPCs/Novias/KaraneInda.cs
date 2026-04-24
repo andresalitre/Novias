@@ -12,6 +12,7 @@ using Novias.UI;
 using Novias.Items.GirlfriendsItems.Karane;
 using Novias.Items.Potions;
 using Novias.Items.Weapons.Melee;
+using Novias.Players;
 
 namespace Novias.NPCs.Novias
 {
@@ -19,7 +20,7 @@ namespace Novias.NPCs.Novias
     public class KaraneInda : ComportamientoNovia
     {
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<KaranePlayer>().EstaSiguiendo;
-        protected override Color ColorPolvo => new Color(255, 105, 180);
+        protected override Color ColorPolvo => new Color(255, 165, 0);
         protected override int CooldownAtaque => 45;
         protected override int EfectoNovia => ModContent.ProjectileType<Corazon>();
         protected override int RegeneracionVida => 8;
@@ -65,7 +66,7 @@ namespace Novias.NPCs.Novias
         {
             var tienda = new NPCShop(Type, "Shop");
             tienda.Add(ModContent.ItemType<GatitoMenso>());
-            tienda.Add(ModContent.ItemType<PocionDeTsundere>());
+            tienda.Add(ModContent.ItemType<PocionDeTsundere>(), new Condition("Mods.Novias.Condiciones.MisionCompletada", () => Main.LocalPlayer.GetModPlayer<KaranePlayer>().MisionActual >= 1));
             tienda.Register();
         }
 
@@ -96,6 +97,7 @@ namespace Novias.NPCs.Novias
             });
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs) => NPC.downedBoss1;
+        public override bool CanTownNPCSpawn(int numTownNPCs) =>
+            Main.LocalPlayer.GetModPlayer<HakariPlayer>().MisionActual >= 1;
     }
 }

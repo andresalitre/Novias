@@ -1,4 +1,5 @@
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Novias.Systems;
 using Novias.Items.Potions;
 using Novias.Items.GirlfriendsItems.Hakari;
@@ -11,20 +12,26 @@ namespace Novias.NPCs.Misiones
         {
             new MisionData
             {
-                Clave                = "Hakari_1",
-                TituloKey            = "Mods.Novias.Misiones.Hakari.Mision1.Titulo",
-                DescripcionKey       = "Mods.Novias.Misiones.Hakari.Mision1.Descripcion",
-                DialogosKey          = new[]
-                {
-                    "Mods.Novias.Misiones.Hakari.Mision1.Dialogo0",
-                    "Mods.Novias.Misiones.Hakari.Mision1.Dialogo1",
-                    "Mods.Novias.Misiones.Hakari.Mision1.Dialogo2",
-                },
-                ItemRequisito        = ModContent.ItemType<MedioRefrescoDeMelocoton>(),
-                CantidadRequisito    = 1,
-                ItemRecompensa       = ModContent.ItemType<PocionDeSeduccion>(),
-                CantidadRecompensa   = 1,
+                Clave              = "Hakari_1",
+                TituloKey          = "Mods.Novias.Misiones.Hakari.Mision1.Titulo",
+                DescripcionKey     = "Mods.Novias.Misiones.Hakari.Mision1.Descripcion",
+                ItemRequisito      = ModContent.ItemType<MedioRefrescoDeMelocoton>(),
+                CantidadRequisito  = 1,
+                ItemRecompensa     = ModContent.ItemType<PocionDeSeduccion>(),
+                CantidadRecompensa = 1,
                 DialogoRecompensaKey = "Mods.Novias.Misiones.Hakari.Mision1.Recompensa",
+                OnMensajesCompletacion = () =>
+                {
+                    string nj = Terraria.Main.LocalPlayer.name;
+                    Terraria.Main.NewText(Terraria.Localization.Language.GetTextValue("Mods.Novias.UI.TiendaDesbloqueada", nj, "Hakari"), 255, 215, 0);
+                    Terraria.Main.NewText(Terraria.Localization.Language.GetTextValue("Mods.Novias.UI.SeguimientoDesbloqueado", nj, "Hakari"), 180, 80, 220);
+                },
+                DialogosPresentacion = new[]
+                {
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Dialogo0" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Dialogo1" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Dialogo2" },
+                },
                 DialogosCompletacion = new[]
                 {
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion0" },
@@ -32,45 +39,36 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion2" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion3" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion4" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion4" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion5" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion6" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion7" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion8" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion9" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion10" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Completacion11" },
                 },
             },
+
+            Mision1HakariKarane.Obtener(),
+
+            Mision2HakariKarane.Obtener(),
+
             new MisionData
             {
-                Clave                = "Hakari_2",
-                TituloKey            = "Mods.Novias.Misiones.Hakari.Mision2.Titulo",
-                DescripcionKey       = "Mods.Novias.Misiones.Hakari.Mision2.Descripcion",
-                DialogosKey          = new[]
+                Clave              = "Hakari_2",
+                TituloKey          = "Mods.Novias.Misiones.Hakari.Mision2.Titulo",
+                DescripcionKey     = "Mods.Novias.Misiones.Hakari.Mision2.Descripcion",
+                ItemRequisito      = 0,
+                ItemRecompensa     = ModContent.ItemType<PocionDeSeduccion>(),
+                CantidadRecompensa = 1,
+                MensajeBloqueadoKey  = "Mods.Novias.Misiones.Hakari.Mision2.Bloqueado",
+                Condicion          = () => false,
+                DialogosPresentacion = new[]
                 {
-                    "Mods.Novias.Misiones.Hakari.Mision2.Dialogo0",
-                    "Mods.Novias.Misiones.Hakari.Mision2.Dialogo1",
-                    "Mods.Novias.Misiones.Hakari.Mision2.Dialogo2",
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision2.Dialogo0" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision2.Dialogo1" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision2.Dialogo2" },
                 },
-                ItemRequisito        = 0,
-                ItemRecompensa       = ModContent.ItemType<PocionDeSeduccion>(),
-                CantidadRecompensa   = 1,
-                DialogoRecompensaKey = "Mods.Novias.Misiones.Hakari.Mision2.Recompensa",
-            },
-            new MisionData
-            {
-                Clave                = "Hakari_3",
-                TituloKey            = "Mods.Novias.Misiones.Hakari.Mision3.Titulo",
-                DescripcionKey       = "Mods.Novias.Misiones.Hakari.Mision3.Descripcion",
-                DialogosKey          = new[]
-                {
-                    "Mods.Novias.Misiones.Hakari.Mision3.Dialogo0",
-                    "Mods.Novias.Misiones.Hakari.Mision3.Dialogo1",
-                    "Mods.Novias.Misiones.Hakari.Mision3.Dialogo2",
-                },
-                ItemRequisito        = 0,
-                ItemRecompensa       = ModContent.ItemType<PocionDeSeduccion>(),
-                CantidadRecompensa   = 1,
-                DialogoRecompensaKey = "Mods.Novias.Misiones.Hakari.Mision3.Recompensa",
             },
         };
     }
