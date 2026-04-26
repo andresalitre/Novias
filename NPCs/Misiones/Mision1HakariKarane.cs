@@ -14,7 +14,7 @@ namespace Novias.NPCs.Misiones
     {
         static readonly Color CHakari = new Color(255, 190, 230);
         static readonly Color CKarane = new Color(239, 178, 97);
-        static readonly Color CAmbas = new Color(255, 150, 200);
+        static readonly Color CAmbas = new Color(255, 255, 255);
 
         public static MisionData Obtener() => new MisionData
         {

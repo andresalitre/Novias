@@ -48,12 +48,7 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision1.Dialogo8" },
                 },
                 DialogosCompletacion = new[]
-                {
-                    /* 
-                       Hakari = new Color(255, 190, 230);
-                       Karane = new Color(239, 178, 97);
-                       Ambas = new Color(255, 150, 200);*/
-                    
+                {                
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision1.Completacion0" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision1.Completacion1" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision1.Completacion2" },
@@ -97,10 +92,8 @@ namespace Novias.NPCs.Misiones
                 },
                 DialogosCompletacion = new[]
                 {
-                    /* 
-                       Hakari = new Color(255, 190, 230);
-                       Karane = new Color(239, 178, 97);
-                       Ambas = new Color(255, 150, 200);*/
+                    // Hakari = new Color(255, 190, 230);
+                    // Karane = new Color(239, 178, 97);
                     
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion0" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion1", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230)},
@@ -128,7 +121,29 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion23", NombreNPC = "Hakari y Karane", ColorNombre = new Color(255, 255, 255)},
                 },
             },
-            
+
+             new MisionData
+            {
+                TituloKey            = "Mods.Novias.Misiones.Shizuka.Mision3.Titulo",
+                DescripcionKey       = "Mods.Novias.Misiones.Shizuka.Mision3.Descripcion",
+                ItemRequisito        = 0,
+                ItemRecompensa       = ModContent.ItemType<PocionDeEcosDeAmor>(),
+                CantidadRecompensa   = 1,
+                MensajeBloqueadoKey  = "Mods.Novias.Misiones.Shizuka.Mision3.Bloqueado",
+                DialogosPresentacion = new[]
+                {
+                    new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.Shizuka.Mision3.Dialogo0" },
+                    new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.Shizuka.Mision3.Dialogo1" },
+                },
+                DialogosCompletacion = new[]
+                {
+                    // Hakari = new Color(255, 190, 230);
+                    // Karane = new Color(239, 178, 97);
+                    
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision3.Completacion0" },
+                },
+            },
+
         };
     }
 }
