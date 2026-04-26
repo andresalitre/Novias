@@ -26,13 +26,6 @@ namespace Novias.UI
         protected override string NombreNPC => "Karane";
         protected override int BuffBeso => ModContent.BuffType<FuerzaDeTsundere>();
 
-        protected override Color ColorParaNombre(string nombre)
-        {
-            if (nombre == Main.LocalPlayer.name) return ColorDialogoJugador;
-            if (nombre == "Hakari") return new Color(255, 105, 180);
-            return ColorDialogoNPC;
-        }
-
         protected override NoviasPlayerBase ObtenerPlayer() =>
             Main.LocalPlayer.GetModPlayer<KaranePlayer>();
 

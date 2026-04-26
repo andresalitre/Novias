@@ -39,3 +39,20 @@ KaraneInda: {
 
 	Census.SpawnCondition: Completa la primera misión de Hakari
 }
+
+ShizukaYoshimoto: {
+	// DisplayName: Shizuka Yoshimoto
+
+	TownNPCMood: {
+		// Content: Estoy feliz.
+		// NoHome: Detesto no tener un hogar.
+		// FarFromHome: Estoy demasiado lejos de casa.
+		// LoveSpace: Me encanta tener tanto espacio.
+		// DislikeCrowded: No me gusta tener tan poco espacio.
+		// HateCrowded: Detesto tener poco espacio.
+		// LikeNPC_Princess: Me gusta {NPCName}.
+		// Princess_LovesNPC: Me gusta {NPCName}.
+	}
+
+	// Census.SpawnCondition: Conditions unknown
+}

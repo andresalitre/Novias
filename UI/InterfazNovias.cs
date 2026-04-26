@@ -558,7 +558,7 @@ namespace Novias.UI
 
             if (m.ItemRecompensa != 0)
                 Main.LocalPlayer.QuickSpawnItem(Main.LocalPlayer.GetSource_FromThis(), m.ItemRecompensa, m.CantidadRecompensa);
-            p.CompletarMision();
+            if (m.AvanzaFase) p.CompletarMision();
 
             m.OnMensajesCompletacion?.Invoke();
 
@@ -572,7 +572,7 @@ namespace Novias.UI
         private void FinalizarMision(MisionData m, NoviasPlayerBase p)
         {
             m.OnMensajesCompletacion?.Invoke();
-            p.UIAbierta = false; p.CompletarMision(); _lineasMostradas.Clear();
+            p.UIAbierta = false; if (m.AvanzaFase) p.CompletarMision(); _lineasMostradas.Clear();
             SoundEngine.PlaySound(SoundID.Item4);
             CombatText.NewText(Main.LocalPlayer.getRect(), ColorBorde, Language.GetTextValue("Mods.Novias.UI.MisionCompleta"), dramatic: true);
             CerrarChat();

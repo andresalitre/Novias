@@ -27,5 +27,6 @@ namespace Novias.Systems
 
         public bool EstaDisponible() => Condicion == null || Condicion();
         public bool PuedeCompletar() => CondicionCompletar == null || CondicionCompletar();
+        public bool AvanzaFase { get; init; } = true;
     }
 }

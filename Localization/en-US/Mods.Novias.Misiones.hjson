@@ -130,3 +130,69 @@ CompartidaHakariKarane: {
 		Completacion10: Hurry up, hit the complete button and KISS US FAST!!
 	}
 }
+
+Shizuka: {
+	Mision1: {
+		Titulo: La princesa muda y el terrariano
+		Descripcion: Parece que a ella le cuesta hablar con los demás, encuentra una forma de ayudarla a comunicarse.
+		Bloqueado: La princesa muda y el terrariano: Requiere: Completar "Un beso de tres".
+		Dialogo0: ...
+		Dialogo1: ":)"
+		Dialogo2: (⸝⸝O-O⸝⸝)
+		Dialogo3: (⸝⸝>-<⸝⸝)
+		Dialogo4: *Pensamientos: Qué increíbles diálogos fueron implementados en este personaje...*
+		Dialogo5: ¿Por qué no solo me hablas con claridad?
+		Dialogo6: (｡Ó-Ò｡)
+		Dialogo7: (◞‸ ◟)
+		Dialogo8: Entiendo...
+		Completacion0: Ten, es para ti. Es un teléfono con reproductor de voz que reproducirá lo que escribas en él.
+		Completacion1: No puedo imaginarme lo difícil que puede ser para ti tener que hablar en voz alta.
+		Completacion2: Sé que debes tener tus razones... Por eso no quiero que te sientas presionada.
+		Completacion3: Pero para serte sincero, me gustaría ayudarte con esto para que puedas hablar con los demás.
+		Completacion4: Espero que esto te ayude... Bueno, ¿por qué no intentas usarlo?
+		Completacion5: ...
+		Completacion6: *Teléfono: Te quiero...*
+		Completacion7: ...
+		Completacion8: *Teléfono: Lo siento... ¿Puedes ignorar lo que te acabo de decir?*
+		Completacion9: *Teléfono: No te pido una respuesta al respecto.*
+		Completacion10: *Teléfono: Soy consciente de que tu corazón le pertenece a otra doncella.*
+		Completacion11: *Teléfono: Pero quería confesar mis sentimientos antes de...*
+		Completacion12: Escúchame... ¡Yo también te quiero mucho!
+		Completacion13: *Teléfono: Pero nuestro destino no nos permitirá estar juntos...*
+		Completacion14: Si el destino se opone...
+		Completacion15: ¡Tendremos que cambiarlo!
+		Completacion16: ¡Caminemos juntos, Shizuka!
+	}
+
+	Mision2: {
+		Titulo: Momento divertido de presentación
+		Descripcion: Preséntale a Shizuka a tus novias. No juzgues el nombre de la misión, no había tiempo.
+		Bloqueado: Momento divertido de presentación: Requiere: Hakari y Karane deben estar siguiendo al jugador:
+		Dialogo0: *Pensamientos: Supongo que debo presentarles mi nueva novia a mis otras novias...*
+		Dialogo1: *Pensamientos: ¡Ay, qué miedito!*
+		Completacion0: Hola chicas... Les quería hacer una pregunta.
+		Completacion1: ¿Qué sucede, {0}?
+		Completacion2: Acabo de completar la misión 1 de Shizuka Yoshimoto y...
+		Completacion3: Quiero que dejen que Shizuka Yoshimoto sea mi nueva novia y esté con nosotros tres en una relación...
+		Completacion4: ¡ME NIEGOOOOOOOOOOOOOOOOOOOOOOOOO! ¡ROTUNDAMENTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!
+		Completacion5: Cómo es posible, Rentarou...
+		Completacion6: Encontraste un nuevo amor, pero fuiste muy considerado en no querer abandonarnos. ¡No puedo creer cuánta bondad hay en tu ser!
+		Completacion7: ¡¿Y ahora a esta se le pudrió el cerebro o qué?!
+		Completacion8: ¡No! ¡Que Shizuka se integre no cambia lo que ya sentía por ustedes!
+		Completacion9: ¡Que quede claro! ¡Seguiré queriéndolas a todas y cuidando de ustedes como siempre!
+		Completacion10: ¡NO! ¡PROMETO AMARLAS MUCHO MÁS QUE ANTES! ¡DENME LA OPORTUNIDAD!
+		Completacion11: ¿Mucho más que antes...?
+		Completacion12: Sí... Y si alguna vez no les llego a cumplir, solo háganmelo saber...
+		Completacion13: Y voy a expiar mis pecados... bebiendo poción roja.
+		Completacion14: ¡¿Cómo planeas conseguir una en un mundo vanilla?!
+		Completacion15: ¡Pero qué basado, eres el mejor, mi {0}!
+		Completacion16: Muy bien. Puede que las hayas visto antes, Shizuka; ellas son mis novias, Hakari Hanazono y Karane Inda.
+		Completacion17: Encantada de conocerte.
+		Completacion18: Sí... es un placer...
+		Completacion19: Ella es Shizuka Yoshimoto, también será mi novia, se las presento, chicas.
+		Completacion20: *Pensamientos de Hakari: ¿Cómo estará programada?*
+		Completacion21: *Pensamientos de Karane: Según su código no tiene diálogos integrados.*
+		Completacion22: *Teléfono: El gusto es mío, espero podamos llevarnos muy bien.*
+		Completacion23: ¡ES COMO UNA IA!
+	}
+}

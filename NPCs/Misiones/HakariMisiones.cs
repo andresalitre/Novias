@@ -12,7 +12,6 @@ namespace Novias.NPCs.Misiones
         {
             new MisionData
             {
-                Clave              = "Hakari_1",
                 TituloKey          = "Mods.Novias.Misiones.Hakari.Mision1.Titulo",
                 DescripcionKey     = "Mods.Novias.Misiones.Hakari.Mision1.Descripcion",
                 ItemRequisito      = ModContent.ItemType<MedioRefrescoDeMelocoton>(),
@@ -55,7 +54,6 @@ namespace Novias.NPCs.Misiones
 
             new MisionData
             {
-                Clave              = "Hakari_2",
                 TituloKey          = "Mods.Novias.Misiones.Hakari.Mision2.Titulo",
                 DescripcionKey     = "Mods.Novias.Misiones.Hakari.Mision2.Descripcion",
                 ItemRequisito      = 0,

@@ -16,7 +16,7 @@ HakariHanazono: {
 		LikeNPC: I like {NPCName}.
 	}
 
-	Census.SpawnCondition: The Eye of Cthulhu has been defeated
+	Census.SpawnCondition: No condition
 }
 
 KaraneInda: {
@@ -37,5 +37,22 @@ KaraneInda: {
 		LikeNPC: I like {NPCName}.
 	}
 
-	Census.SpawnCondition: Complete the first mission of Hakari
+	Census.SpawnCondition: Complete the first mission of Hakari "An Indirect Kiss"
+}
+
+ShizukaYoshimoto: {
+	DisplayName: Shizuka Yoshimoto
+
+	TownNPCMood: {
+		Content: Estoy feliz.
+		NoHome: Detesto no tener un hogar.
+		FarFromHome: Estoy demasiado lejos de casa.
+		LoveSpace: Me encanta tener tanto espacio.
+		DislikeCrowded: No me gusta tener tan poco espacio.
+		HateCrowded: Detesto tener poco espacio.
+		LikeNPC_Princess: Me gusta {NPCName}.
+		Princess_LovesNPC: Me gusta {NPCName}.
+	}
+
+	Census.SpawnCondition: Complete "You must choose only one, or maybe not?"
 }

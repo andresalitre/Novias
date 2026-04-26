@@ -14,7 +14,6 @@ namespace Novias.NPCs.Misiones
         {
             new MisionData
             {
-                Clave              = "Karane_1",
                 TituloKey          = "Mods.Novias.Misiones.Karane.Mision1.Titulo",
                 DescripcionKey     = "Mods.Novias.Misiones.Karane.Mision1.Descripcion",
                 ItemRequisito      = ModContent.ItemType<GatitoDePeluche>(),
@@ -54,7 +53,6 @@ namespace Novias.NPCs.Misiones
 
             new MisionData
             {
-                Clave              = "Karane_3",
                 TituloKey          = "Mods.Novias.Misiones.Karane.Mision2.Titulo",
                 DescripcionKey     = "Mods.Novias.Misiones.Karane.Mision2.Descripcion",
                 ItemRequisito      = 0,

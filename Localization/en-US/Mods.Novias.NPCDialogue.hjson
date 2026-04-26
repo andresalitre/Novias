@@ -10,7 +10,7 @@ HakariHanazono: {
 	Seguir: Follow you? Of course! Wherever you go, I'll be right there by your side.
 	DejarDeSeguir: H-huh…? You don't need me anymore? Who wrote this depressing dialogue?
 	Ocupada: Hehe, sorry, but I'm already accompanying someone. Maybe next time!
-	Beso: This feeling is incredible! I've never felt anything like it! {0}, {0}, {0}, {0}...
+	Beso: Wooah...! It's never been so intense before! My brain is mush, and my heart is wide open for you! {0}, darling! Darling, {0}! {0}, darling!
 }
 
 KaraneInda: {
@@ -25,5 +25,20 @@ KaraneInda: {
 	Seguir: I-I have no choice! D-don't think I'm doing this because I want to be with you or anything!
 	DejarDeSeguir: Fine, whatever... Why does this feel so crappy if it's just a game?
 	Ocupada: Don't get any ideas! I'm already with someone else... so beat it!
-	Beso: I love you, {0}! Kiss me more! Don't ever stop! ...HUH?! Don't you dare think I was enjoying that!
+	Beso: Wuuah...! I love, love, love, love love you! I love you more than anything! Kiss me again! KISS ME TILL THE DAY I DIE!!!
+}
+
+ShizukaYoshimoto: {
+	PreMision0: ...
+	PreMision1: ...
+	PreMision2: ...
+	Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
+	Chat1: *Teléfono: Según el capítulo 5 del manga, aquí debería pasar algo romántico.*
+	Chat2: *Teléfono: Según el capítulo 5 del manga, aquí debería pasar algo romántico.*
+	Chat3: *
+	Chat4: *
+	Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
+	DejarDeSeguir: *Teléfono: Estaré aquí esperando tu regreso.*
+	Ocupada: *
+	Beso: Te quiero, {0}. Te quiero... Te quiero mucho... Ay, no, no puedo dejar de pensar en {0}...
 }

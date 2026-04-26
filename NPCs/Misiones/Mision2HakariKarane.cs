@@ -16,7 +16,7 @@ namespace Novias.NPCs.Misiones
     {
         static readonly Color CHakari = new Color(255, 190, 230);
         static readonly Color CKarane = new Color(239, 178, 97);
-        static readonly Color CAmbas = new Color(255, 150, 200);
+        static readonly Color CAmbas = new Color(255, 255, 255);
 
         const int metaDeEnemigos = 50;
 
@@ -114,13 +114,13 @@ namespace Novias.NPCs.Misiones
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo0", NombreNPC = "Hakari", ColorNombre = CHakari },
                 new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo1" },
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo2", NombreNPC = "Hakari y Karane", ColorNombre = CAmbas },
-                new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo3" }, 
-                new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo4" },
+                new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo3" }, 
+                new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo4" },
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo5", NombreNPC = "Hakari", ColorNombre = CHakari },
-                new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo6" },
+                new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo6" },
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo7", NombreNPC = "Karane", ColorNombre = CKarane },
-                new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo8" },
-                new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo9" },
+                new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo8" },
+                new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Dialogo9" },
 
             },
 
@@ -128,13 +128,13 @@ namespace Novias.NPCs.Misiones
             {
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion0", NombreNPC = "Hakari", ColorNombre = CHakari },
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion1", NombreNPC = "Hakari", ColorNombre = CHakari },
-                new LineaDialogo { EsJugador = false,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion2", NombreNPC = "Karane", ColorNombre = CKarane },
+                new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion2", NombreNPC = "Karane", ColorNombre = CKarane },
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion3", NombreNPC = "Karane", ColorNombre = CKarane },
-                new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion4" },
-                new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion5" },
+                new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion4" },
+                new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion5" },
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion6", NombreNPC = "Hakari y Karane", ColorNombre = CAmbas },
                 new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion7" },
-                new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion8" },
+                new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion8" },
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion9", NombreNPC = "Karane", ColorNombre = CKarane },
                 new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.CompartidaHakariKarane.Mision2.Completacion10", NombreNPC = "Karane", ColorNombre = CKarane },
             },

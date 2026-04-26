@@ -26,13 +26,6 @@ namespace Novias.UI
         protected override string NombreNPC => "Hakari";
         protected override int BuffBeso => ModContent.BuffType<ImpulsoSeductor>();
 
-        protected override Color ColorParaNombre(string nombre)
-        {
-            if (nombre == Main.LocalPlayer.name) return ColorDialogoJugador;
-            if (nombre == "Karane") return new Color(255, 165, 0);
-            return ColorDialogoNPC;
-        }
-
         protected override NoviasPlayerBase ObtenerPlayer() =>
             Main.LocalPlayer.GetModPlayer<HakariPlayer>();
 
