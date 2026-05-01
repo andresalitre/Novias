@@ -53,7 +53,6 @@ namespace Novias.NPCs.Misiones
                 Main.LocalPlayer.GetModPlayer<HakariPlayer>().CompletacionPendiente = true;
                 Main.LocalPlayer.GetModPlayer<KaranePlayer>().CompletacionPendiente = true;
             },
-
             OnCompletar = () =>
             {
                 var player = Main.LocalPlayer;
@@ -72,6 +71,9 @@ namespace Novias.NPCs.Misiones
 
                 player.GetModPlayer<HakariPlayer>().Mision1CompartidaCompletada = true;
                 player.GetModPlayer<KaranePlayer>().Mision1CompartidaCompletada = true;
+
+                player.GetModPlayer<HakariPlayer>().AvanzarMisionSinFase();
+                player.GetModPlayer<KaranePlayer>().AvanzarMisionSinFase();
 
                 player.QuickSpawnItem(player.GetSource_FromThis(), ModContent.ItemType<PocionDeSeduccion>(), 2);
                 player.QuickSpawnItem(player.GetSource_FromThis(), ModContent.ItemType<PocionDeTsundere>(), 2);

@@ -48,6 +48,8 @@ namespace Novias.NPCs.Misiones
                 },
             },
 
+            //Misiones compartidas, desbloquean beso
+
             Mision1HakariKarane.Obtener(),
 
             Mision2HakariKarane.Obtener(),
@@ -60,7 +62,7 @@ namespace Novias.NPCs.Misiones
                 ItemRecompensa     = ModContent.ItemType<PocionDeSeduccion>(),
                 CantidadRecompensa = 1,
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Hakari.Mision2.Bloqueado",
-                Condicion          = () => false,
+                Condicion          = () => false, // esta mision la hare despues
                 DialogosPresentacion = new[]
                 {
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision2.Dialogo0" },

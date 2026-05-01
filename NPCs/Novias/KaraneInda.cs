@@ -21,7 +21,7 @@ namespace Novias.NPCs.Novias
     {
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<KaranePlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(255, 165, 0);
-        protected override int CooldownAtaque => 45;
+        protected override int CooldownAtaque => 30;
         protected override int EfectoNovia => ModContent.ProjectileType<Corazon>();
         protected override int RegeneracionVida => 8;
 
@@ -98,6 +98,6 @@ namespace Novias.NPCs.Novias
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs) =>
-            Main.LocalPlayer.GetModPlayer<HakariPlayer>().MisionActual >= 1;
+            Main.LocalPlayer.GetModPlayer<HakariPlayer>().MisionActual >= 1; //llega luego de completar hakari 1, la primera mision del mod
     }
 }

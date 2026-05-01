@@ -22,7 +22,7 @@ namespace Novias.NPCs.Misiones
                 CantidadRecompensa = 1,
                 DialogoRecompensaKey = "Mods.Novias.Misiones.Karane.Mision1.Recompensa",
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Karane.Mision1.Bloqueado",
-                Condicion = () => Main.LocalPlayer.GetModPlayer<HakariPlayer>().MisionActual >= 1,
+                Condicion = () => Main.LocalPlayer.GetModPlayer<HakariPlayer>().MisionActual >= 1, //completar hakari 1
                 OnMensajesCompletacion = () =>
                 {
                     string nj = Main.LocalPlayer.name;
@@ -47,6 +47,8 @@ namespace Novias.NPCs.Misiones
                 },
             },
 
+            //Misiones compartidas, desbloquean beso
+
             Mision1HakariKarane.Obtener(),
 
             Mision2HakariKarane.Obtener(),
@@ -59,7 +61,7 @@ namespace Novias.NPCs.Misiones
                 ItemRecompensa     = ModContent.ItemType<PocionDeTsundere>(),
                 CantidadRecompensa = 1,
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Karane.Mision2.Bloqueado",
-                Condicion          = () => false,
+                Condicion          = () => false, //mision para despues
                 DialogosPresentacion = new[]
                 {
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Karane.Mision2.Dialogo0" },

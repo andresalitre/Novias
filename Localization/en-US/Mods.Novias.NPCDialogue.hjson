@@ -29,16 +29,26 @@ KaraneInda: {
 }
 
 ShizukaYoshimoto: {
-	PreMision0: ...
-	PreMision1: ...
+	PreMision0: ¡A-a...!
+	PreMision1: ¡¿...?!
 	PreMision2: ...
 	Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
-	Chat1: *Teléfono: Según el capítulo 5 del manga, aquí debería pasar algo romántico.*
-	Chat2: *
-	Chat3: *
-	Chat4: *
+	Chat1: *Teléfono: Acorde al quinto capítulo del manga, aquí debería suceder algo romántico.*
+	Chat2: *Teléfono: Mi corazón late como el de la princesa Io ante el caballero Kamakur.*
+	Chat3: Chat4:
 	Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
-	DejarDeSeguir: *Teléfono: Estaré aquí esperando tu regreso.*
-	Ocupada: *
-	Beso: Te quiero, {0}. Te quiero... Te quiero mucho... Ay, no, no puedo dejar de pensar en {0}...
+	DejarDeSeguir: Ocupada:
+	Beso: Te quiero, {0}. Te quiero... Te quiero mucho... Ay, no, no puedo dejar de pensar en ti, {0}...!
+}
+
+NanoEiai: {
+	PreMision0: "3,1415926535897932384... 3,1415926535897932384..."
+	PreMision1: En este mundo, lo que no mejora tu futuro no tiene sentido si quiera intentarlo
+	PreMision2: El romance es inutil, es una perdida de tiempo total
+	Chat0: Chat1: Toda ayuda es buena, aunque las posibilidades sean casi nulas.
+	Chat2: 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 ...
+	Chat3: Chat4:
+	Seguir: Es lógico, seguirte seria lo más eficiente para que puedas progresar.
+	DejarDeSeguir: Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
+	Beso: Mphh, esto... supera mis expectativas, es como inyectar felicidad directamente en mi cerebro con una explosion de placer, es demasiado!!!
 }

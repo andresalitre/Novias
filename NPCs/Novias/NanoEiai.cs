@@ -9,24 +9,23 @@ using Novias.Projectiles;
 using Novias.Effects;
 using Novias.NPCs.Misiones;
 using Novias.UI;
-using Novias.Items.GirlfriendsItems.Shizuka;
+using Novias.Items.GirlfriendsItems.Nano;
 using Novias.Items.Potions;
-using Novias.Items.Weapons.Mage;
-using Novias.Items.Paintings;
+using Novias.Items.Weapons.Ranged;
 
 namespace Novias.NPCs.Novias
 {
     [AutoloadHead]
-    public class ShizukaYoshimoto : ComportamientoNovia
+    public class NanoEiai : ComportamientoNovia
     {
-        protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().EstaSiguiendo;
+        protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<NanoPlayer>().EstaSiguiendo;
         protected override Color ColorPolvo => new Color(255, 165, 0);
-        protected override int CooldownAtaque => 40;
+        protected override int CooldownAtaque => 25;
         protected override int EfectoNovia => ModContent.ProjectileType<Corazon>();
         protected override int RegeneracionVida => 8;
 
         protected override bool EstaHablandoConInterfaz =>
-            InterfazNovias.InterfazAbierta<ShizukaInterfaz>();
+            InterfazNovias.InterfazAbierta<NanoInterfaz>();
 
         protected override void LanzarAtaque(Vector2 direccion)
         {
@@ -34,9 +33,9 @@ namespace Novias.NPCs.Novias
             Projectile.NewProjectile(
                 NPC.GetSource_FromThis(),
                 NPC.Center,
-                direccion * 20f,
-                ModContent.ProjectileType<NotaDeCanto>(),
-                30, 7f, Main.myPlayer, NPC.whoAmI
+                direccion * 18f,
+                ModContent.ProjectileType<CutterProyectil>(),
+                15, 18f, Main.myPlayer, NPC.whoAmI
             );
         }
 
@@ -56,11 +55,11 @@ namespace Novias.NPCs.Novias
             NPC.width = 20;
             NPC.height = 38;
             NPC.aiStyle = NPCAIStyleID.Passive;
-            NPC.lifeMax = 2000;
-            NPC.defense = 40;
+            NPC.lifeMax = 2500;
+            NPC.defense = 65;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
-            NPC.DeathSound = SoundID.NPCDeath1;
+            NPC.DeathSound = SoundID.NPCDeath20;
             NPC.townNPC = true;
             NPC.friendly = true;
         }
@@ -68,9 +67,8 @@ namespace Novias.NPCs.Novias
         public override void AddShops()
         {
             var tienda = new NPCShop(Type, "Shop");
-            tienda.Add(ModContent.ItemType<ElRomanceDeLaDiadema>());
-            tienda.Add(ModContent.ItemType<PocionDeEcosDeAmor>(), new Condition("Mods.Novias.Condiciones.MisionCompletada", () => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().MisionActual >= 1));
-            tienda.Add(ModContent.ItemType<Familia>());
+            tienda.Add(ModContent.ItemType<Cutter>());
+            tienda.Add(ModContent.ItemType<PocionDeEficiencia>(), new Condition("Mods.Novias.Condiciones.MisionCompletada", () => Main.LocalPlayer.GetModPlayer<NanoPlayer>().MisionActual >= 2));
             tienda.Register();
         }
 
@@ -89,7 +87,7 @@ namespace Novias.NPCs.Novias
 
         public override string GetChat()
         {
-            ShizukaInterfaz.Instance._state?.IniciarConNPC(NPC);
+            NanoInterfaz.Instance._state?.IniciarConNPC(NPC);
             return " ";
         }
 
@@ -102,7 +100,6 @@ namespace Novias.NPCs.Novias
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs) =>
-            Main.LocalPlayer.GetModPlayer<HakariPlayer>().Mision1CompartidaCompletada &&
-            Main.LocalPlayer.GetModPlayer<KaranePlayer>().Mision1CompartidaCompletada; //llega luego de la compartida 1 de las primeras
+            Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().MisionActual >= 2; //llega luego de la mision 2 shizuka, osea la presentacion
     }
 }

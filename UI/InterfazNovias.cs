@@ -155,7 +155,7 @@ namespace Novias.UI
             }
         }
 
-        private MisionData MisionActual()
+        private MisionData MisionActualData()
         {
             var ms = ObtenerMisiones(); int mi = ObtenerPlayer().MisionActual;
             return mi >= 0 && mi < ms.Length ? ms[mi] : null;
@@ -163,12 +163,12 @@ namespace Novias.UI
 
         private LineaDialogo[] LineasPresentacion()
         {
-            var m = MisionActual(); return m?.DialogosPresentacion ?? System.Array.Empty<LineaDialogo>();
+            var m = MisionActualData(); return m?.DialogosPresentacion ?? System.Array.Empty<LineaDialogo>();
         }
 
         private LineaDialogo[] LineasCompletacion()
         {
-            var m = MisionActual(); return m?.DialogosCompletacion ?? System.Array.Empty<LineaDialogo>();
+            var m = MisionActualData(); return m?.DialogosCompletacion ?? System.Array.Empty<LineaDialogo>();
         }
 
         private bool EsUltimaCompletacion() => _completacionIndex >= LineasCompletacion().Length - 1;
@@ -241,7 +241,7 @@ namespace Novias.UI
             var p = ObtenerPlayer();
             if (p.CompletacionPendiente)
             {
-                var m = MisionActual();
+                var m = MisionActualData();
                 if (m == null || (m.YaFueCompletada != null && m.YaFueCompletada()))
                 {
                     p.CompletacionPendiente = false; p.UIAbierta = false;
@@ -283,10 +283,10 @@ namespace Novias.UI
                 ? Language.GetTextValue("Mods.Novias.UI.DejarSeguir")
                 : Language.GetTextValue("Mods.Novias.UI.Seguir"), CBotonSeguir);
             if (fase >= 2) AgregarBtnKey("Mods.Novias.UI.Besar", CBotonBeso);
-            if (fase < 3)
+            var ms = ObtenerMisiones(); int mIdx = player.MisionActual;
+            if (mIdx >= 0 && mIdx < ms.Length)
             {
-                var ms = ObtenerMisiones(); int mIdx = player.MisionActual;
-                bool disp = mIdx >= 0 && mIdx < ms.Length && ms[mIdx].EstaDisponible();
+                bool disp = ms[mIdx].EstaDisponible();
                 AgregarBtnKey("Mods.Novias.UI.Mision", disp ? CBotonMision : CBotonBloqueado, false);
             }
             AgregarBtnKey("Mods.Novias.UI.Felicidad", CBotonFelicidad);
@@ -309,7 +309,7 @@ namespace Novias.UI
 
         private void CargarBotonesObjetivo()
         {
-            var m = MisionActual(); if (m == null) return;
+            var m = MisionActualData(); if (m == null) return;
             bool tiene = m.CondicionCompletar != null ? m.PuedeCompletar()
                        : (m.ItemRequisito == 0 || Main.LocalPlayer.CountItem(m.ItemRequisito) >= m.CantidadRequisito);
             AgregarBtnKey("Mods.Novias.UI.Cerrar", CBotonCerrar);
@@ -364,7 +364,7 @@ namespace Novias.UI
 
             if (_pantalla == PantallaUI.MisionObjetivo && _itemHoverRect != Rectangle.Empty && _itemHoverRect.Contains(Main.mouseX, Main.mouseY))
             {
-                var m = MisionActual();
+                var m = MisionActualData();
                 if (m?.ItemRequisito != 0)
                 {
                     Main.LocalPlayer.mouseInterface = true;
@@ -404,7 +404,7 @@ namespace Novias.UI
                 }
                 if (texto == Txt("Mods.Novias.UI.Saltar")) { FinalizarLineaActual(); RefreshBotones(); return; }
                 if (texto == Txt("Mods.Novias.UI.Siguiente") || texto == Txt("Mods.Novias.UI.Hablar")) { AvanzarCompletacion(); return; }
-                if (texto == Txt("Mods.Novias.UI.Completar")) { CompletarMision(); return; }
+                if (texto == Txt("Mods.Novias.UI.Completar")) { CompletarMisionUI(); return; }
                 return;
             }
 
@@ -420,7 +420,7 @@ namespace Novias.UI
                 if (texto == Txt("Mods.Novias.UI.Siguiente") || texto == Txt("Mods.Novias.UI.Hablar")) { AvanzarPresentacion(); return; }
                 if (texto == Txt("Mods.Novias.UI.AceptarMision"))
                 {
-                    var p2 = ObtenerPlayer(); var m2 = MisionActual();
+                    var p2 = ObtenerPlayer(); var m2 = MisionActualData();
                     _lineasMostradas.Clear(); _presentacionIndex = 0;
                     p2.UIAbierta = true; m2?.OnAceptar?.Invoke();
                     _pantalla = PantallaUI.MisionObjetivo;
@@ -435,7 +435,7 @@ namespace Novias.UI
                 if (texto == Txt("Mods.Novias.UI.Cerrar")) { SoundEngine.PlaySound(SoundID.MenuClose); CerrarChat(); return; }
                 if (texto == Txt("Mods.Novias.UI.Completar"))
                 {
-                    var m3 = MisionActual(); var p3 = ObtenerPlayer();
+                    var m3 = MisionActualData(); var p3 = ObtenerPlayer();
                     if (m3.OnCompletar == null && m3.ItemRequisito != 0)
                         for (int i = 0; i < Main.LocalPlayer.inventory.Length; i++)
                         {
@@ -543,9 +543,9 @@ namespace Novias.UI
             _completacionIndex = 0; _lineasMostradas.Clear();
         }
 
-        private void CompletarMision()
+        private void CompletarMisionUI()
         {
-            var m = MisionActual(); var p = ObtenerPlayer(); int mi = p.MisionActual;
+            var m = MisionActualData(); var p = ObtenerPlayer();
 
             if (m.OnCompletar != null)
             {
@@ -558,7 +558,9 @@ namespace Novias.UI
 
             if (m.ItemRecompensa != 0)
                 Main.LocalPlayer.QuickSpawnItem(Main.LocalPlayer.GetSource_FromThis(), m.ItemRecompensa, m.CantidadRecompensa);
+
             if (m.AvanzaFase) p.CompletarMision();
+            else p.AvanzarMisionSinFase();
 
             m.OnMensajesCompletacion?.Invoke();
 
@@ -572,7 +574,10 @@ namespace Novias.UI
         private void FinalizarMision(MisionData m, NoviasPlayerBase p)
         {
             m.OnMensajesCompletacion?.Invoke();
-            p.UIAbierta = false; if (m.AvanzaFase) p.CompletarMision(); _lineasMostradas.Clear();
+            p.UIAbierta = false;
+            if (m.AvanzaFase) p.CompletarMision();
+            else p.AvanzarMisionSinFase();
+            _lineasMostradas.Clear();
             SoundEngine.PlaySound(SoundID.Item4);
             CombatText.NewText(Main.LocalPlayer.getRect(), ColorBorde, Language.GetTextValue("Mods.Novias.UI.MisionCompleta"), dramatic: true);
             CerrarChat();
@@ -604,7 +609,7 @@ namespace Novias.UI
                 if (_pantalla == PantallaUI.MisionObjetivo)
                 {
                     DibujarSpriteItem(sb);
-                    var mContador = MisionActual();
+                    var mContador = MisionActualData();
                     if (mContador?.ObtenerContador != null)
                     {
                         string lineaContador = mContador.ObtenerContador();
@@ -642,7 +647,6 @@ namespace Novias.UI
             int anchoMax = (int)((p.W - PAD * 2) * _s);
 
             var (nombre, _, esJugador) = _lineasMostradas[^1];
-
             Color colorNom = ResolverColorLinea(nombre, esJugador);
 
             string label = nombre + ":";
@@ -683,7 +687,7 @@ namespace Novias.UI
 
         private void DibujarSpriteItem(SpriteBatch sb)
         {
-            var m = MisionActual(); if (m?.ItemRequisito == 0) return;
+            var m = MisionActualData(); if (m?.ItemRequisito == 0) return;
             var tex = TextureAssets.Item[m.ItemRequisito].Value; if (tex == null) return;
             var font = FontAssets.MouseText.Value;
             string lbl = $"x{m.CantidadRequisito}"; float esL = 0.85f * _s, lW = font.MeasureString(lbl).X * esL, lH = font.MeasureString(lbl).Y * esL;

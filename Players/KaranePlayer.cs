@@ -10,8 +10,6 @@ namespace Novias.Players
         public bool Mision1CompartidaCompletada = false;
         public int ContadorEnemigosMision2 = 0;
 
-        protected override bool MisionIntermediaCompletada => Mision1CompartidaCompletada;
-
         public override void SaveData(TagCompound tag)
         {
             base.SaveData(tag);

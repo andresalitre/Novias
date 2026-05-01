@@ -78,15 +78,5 @@ namespace Novias.Projectiles
         {
             modifiers.ArmorPenetration += 5;
         }
-
-        public override void OnKill(int timeLeft)
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                Dust polvo = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Iron);
-                polvo.velocity = Main.rand.NextVector2Circular(3f, 3f);
-                polvo.scale = 0.8f;
-            }
-        }
     }
 }

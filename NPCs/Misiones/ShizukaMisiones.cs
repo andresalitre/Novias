@@ -23,7 +23,7 @@ namespace Novias.NPCs.Misiones
                 CantidadRecompensa   = 1,
                 DialogoRecompensaKey = "Mods.Novias.Misiones.Shizuka.Mision1.Recompensa",
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Shizuka.Mision1.Bloqueado",
-                Condicion = () =>
+                Condicion = () => // completar mision compartida con las 2 primeras, osea desbloquear beso
                 {
                     var h = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
                     var k = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
@@ -48,7 +48,7 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision1.Dialogo8" },
                 },
                 DialogosCompletacion = new[]
-                {                
+                {
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision1.Completacion0" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision1.Completacion1" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision1.Completacion2" },
@@ -77,14 +77,14 @@ namespace Novias.NPCs.Misiones
                 ItemRecompensa       = ModContent.ItemType<PocionDeEcosDeAmor>(),
                 CantidadRecompensa   = 1,
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Shizuka.Mision2.Bloqueado",
-                Condicion = () =>
+                AvanzaFase           = false,
+                Condicion = () => // esta mision no desbloquea nada, es solo para avanzar en la historia
                 {
                     var h = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
                     var k = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
                     return h.EstaSiguiendo && k.EstaSiguiendo
-                    && Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().Fase >= 1;
+                        && Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().Fase >= 1;
                 },
-                AvanzaFase = false,
                 DialogosPresentacion = new[]
                 {
                     new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Dialogo0" },
@@ -92,37 +92,37 @@ namespace Novias.NPCs.Misiones
                 },
                 DialogosCompletacion = new[]
                 {
-                    // Hakari = new Color(255, 190, 230);
-                    // Karane = new Color(239, 178, 97);
-                    
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion0" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion1", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230)},
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion1",  NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion2" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion3" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion4", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97)},
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion5", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230)},
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion6", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230)},
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion7", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97)},
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion4",  NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion5",  NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion6",  NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion7",  NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion8" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion9" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion10" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion11", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97)},
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion11", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion12" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion13" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion14", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97)},
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion15", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230)},
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion14", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion15", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion16" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion17", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230)},
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion18", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97)},
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion17", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion18", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion19" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion20", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230)},
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion21", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97)},
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion20", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion21", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion22" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion23", NombreNPC = "Hakari y Karane", ColorNombre = new Color(255, 255, 255)},
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision2.Completacion23", NombreNPC = "Hakari y Karane", ColorNombre = new Color(255, 255, 255) },
                 },
             },
 
-             new MisionData
+
+            //Esta mision desbloquea beso (mision 3) 
+
+            new MisionData
             {
                 TituloKey            = "Mods.Novias.Misiones.Shizuka.Mision3.Titulo",
                 DescripcionKey       = "Mods.Novias.Misiones.Shizuka.Mision3.Descripcion",
@@ -130,6 +130,11 @@ namespace Novias.NPCs.Misiones
                 ItemRecompensa       = ModContent.ItemType<PocionDeEcosDeAmor>(),
                 CantidadRecompensa   = 1,
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Shizuka.Mision3.Bloqueado",
+                 Condicion = () => //karane sigue al jugador, ya que habra una pequeña conversacion entre shizuka y ella
+                {
+                    var k = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
+                    return k.EstaSiguiendo;
+                },
                 DialogosPresentacion = new[]
                 {
                     new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.Shizuka.Mision3.Dialogo0" },
@@ -137,13 +142,9 @@ namespace Novias.NPCs.Misiones
                 },
                 DialogosCompletacion = new[]
                 {
-                    // Hakari = new Color(255, 190, 230);
-                    // Karane = new Color(239, 178, 97);
-                    
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision3.Completacion0" },
+                    new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.Shizuka.Mision3.Completacion0" },
                 },
             },
-
         };
     }
 }
