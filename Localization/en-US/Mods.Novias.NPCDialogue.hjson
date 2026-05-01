@@ -17,12 +17,11 @@ KaraneInda: {
 	PreMision0: Don't look at me like that! Do I look interesting to you or something? 'Cause I'm not!
 	PreMision1: That Hakari! Why is she always one step ahead?! Huh?! Don't you dare think I said I like you or anything like that, you dummy!
 	PreMision2: This world is so different. Does this even belong to the manga canon?
-	Chat0: Don't think I'm here because I want to! It's just that the code forces me to spawn near you!
-	Chat1: Why are you opening my chat so much? It's not like I'm the main girl of this arc! ...Wait, for real though, is this canon?
-	Chat2: D-don't get so close! The tsundere manual says I should back away... but it doesn't say I actually want to!
-	Chat3: W-what are you looking at?! Stop reading my dialogue lines! This isn't some cheap visual novel!
-	Chat4: D-don't get the wrong idea! I didn't come to your world just to be with you. This isn't some generic isekai cliché!
-	Seguir: I-I have no choice! D-don't think I'm doing this because I want to be with you or anything!
+	Chat0: Don't think I'm here by choice! It's just that the code forces me to spawn near you! Stupid convenient programming!
+	Chat1: Why do you keep opening my chat?! It's not like I'm the protagonist of this arc or have anything important to tell you, okay?!
+	Chat2: D-don't get so close! The tsundere manual says I should back away... but it doesn't say I want to.
+	Chat3: W-what are you staring at?! Stop reading my dialogue lines! We're not in some visual novel!
+	Chat4: D-don't get the wrong idea! It's not like I came to your world to be with you! I was just looking for a place to go to the bathroom and this happened to be on the way!
 	DejarDeSeguir: Fine, whatever... Why does this feel so crappy if it's just a game?
 	Ocupada: Don't get any ideas! I'm already with someone else... so beat it!
 	Beso: Wuuah...! I love, love, love, love love you! I love you more than anything! Kiss me again! KISS ME TILL THE DAY I DIEEEE!!!
@@ -35,9 +34,10 @@ ShizukaYoshimoto: {
 	Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
 	Chat1: *Teléfono: Acorde al quinto capítulo del manga, aquí debería suceder algo romántico.*
 	Chat2: *Teléfono: Mi corazón late como el de la princesa Io ante el caballero Kamakur.*
-	Chat3: Chat4:
+	Chat3: s
+	Chat4: s
 	Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
-	DejarDeSeguir: Ocupada:
+	DejarDeSeguir: Ocupada: "s"
 	Beso: Te quiero, {0}. Te quiero... Te quiero mucho... Ay, no, no puedo dejar de pensar en ti, {0}...!
 }
 
@@ -47,8 +47,10 @@ NanoEiai: {
 	PreMision2: El romance es inutil, es una perdida de tiempo total
 	Chat0: Chat1: Toda ayuda es buena, aunque las posibilidades sean casi nulas.
 	Chat2: 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 ...
-	Chat3: Chat4:
+	Chat3: s
+	Chat4: s
 	Seguir: Es lógico, seguirte seria lo más eficiente para que puedas progresar.
-	DejarDeSeguir: Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
+	DejarDeSeguir: s
+	Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
 	Beso: Mphh, esto... supera mis expectativas, es como inyectar felicidad directamente en mi cerebro con una explosion de placer, es demasiado!!!
 }

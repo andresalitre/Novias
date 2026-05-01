@@ -26,7 +26,6 @@ Hakari: {
 		Dialogo0: Diálogo pendiente.
 		Dialogo1: Diálogo pendiente.
 		Dialogo2: Diálogo pendiente.
-		Recompensa: Recompensa pendiente.
 	}
 }
 
@@ -54,7 +53,6 @@ Karane: {
 		Dialogo0: Diálogo pendiente.
 		Dialogo1: Diálogo pendiente.
 		Dialogo2: Diálogo pendiente.
-		Recompensa: Recompensa pendiente.
 	}
 }
 
@@ -165,22 +163,22 @@ Shizuka: {
 	}
 
 	Mision2: {
-		Titulo: Momento divertido de presentación
-		Descripcion: Preséntale a Shizuka a tus novias. No juzgues el nombre de la misión, no había tiempo.
-		Bloqueado: Momento divertido de presentación: Requiere: Hakari y Karane deben estar siguiendo al jugador:
+		Titulo: ¿Una más? ¿Qué más da?
+		Descripcion: Preséntale a Shizuka a tus novias.
+		Bloqueado: ¿Una más? ¿Qué más da?: Requiere: Hakari y Karane deben estar siguiendo al jugador.
 		Dialogo0: *Pensamientos: Supongo que debo presentarles mi nueva novia a mis otras novias...*
 		Dialogo1: ¡Ay, qué miedito!
 		Completacion0: Hola chicas... Les quería hacer una pregunta.
 		Completacion1: ¿Qué sucede, {0}?
 		Completacion2: Acabo de completar la misión 1 de Shizuka Yoshimoto y...
 		Completacion3: Quiero que dejen que Shizuka Yoshimoto sea mi nueva novia y esté con nosotros tres en una relación...
-		Completacion4: ¡ME NIEGOOOOOOOOOOOOOOOOOOOOOOOOO! ¡ROTUNDAMENTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!
+		Completacion4: ¡ME NIEGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO! ¡ROTUNDAMENTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!
 		Completacion5: Cómo es posible, {0}...
 		Completacion6: Encontraste un nuevo amor, pero fuiste muy considerado en no querer abandonarnos. ¡No puedo creer cuánta bondad hay en tu ser!
 		Completacion7: ¡¿Y ahora a esta se le pudrió el cerebro o qué?!
 		Completacion8: ¡No! ¡Que Shizuka se integre no cambia lo que ya sentía por ustedes!
 		Completacion9: ¡Que quede claro! ¡Seguiré queriéndolas a todas y cuidando de ustedes como siempre!
-		Completacion10: ¡NO...! ¡PROMETO AMARLAS MUCHO MÁS QUE ANTES! ¡DENME LA OPORTUNIDAD!
+		Completacion10: ¡NO! ¡PROMETO AMARLAS MUCHO MÁS QUE ANTES! ¡DENME LA OPORTUNIDAD!
 		Completacion11: ¿Mucho más que antes...?
 		Completacion12: Sí... Y si alguna vez no les llego a cumplir, solo háganmelo saber...
 		Completacion13: Y voy a expiar mis pecados... bebiendo poción roja.
@@ -197,48 +195,108 @@ Shizuka: {
 	}
 
 	Mision3: {
-		// Titulo: No hay por qué contenerse.
-		// Descripcion: cutupi
-		// Bloqueado: Dialogo0: nada
-		// Completacion1: nada
+		Titulo: No hay por qué contenerse
+		Descripcion: ¡Ten una aventura asombrosa solo con Shizuka! Para que el contador cuente, Hakari y Karane ya no deben seguirte.
+		Bloqueado: No hay por qué contenerse: Requiere: Hakari, Karane y Shizuka siguen al jugador.
+		Dialogo0: Chicas, lo siento. Debo irme un momento, estaré AFK unos minutos.
+		Dialogo1: ...
+		Dialogo2: Oye... dime, Yoshimoto. ¿Qué pretendes? ¿Por qué te contienes con {0}?
+		Dialogo3: ...
+		Dialogo4: ¡Habla! Deja de fingir. ¡Eres la única que mantiene distancia con {0}! ¿Por qué no dices lo que pretendes?
+		Dialogo5: Tal vez es porque das mucho miedo, Karane, y encima de eso te pones a gritar como loca.
+		Dialogo6: ¿¡Qué!? ¿¡Yo loca!? ¿Cuándo me has escuchado gritarle a alguien?
+		Dialogo7: *Teléfono: Soy la tercera novia de {0}. Fui la última en llegar... no quería interponerme...*
+		Dialogo8: ¡Bah! Sabía que ibas a decir algo así. Pero ¿sabes qué? Ahora tú también eres novia de {0}, te guste o no.
+		Dialogo9: Tienes que dejar de comportarte así. Deja de fingir algo que no eres. Deja de fingir que no dices lo que sientes por nervios.
+		Dialogo10: Mira quién lo dice... la señorita que ni por error admite lo que piensa o siente.
+		Dialogo11: ¡¡TÚ CIERRA LA BOCA, QUE NADIE ESTÁ HABLANDO CONTIGO!!
+		Dialogo12: *Teléfono: Tienes razón... lo siento mucho...*
+		Dialogo13: ¡¡A ESTO ME REFERÍA!! ¿¡Por qué siempre das la razón y no discutes!? ¡UYYYY!
+		Dialogo14: *Teléfono: Por favor, escuchen... voy a sincerarme con ustedes. En realidad... el miedo me paraliza por completo*
+		Dialogo15: ¿Qué? ¿En verdad doy tanto miedo cuando me enojo? T_T
+		Dialogo16: ¿En serio? Me sorprende que no lo hayas notado.
+		Dialogo17: *Teléfono: Eso no es lo que quería decir. Lo que en realidad quiero decir es que...*
+		Dialogo18: *Teléfono: Hanazono se comporta con mucha gracia y elegancia. Es una señorita con mucho encanto y mucho estilo.*
+		Dialogo19: *Teléfono: Inda es... una belleza con facciones muy estilizadas y, además, alguien que rebosa mucha confianza.*
+		Dialogo20: *Teléfono: Yo no sé si pueda llegar a ser, aunque sea un poco, como ellas. Y lo más probable es que {0} nos compare... eso es lo que más temo...*
+		Dialogo21: *Pensamientos de Karane: ¿Qué demonios...?*
+		Dialogo22: *Pensamientos de Hakari: Lo que dijo...*
+		Dialogo23: *Pensamientos de ambas: ¡ES SÚPER ADORABLE!*
+		Dialogo24: *Teléfono: Yo solo soy una chica normal y sencilla, con un cuerpo similar al de una niña, con una personalidad triste y reservada...*
+		Dialogo25: *Teléfono: A su lado, la diferencia es como el día y la noche...*
+		Dialogo26: Mmm... no. A mí también me pareces una chica bastante linda. Eres pequeña y delicada. Creo que son muy buenas cualidades.
+		Dialogo27: Lamento haber sido tan agresiva. No fue mi intención ser así, lo siento...
+		Dialogo28: ¡Es cierto! Tienes que disculparla, por favor. Karane siempre ha sido muy enojona y de mal carácter.
+		Dialogo29: ¿¡Ahhh!?
+		Dialogo30: Sin embargo, el amor de {0} es más profundo de lo que puedas imaginar.
+		Dialogo31: ¡Ya te lo dije! No tienes que contener tus sentimientos ni preocuparte por nosotras. Si quieres hablar con {0} o quieres que haga algo, se lo dices y punto final.
+		Dialogo32: *Pensamientos: ¡Mi plan resultó mejor de lo que pensaba!*
+		Dialogo33: *Pensamientos: Como Karane parecía furiosa con Shizuka, fingí irme AFK. Si quiero que las chicas se lleven bien, no debo entrometerme.*
+		Dialogo34: *Pensamientos: Como pensaba, Karane no estaba enojada, solo frustrada.*
+		Dialogo35: *Pensamientos: Hakari intercedió para evitar que Shizuka recibiera toda su ira sin filtros.*
+		Dialogo36: *Pensamientos: ¡Y luego Shizuka aceptó lo que le dijo Karane y les contó lo que sentía de verdad!*
+		Dialogo37: *Pensamientos: ¡AYYY, MIS CHICAAASSS!*
+		Dialogo38: ¡Ya volví!
+		Dialogo39: Oye {0}, decidimos que Shizuka irá en una aventura contigo. ¡Ustedes dos solos!
+		Dialogo40: ¡Es cierto! ¿Verdad que quieres ir en una aventura con {0}, Shizuka?
+		Dialogo41: *Teléfono: Quiero hacerlo.*
+		Completacion0: *Teléfono: Esta aventura fue... muy divertida. Una experiencia digna de un OVA*
+		Completacion1: ¡Sí! Fue increíble, Shizuka. Podemos tener todas las aventuras que quieras, cuando quieras.
+		Completacion2: *Teléfono: Estaré junto a ti en todo momento, donde sea que vayas...*
+		Completacion3: Gracias, Shizuka. Me conmueven tus palabras... Te quiero.
+		Completacion4: *Teléfono: Yo también te quiero, mi señor...*
+		Completacion5: ...
+		Completacion6: ¿Oh? ¿Qué sucede, Shizuka?
+		Completacion7: *Teléfono: Quiero que me beses...*
+		Completacion8: ¿¡Qué!?
+		Completacion9: *Teléfono: En el fondo de mi corazón... deseo compartir un beso contigo...*
+		Completacion10: Muchas gracias... Eso me hace muy feliz.
+	}
+
+	Mision4: {
+		Titulo: Próximamente...
+		Descripcion: Descripción pendiente.
+		Bloqueado: Próximamente...
+		Dialogo0: Diálogo pendiente.
+		Dialogo1: Diálogo pendiente.
+		Dialogo2: Diálogo pendiente.
 	}
 }
 
 Nano: {
 	Mision1: {
-		// Titulo: La novia más eficaz
-		// Descripcion: Parece que Nano Eiai tiene algo que decirte.
-		// Bloqueado: La novia más eficaz: Requiere: Completar "No hay por qué contenerse" de Shizuka.
-		// Dialogo0: Pareces que eres nueva por aqui, te habia estado observando, tu nombre es Nano Eiai, verdad?
-		// Completacion0: Escucha {0}, desde que apareci en este mundo e tenido la sensacion de que me gustas.
-		// Completacion1: Me gustaria... que empecemos una relacion.
-		// Completacion2: Oh... Por supuesto, tu tambien me gustas mucho Eiai, sera un placer salir contigo.
-		// Completacion3: Debo negarme.
-		// Completacion4: AHORA QUE FUE LO QUE HICE MAL!!??
-		// Completacion5: El resultado ideal era que tu te negaras a salir conmigo, pero como no fue de ese modo, tuve que negarme yo.
-		// Completacion6: Escuchame, vine a terminar con este amor.
-		// Completacion7: El romance solo lleva al matrimonio y los hijos, y en este momento, no deseo nada de eso.
-		// Completacion8: El romance, es inutil, una perdida de tiempo total.
-		// Completacion9: Entre nosotros 2, nunca habra una relacion amorosa.
-		// Completacion10: ...
-		// Completacion11: Me tengo que ir
-		// Completacion12: Espera, Eiai, no pienso permitir que acabes con este amor rechazandome!
-		// Completacion13: Eso no me importa
-		// Completacion14: Claro que importa...! por que estoy enamorado! no depende de ti que deje de sentir esto, no me rendire tan facil!
-		// Completacion15: *Pensamientos de nano: {0} esta enamorado de mi! 3,141592653589793...
-		// Completacion16: Tenias que saberlo, ademas, yo no puedo... soltar a las personas tan facil...
-		// Completacion17: Te lo pido, ten una cita conmigo! y despues decide que es lo que haras
-		// Completacion18: Eso seria algo...
-		// Completacion19: Te prometo que si no te convence, dejare de insistir, tienes mi palabra!
+		Titulo: La novia más eficaz
+		Descripcion: Parece que Nano Eiai tiene algo que decirte.
+		Bloqueado: La novia más eficaz: Requiere completar "No hay por qué contenerse" de Shizuka.
+		Dialogo0: Parece que eres nueva por aquí. Te había estado observando. Tu nombre es Nano Eiai, ¿verdad?
+		Completacion0: Escucha, {0}. Desde que aparecí en este mundo he tenido la sensación de que me gustas.
+		Completacion1: Me gustaría... que empecemos una relación.
+		Completacion2: Oh... Por supuesto. Tú también me gustas mucho, Eiai. Será un placer salir contigo.
+		Completacion3: Debo negarme.
+		Completacion4: ¡¿AHORA QUÉ FUE LO QUE HICE MAL?!?
+		Completacion5: El resultado ideal era que tú te negaras a salir conmigo. Como no fue de ese modo, tuve que negarme yo.
+		Completacion6: Escúchame. Vine a terminar con este amor.
+		Completacion7: El romance solo conduce al matrimonio y a los hijos, y en este momento no deseo nada de eso.
+		Completacion8: El romance es inútil. Una pérdida de tiempo total.
+		Completacion9: Entre nosotros dos nunca habrá una relación amorosa.
+		Completacion10: ...
+		Completacion11: Me tengo que ir.
+		Completacion12: Espera, Eiai. ¡No pienso permitir que acabes con este amor rechazándome!
+		Completacion13: Eso no me importa.
+		Completacion14: ¡Claro que importa! ¡Porque estoy enamorado! No depende de ti que deje de sentir esto. ¡No me rendiré tan fácil!
+		Completacion15: *Pensamientos de Nano: {0} está enamorado de mí... 3,141592653589793...*
+		Completacion16: Tenías que saberlo. Además, yo no puedo... soltar a las personas tan fácil...
+		Completacion17: Te lo pido. ¡Ten una cita conmigo! Y después decide qué es lo que harás.
+		Completacion18: Eso sería algo... aceptable.
+		Completacion19: Te prometo que si no te convence, dejaré de insistir. Tienes mi palabra.
 	}
 
 	Mision2: {
-		// Titulo: Up : una aventura de altura
-		// Descripcion: Pasala bien con nano en mundo terrariano, un foto en alguna isla flotante seria un bonito recuerdo.
-		// Bloqueado: Up : una aventura de altura: Requiere:
-		// Dialogo0: Diálogo pendiente.
-		// Dialogo1: Diálogo pendiente.
+		Titulo: Up : una aventura de altura
+		Descripcion: Pasala bien con nano en mundo terrariano, saca una foto en alguna isla flotante, seria un bonito recuerdo.
+		Bloqueado: Up : una aventura de altura: Requiere: Completar "No hay por qué contenerse" de Shizuka. Karane debe seguir al jugador.
+		Dialogo0: A donde iremos {0}?
+		Dialogo1: Iremos donde el viento nos lleve
 		// Dialogo2: Diálogo pendiente.
-		// Recompensa: Recompensa pendiente.
 	}
 }

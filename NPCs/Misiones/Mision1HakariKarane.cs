@@ -30,8 +30,8 @@ namespace Novias.NPCs.Misiones
             {
                 var h = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
                 var k = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
-                return h.MisionActual >= 1 && k.MisionActual >= 1
-                    && h.EstaSiguiendo && k.EstaSiguiendo;
+                return h.MisionActual >= 1 && k.MisionActual >= 1 //que hayas completado la mision 1 de cada una
+                    && h.EstaSiguiendo && k.EstaSiguiendo; // y ambas sigan al jugador
             },
 
             CondicionCompletar = () =>
@@ -39,7 +39,7 @@ namespace Novias.NPCs.Misiones
                 var h = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
                 var k = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
                 return h.EstaSiguiendo && k.EstaSiguiendo
-                    && Main.LocalPlayer.CountItem(ModContent.ItemType<TrebolDe4Hojas>()) >= 2;
+                    && Main.LocalPlayer.CountItem(ModContent.ItemType<TrebolDe4Hojas>()) >= 2; //tener 2 trboles
             },
 
             OnAceptar = () =>

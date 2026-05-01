@@ -26,7 +26,6 @@ Hakari: {
 		Dialogo0: Diálogo pendiente.
 		Dialogo1: Diálogo pendiente.
 		Dialogo2: Diálogo pendiente.
-		Recompensa: Recompensa pendiente.
 	}
 }
 
@@ -48,13 +47,12 @@ Karane: {
 	}
 
 	Mision2: {
-		Titulo: Farewell... Tsundere Energy:
+		Titulo: Farewell... Tsundere Energy
 		Descripcion: Descripción pendiente.
-		Bloqueado: Farewell... Tsundere Energy
+		Bloqueado: Farewell... Tsundere Energy: Coming Soon...
 		Dialogo0: Diálogo pendiente.
 		Dialogo1: Diálogo pendiente.
 		Dialogo2: Diálogo pendiente.
-		Recompensa: Recompensa pendiente.
 	}
 }
 
@@ -198,9 +196,70 @@ Shizuka: {
 
 	Mision3: {
 		Titulo: No hay por qué contenerse.
-		Descripcion: cutupi
-		Bloqueado: Dialogo0: nada
-		Completacion1: nada
+		Descripcion: ¡Ten una aventura asombrosa solo con Shizuka!
+		Bloqueado: No hay por qué contenerse: Requiere: Hakari y Karane siguen al jugador.
+		Dialogo0: Chicas, lo siento. Debo irme un momento, estaré AFK unos minutos.
+		Dialogo1: ...
+		Dialogo2: Oye... dime, Yoshimoto. ¿Qué pretendes? ¿Por qué te contienes con {0}?
+		Dialogo3: ...
+		Dialogo4: ¡Habla! Deja de fingir. ¡Eres la única que mantiene distancia con {0}! ¿Por qué no dices lo que pretendes?
+		Dialogo5: Tal vez es porque das mucho miedo, Karane, y encima de eso te pones a gritar como loca.
+		Dialogo6: ¿¡Qué!? ¿¡Yo loca!? ¿Cuándo me has escuchado gritarle a alguien?
+		Dialogo7: *Teléfono: Soy la tercera novia de {0}. Fui la última en llegar... no quería interponerme...*
+		Dialogo8: Bah. Sabía que ibas a decir algo así. Pero ¿sabes qué? Ahora tú también eres novia de {0}, te guste o no.
+		Dialogo9: Tienes que dejar de comportarte así. Deja de fingir algo que no eres. Deja de fingir que no dices lo que sientes por nervios.
+		Dialogo10: Mira quién lo dice... la señorita que ni por error admite lo que piensa o siente.
+		Dialogo11: ¡¡TÚ CIERRA LA BOCA, QUE NADIE ESTÁ HABLANDO CONTIGO!!
+		Dialogo12: *Teléfono: Tienes razón... lo siento mucho...*
+		Dialogo13: ¡A ESTO ME REFERÍA! ¿¡Por qué siempre das la razón y no discutes!? ¡UYYYY!
+		Dialogo14: *Teléfono: Por favor, escuchen... voy a sincerarme con ustedes. En realidad... el miedo me paraliza por completo...*
+		Dialogo15: ¿Qué? ¿En verdad doy tanto miedo cuando me enojo? T_T
+		Dialogo16: ¿En serio? Me sorprende que no lo hayas notado.
+		Dialogo17: *Teléfono: Eso no es lo que quería decir. Lo que en realidad quiero decir es que...*
+		Dialogo18: *Teléfono: Hanazono se comporta con mucha gracia y elegancia. Es una señorita con mucho encanto y mucho estilo.*
+		Dialogo19: *Teléfono: Inda es... una belleza con facciones muy estilizadas y, además, alguien que rebosa mucha confianza.*
+		Dialogo20: *Teléfono: Yo no sé si pueda llegar a ser, aunque sea un poco, como ellas. Y lo más probable es que {0} nos compare... eso es lo que más temo...*
+		Dialogo21: ¿Qué demonios...?
+		Dialogo22: Lo que dijo...
+		Dialogo23: ¡ES SÚPER ADORABLE!
+		Dialogo24: *Teléfono: Yo solo soy una chica normal y sencilla, con un cuerpo similar al de una niña, con una personalidad triste y reservada...*
+		Dialogo25: *Teléfono: A su lado, la diferencia es como el día y la noche...*
+		Dialogo26: Mmm... no. A mí también me pareces una chica bastante linda. Eres pequeña y delicada. Creo que son muy buenas cualidades.
+		Dialogo27: Lamento haber sido tan agresiva. No fue mi intención ser así, lo siento...
+		Dialogo28: ¡Es cierto! Tienes que disculparla, por favor. Karane siempre ha sido muy enojona y de mal carácter.
+		Dialogo29: ¿¡Ahhh!?
+		Dialogo30: Sin embargo, el amor de {0} es más profundo de lo que puedas imaginar.
+		Dialogo31: ¡Ya te lo dije! No tienes que contener tus sentimientos ni preocuparte por nosotras. Si quieres hablar con {0} o quieres que haga algo, se lo dices y punto final.
+		Dialogo32: *Pensamientos: ¡Mi plan resultó mejor de lo que pensaba!*
+		Dialogo33: *Pensamientos: Karane parecía furiosa con Shizuka. Si quiero que mis novias se lleven bien, no debo entrometerme. Por eso fingí irme AFK.*
+		Dialogo34: *Pensamientos: Como pensaba, Karane no estaba enojada, solo frustrada.*
+		Dialogo35: *Pensamientos: Hakari intercedió para evitar que Shizuka recibiera toda su ira sin filtros.*
+		Dialogo36: *Pensamientos: Y luego Shizuka aceptó lo que le dijo Karane y les contó lo que sentía de verdad.*
+		Dialogo37: *Pensamientos: ¡AYYY, MIS CHICAAASSS!*
+		Dialogo38: ¡Ya volví!
+		Dialogo39: Oye {0}, decidimos que Shizuka irá en una aventura contigo. ¡Ustedes dos solos!
+		Dialogo40: Es cierto. ¿Verdad que quieres ir en una aventura con {0}, Shizuka?
+		Dialogo41: *Teléfono: Quiero hacerlo.*
+		Completacion0: *Teléfono: Esta aventura fue... muy divertida. Una experiencia digna de un OVA*
+		Completacion1: ¡Sí! Fue increíble, Shizuka. Podemos tener todas las aventuras que quieras, cuando quieras.
+		Completacion2: *Teléfono: Estaré junto a ti en todo momento, donde sea que vayas...*
+		Completacion3: Gracias, Shizuka. Me conmueven tus palabras... Te quiero.
+		Completacion4: *Teléfono: Yo también te quiero, mi señor...*
+		Completacion5: ...
+		Completacion6: ¿Oh? ¿Qué sucede, Shizuka?
+		Completacion7: *Teléfono: Quiero que me beses...*
+		Completacion8: ¿¡Qué!?
+		Completacion9: *Teléfono: En el fondo de mi corazón... deseo compartir un beso contigo...*
+		Completacion10: Muchas gracias... Eso me hace muy feliz.
+	}
+
+	Mision4: {
+		Titulo: Coming Soon...
+		Descripcion: Descripción pendiente.
+		Bloqueado: Coming Soon...
+		Dialogo0: Diálogo pendiente.
+		Dialogo1: Diálogo pendiente.
+		Dialogo2: Diálogo pendiente.
 	}
 }
 
@@ -225,7 +284,7 @@ Nano: {
 		Completacion12: Espera, Eiai, no pienso permitir que acabes con este amor rechazandome!
 		Completacion13: Eso no me importa
 		Completacion14: Claro que importa...! por que estoy enamorado! no depende de ti que deje de sentir esto, no me rendire tan facil!
-		Completacion15: *Pensamientos de nano: {0} esta enamorado de mi! 3,141592653589793...
+		Completacion15: *Pensamientos de nano: {0} esta enamorado de mi! 3,141592653589793...*
 		Completacion16: Tenias que saberlo, ademas, yo no puedo... soltar a las personas tan facil...
 		Completacion17: Te lo pido, ten una cita conmigo! y despues decide que es lo que haras
 		Completacion18: Eso seria algo...
@@ -235,10 +294,9 @@ Nano: {
 	Mision2: {
 		Titulo: Up : una aventura de altura
 		Descripcion: Pasala bien con nano en mundo terrariano, un foto en alguna isla flotante seria un bonito recuerdo.
-		Bloqueado: Up : una aventura de altura: Requiere:
+		Bloqueado: Up : una aventura de altura: Requiere: Completar "No hay por qué contenerse" de Shizuka. Karane debe seguir al jugador.
 		Dialogo0: Diálogo pendiente.
 		Dialogo1: Diálogo pendiente.
 		Dialogo2: Diálogo pendiente.
-		Recompensa: Recompensa pendiente.
 	}
 }

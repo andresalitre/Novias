@@ -22,23 +22,23 @@ KaraneInda: {
 	Chat2: ¡N-no te acerques tanto! El manual de tsundere dice que debo alejarme... pero no dice que quiera hacerlo.
 	Chat3: ¡¿Q-qué estás mirando?! ¡Deja de leer mis diálogos! ¡No estamos en una novela visual!
 	Chat4: ¡No te confundas! ¡No es que haya venido a tu mundo para estar contigo! ¡Solo buscaba un sitio para ir al baño y este lugar me quedaba de paso!
-	Seguir: ¡N-no tengo otra opción! ¡El sistema me esta obligando! ¡Así que no creas que lo hago porque quiera caminar a tu lado ni nada!
 	DejarDeSeguir: Bien, como quieras... ¡Me da igual! Pero... ¿por qué se siente tan mal esto si solo es un estúpido juego?
 	Ocupada: ¡No te hagas ideas equivocadas! Ya estoy con alguien... ¡así que vete!
 	Beso: ¡Uyyy...! ¡Amo a {0}! ¡Lo amo! ¡Lo amo! ¡Lo amo! ¡Lo amo! ¡Bésame más! ¡NUNCA DEJES DE BESARME! ¡¿Eh?! ¡No creas que lo estaba disfrutando!
 }
 
 ShizukaYoshimoto: {
-	// PreMision0: ¡A-a...!
-	// PreMision1: ¡¿...?!
-	// PreMision2: ...
-	// Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
-	// Chat1: *Teléfono: Acorde al quinto capítulo del manga, aquí debería suceder algo romántico.*
-	// Chat2: *Teléfono: Mi corazón late como el de la princesa Io ante el caballero Kamakur.*
-	// Chat3: Chat4:
-	// Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
-	// DejarDeSeguir: Ocupada:
-	// Beso: Te quiero, {0}. Te quiero... Te quiero mucho... Ay, no, no puedo dejar de pensar en ti, {0}...!
+	PreMision0: ¡A-a...!
+	PreMision1: ¡¿...?!
+	PreMision2: ...
+	Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
+	Chat1: *Teléfono: Acorde al quinto capítulo del manga, aquí debería suceder algo romántico.*
+	Chat2: *Teléfono: Mi corazón late como el de la princesa Io ante el caballero Kamakuru.*
+	Chat3: *Teléfono: Percibo presencias antiguas bajo la tierra... como si algo durmiera desde antes que este mundo fuera generado...*
+	Chat4: *Teléfono: Si escuchas susurros cuando cae la noche, no temas... probablemente solo sea el viento... probablemente...*
+	Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
+	DejarDeSeguir: *Teléfono: Entiendo... permaneceré aquí, aguardando tu regreso.*
+	Beso: Te quiero, {0}. Te quiero... Te quiero mucho... Ay, no, no puedo dejar de pensar en ti, {0}...!
 }
 
 NanoEiai: {
@@ -47,8 +47,10 @@ NanoEiai: {
 	// PreMision2: El romance es inutil, es una perdida de tiempo total
 	// Chat0: Chat1: Toda ayuda es buena, aunque las posibilidades sean casi nulas.
 	// Chat2: 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 ...
-	// Chat3: Chat4:
+	// Chat3: s
+	// Chat4: s
 	// Seguir: Es lógico, seguirte seria lo más eficiente para que puedas progresar.
-	// DejarDeSeguir: Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
+	// DejarDeSeguir: s
+	// Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
 	// Beso: Mphh, esto... supera mis expectativas, es como inyectar felicidad directamente en mi cerebro con una explosion de placer, es demasiado!!!
 }

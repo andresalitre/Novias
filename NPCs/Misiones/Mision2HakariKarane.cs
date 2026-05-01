@@ -96,7 +96,7 @@ namespace Novias.NPCs.Misiones
                 player.GetModPlayer<HakariPlayer>().CompletarMision();
                 player.GetModPlayer<KaranePlayer>().CompletarMision();
 
-                player.GetModPlayer<HakariPlayer>().ContadorEnemigosMision2 = 0;
+                player.GetModPlayer<HakariPlayer>().ContadorEnemigosMision2 = 0; // resetear contador, ya no se usa para nada, por que no se pueden repetir misiones, pero por las dudas o por si uso algun otro contador al futuro
                 player.GetModPlayer<KaranePlayer>().ContadorEnemigosMision2 = 0;
 
                 string nj = player.name;
