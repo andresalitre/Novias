@@ -10,7 +10,7 @@ namespace Novias.NPCs.Misiones
 {
     public static class KaraneMisiones
     {
-        static string Pensamiento => Language.GetTextValue("Mods.Novias.Misiones.Karane.Pensamiento");
+        static string Pensamiento => Language.GetTextValue("Mods.Novias.Misiones.Pensamiento");
 
         public static MisionData[] ObtenerMisiones() => new[]
         {

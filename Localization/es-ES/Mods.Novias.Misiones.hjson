@@ -1,6 +1,11 @@
-Hakari: {
-	PensamientoHakari: Pensamientos de Hakari
+Pensamiento: Pensamientos
+PensamientoHakari: Pensamientos de Hakari
+PensamientoKarane: Pensamientos de Karane
+PensamientoNano: Pensamientos de Nano
+PensamientoHakariKarane: Pensamientos de Hakari y Karane
+HakariKarane: Hakari y Karane
 
+Hakari: {
 	Mision1: {
 		Titulo: Un beso indirecto
 		Descripcion: Tráele a Hakari medio refresco de melocotón.
@@ -32,8 +37,6 @@ Hakari: {
 }
 
 Karane: {
-	Pensamiento: Pensamientos de {0}
-
 	Mision1: {
 		Titulo: Perdón de la tsundere
 		Descripcion: Consíguele a Karane un lindo gatito de peluche.
@@ -61,10 +64,6 @@ Karane: {
 }
 
 CompartidaHakariKarane: {
-	Ambas: Hakari y Karane
-	PensamientoAmbas: Pensamientos de Hakari y Karane
-	Pensamiento: Pensamientos de {0}
-
 	Mision1: {
 		Titulo: Debes escoger solo a una, ¿o quizas no?
 		Descripcion: Consigue un regalo especial para ambas chicas, usar una hoz en el césped puede ayudar.
@@ -138,12 +137,6 @@ CompartidaHakariKarane: {
 }
 
 Shizuka: {
-	Ambas: Hakari y Karane
-	PensamientoHakariKarane: Pensamientos de Hakari y Karane
-	Pensamiento: Pensamientos de {0}
-	PensamientoHakari: Pensamientos de Hakari
-	PensamientoKarane: Pensamientos de Karane
-
 	Mision1: {
 		Titulo: La princesa muda y el terrariano
 		Descripcion: Parece que a ella le cuesta hablar con los demás, encuentra una forma de ayudarla a comunicarse.
@@ -278,8 +271,6 @@ Shizuka: {
 }
 
 Nano: {
-	PensamientoNano: Pensamientos de Nano
-
 	Mision1: {
 		Titulo: La novia más eficaz
 		Descripcion: Parece que Nano Eiai tiene algo que decirte.

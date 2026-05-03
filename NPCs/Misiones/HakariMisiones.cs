@@ -8,7 +8,7 @@ namespace Novias.NPCs.Misiones
 {
     public static class HakariMisiones
     {
-        static string PensamientoHakari => Language.GetTextValue("Mods.Novias.Misiones.Hakari.PensamientoHakari");
+        static string PensamientoHakari => Language.GetTextValue("Mods.Novias.Misiones.PensamientoHakari");
 
         public static MisionData[] ObtenerMisiones() => new[]
         {

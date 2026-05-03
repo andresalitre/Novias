@@ -17,12 +17,11 @@ namespace Novias.NPCs.Misiones
         private static bool mision3Iniciada = false;
         public static int ContadorEnemigosMision3Shizuka = 0;
         private const int metaEnemigos = 15;
-        static string HakariKarane => Language.GetTextValue("Mods.Novias.Misiones.Shizuka.HakariKarane");
-        static string Pensamiento => Language.GetTextValue("Mods.Novias.Misiones.Shizuka.Pensamiento");
-        static string PensamientoHakariKarane => Language.GetTextValue("Mods.Novias.Misiones.Shizuka.PensamientoHakariKarane");
-        static string PensamientoHakari => Language.GetTextValue("Mods.Novias.Misiones.Shizuka.PensamientoHakari");
-        static string PensamientoKarane => Language.GetTextValue("Mods.Novias.Misiones.Shizuka.PensamientoKarane");
-
+        static string HakariKarane => Language.GetTextValue("Mods.Novias.Misiones.HakariKarane");
+        static string Pensamiento => Language.GetTextValue("Mods.Novias.Misiones.Pensamiento");
+        static string PensamientoHakariKarane => Language.GetTextValue("Mods.Novias.Misiones.PensamientoHakariKarane");
+        static string PensamientoHakari => Language.GetTextValue("Mods.Novias.Misiones.PensamientoHakari");
+        static string PensamientoKarane => Language.GetTextValue("Mods.Novias.Misiones.PensamientoKarane");
         public static MisionData[] ObtenerMisiones() => new[]
         {
             new MisionData // CAPITULO 3 ANIME, PRIMERA MISION SHIZUKA

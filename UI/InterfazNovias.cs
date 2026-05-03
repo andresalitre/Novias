@@ -94,7 +94,7 @@ namespace Novias.UI
         protected virtual Color ColorBorde => new Color(200, 90, 150);
         protected virtual Color ColorTitulo => new Color(255, 190, 230);
         protected virtual Color ColorDialogoNPC => new Color(255, 200, 230);
-        protected virtual Color ColorDialogoJugador => new Color(180, 220, 255);
+        protected virtual Color ColorDialogoJugador => new Color(255, 225, 255);
 
         protected abstract NoviasPlayerBase ObtenerPlayer();
         protected abstract MisionData[] ObtenerMisiones();
@@ -189,8 +189,9 @@ namespace Novias.UI
         private void CargarLinea(LineaDialogo l)
         {
             string txt = Language.GetTextValue(l.Key, Main.LocalPlayer.name, NombreNPC);
-            string pre = l.EsJugador ? Main.LocalPlayer.name
-                       : string.IsNullOrEmpty(l.NombreNPC) ? NombreNPC : l.NombreNPC;
+            string pre = l.EsJugador
+                ? (string.IsNullOrEmpty(l.NombreNPC) ? Main.LocalPlayer.name : l.NombreNPC)
+                : (string.IsNullOrEmpty(l.NombreNPC) ? NombreNPC : l.NombreNPC);
             _lineasMostradas.Add((pre, txt, l.EsJugador));
             _textoFull = string.IsNullOrWhiteSpace(txt) ? "..." : txt;
             _textoVis = ""; _timerLetra = 0;

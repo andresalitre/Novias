@@ -11,7 +11,7 @@ namespace Novias.NPCs.Misiones
 {
     public static class NanoMisiones
     {
-        static string PensamientoNano => Language.GetTextValue("Mods.Novias.Misiones.Nano.PensamientoNano");
+        static string PensamientoNano => Language.GetTextValue("Mods.Novias.Misiones.PensamientoNano");
 
         public static MisionData[] ObtenerMisiones() => new[]
         {
