@@ -1,10 +1,12 @@
 Hakari: {
+	PensamientoHakari: Hakari's thoughts
+
 	Mision1: {
 		Titulo: An Indirect Kiss
 		Descripcion: Bring Hakari half a peach soda.
 		Dialogo0: I'm craving a peach soda so much. Although, I could never finish a whole can all by myself...
 		Dialogo1: In case you happened to find one... Do you... think that you could split it with me?
-		Dialogo2: *Hakari's thoughts: It's the perfect scheme! I'm so smooth! I'm totally about to land my first indirect kiss!*
+		Dialogo2: It's the perfect scheme! I'm so smooth! I'm totally about to land my first indirect kiss!
 		Completacion0: Here, this feels about right.
 		Completacion1: Thank you so much!
 		Completacion2: Wait! Isn't this an... indirect kiss?
@@ -30,6 +32,8 @@ Hakari: {
 }
 
 Karane: {
+	Pensamiento: "{0}'s thoughts"
+
 	Mision1: {
 		Titulo: The Tsundere's Forgiveness
 		Descripcion: Get Karane a cute kitty plushie.
@@ -41,7 +45,7 @@ Karane: {
 		Completacion0: Here you go, I got you something I think you'll like.
 		Completacion1: A-a kitty plushie...? I-it's not like it makes me happy or anything...
 		Completacion2: Hmph! But, if you really insist, then I suppose I could be yout girlfriend, if you beg me or whatever.
-		Completacion3: *Thoughts: That was the most passive aggresive confession in the history of mankind*
+		Completacion3: That was the most passive aggresive confession in the history of mankind
 		Completacion4: Argh, what I'm trying to say is if...
 		Completacion5: I-If I was in live with you, too, then, {0}, would you go out with me?
 	}
@@ -57,6 +61,10 @@ Karane: {
 }
 
 CompartidaHakariKarane: {
+	Ambas: Hakari and Karane
+	PensamientoAmbas: Hakari's and Karane's thoughts
+	Pensamiento: "{0}'s thoughts"
+
 	Mision1: {
 		Titulo: You must choose only one, or maybe not?
 		Descripcion: Get a special gift for both girls; using a scythe on the grass might help.
@@ -130,6 +138,12 @@ CompartidaHakariKarane: {
 }
 
 Shizuka: {
+	Ambas: Hakari and Karane
+	PensamientoHakariKarane: Hakari's and Karane's thoughts
+	Pensamiento: "{0}'s thoughts"
+	PensamientoHakari: Hakari's thoughts
+	PensamientoKarane: Karane's thoughts
+
 	Mision1: {
 		Titulo: La princesa muda y el terrariano
 		Descripcion: Parece que a ella le cuesta hablar con los demás, encuentra una forma de ayudarla a comunicarse.
@@ -138,7 +152,7 @@ Shizuka: {
 		Dialogo1: ":)"
 		Dialogo2: (⸝⸝O-O⸝⸝)
 		Dialogo3: (⸝⸝>-<⸝⸝)
-		Dialogo4: *Pensamientos: Qué increíbles diálogos fueron implementados en este personaje...*
+		Dialogo4: Qué increíbles diálogos fueron implementados en este personaje...
 		Dialogo5: ¿Por qué no solo me hablas con claridad?
 		Dialogo6: (｡Ó-Ò｡)
 		Dialogo7: (◞‸ ◟)
@@ -166,19 +180,19 @@ Shizuka: {
 		Titulo: ¿Una más? ¿Qué más da?
 		Descripcion: Preséntale a Shizuka a tus novias.
 		Bloqueado: ¿Una más? ¿Qué más da?: Requiere: Hakari y Karane deben estar siguiendo al jugador.
-		Dialogo0: *Pensamientos: Supongo que debo presentarles mi nueva novia a mis otras novias...*
+		Dialogo0: Supongo que debo presentarles mi nueva novia a mis otras novias...
 		Dialogo1: ¡Ay, qué miedito!
 		Completacion0: Hola chicas... Les quería hacer una pregunta.
 		Completacion1: ¿Qué sucede, {0}?
 		Completacion2: Acabo de completar la misión 1 de Shizuka Yoshimoto y...
 		Completacion3: Quiero que dejen que Shizuka Yoshimoto sea mi nueva novia y esté con nosotros tres en una relación...
-		Completacion4: ¡ME NIEGOOOOOOOOOOOOOOOOOOOOOOOOO! ¡ROTUNDAMENTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!
+		Completacion4: ¡ME NIEGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO! ¡ROTUNDAMENTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!
 		Completacion5: Cómo es posible, {0}...
 		Completacion6: Encontraste un nuevo amor, pero fuiste muy considerado en no querer abandonarnos. ¡No puedo creer cuánta bondad hay en tu ser!
 		Completacion7: ¡¿Y ahora a esta se le pudrió el cerebro o qué?!
 		Completacion8: ¡No! ¡Que Shizuka se integre no cambia lo que ya sentía por ustedes!
 		Completacion9: ¡Que quede claro! ¡Seguiré queriéndolas a todas y cuidando de ustedes como siempre!
-		Completacion10: ¡NO...! ¡PROMETO AMARLAS MUCHO MÁS QUE ANTES! ¡DENME LA OPORTUNIDAD!
+		Completacion10: ¡NO! ¡PROMETO AMARLAS MUCHO MÁS QUE ANTES! ¡DENME LA OPORTUNIDAD!
 		Completacion11: ¿Mucho más que antes...?
 		Completacion12: Sí... Y si alguna vez no les llego a cumplir, solo háganmelo saber...
 		Completacion13: Y voy a expiar mis pecados... bebiendo poción roja.
@@ -188,16 +202,16 @@ Shizuka: {
 		Completacion17: Encantada de conocerte.
 		Completacion18: Sí... es un placer...
 		Completacion19: Ella es Shizuka Yoshimoto, también será mi novia, se las presento, chicas.
-		Completacion20: *Pensamientos de Hakari: ¿Cómo estará programada?*
-		Completacion21: *Pensamientos de Karane: Según su código no tiene diálogos integrados.*
+		Completacion20: ¿Cómo estará programada?
+		Completacion21: Según su código no tiene diálogos integrados.
 		Completacion22: *Teléfono: El gusto es mío, espero podamos llevarnos muy bien.*
 		Completacion23: ¡ES COMO UNA IA!
 	}
 
 	Mision3: {
-		Titulo: No hay por qué contenerse.
-		Descripcion: ¡Ten una aventura asombrosa solo con Shizuka!
-		Bloqueado: No hay por qué contenerse: Requiere: Hakari y Karane siguen al jugador.
+		Titulo: No hay por qué contenerse
+		Descripcion: ¡Ten una aventura asombrosa solo con Shizuka! Para que el contador avance, Hakari y Karane ya no deben seguirte.
+		Bloqueado: No hay por qué contenerse: Requiere: Hakari, Karane y Shizuka siguen al jugador.
 		Dialogo0: Chicas, lo siento. Debo irme un momento, estaré AFK unos minutos.
 		Dialogo1: ...
 		Dialogo2: Oye... dime, Yoshimoto. ¿Qué pretendes? ¿Por qué te contienes con {0}?
@@ -206,13 +220,13 @@ Shizuka: {
 		Dialogo5: Tal vez es porque das mucho miedo, Karane, y encima de eso te pones a gritar como loca.
 		Dialogo6: ¿¡Qué!? ¿¡Yo loca!? ¿Cuándo me has escuchado gritarle a alguien?
 		Dialogo7: *Teléfono: Soy la tercera novia de {0}. Fui la última en llegar... no quería interponerme...*
-		Dialogo8: Bah. Sabía que ibas a decir algo así. Pero ¿sabes qué? Ahora tú también eres novia de {0}, te guste o no.
+		Dialogo8: ¡Bah! Sabía que ibas a decir algo así. Pero ¿sabes qué? Ahora tú también eres novia de {0}, te guste o no.
 		Dialogo9: Tienes que dejar de comportarte así. Deja de fingir algo que no eres. Deja de fingir que no dices lo que sientes por nervios.
 		Dialogo10: Mira quién lo dice... la señorita que ni por error admite lo que piensa o siente.
 		Dialogo11: ¡¡TÚ CIERRA LA BOCA, QUE NADIE ESTÁ HABLANDO CONTIGO!!
 		Dialogo12: *Teléfono: Tienes razón... lo siento mucho...*
-		Dialogo13: ¡A ESTO ME REFERÍA! ¿¡Por qué siempre das la razón y no discutes!? ¡UYYYY!
-		Dialogo14: *Teléfono: Por favor, escuchen... voy a sincerarme con ustedes. En realidad... el miedo me paraliza por completo...*
+		Dialogo13: ¡¡A ESTO ME REFERÍA!! ¿¡Por qué siempre das la razón y no discutes!? ¡UYYYY!
+		Dialogo14: *Teléfono: Por favor, escuchen... voy a sincerarme con ustedes. En realidad... el miedo me paraliza por completo*
 		Dialogo15: ¿Qué? ¿En verdad doy tanto miedo cuando me enojo? T_T
 		Dialogo16: ¿En serio? Me sorprende que no lo hayas notado.
 		Dialogo17: *Teléfono: Eso no es lo que quería decir. Lo que en realidad quiero decir es que...*
@@ -230,15 +244,15 @@ Shizuka: {
 		Dialogo29: ¿¡Ahhh!?
 		Dialogo30: Sin embargo, el amor de {0} es más profundo de lo que puedas imaginar.
 		Dialogo31: ¡Ya te lo dije! No tienes que contener tus sentimientos ni preocuparte por nosotras. Si quieres hablar con {0} o quieres que haga algo, se lo dices y punto final.
-		Dialogo32: *Pensamientos: ¡Mi plan resultó mejor de lo que pensaba!*
-		Dialogo33: *Pensamientos: Karane parecía furiosa con Shizuka. Si quiero que mis novias se lleven bien, no debo entrometerme. Por eso fingí irme AFK.*
-		Dialogo34: *Pensamientos: Como pensaba, Karane no estaba enojada, solo frustrada.*
-		Dialogo35: *Pensamientos: Hakari intercedió para evitar que Shizuka recibiera toda su ira sin filtros.*
-		Dialogo36: *Pensamientos: Y luego Shizuka aceptó lo que le dijo Karane y les contó lo que sentía de verdad.*
-		Dialogo37: *Pensamientos: ¡AYYY, MIS CHICAAASSS!*
+		Dialogo32: ¡Mi plan resultó mejor de lo que pensaba!
+		Dialogo33: Como Karane parecía furiosa con Shizuka, fingí irme AFK. Si quiero que las chicas se lleven bien, no debo entrometerme.
+		Dialogo34: Como pensaba, Karane no estaba enojada, solo frustrada.
+		Dialogo35: Hakari intercedió para evitar que Shizuka recibiera toda su ira sin filtros.
+		Dialogo36: ¡Y luego Shizuka aceptó lo que le dijo Karane y les contó lo que sentía de verdad!
+		Dialogo37: ¡AYYY, MIS CHICAAASSS!
 		Dialogo38: ¡Ya volví!
 		Dialogo39: Oye {0}, decidimos que Shizuka irá en una aventura contigo. ¡Ustedes dos solos!
-		Dialogo40: Es cierto. ¿Verdad que quieres ir en una aventura con {0}, Shizuka?
+		Dialogo40: ¡Es cierto! ¿Verdad que quieres ir en una aventura con {0}, Shizuka?
 		Dialogo41: *Teléfono: Quiero hacerlo.*
 		Completacion0: *Teléfono: Esta aventura fue... muy divertida. Una experiencia digna de un OVA*
 		Completacion1: ¡Sí! Fue increíble, Shizuka. Podemos tener todas las aventuras que quieras, cuando quieras.
@@ -264,6 +278,8 @@ Shizuka: {
 }
 
 Nano: {
+	PensamientoNano: Nano's thoughts
+
 	Mision1: {
 		Titulo: La novia más eficaz
 		Descripcion: Parece que Nano Eiai tiene algo que decirte.
@@ -284,7 +300,7 @@ Nano: {
 		Completacion12: Espera, Eiai, no pienso permitir que acabes con este amor rechazandome!
 		Completacion13: Eso no me importa
 		Completacion14: Claro que importa...! por que estoy enamorado! no depende de ti que deje de sentir esto, no me rendire tan facil!
-		Completacion15: *Pensamientos de nano: {0} esta enamorado de mi! 3,141592653589793...*
+		Completacion15: "{0} esta enamorado de mi! 3,141592653589793..."
 		Completacion16: Tenias que saberlo, ademas, yo no puedo... soltar a las personas tan facil...
 		Completacion17: Te lo pido, ten una cita conmigo! y despues decide que es lo que haras
 		Completacion18: Eso seria algo...

@@ -8,9 +8,11 @@ namespace Novias.NPCs.Misiones
 {
     public static class HakariMisiones
     {
+        static string PensamientoHakari => Language.GetTextValue("Mods.Novias.Misiones.Hakari.PensamientoHakari");
+
         public static MisionData[] ObtenerMisiones() => new[]
         {
-            new MisionData
+            new MisionData // MISION 1 CAPITULO 1 ANIME
             {
                 TituloKey          = "Mods.Novias.Misiones.Hakari.Mision1.Titulo",
                 DescripcionKey     = "Mods.Novias.Misiones.Hakari.Mision1.Descripcion",
@@ -29,7 +31,7 @@ namespace Novias.NPCs.Misiones
                 {
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Dialogo0" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Dialogo1" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Dialogo2" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Hakari.Mision1.Dialogo2", NombreNPC = PensamientoHakari },
                 },
                 DialogosCompletacion = new[]
                 {
@@ -50,9 +52,9 @@ namespace Novias.NPCs.Misiones
 
             //Misiones compartidas, desbloquean beso
 
-            Mision1HakariKarane.Obtener(),
+            Mision1HakariKarane.Obtener(), // CAPITULO 1 ANIME AVANZA HISTORIA
 
-            Mision2HakariKarane.Obtener(),
+            Mision2HakariKarane.Obtener(), // CAPITULO 2 ANIME DESBLOQUEA BESO
 
             new MisionData
             {

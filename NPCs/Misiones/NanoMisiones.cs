@@ -11,11 +11,13 @@ namespace Novias.NPCs.Misiones
 {
     public static class NanoMisiones
     {
+        static string PensamientoNano => Language.GetTextValue("Mods.Novias.Misiones.Nano.PensamientoNano");
+
         public static MisionData[] ObtenerMisiones() => new[]
         {
 
             //esta mision para seguimiento
-            new MisionData
+            new MisionData //MISION 1 NANO, CAPITULO 5 ANIME 
             {
                 TituloKey            = "Mods.Novias.Misiones.Nano.Mision1.Titulo",
                 DescripcionKey       = "Mods.Novias.Misiones.Nano.Mision1.Descripcion",
@@ -53,7 +55,7 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = true,   Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion12" },
                     new LineaDialogo { EsJugador = false,  Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion13" },
                     new LineaDialogo { EsJugador = true,   Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion14" },
-                    new LineaDialogo { EsJugador = false,  Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion15" },
+                    new LineaDialogo { EsJugador = false,  Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion15", NombreNPC = PensamientoNano },
                     new LineaDialogo { EsJugador = true,   Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion16" },
                     new LineaDialogo { EsJugador = true,   Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion17" },
                     new LineaDialogo { EsJugador = false,  Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion18" },
@@ -62,9 +64,7 @@ namespace Novias.NPCs.Misiones
                 },
             },
 
-            //Mision de beso
-
-            new MisionData
+            new MisionData // MISION 2 NANO, CAPITULO 5 ANIME DESBLOQUEA BESO
             {
                 TituloKey            = "Mods.Novias.Misiones.Nano.Mision2.Titulo",
                 DescripcionKey       = "Mods.Novias.Misiones.Nano.Mision2.Descripcion",
@@ -95,7 +95,21 @@ namespace Novias.NPCs.Misiones
                 },
             },
 
-
+            new MisionData // MISION 4 PROXIMAMENTE 
+            {
+                TituloKey          = "Mods.Novias.Misiones.Nano.Mision4.Titulo",
+                DescripcionKey     = "Mods.Novias.Misiones.Nano.Mision4.Descripcion",
+                ItemRequisito      = 0,
+                ItemRecompensa     = ModContent.ItemType<PocionDeEficiencia>(),
+                CantidadRecompensa = 1,
+                MensajeBloqueadoKey  = "Mods.Novias.Misiones.Nano.Mision4.Bloqueado",
+                Condicion          = () => false, // esta mision la hare despues
+                DialogosPresentacion = new[]
+                {
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo0" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo1" },
+                },
+            },
 
         };
     }
