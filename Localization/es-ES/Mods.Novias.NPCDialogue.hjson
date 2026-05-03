@@ -32,26 +32,28 @@ ShizukaYoshimoto: {
 	PreMision0: ¡A-a...!
 	PreMision1: ¡¿...?!
 	PreMision2: ...
-	Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
-	Chat1: *Teléfono: Acorde al quinto capítulo del manga, aquí debería suceder algo romántico.*
+	Chat0: *Teléfono: Mi señor... Este mundo desconocido, ¿podría ser este nuestro paraíso soñado?*
+	Chat1: *Teléfono: Acorde al quinto capítulo del manga, aquí debería suceder algo romántico. Yo solo cumplo mi deber como princesa.*
 	Chat2: *Teléfono: Mi corazón late como el de la princesa Io ante el caballero Kamakuru.*
-	Chat3: *Teléfono: Percibo presencias antiguas bajo la tierra... como si algo durmiera desde antes que este mundo fuera generado...*
-	Chat4: *Teléfono: Si escuchas susurros cuando cae la noche, no temas... probablemente solo sea el viento... probablemente...*
+	Chat3: *Teléfono: Hay algo en estas tierras... un susurro bajo el suelo, tal como en los relatos de Lovecraft...*
+	Chat4: *Teléfono: Estar contigo es una alegría que no se puede expresar en palabras.*
 	Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
-	DejarDeSeguir: *Teléfono: Entiendo... permaneceré aquí, aguardando tu regreso.*
-	Beso: Te quiero, {0}. Te quiero... Te quiero mucho... Ay, no, no puedo dejar de pensar en ti, {0}...!
+	DejarDeSeguir: *Teléfono: Sus palabras son órdenes. Debes saber que mi corazón permanecerá leal a ti.*
+	Ocupada: *Teléfono: Lo siento, ya estoy acompañando a alguien. No sería correcto abandonarlo...*
+	Beso: Te quiero, {0}. Te quiero... Te quiero mucho... ¡Ay, no, no puedo dejar de pensar en ti, {0}...!
 }
 
 NanoEiai: {
-	// PreMision0: "3,1415926535897932384... 3,1415926535897932384..."
-	// PreMision1: En este mundo, lo que no mejora tu futuro no tiene sentido si quiera intentarlo
-	// PreMision2: El romance es inutil, es una perdida de tiempo total
-	// Chat0: Chat1: Toda ayuda es buena, aunque las posibilidades sean casi nulas.
-	// Chat2: 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 ...
-	// Chat3: s
-	// Chat4: s
-	// Seguir: Es lógico, seguirte seria lo más eficiente para que puedas progresar.
-	// DejarDeSeguir: s
-	// Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
-	// Beso: Mphh, esto... supera mis expectativas, es como inyectar felicidad directamente en mi cerebro con una explosion de placer, es demasiado!!!
+	PreMision0: "3,1415926535897932384... 3,1415926535897932384..."
+	PreMision1: En este mundo, lo que no mejora tu futuro no tiene sentido siquiera intentarlo.
+	PreMision2: El romance es inútil, es una pérdida de tiempo total.
+	Chat0: Desde que estoy contigo, he empezado a considerar que algunos momentos, aunque no produzcan resultados, siguen siendo... necesarios.
+	Chat1: Toda ayuda es buena, aunque las posibilidades sean casi nulas.
+	Chat2: 3,1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 ...
+	Chat3: Desearía que pudieras apreciar mejor mis abundantes encantos femeninos.
+	Chat4: Incluso si el mundo entero se convirtiera en piedra, estoy un 10 mil millones por ciento segura de que te buscaría hasta encontrarte.
+	Seguir: Es lógico, seguirte sería lo más eficiente para que puedas progresar.
+	DejarDeSeguir: Entendido. Reasignaré mi tiempo a tareas más productivas... aunque mi prioridad siga siendo observar tu progreso.
+	Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
+	Beso: Mphh, esto... supera mis expectativas, es como inyectar felicidad directamente en mi cerebro con una explosión de placer, ¡es demasiado!
 }

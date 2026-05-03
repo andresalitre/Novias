@@ -29,29 +29,30 @@ KaraneInda: {
 }
 
 ShizukaYoshimoto: {
-	PreMision0: ¡A-a...!
-	PreMision1: ¡¿...?!
+	PreMision0: A-a...!
+	PreMision1: ...?!
 	PreMision2: ...
-	Chat0: *Teléfono: Mi señor... Este mundo desconocido ¿Podría ser este nuestro paraíso soñado?*
-	Chat1: *Teléfono: Acorde al quinto capítulo del manga, aquí debería suceder algo romántico.*
-	Chat2: *Teléfono: Mi corazón late como el de la princesa Io ante el caballero Kamakur.*
-	Chat3: s
-	Chat4: s
-	Seguir: *Teléfono: Ansío ser de ayuda en tu aventura.*
-	DejarDeSeguir: Ocupada: "s"
-	Beso: Te quiero, {0}. Te quiero... Te quiero mucho... Ay, no, no puedo dejar de pensar en ti, {0}...!
+	Chat0: *Phone: My lord... Could this unknown world be the paradise of our dreams?*
+	Chat1: *Phone: According to the fifth chapter of the manga, something romantic should happen here. I am merely fulfilling my duty as a princess.*
+	Chat2: *Phone: My heart flutters just like Princess Io's before Sir Kamakuru.*
+	Chat3: *Phone: There is something about these lands... a whisper beneath the soil, just like in the tales of Lovecraft...*
+	Chat4: *Phone: Being with you is a joy that cannot be expressed in words.*
+	Seguir: *Phone: I yearn to be of use in your adventure.*
+	DejarDeSeguir: *Phone: Your words are my command. Know that my heart shall remain loyal to you.*
+	Ocupada: *Phone: I am sorry, I am already accompanying someone else. It would not be right to abandon them...*
+	Beso:I love you, {0}! I love you, I love you, I love you! It's kind of scary. I can't remember anything except your lips! My body feels so fuzzy and small...
 }
 
 NanoEiai: {
-	PreMision0: "3,1415926535897932384... 3,1415926535897932384..."
-	PreMision1: En este mundo, lo que no mejora tu futuro no tiene sentido si quiera intentarlo
-	PreMision2: El romance es inutil, es una perdida de tiempo total
-	Chat0: Chat1: Toda ayuda es buena, aunque las posibilidades sean casi nulas.
+	PreMision0: 3.1415926535897932384... 3.1415926535897932384...
+	PreMision1: Anything that doesn't improve your prospects is meaningless. That's the way of this world, like it or not.
+	PreMision2: Romance is meaningless. A complete waste of time.
+	Chat0: Since being with you, I have begun to consider that certain moments, even if they yield no results, remain... necessary.
+	Chat1: Any assistance is beneficial, even if the possibilities are near zero.
 	Chat2: 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 ...
-	Chat3: s
-	Chat4: s
-	Seguir: Es lógico, seguirte seria lo más eficiente para que puedas progresar.
-	DejarDeSeguir: s
-	Ocupada: No sería eficiente seguir a dos jugadores al mismo tiempo.
-	Beso: Mphh, esto... supera mis expectativas, es como inyectar felicidad directamente en mi cerebro con una explosion de placer, es demasiado!!!
-}
+	Chat3: I wish you could better appreciate my abundant feminine charms.
+	Chat4: Even if the entire world were turned to stone, I am ten billion percent certain that I would search until I found you.
+	Seguir: It is logical. Following you would be the most efficient way for you to progress.
+	DejarDeSeguir: Understood. I will reassign my time to more productive tasks... though my priority remains observing your progress.
+	Ocupada: It would not be efficient to follow two players simultaneously.
+	Beso: This far surpasses any expectation. It's like my brain has been injected with a shot of pure joy and pleasure! I feel it coursing through my veins, taking over my entire body!
