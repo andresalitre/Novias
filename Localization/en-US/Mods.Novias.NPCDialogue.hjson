@@ -40,7 +40,7 @@ ShizukaYoshimoto: {
 	Seguir: *Phone: I yearn to be of use in your adventure.*
 	DejarDeSeguir: *Phone: Your words are my command. Know that my heart shall remain loyal to you.*
 	Ocupada: *Phone: I am sorry, I am already accompanying someone else. It would not be right to abandon them...*
-	Beso:I love you, {0}! I love you, I love you, I love you! It's kind of scary. I can't remember anything except your lips! My body feels so fuzzy and small...
+	Beso: I love you, {0}! I love you, I love you, I love you! It's kind of scary. I can't remember anything except your lips! My body feels so fuzzy and small...
 }
 
 NanoEiai: {
@@ -56,3 +56,4 @@ NanoEiai: {
 	DejarDeSeguir: Understood. I will reassign my time to more productive tasks... though my priority remains observing your progress.
 	Ocupada: It would not be efficient to follow two players simultaneously.
 	Beso: This far surpasses any expectation. It's like my brain has been injected with a shot of pure joy and pleasure! I feel it coursing through my veins, taking over my entire body!
+}
