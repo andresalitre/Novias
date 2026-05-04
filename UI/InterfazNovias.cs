@@ -13,6 +13,8 @@ using Terraria.UI.Chat;
 using System.Collections.Generic;
 using Novias.Players;
 using Novias.Systems;
+using System.Reflection;
+using Terraria.GameContent;
 
 namespace Novias.UI
 {
@@ -120,7 +122,7 @@ namespace Novias.UI
         private static readonly Color CBotonSeguir = new Color(180, 80, 180);
         private static readonly Color CBotonBeso = new Color(220, 80, 130);
         private static readonly Color CBotonMision = new Color(200, 150, 30);
-        private static readonly Color CBotonFelicidad = new Color(59, 169, 69);
+        private static readonly Color CBotonDialogo = new Color(59, 169, 69);
         private static readonly Color CBotonHablar = new Color(59, 169, 69);
 
         protected struct Btn
@@ -290,7 +292,7 @@ namespace Novias.UI
                 bool disp = ms[mIdx].EstaDisponible();
                 AgregarBtnKey("Mods.Novias.UI.Mision", disp ? CBotonMision : CBotonBloqueado, false);
             }
-            AgregarBtnKey("Mods.Novias.UI.Felicidad", CBotonFelicidad);
+            AgregarBtnKey("Mods.Novias.UI.Dialogo", CBotonDialogo);
             AgregarBtnKey("Mods.Novias.UI.Cerrar", CBotonCerrar);
         }
 
@@ -502,11 +504,23 @@ namespace Novias.UI
                     _npc.AddBuff(BuffID.Lovestruck, 60 * 5);
                     SetTexto(ObtenerDialogoBeso()); return;
                 }
-                if (texto == Txt("Mods.Novias.UI.Felicidad"))
+                if (texto == Txt("Mods.Novias.UI.Dialogo"))
                 {
-                    string tf = "";
-                    try { var m = typeof(NPC).GetMethod("GetShoppingText", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance); if (m != null) tf = m.Invoke(npc, new object[] { Main.LocalPlayer })?.ToString() ?? ""; } catch { }
-                    SetTexto(string.IsNullOrWhiteSpace(tf) ? Language.GetTextValue("Mods.Novias.UI.FelicidadDefault") : tf);
+                    if (npc != null && npc.active)
+                    {
+                        string npcName = npc.ModNPC?.GetType().Name ?? "";
+                        int total = 5;
+                        int idx = Main.rand.Next(total);
+                        string key = $"Mods.Novias.NPCfelicidad.{npcName}.Felicidad{idx}";
+                        string chat = Language.GetTextValue(key);
+
+                        if (chat == key)
+                        {
+                            NPCLoader.GetChat(npc, ref chat);
+                        }
+
+                        SetTexto(chat);
+                    }
                     return;
                 }
                 if (texto == Txt("Mods.Novias.UI.Tienda"))
