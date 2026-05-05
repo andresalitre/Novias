@@ -12,6 +12,7 @@ namespace Novias.Systems
         public int CantidadRequisito { get; init; } = 1;
         public int ItemRecompensa { get; init; }
         public int CantidadRecompensa { get; init; } = 1;
+        public int[] ItemsDisplay { get; init; } = System.Array.Empty<int>();
 
         public LineaDialogo[] DialogosPresentacion { get; init; } = System.Array.Empty<LineaDialogo>();
         public LineaDialogo[] DialogosCompletacion { get; init; } = System.Array.Empty<LineaDialogo>();

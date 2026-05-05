@@ -25,7 +25,7 @@ namespace Novias.UI
         protected override Color ColorDialogoNPC => new Color(210, 180, 255);
 
         protected override string NombreNPC => "Nano";
-        protected override int BuffBeso => ModContent.BuffType<ArmoniaMagica>();
+        protected override int BuffBeso => ModContent.BuffType<Eficiencia>();
 
         protected override NoviasPlayerBase ObtenerPlayer() =>
             Main.LocalPlayer.GetModPlayer<NanoPlayer>();

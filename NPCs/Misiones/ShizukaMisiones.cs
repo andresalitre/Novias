@@ -84,7 +84,6 @@ namespace Novias.NPCs.Misiones
             {
                 TituloKey            = "Mods.Novias.Misiones.Shizuka.Mision2.Titulo",
                 DescripcionKey       = "Mods.Novias.Misiones.Shizuka.Mision2.Descripcion",
-                ItemRequisito        = 0,
                 ItemRecompensa       = ModContent.ItemType<PocionDeEcosDeAmor>(),
                 CantidadRecompensa   = 1,
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Shizuka.Mision2.Bloqueado",
@@ -134,7 +133,6 @@ namespace Novias.NPCs.Misiones
             {
                 TituloKey            = "Mods.Novias.Misiones.Shizuka.Mision3.Titulo",
                 DescripcionKey       = "Mods.Novias.Misiones.Shizuka.Mision3.Descripcion",
-                ItemRequisito        = 0,
                 ItemRecompensa       = ModContent.ItemType<PocionDeEcosDeAmor>(),
                 CantidadRecompensa   = 1,
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Shizuka.Mision3.Bloqueado",
@@ -186,7 +184,7 @@ namespace Novias.NPCs.Misiones
                     player.GetModPlayer<ShizukaPlayer>().UIAbierta = false;
 
                     string nj = player.name;
-                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.BesoDesbloqueado", nj, "Shizuka"), 180, 80, 220);
+                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.BesoDesbloqueado", nj, "Shizuka"), 180, 220, 255);
                 },
                 DialogosPresentacion = new[]
                 {

@@ -6,37 +6,39 @@ using Novias.Items.Potions;
 using Novias.Items.GirlfriendsItems.Nano;
 using Novias.Players;
 using Microsoft.Xna.Framework;
+using Novias.NPCs.Novias;
 
 namespace Novias.NPCs.Misiones
 {
     public static class NanoMisiones
     {
         static string PensamientoNano => Language.GetTextValue("Mods.Novias.Misiones.PensamientoNano");
+        static string Pensamiento => Language.GetTextValue("Mods.Novias.Misiones.Pensamiento");
+
+        static NanoPlayer Nano => Main.LocalPlayer.GetModPlayer<NanoPlayer>();
+
+        static bool SoloNanoSigue()
+        {
+            var s = Main.LocalPlayer.GetModPlayer<ShizukaPlayer>();
+            var k = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
+            var h = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
+            return Nano.EstaSiguiendo && !s.EstaSiguiendo && !k.EstaSiguiendo && !h.EstaSiguiendo;
+        }
 
         public static MisionData[] ObtenerMisiones() => new[]
         {
-
-            //esta mision para seguimiento
-            new MisionData //MISION 1 NANO, CAPITULO 5 ANIME 
+            new MisionData //MISION 1 NANO
             {
                 TituloKey            = "Mods.Novias.Misiones.Nano.Mision1.Titulo",
                 DescripcionKey       = "Mods.Novias.Misiones.Nano.Mision1.Descripcion",
-                ItemRequisito        = 0,
-                CantidadRequisito    = 1,
-                ItemRecompensa       = ModContent.ItemType<PocionDeEficiencia>(),
-                CantidadRecompensa   = 1,
                 DialogoRecompensaKey = "Mods.Novias.Misiones.Nano.Mision1.Recompensa",
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Nano.Mision1.Bloqueado",
-                Condicion = () => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().MisionActual >= 3, //completar el beso con shizuka
-                OnMensajesCompletacion = () =>
-                {
-                    string nj = Main.LocalPlayer.name;
-                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.TiendaDesbloqueada", nj, "Nano"), 255, 215, 0);
-                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.SeguimientoDesbloqueado", nj, "Nano"), 180, 80, 220);
-                },
+                Condicion = () => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().MisionActual >= 3,
                 DialogosPresentacion = new[]
                 {
-                    new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.Nano.Mision1.Dialogo0" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision1.Dialogo0" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision1.Dialogo1" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision1.Dialogo2", NombreNPC = Pensamiento },
                 },
                 DialogosCompletacion = new[]
                 {
@@ -60,31 +62,34 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = true,   Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion17" },
                     new LineaDialogo { EsJugador = false,  Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion18" },
                     new LineaDialogo { EsJugador = true,   Key = "Mods.Novias.Misiones.Nano.Mision1.Completacion19" },
-
+                },
+                OnMensajesCompletacion = () =>
+                {
+                    string nj = Main.LocalPlayer.name;
+                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.SeguimientoDesbloqueado", nj, "Nano"), 180, 80, 220);
                 },
             },
 
-            new MisionData // MISION 2 NANO, CAPITULO 5 ANIME DESBLOQUEA BESO
+            new MisionData // MISION 2 NANO, IR AL INFRAMUNDO Y A LA NIEVE (Sacar fotos con la camara)
             {
                 TituloKey            = "Mods.Novias.Misiones.Nano.Mision2.Titulo",
                 DescripcionKey       = "Mods.Novias.Misiones.Nano.Mision2.Descripcion",
-                ItemRequisito        = 0,
-                CantidadRequisito    = 1,
                 ItemRecompensa       = ModContent.ItemType<PocionDeEficiencia>(),
                 CantidadRecompensa   = 1,
                 DialogoRecompensaKey = "Mods.Novias.Misiones.Nano.Mision2.Recompensa",
                 MensajeBloqueadoKey  = "Mods.Novias.Misiones.Nano.Mision2.Bloqueado",
-                OnMensajesCompletacion = () =>
-                {
-                    string nj = Main.LocalPlayer.name;
-                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.TiendaDesbloqueada", nj, "Nano"), 255, 215, 0);
-                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.SeguimientoDesbloqueado", nj, "Nano"), 180, 80, 220);
+                Condicion = () => SoloNanoSigue(),
+                ItemsDisplay = new[] {
+                    ModContent.ItemType<Camara>(),
+                    ModContent.ItemType<FotoInframundo>(),
+                    ModContent.ItemType<FotoNieve>()
                 },
+                AvanzaFase           = false,
                 DialogosPresentacion = new[]
                 {
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo0" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo1" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo2" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo1" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo2" },
                 },
                 DialogosCompletacion = new[]
                 {
@@ -93,24 +98,91 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion2" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion3" },
                 },
+                CondicionCompletar = () =>
+                {
+                    if (!SoloNanoSigue()) return false;
+                    bool tieneInframundo = Main.LocalPlayer.CountItem(ModContent.ItemType<FotoInframundo>()) >= 1;
+                    bool tieneNieve = Main.LocalPlayer.CountItem(ModContent.ItemType<FotoNieve>()) >= 1;
+                    return tieneInframundo && tieneNieve;
+                },
             },
 
-            new MisionData // MISION 4 PROXIMAMENTE 
+            new MisionData // MISION 3 NANO, foto del cielo (Estar en el cielo y sacar la foto con la camara)
+            {
+                TituloKey            = "Mods.Novias.Misiones.Nano.Mision3.Titulo",
+                DescripcionKey       = "Mods.Novias.Misiones.Nano.Mision3.Descripcion",
+                ItemRecompensa       = ModContent.ItemType<PocionDeEficiencia>(),
+                CantidadRecompensa   = 1,
+                DialogoRecompensaKey = "Mods.Novias.Misiones.Nano.Mision3.Recompensa",
+                MensajeBloqueadoKey  = "Mods.Novias.Misiones.Nano.Mision3.Bloqueado",
+                Condicion = () => SoloNanoSigue(),
+                ItemsDisplay = new[] {
+                    ModContent.ItemType<Camara>(),
+                    ModContent.ItemType<FotoCielo>()
+                },
+                AvanzaFase           = false,
+                DialogosPresentacion = new[]
+                {
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision3.Dialogo0" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Dialogo1" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Dialogo2", NombreNPC = Pensamiento },
+                },
+                DialogosCompletacion = new[]
+                {
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion0" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion1" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion2" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion3" },
+                },
+                CondicionCompletar = () =>
+                {
+                    if (!SoloNanoSigue()) return false;
+                    if (Main.LocalPlayer.CountItem(ModContent.ItemType<FotoCielo>()) < 1) return false;
+                    foreach (NPC npc in Main.npc)
+                    {
+                        if (!npc.active) continue;
+                        if (npc.ModNPC is NanoEiai && npc.ai[2] == 1f)
+                            return true;
+                    }
+                    return false;
+                },
+            },
+
+            new MisionData // MISION 4, conversacion final, desbloquea beso
             {
                 TituloKey          = "Mods.Novias.Misiones.Nano.Mision4.Titulo",
                 DescripcionKey     = "Mods.Novias.Misiones.Nano.Mision4.Descripcion",
-                ItemRequisito      = 0,
                 ItemRecompensa     = ModContent.ItemType<PocionDeEficiencia>(),
                 CantidadRecompensa = 1,
-                MensajeBloqueadoKey  = "Mods.Novias.Misiones.Nano.Mision4.Bloqueado",
-                Condicion          = () => false, // esta mision la hare despues
+                MensajeBloqueadoKey = "Mods.Novias.Misiones.Nano.Mision4.Bloqueado",
                 DialogosPresentacion = new[]
                 {
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo0" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo1" },
                 },
+                DialogosCompletacion = new[]
+                {
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion0" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion1" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion2" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion3" },
+                },
+                OnMensajesCompletacion = () =>
+                {
+                    string nj = Main.LocalPlayer.name;
+                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.BesoDesbloqueado", nj, "Nano"), 210, 180, 255);
+                },
+                Condicion = () =>
+                {
+                    foreach (NPC npc in Main.npc)
+                    {
+                        if (!npc.active) continue;
+                        if (npc.ModNPC is NanoEiai && npc.ai[2] == 1f)
+                            return false;
+                    }
+                    return true;
+                },
             },
-
         };
     }
 }

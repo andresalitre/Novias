@@ -20,7 +20,7 @@ namespace Novias.NPCs.Novias
     public class ShizukaYoshimoto : ComportamientoNovia
     {
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().EstaSiguiendo;
-        protected override Color ColorPolvo => new Color(255, 165, 0);
+        protected override Color ColorPolvo => new Color(180, 220, 255);
         protected override int CooldownAtaque => 40;
         protected override int EfectoNovia => ModContent.ProjectileType<Corazon>();
         protected override int RegeneracionVida => 8;

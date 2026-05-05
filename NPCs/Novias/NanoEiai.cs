@@ -19,7 +19,7 @@ namespace Novias.NPCs.Novias
     public class NanoEiai : ComportamientoNovia
     {
         protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<NanoPlayer>().EstaSiguiendo;
-        protected override Color ColorPolvo => new Color(255, 165, 0);
+        protected override Color ColorPolvo => new Color(210, 180, 255);
         protected override int CooldownAtaque => 25;
         protected override int EfectoNovia => ModContent.ProjectileType<Corazon>();
         protected override int RegeneracionVida => 8;
@@ -97,6 +97,39 @@ namespace Novias.NPCs.Novias
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
             });
+        }
+
+        public override void AI()
+        {
+            base.AI();
+
+            bool enElCielo = NPC.Center.Y < Main.worldSurface * 16 * 0.35f;
+            bool enSuelo = EstaEnSuelo(NPC);
+
+            NPC.ai[2] = (enElCielo && enSuelo) ? 1f : 0f;
+        }
+
+        private static bool EstaEnSuelo(NPC npc)
+        {
+            int tileX = (int)(npc.Center.X / 16);
+            int tileY = (int)((npc.position.Y + npc.height + 4) / 16);
+            Tile tile = Main.tile[tileX, tileY];
+            return tile != null && tile.HasTile && Main.tileSolid[tile.TileType];
+        }
+
+
+        public override void DrawEffects(ref Color drawColor)
+        {
+            var p = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
+            bool mision2Activa = p.MisionActual == 1 && p.UIAbierta;
+
+            if (NPC.ai[2] == 1f && mision2Activa && NPC.localAI[0]++ % 40 == 0)
+            {
+                CombatText.NewText(
+                    new Rectangle((int)NPC.position.X, (int)NPC.position.Y - 20, NPC.width, NPC.height),
+                    Color.Yellow, "!", dramatic: true
+                );
+            }
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs) =>

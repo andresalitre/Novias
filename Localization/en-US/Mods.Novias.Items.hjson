@@ -117,3 +117,23 @@ TrebolDe4Hojas: {
 		'''
 	DisplayName: Pink four-leaf clover
 }
+
+Camara: {
+	DisplayName: Camara
+	Tooltip: ""
+}
+
+FotoCielo: {
+	DisplayName: Foto Cielo
+	Tooltip: ""
+}
+
+FotoInframundo: {
+	DisplayName: Foto Inframundo
+	Tooltip: ""
+}
+
+FotoNieve: {
+	DisplayName: Foto Nieve
+	Tooltip: ""
+}

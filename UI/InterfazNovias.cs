@@ -14,7 +14,6 @@ using System.Collections.Generic;
 using Novias.Players;
 using Novias.Systems;
 using System.Reflection;
-using Terraria.GameContent;
 
 namespace Novias.UI
 {
@@ -368,10 +367,10 @@ namespace Novias.UI
             if (_pantalla == PantallaUI.MisionObjetivo && _itemHoverRect != Rectangle.Empty && _itemHoverRect.Contains(Main.mouseX, Main.mouseY))
             {
                 var m = MisionActualData();
-                if (m?.ItemRequisito != 0)
+                if (m?.ItemsDisplay.Length > 0)
                 {
                     Main.LocalPlayer.mouseInterface = true;
-                    Item t = new Item(); t.SetDefaults(m.ItemRequisito);
+                    Item t = new Item(); t.SetDefaults(m.ItemsDisplay[0]);
                     Main.HoverItem = t; Main.hoverItemName = t.Name; Main.mouseText = true;
                 }
             }
@@ -677,7 +676,7 @@ namespace Novias.UI
 
         private Color ResolverColorLinea(string nombre, bool esJugador)
         {
-            if (esJugador) return ColorDialogoJugador;
+            if (esJugador) return Color.White;
 
             LineaDialogo[] ls;
             int idx;
@@ -702,16 +701,27 @@ namespace Novias.UI
 
         private void DibujarSpriteItem(SpriteBatch sb)
         {
-            var m = MisionActualData(); if (m?.ItemRequisito == 0) return;
-            var tex = TextureAssets.Item[m.ItemRequisito].Value; if (tex == null) return;
+            var m = MisionActualData();
+            if (m == null || m.ItemsDisplay.Length == 0) return;
+
             var font = FontAssets.MouseText.Value;
-            string lbl = $"x{m.CantidadRequisito}"; float esL = 0.85f * _s, lW = font.MeasureString(lbl).X * esL, lH = font.MeasureString(lbl).Y * esL;
-            float sc = System.Math.Min(1f, 24f / System.Math.Max(tex.Width, tex.Height)) * _s;
-            int iW = (int)(tex.Width * sc), iH = (int)(tex.Height * sc);
-            float x = _pPx.X + PAD * _s, y = _pPx.Y + (H - PAD - B_H - iH - 14f) * _s;
-            _itemHoverRect = new Rectangle((int)x, (int)y, (int)(iW + 6 * _s + lW), iH + 4);
-            sb.Draw(tex, new Vector2(x, y), null, Color.White, 0f, Vector2.Zero, sc, SpriteEffects.None, 0f);
-            Utils.DrawBorderString(sb, lbl, new Vector2(x + iW + 6 * _s, y + (iH - lH) / 2f), Color.White, esL);
+            float sc = _s;
+            float x = _pPx.X + PAD * _s;
+            float y = _pPx.Y + (H - PAD - B_H - 28f) * _s;
+
+            for (int d = 0; d < m.ItemsDisplay.Length; d++)
+            {
+                int tipo = m.ItemsDisplay[d];
+                var tex = TextureAssets.Item[tipo].Value;
+                if (tex == null) continue;
+
+                float escala = System.Math.Min(1f, 24f / System.Math.Max(tex.Width, tex.Height)) * _s;
+                int iW = (int)(tex.Width * escala);
+                int iH = (int)(tex.Height * escala);
+
+                sb.Draw(tex, new Vector2(x, y), null, Color.White, 0f, Vector2.Zero, escala, SpriteEffects.None, 0f);
+                x += iW + 6f * _s;
+            }
         }
 
         private static void DibujarDerechaAbajo(SpriteBatch sb, DynamicSpriteFont font, string texto, float xRight, float y0, float anchoMax, float escala, Color color)

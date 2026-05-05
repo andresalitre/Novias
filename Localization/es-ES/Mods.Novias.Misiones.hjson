@@ -276,6 +276,8 @@ Nano: {
 		Descripcion: Parece que Nano Eiai tiene algo que decirte.
 		Bloqueado: La novia más eficaz: Requiere completar "No hay por qué contenerse" de Shizuka.
 		Dialogo0: Parece que eres nueva por aquí. Te había estado observando. Tu nombre es Nano Eiai, ¿verdad?
+		Dialogo1: Exactamente. Tú debes ser {0}. Ya había escuchado sobre ti.
+		Dialogo2: ¿Por qué siento como si una gran fuerza me estuviera aplastando?
 		Completacion0: Escucha, {0}. Desde que aparecí en este mundo he tenido la sensación de que me gustas.
 		Completacion1: Me gustaría... que empecemos una relación.
 		Completacion2: Oh... Por supuesto. Tú también me gustas mucho, Eiai. Será un placer salir contigo.
@@ -299,11 +301,46 @@ Nano: {
 	}
 
 	Mision2: {
-		Titulo: Up : una aventura de altura
-		Descripcion: Pasala bien con nano en el mundo terrariano, obten una foto en alguna isla flotante seria un bonito recuerdo.
+		Titulo: Un paseo termal
+		Descripcion: Pasala bien en tu cita con Nano, usa una camara para capturar buenos momentos en el infierno y la nieve.
+		Bloqueado: Un paseo termal: Requiere: Nano debe seguir al jugador, ninguna otra novia debe seguirte.
+		Dialogo0: Donde sera nuestra cita, {0}?
+		Dialogo1: Eh planeado varios lugares muy excepcionales
+		Dialogo2: Hoy debo conseguir que Eiai se divierta como nunca
+		Dialogo3: a
+		Completacion0: a
+		Completacion1: a
+		Completacion2: a
+		Completacion3: a
+		Completacion4: a
+		Completacion5: a
+	}
+
+	Mision3: {
+		Titulo: NanUp : una isla en altura
+		Descripcion: Consigue un ultimo recuerdo en una isla flotante, debes hablar con Nano en la isla flotante para continuar.
 		Bloqueado: Up : una aventura de altura: Requiere: Nano debe seguir al jugador, ninguna otra novia debe seguirte.
-		Dialogo0: A donde iremos {0}?
-		Dialogo1: Eh planeado un cita en un lugar muy especial
-		Dialogo2: Pensamientos: Hoy debo conseguir que Eiai se divierta como nunca en esta cita
+		Dialogo0: A donde iremos ahora, {0}?
+		Dialogo1: Iremos a un ultimo
+		Dialogo2: a
+		Completacion0: Por fin hemos llegado! lastima que hay limite de altura, las vistas son increibles
+		Completacion1: ...
+		Completacion2: Oye te sientes bien Eiai, te dan miedo las alturas?
+		Completacion3: Si... Es normal tener miedo a la elevacion que pone tan facil la vida en peligro...
+		Completacion4: Tranquila Eiai, me quedare a tu lado hasta que volvamos
+	}
+
+	Mision4: {
+		Titulo: Ultimatum
+		Descripcion: Nano Eiai tiene unas ultimas cosas que decirte.
+		Bloqueado: Ultimatum: Requiere: Baja de la isla flotante si es que sigues en ella.
+		Dialogo0: a
+		Dialogo1: a
+		Dialogo2: a
+		Completacion0: a
+		Completacion1: a
+		Completacion2: a
+		Completacion3: a
+		Completacion4: a
 	}
 }
