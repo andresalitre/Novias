@@ -302,7 +302,7 @@ Nano: {
 
 	Mision2: {
 		Titulo: Un paseo termal
-		Descripcion: Pásala bien en tu cita con Nano; usa una cámara para capturar fotos junto a Nano en el infierno y la nieve.
+		Descripcion: Pásala bien en tu cita con Nano, usa una cámara para capturar fotos junto a Nano en el infierno y la nieve.
 		Bloqueado: Un paseo termal: Requiere: Nano debe seguir al jugador, ninguna otra novia debe seguirte.
 		Dialogo0: ¿Dónde será nuestra cita, {0}?
 		Dialogo1: He planeado varios lugares muy excepcionales.

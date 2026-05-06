@@ -194,7 +194,11 @@ namespace Novias.UI
                 ? (string.IsNullOrEmpty(l.NombreNPC) ? Main.LocalPlayer.name : l.NombreNPC)
                 : (string.IsNullOrEmpty(l.NombreNPC) ? NombreNPC : l.NombreNPC);
             _lineasMostradas.Add((pre, txt, l.EsJugador));
-            _textoFull = string.IsNullOrWhiteSpace(txt) ? "..." : txt;
+            string tags = "";
+            if (l.ItemsMostrar?.Length > 0)
+                foreach (int tipo in l.ItemsMostrar)
+                    tags += $" [i:{tipo}]";
+            _textoFull = (string.IsNullOrWhiteSpace(txt) ? "..." : txt) + tags;
             _textoVis = ""; _timerLetra = 0;
         }
 
@@ -355,7 +359,14 @@ namespace Novias.UI
                 _timerLetra++;
                 if (_timerLetra >= VEL_LETRA)
                 {
-                    _timerLetra = 0; _textoVis = _textoFull[..(_textoVis.Length + 1)];
+                    _timerLetra = 0;
+                    int next = _textoVis.Length + 1;
+                    if (next <= _textoFull.Length && _textoFull[next - 1] == '[')
+                    {
+                        int cierre = _textoFull.IndexOf(']', next);
+                        if (cierre >= 0) next = cierre + 1;
+                    }
+                    _textoVis = _textoFull[..System.Math.Min(next, _textoFull.Length)];
                     if (_textoVis.Length % 2 == 0) SoundEngine.PlaySound(SoundID.MenuTick with { Volume = 0.15f, Pitch = 0.5f });
                 }
                 if (esDialogo) RefreshBotones();
@@ -709,7 +720,7 @@ namespace Novias.UI
             if (lista.Length == 0) return;
 
             float x = _pPx.X + PAD * _s;
-            float y = _pPx.Y + (H - PAD - B_H - 48f) * _s;
+            float y = _pPx.Y + (H - PAD - B_H - 33f) * _s;
 
             for (int d = 0; d < lista.Length; d++)
             {

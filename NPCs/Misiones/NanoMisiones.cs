@@ -98,13 +98,13 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion1" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion2" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion3" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion4" + $"[i:{ModContent.ItemType<Camara>()}]" },
+                    new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion4", ItemsMostrar = new[] { ModContent.ItemType<Camara>() } },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion5" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion6" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion7" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion8", NombreNPC = Pensamiento},
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion9" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion10" + $"[i:{ModContent.ItemType<FotoInframundo>()}]" + $"[i:{ModContent.ItemType<FotoNieve>()}]" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion10", ItemsMostrar = new[] { ModContent.ItemType<FotoInframundo>(), ModContent.ItemType<FotoNieve>() } },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion11" },
                 },
                 CondicionCompletar = () =>
@@ -205,7 +205,7 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion26" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion27" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion28" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion29" + $"[i:{ModContent.ItemType<FotoCielo>()}]" + $"[i:{ModContent.ItemType<FotoInframundo>()}]" + $"[i:{ModContent.ItemType<FotoNieve>()}]" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion29", ItemsMostrar = new[] { ModContent.ItemType<FotoCielo>(), ModContent.ItemType<FotoInframundo>(), ModContent.ItemType<FotoNieve>() } },
                 },
                 CondicionCompletar = () =>
                 {
