@@ -203,7 +203,7 @@ Shizuka: {
 
 	Mision3: {
 		Titulo: No hay por qué contenerse
-		Descripcion: ¡Ten una aventura asombrosa solo con Shizuka! Para que el contador avance, Hakari y Karane ya no deben seguirte.
+		Descripcion: ¡Ten una aventura asombrosa solo con Shizuka! Elimina enemigos en el bioma maldito. Para que el contador avance, Hakari y Karane ya no deben seguirte.
 		Bloqueado: No hay por qué contenerse: Requiere: Hakari, Karane y Shizuka siguen al jugador.
 		Dialogo0: Chicas, lo siento. Debo irme un momento, estaré AFK unos minutos.
 		Dialogo1: ...
@@ -302,45 +302,79 @@ Nano: {
 
 	Mision2: {
 		Titulo: Un paseo termal
-		Descripcion: Pasala bien en tu cita con Nano, usa una camara para capturar buenos momentos en el infierno y la nieve.
+		Descripcion: Pásala bien en tu cita con Nano; usa una cámara para capturar fotos junto a Nano en el infierno y la nieve.
 		Bloqueado: Un paseo termal: Requiere: Nano debe seguir al jugador, ninguna otra novia debe seguirte.
-		Dialogo0: Donde sera nuestra cita, {0}?
-		Dialogo1: Eh planeado varios lugares muy excepcionales
-		Dialogo2: Hoy debo conseguir que Eiai se divierta como nunca
-		Dialogo3: a
-		Completacion0: a
-		Completacion1: a
-		Completacion2: a
-		Completacion3: a
-		Completacion4: a
-		Completacion5: a
+		Dialogo0: ¿Dónde será nuestra cita, {0}?
+		Dialogo1: He planeado varios lugares muy excepcionales.
+		Dialogo2: Hoy debo conseguir que Eiai se divierta como nunca...
+		Dialogo3: Que sepa que pasar tiempo con quien aprecias tiene sentido y no es un desperdicio.
+		Completacion0: Bueno Eiai, estamos a la mitad de nuestra cita, ¿cómo lo has estado pasando hasta ahora?
+		Completacion1: No he conseguido nada de valor hasta ahora.
+		Completacion2: La nieve es simplemente agua en estado sólido cristalizado.
+		Completacion3: Por otra parte, ir al infierno es una decisión carente de lógica. El calor es tan extremo que apreciar las vistas es simplemente imposible.
+		Completacion4: ¡Es parte del encanto del mundo, estamos desafiando la lógica juntos!
+		Completacion5: No me dijiste que llevabas una cámara instantánea.
+		Completacion6: ¿Las conoces? Siempre me han gustado estas cámaras, ¿y a ti?
+		Completacion7: Sin negativos ni datos digitales, solo pueden crear una copia de cada fotografía. No son muy útiles que digamos, es algo absurdo.
+		Completacion8: Creo que eso fue un "no"...
+		Completacion9: ¡Bueno, eso da igual por ahora!
+		Completacion10: Míralas, eres muy fotogénica, ¿ves?
+		Completacion11: Qué absurdo eres.
 	}
 
 	Mision3: {
 		Titulo: NanUp : una isla en altura
-		Descripcion: Consigue un ultimo recuerdo en una isla flotante, debes hablar con Nano en la isla flotante para continuar.
-		Bloqueado: Up : una aventura de altura: Requiere: Nano debe seguir al jugador, ninguna otra novia debe seguirte.
-		Dialogo0: A donde iremos ahora, {0}?
-		Dialogo1: Iremos a un ultimo
-		Dialogo2: a
-		Completacion0: Por fin hemos llegado! lastima que hay limite de altura, las vistas son increibles
+		Descripcion: Consigue un último recuerdo en una isla flotante, debes hablar con Nano en la isla flotante para continuar.
+		Bloqueado: NanUp : una isla en altura: Requiere: Nano debe seguir al jugador, ninguna otra novia debe seguirte.
+		Dialogo0: ¿Qué es lo que haremos ahora?
+		Dialogo1: Iremos a un último lugar, como es una cita, este lugar especial no podría faltar.
+		Dialogo2: Es lo único que me queda, ¡ojalá Nano disfrute de esto, es mi última oportunidad!
+		Completacion0: ¡Por fin hemos llegado! Lástima que hay límite de altura, las vistas son increíbles.
 		Completacion1: ...
-		Completacion2: Oye te sientes bien Eiai, te dan miedo las alturas?
-		Completacion3: Si... Es normal tener miedo a la elevacion que pone tan facil la vida en peligro...
-		Completacion4: Tranquila Eiai, me quedare a tu lado hasta que volvamos
+		Completacion2: Sí... Se puede apreciar muy eficientemente el paisaje desde aquí arriba...
+		Completacion3: ...
+		Completacion4: Oye, ¿te sientes bien, Eiai? ¿Te dan miedo las alturas?
+		Completacion5: Sí... Es normal tener miedo a la elevación que pone tan fácil la vida en peligro...
+		Completacion6: Tranquila, Eiai, es hora de que volvamos, me quedaré a tu lado hasta que estemos abajo.
 	}
 
 	Mision4: {
-		Titulo: Ultimatum
-		Descripcion: Nano Eiai tiene unas ultimas cosas que decirte.
-		Bloqueado: Ultimatum: Requiere: Baja de la isla flotante si es que sigues en ella.
-		Dialogo0: a
-		Dialogo1: a
-		Dialogo2: a
-		Completacion0: a
-		Completacion1: a
-		Completacion2: a
-		Completacion3: a
-		Completacion4: a
+		Titulo: Algo que vale la pena
+		Descripcion: Nano Eiai tiene unas últimas cosas que decirte.
+		Bloqueado: Algo que vale la pena: Requiere: Tener las 3 fotos (Inframundo, nieve y cielo). Baja de la isla flotante si es que sigues en ella.
+		Dialogo0: Ya estamos abajo, Eiai. Por fin pisamos tierra firme.
+		Dialogo1: Después de estar allá arriba, el suelo se siente mucho más seguro.
+		Dialogo2: Fue un recorrido bastante loco, ¿verdad? Desde el frío extremo hasta ese calor insoportable...
+		Dialogo3: Sí, aunque no estoy acostumbrada a experimentar tantas cosas distintas en tan poco tiempo.
+		Completacion0: Y bien, ¿te divertiste?
+		Completacion1: Sí, me divertí mucho, más de lo que esperaba.
+		Completacion2: ¡¿En serio?! Eso significa...
+		Completacion3: Pero eso es todo, fue divertido, nada más.
+		Completacion4: No conseguí nada de valor con esto. Fue un día sin utilidad...
+		Completacion5: Perdóname...
+		Completacion6: No... no tienes por qué disculparte, no siempre se logra lo que se quiere.
+		Completacion7: Gracias por ser sincera, es preferible la verdad que una mentira solo para no lastimarme.
+		Completacion8: Entonces... es una pena, pero ya que fue un día inútil y no valió la pena la experiencia...
+		Completacion9: Acabemos con esto... Pondré las fotos en el slot de basura.
+		Completacion10: ...
+		Completacion11: ¡Ah! ¡Espera!
+		Completacion12: Lo siento... Pensé que como dicen que no se puede perder lo que no se tiene, creí que no te importaría.
+		Completacion13: Pero veo que no es así... Supongo que esto es una prueba de que ahora tienes algo que no tenías antes y que lo quieres proteger.
+		Completacion14: Hoy pudiste conseguir algo con valor, es algo... que no puede definirse con palabras o calificarse con números en una escala.
+		Completacion15: Puede que no te sirva para el futuro que deseas... pero es algo tan valioso que no quieres perderlo.
+		Completacion16: Y ahora es tuyo, permítete sentirlo...
+		Completacion17: ...
+		Completacion18: ¿Qué es...? ¿Por qué estoy llorando...?
+		Completacion19: Lo siento... pero quiero que sepas que los ratos felices tienen sentido.
+		Completacion20: Y que esos ratos son los que le dan sentido a la vida, aunque parezca que carezcan de valor o no sean productivos, aún valen la pena vivirlos.
+		Completacion21: ¿Te sientes mejor?
+		Completacion22: Sí... Escúchame {0}, realmente me gustas mucho, me gustaría comenzar una relación.
+		Completacion23: Con este nuevo romance quiero conseguir todo lo que me he perdido.
+		Completacion24: Quiero hacer contigo las cosas que menospreciaba... En las que nunca había pensado...
+		Completacion25: Es mutuo, tú también me gustas mucho Eiai. ¡Sé mi novia, por favor acéptame!
+		Completacion26: ...
+		Completacion27: A partir de ahora cumpliré mis deseos sin preocuparme por los detalles, ¿eso será eficiente? ¿Te importa?
+		Completacion28: No... claro... no hay problema...
+		Completacion29: Me quedaré con las fotos.
 	}
 }

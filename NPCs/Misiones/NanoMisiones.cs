@@ -89,14 +89,23 @@ namespace Novias.NPCs.Misiones
                 {
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo0" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo1" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo2" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo2", NombreNPC = Pensamiento},
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Dialogo3", NombreNPC = Pensamiento},
                 },
                 DialogosCompletacion = new[]
                 {
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion0" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion1" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion2" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion3" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion1" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion2" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion3" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion4" + $"[i:{ModContent.ItemType<Camara>()}]" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion5" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion6" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion7" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion8", NombreNPC = Pensamiento},
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion9" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion10" + $"[i:{ModContent.ItemType<FotoInframundo>()}]" + $"[i:{ModContent.ItemType<FotoNieve>()}]" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion11" },
                 },
                 CondicionCompletar = () =>
                 {
@@ -130,9 +139,12 @@ namespace Novias.NPCs.Misiones
                 DialogosCompletacion = new[]
                 {
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion0" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion1" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion2" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion3" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion1" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion2" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion3" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion4" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion5" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision3.Completacion6" },
                 },
                 CondicionCompletar = () =>
                 {
@@ -157,15 +169,50 @@ namespace Novias.NPCs.Misiones
                 MensajeBloqueadoKey = "Mods.Novias.Misiones.Nano.Mision4.Bloqueado",
                 DialogosPresentacion = new[]
                 {
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo0" },
-                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo1" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo0" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo1" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo2" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Dialogo3" },
                 },
                 DialogosCompletacion = new[]
                 {
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion0" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion1" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion1" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion2" },
-                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion3" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion3" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion4" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion5" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion6" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion7" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion8" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion9" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion10" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion11" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion12" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion13" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion14" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion15" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion16" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion17" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion18" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion19" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion20" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion21" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion22" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion23" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion24" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion25" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion26" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion27" },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion28" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision4.Completacion29" + $"[i:{ModContent.ItemType<FotoCielo>()}]" + $"[i:{ModContent.ItemType<FotoInframundo>()}]" + $"[i:{ModContent.ItemType<FotoNieve>()}]" },
+                },
+                CondicionCompletar = () =>
+                {
+                    bool tieneInframundo = Main.LocalPlayer.CountItem(ModContent.ItemType<FotoInframundo>()) >= 1;
+                    bool tieneNieve = Main.LocalPlayer.CountItem(ModContent.ItemType<FotoNieve>()) >= 1;
+                    bool tieneCielo = Main.LocalPlayer.CountItem(ModContent.ItemType<FotoCielo>()) >= 1;
+                    return tieneInframundo && tieneNieve && tieneCielo;
                 },
                 OnMensajesCompletacion = () =>
                 {

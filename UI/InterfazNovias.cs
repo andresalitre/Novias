@@ -702,16 +702,18 @@ namespace Novias.UI
         private void DibujarSpriteItem(SpriteBatch sb)
         {
             var m = MisionActualData();
-            if (m == null || m.ItemsDisplay.Length == 0) return;
+            if (m == null) return;
+            int[] lista = m.ItemsDisplay.Length > 0
+                ? m.ItemsDisplay
+                : (m.ItemRequisito > 0 ? new[] { m.ItemRequisito } : System.Array.Empty<int>());
+            if (lista.Length == 0) return;
 
-            var font = FontAssets.MouseText.Value;
-            float sc = _s;
             float x = _pPx.X + PAD * _s;
-            float y = _pPx.Y + (H - PAD - B_H - 28f) * _s;
+            float y = _pPx.Y + (H - PAD - B_H - 48f) * _s;
 
-            for (int d = 0; d < m.ItemsDisplay.Length; d++)
+            for (int d = 0; d < lista.Length; d++)
             {
-                int tipo = m.ItemsDisplay[d];
+                int tipo = lista[d];
                 var tex = TextureAssets.Item[tipo].Value;
                 if (tex == null) continue;
 

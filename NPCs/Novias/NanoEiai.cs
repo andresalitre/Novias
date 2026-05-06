@@ -121,9 +121,19 @@ namespace Novias.NPCs.Novias
         public override void DrawEffects(ref Color drawColor)
         {
             var p = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
-            bool mision2Activa = p.MisionActual == 1 && p.UIAbierta;
 
-            if (NPC.ai[2] == 1f && mision2Activa && NPC.localAI[0]++ % 40 == 0)
+            bool mision2Activa = p.MisionActual == 1 && p.UIAbierta;
+            bool mision3Activa = p.MisionActual == 2 && p.UIAbierta;
+
+            bool condicionMision2 = mision2Activa
+                && Main.LocalPlayer.HasItem(ModContent.ItemType<FotoInframundo>())
+                && Main.LocalPlayer.HasItem(ModContent.ItemType<FotoNieve>());
+
+            bool condicionMision3 = mision3Activa
+                && NPC.ai[2] == 1f
+                && Main.LocalPlayer.HasItem(ModContent.ItemType<FotoCielo>());
+
+            if ((condicionMision2 || condicionMision3) && NPC.localAI[0]++ % 40 == 0)
             {
                 CombatText.NewText(
                     new Rectangle((int)NPC.position.X, (int)NPC.position.Y - 20, NPC.width, NPC.height),
