@@ -98,7 +98,7 @@ namespace Novias.NPCs.Misiones
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion1" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion2" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion3" },
-                    new LineaDialogo { EsJugador = true, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion4", ItemsMostrar = new[] { ModContent.ItemType<Camara>() } },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion4", ItemsMostrar = new[] { ModContent.ItemType<Camara>() } },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion5" },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion6" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision2.Completacion7" },
@@ -230,6 +230,44 @@ namespace Novias.NPCs.Misiones
                     return true;
                 },
             },
+
+            new MisionData // MISION 5, Avanza historia, simplemente presentacion de Nano a las otras NPC
+            {
+                TituloKey          = "Mods.Novias.Misiones.Nano.Mision5.Titulo",
+                DescripcionKey     = "Mods.Novias.Misiones.Nano.Mision5.Descripcion",
+                MensajeBloqueadoKey = "Mods.Novias.Misiones.Nano.Mision5.Bloqueado",
+                Condicion = () =>
+                {
+                    var s = Main.LocalPlayer.GetModPlayer<ShizukaPlayer>();
+                    var k = Main.LocalPlayer.GetModPlayer<KaranePlayer>();
+                    var h = Main.LocalPlayer.GetModPlayer<HakariPlayer>();
+                    return s.EstaSiguiendo && k.EstaSiguiendo && h.EstaSiguiendo;
+                },
+                DialogosPresentacion = new[]
+                {
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision5.Dialogo0", NombreNPC = Pensamiento },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision5.Dialogo1", NombreNPC = Pensamiento },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision5.Dialogo2" },
+                },
+                DialogosCompletacion = new[]
+                    // , NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
+                    // , NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
+                    // , NombreNPC = "Shizuka", ColorNombre = new Color(180, 220, 255) },
+                {
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion0" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion1", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion2", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion3", NombreNPC = "Shizuka", ColorNombre = new Color(180, 220, 255) },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion4" },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion5" }, //nano
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion6" }, //nano
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion7", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion8", NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
+                    new LineaDialogo { EsJugador = false,  Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion9", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
+                    new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion10", NombreNPC = "Shizuka", ColorNombre = new Color(180, 220, 255) },
+                    new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Nano.Mision5.Completacion11" },
+                },
+            }
         };
     }
 }

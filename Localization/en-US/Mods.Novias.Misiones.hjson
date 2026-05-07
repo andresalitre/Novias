@@ -377,4 +377,25 @@ Nano: {
 		Completacion28: No... claro... no hay problema...
 		Completacion29: Me quedaré con las fotos.
 	}
+
+	Mision5: {
+		Titulo: ¿Cuántas faltan?
+		Descripcion: Preséntale a Nano a tus novias.
+		Bloqueado: ¿Cuántas faltan?: Requiere: Todas las otras novias deben estar siguiéndote.
+		Dialogo0: Bueno, aquí vamos otra vez...
+		Dialogo1: Aunque ya no estoy tan nervioso como la primera vez.
+		Dialogo2: ¡Hola chicas!
+		Completacion0: Tuve un paseo con Nano y... me preguntaba si aceptarían que se convirtiera en mi nueva novia.
+		Completacion1: ¡Ya no me sorprende nada de ti en este punto! Haz lo que se te venga en gana.
+		Completacion2: Si tú aún consideras que soy digna de seguir contigo, yo no tengo ningún problema, {0}.
+		Completacion3: *Teléfono: Yo misma llegué con los refuerzos, no puedo negarme.*
+		Completacion4: ¡Muchas gracias! ¡Beberé poción roja si no las trato bien, es una promesa!
+		Completacion5: Ese método de suicidio es poco eficaz. ¿De dónde planeas conseguir una poción roja?
+		Completacion6: Invocar a la emperatriz de la luz de día sería más eficaz.
+		Completacion7: ¡Deja de optimizar hasta las formas de desvivirse!
+		Completacion8: ¡A mí me interesa más la cita que tuvieron! ¡Ese es uno de mis objetivos también!
+		Completacion9: ¡Yo no estoy muy ocupada, hubiera ido aunque no me lo hubieras pedido!
+		Completacion10: *Teléfono: ¡Una fiesta para los enamorados!*
+		Completacion11: Tranquilas, ¡podemos ir juntos a algún lugar en la próxima misión!
+	}
 }

@@ -188,6 +188,9 @@ namespace Novias.NPCs.Misiones
                 },
                 DialogosPresentacion = new[]
                 {
+                    // , NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
+                    // , NombreNPC = "Hakari", ColorNombre = new Color(255, 190, 230) },
+                    // , NombreNPC = "Shizuka", ColorNombre = new Color(180, 220, 255) },
                     new LineaDialogo { EsJugador = true,  Key = "Mods.Novias.Misiones.Shizuka.Mision3.Dialogo0" },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision3.Dialogo1", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
                     new LineaDialogo { EsJugador = false, Key = "Mods.Novias.Misiones.Shizuka.Mision3.Dialogo2", NombreNPC = "Karane", ColorNombre = new Color(239, 178, 97) },
