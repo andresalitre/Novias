@@ -5,14 +5,15 @@ The NPCs can follow the player and join them on their adventure, and you can als
 
 How to get started:
 
-Build a house for Hakari Hanazono, no additional conditions required.
-Karane Inda will arrive after completing Hakari Hanazono's first mission.
-As you progress through Hakari and Karane's missions, Shizuka Yoshimoto will arrive.
-As you complete Shizuka's missions, Nano Eiai will arrive in your world.
-In short: Complete missions to unlock all the girlfriends!
-More missions coming soon!
+-Build a house for Hakari Hanazono, no additional conditions required.
+-Karane Inda will arrive after completing Hakari Hanazono's first mission.
+-As you progress through Hakari and Karane's missions, Shizuka Yoshimoto will arrive.
+-As you complete Shizuka's missions, Nano Eiai will arrive in your world.
+-In short: Complete missions to unlock all the girlfriends!
+-More missions coming soon!
 
 Version 2.3.0
+-Minor changes in menu
 
 Future plans:
 - Add Kusuri Yakuzen
