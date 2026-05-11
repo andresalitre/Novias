@@ -23,9 +23,9 @@ namespace Novias.UI
         protected override Color ColorBorde => new Color(180, 130, 255);
         protected override Color ColorTitulo => new Color(210, 180, 255);
         protected override Color ColorDialogoNPC => new Color(210, 180, 255);
-
         protected override string NombreNPC => "Nano";
         protected override int BuffBeso => ModContent.BuffType<Eficiencia>();
+        protected override int MisionParaDialogo => 4;
 
         protected override NoviasPlayerBase ObtenerPlayer() =>
             Main.LocalPlayer.GetModPlayer<NanoPlayer>();

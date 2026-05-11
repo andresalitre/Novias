@@ -51,12 +51,8 @@ TelefonoDeShizuka: {
 }
 
 Familia: {
-	DisplayName: Familia
-	Tooltip:
-		'''
-		"La familia es lo primero"
-		(Yes, it's Spanish)
-		'''
+	DisplayName: Family
+	Tooltip: '''"I Don't Have Friends, I Got Family"'''
 }
 
 Cutter: {

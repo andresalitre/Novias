@@ -25,6 +25,7 @@ namespace Novias.UI
         protected override Color ColorDialogoNPC => new Color(180, 220, 255);
         protected override string NombreNPC => "Shizuka";
         protected override int BuffBeso => ModContent.BuffType<ArmoniaMagica>();
+        protected override int MisionParaDialogo => 2;
 
         protected override NoviasPlayerBase ObtenerPlayer() =>
             Main.LocalPlayer.GetModPlayer<ShizukaPlayer>();

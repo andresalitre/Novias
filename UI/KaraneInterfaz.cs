@@ -25,6 +25,8 @@ namespace Novias.UI
         protected override Color ColorDialogoNPC => new Color(239, 178, 97);
         protected override string NombreNPC => "Karane";
         protected override int BuffBeso => ModContent.BuffType<FuerzaDeTsundere>();
+        protected override int MisionParaDialogo => 2;
+
 
         protected override NoviasPlayerBase ObtenerPlayer() =>
             Main.LocalPlayer.GetModPlayer<KaranePlayer>();

@@ -105,6 +105,7 @@ namespace Novias.UI
         protected virtual string ObtenerDialogoSeguir() => "...";
         protected virtual string ObtenerDialogoDejarSeguir() => "...";
         protected virtual string NombreNPC => _npc?.GivenOrTypeName ?? "";
+        protected virtual int MisionParaDialogo => -1;
 
         protected virtual Color ColorParaNombre(string nombre)
         {
@@ -295,7 +296,8 @@ namespace Novias.UI
                 bool disp = ms[mIdx].EstaDisponible();
                 AgregarBtnKey("Mods.Novias.UI.Mision", disp ? CBotonMision : CBotonBloqueado, false);
             }
-            AgregarBtnKey("Mods.Novias.UI.Dialogo", CBotonDialogo);
+            if (MisionParaDialogo < 0 || player.MisionCompletada(MisionParaDialogo))
+                AgregarBtnKey("Mods.Novias.UI.Dialogo", CBotonDialogo);
             AgregarBtnKey("Mods.Novias.UI.Cerrar", CBotonCerrar);
         }
 

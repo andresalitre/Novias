@@ -25,6 +25,7 @@ namespace Novias.UI
         protected override Color ColorDialogoNPC => new Color(255, 190, 230);
         protected override string NombreNPC => "Hakari";
         protected override int BuffBeso => ModContent.BuffType<ImpulsoSeductor>();
+        protected override int MisionParaDialogo => 2;
 
         protected override NoviasPlayerBase ObtenerPlayer() =>
             Main.LocalPlayer.GetModPlayer<HakariPlayer>();
