@@ -11,7 +11,7 @@ Hakari: {
 		Descripcion: Tráele a Hakari medio refresco de melocotón.
 		Dialogo0: Deseo con tantas ganas un refresco de melocotón. Pero, la verdad, me cuesta mucho terminarme una lata si la tomo yo sola...
 		Dialogo1: En caso de que consiguieras una... ¿No te gustaría que la compartiéramos?
-		Dialogo2: ¡Este plan es perfecto! ¡Podré darle un beso indirecto! ¡Estoy super nerviosa pero qué lista soy!
+		Dialogo2: ¡Este plan es perfecto! ¡Podré darle un beso indirecto! ¡Estoy súper nerviosa pero qué lista soy!
 		Completacion0: Toma, con este medio refresco de melocotón debería ser suficiente.
 		Completacion1: Muchas gracias.
 		Completacion2: ¡¿Eh, eso no es un beso indirecto?!
@@ -40,11 +40,11 @@ Karane: {
 	Mision1: {
 		Titulo: Perdón de la tsundere
 		Descripcion: Consíguele a Karane un lindo gatito de peluche.
+		Bloqueado: Perdón de la tsundere: Requiere: Completar "Un beso indirecto" de Hakari.
 		Dialogo0: ¡Eres un tonto! ¿Por qué dejas que Hakari tome la delantera?
 		Dialogo1: ¡No vayas a creer que me gustas ni nada de eso, ¿eh?!
 		Dialogo2: Esta adaptación no es 100% fiel al anime, así que no creas que te lo perdonaré tan fácil.
 		Dialogo3: Tendrás que esforzarte para que ya no esté enfadada contigo.
-		Bloqueado: Perdón de la tsundere: Requiere: Completar "Un beso indirecto" de Hakari.
 		Completacion0: Aquí tienes, te conseguí algo que creo que te gustará.
 		Completacion1: ¿U-un gatito de peluche...? N-no es como si me alegrara o algo así...
 		Completacion2: ¡Ha! ¿Pero qué más da? Si tantas ganas tienes de ser mi novio, entonces no hay de otra.
@@ -65,24 +65,24 @@ Karane: {
 
 CompartidaHakariKarane: {
 	Mision1: {
-		Titulo: Debes escoger solo a una, ¿o quizas no?
+		Titulo: Debes escoger solo a una, ¿o quizás no?
 		Descripcion: Consigue un regalo especial para ambas chicas, usar una hoz en el césped puede ayudar.
-		Bloqueado: Debes escoger solo a una, ¿o quizas no?: Requiere: Completar "Perdón de la tsundere" de Karane. Hakari y Karane deben estar siguiendo al jugador. El progreso de esta misión es compartido por ambas.
-		Dialogo0: Debes decidir a quien de nosotras vas a elegir...
+		Bloqueado: Debes escoger solo a una, ¿o quizás no?: Requiere: Completar "Perdón de la tsundere" de Karane. Hakari y Karane deben estar siguiendo al jugador. El progreso de esta misión es compartido por ambas.
+		Dialogo0: Debes decidir a quién de nosotras vas a elegir...
 		Dialogo1: Prefiero...
-		Dialogo2: ¡Decirlo despues de la pausa comercial!
+		Dialogo2: ¡Decirlo después de la pausa comercial!
 		Dialogo3: ¡Ni se te ocurra tonto!
-		Dialogo4: Yo... no se a quien elegir, ¿por que me pasa esto a mi?
-		Completacion0: Entonces, ¿por fin tomaste una decision? ¿aclaraste tu mente?
-		Completacion1: Si...
+		Dialogo4: Yo... no sé a quién elegir, ¿por qué me pasa esto a mí?
+		Completacion0: Entonces, ¿por fin tomaste una decisión? ¿aclaraste tu mente?
+		Completacion1: Sí...
 		Completacion2: ¡¡POR FAVOR, PERMITANME SALIR CON LAS 2!!
 		Completacion3: ¡¡¡¡QUEEEEEEEEE!!!!???
-		Completacion4: ¡¡¿¿Como que con las 2!!?? ¡¿Entiendes la estupidez que acabas de decir?!
-		Completacion5: Ya se... parece una horrible y estupida idea...
+		Completacion4: ¡¡¿¿Cómo que con las 2!!?? ¡¿Entiendes la estupidez que acabas de decir?!
+		Completacion5: Ya sé... parece una horrible y estupida idea...
 		Completacion6: Pero... ¡las dos se armaron de valor para decirme lo que en verdad sienten!
-		Completacion7: ¡Y yo mejor que nadie... se lo dificil que es expresarle tus sentimientos a la persona que te gusta!
+		Completacion7: ¡Y yo mejor que nadie... sé lo difícil que es expresarle tus sentimientos a la persona que te gusta!
 		Completacion8: ¡Las dos me gustan mucho y por eso no puedo elegir a solo una de las dos!
-		Completacion9: Se que esto parece una especie de infidelidad... ¡Pero les prometo que me esforzare y ambas seran muy felices a mi lado!
+		Completacion9: Sé que esto parece una especie de infidelidad... ¡Pero les prometo que me esforzaré y ambas serán muy felices a mi lado!
 		Completacion10: ¡Les suplico que lo piensen! ¡Quiero que ambas sean mis novias!
 		Completacion11: ...
 		Completacion12: ...
@@ -90,28 +90,28 @@ CompartidaHakariKarane: {
 		Completacion14: esta linea no sirve de nada xd
 		Completacion15: ¡¿Eh?!
 		Completacion16: ¡¿Oh?!
-		Completacion17: ¿Esos son... treboles de 4 hojas? ¡¿y ademas encontro 2?!
-		Completacion18: ¡¿Que?! ¡Pero si seras idiota! ¡¿Tan grande y todavia sigues creyendo en esas ridiculeces?!
-		Completacion19: Oye Karane... mejor ya no hables, nosotras tambien nos arrastramos buscando uno para el.
-		Completacion20: ¡Aja! ¡¿Quieres ganarte nuestro aprecio con esas tonterias?!
-		Completacion21: De una vez te digo que no me convenseras para compartirte con otra chica.
-		Completacion22: ¡Ah! ¡No! perdon, creo que estas malinterpretandome...
-		Completacion23: ¡¡¡¿Y COMO QUIERES QUE LO INTERPRETE?!!!
-		Completacion24: Crei que si se los daba junto con mi respuesta entonces ustedes quizas se alegrarian aun que sea un poco.
+		Completacion17: ¿Esos son... tréboles de 4 hojas? ¡¿y además encontró 2?!
+		Completacion18: ¡¿Qué?! ¡Pero si serás idiota! ¡¿Tan grande y todavía sigues creyendo en esas ridiculeces?!
+		Completacion19: Oye Karane... mejor ya no hables, nosotras también nos arrastramos buscando uno para él.
+		Completacion20: ¡Aja! ¡¿Quieres ganarte nuestro aprecio con esas tonterías?!
+		Completacion21: De una vez te digo que no me convencerás para compartirte con otra chica.
+		Completacion22: ¡Ah! ¡No! perdón, creo que estás malinterpretándome...
+		Completacion23: ¡¡¡¿Y CÓMO QUIERES QUE LO INTERPRETE?!!!
+		Completacion24: Creí que si se los daba junto con mi respuesta entonces ustedes quizás se alegrarían aunque sea un poco.
 		Completacion25: ¡¡¡¡WUUUUUUUAAAAAA!!!!!!!!!!!!!
-		Completacion26: Si, esta bien, acepto tu propuesta, a mi no me importa tener que compartirte.
-		Completacion27: ¡¡¡¿QUEEEEeeee!!!!?? ¿En serio aceptaras su propuesta indecente?
-		Completacion28: Estoy locamente enamorada de {0}, asi que no importa con quien mas este.
-		Completacion29: No me imagino enamorandome de otra persona que no se trate de el.
+		Completacion26: Sí, está bien, acepto tu propuesta, a mí no me importa tener que compartirte.
+		Completacion27: ¡¡¡¿QUEEEEeeee!!!!?? ¿En serio aceptarás su propuesta indecente?
+		Completacion28: Estoy locamente enamorada de {0}, así que no importa con quién más esté.
+		Completacion29: No me imagino enamorándome de otra persona que no se trate de él.
 		Completacion30: ¡¡¡¡AAAAAA!!!!
-		Completacion31: ¡¡En ese caso yo tambien!! ¡Pero si no me tratas bien te prometo que me las pagaras!
-		Completacion32: ¡Es una promesa! ¡Las hare las chicas mas felices del mundo!
+		Completacion31: ¡¡En ese caso yo también!! ¡Pero si no me tratas bien te prometo que me las pagarás!
+		Completacion32: ¡Es una promesa! ¡Las haré las chicas más felices del mundo!
 	}
 
 	Mision2: {
 		Titulo: Un beso de tres
 		Descripcion: ¡Ten una aventura increíble con tus primeras novias!
-		Bloqueado: Requiere: Completar "Debes escoger solo a una, ¿o quizás no?". Hakari y Karane deben estar siguiendo al jugador. El progreso de esta misión es compartido por ambas.
+		Bloqueado: Un beso de tres: Requiere: Completar "Debes escoger solo a una, ¿o quizás no?". Hakari y Karane deben estar siguiendo al jugador. El progreso de esta misión es compartido por ambas.
 		Dialogo0: Oye, me surgió una duda {0}... ¿has besado a alguien antes de conocernos?
 		Dialogo1: ¿Eh? No, son mis primeras novias en toda mi vida.
 		Dialogo2: ¡¿Mhh?! ¡O sea que la más rápida se llevará el primer beso y marcará sus labios primero!
@@ -132,7 +132,7 @@ CompartidaHakariKarane: {
 		Completacion7: La verdad pensé que se negarían porque creía que se llevaban mal...
 		Completacion8: ¡Pero saldrá bien! ¡Confío en ustedes! ¡NO! ¡Confío en nosotros tres!
 		Completacion9: Oye, no te emociones tanto...
-		Completacion10: Apresúrate, dale al botón de completar y ¡¡BÉSANOS RÁPIDO!!
+		Completacion10: Apresúrate, dale al botón de completar y ¡¡BÉSANOS YA!!
 	}
 }
 
@@ -191,7 +191,7 @@ Shizuka: {
 		Completacion13: Y voy a expiar mis pecados... bebiendo poción roja.
 		Completacion14: ¡¿Cómo planeas conseguir una en un mundo vanilla?!
 		Completacion15: ¡Pero qué basado, eres el mejor, mi {0}!
-		Completacion16: Muy bien. Puede que las hayas visto antes, Shizuka; ellas son mis novias, Hakari Hanazono y Karane Inda.
+		Completacion16: Muy bien. Puede que las hayas visto antes, Shizuka, ellas son mis novias, Hakari Hanazono y Karane Inda.
 		Completacion17: Encantada de conocerte.
 		Completacion18: Sí... es un placer...
 		Completacion19: Ella es Shizuka Yoshimoto, también será mi novia, se las presento, chicas.
@@ -219,7 +219,7 @@ Shizuka: {
 		Dialogo11: ¡¡TÚ CIERRA LA BOCA, QUE NADIE ESTÁ HABLANDO CONTIGO!!
 		Dialogo12: *Teléfono: Tienes razón... lo siento mucho...*
 		Dialogo13: ¡¡A ESTO ME REFERÍA!! ¿¡Por qué siempre das la razón y no discutes!? ¡UYYYY!
-		Dialogo14: *Teléfono: Por favor, escuchen... voy a sincerarme con ustedes. En realidad... el miedo me paraliza por completo*
+		Dialogo14: *Teléfono: Por favor, escuchen... voy a sincerarme con ustedes. En realidad... el miedo me paraliza por completo.*
 		Dialogo15: ¿Qué? ¿En verdad doy tanto miedo cuando me enojo? T_T
 		Dialogo16: ¿En serio? Me sorprende que no lo hayas notado.
 		Dialogo17: *Teléfono: Eso no es lo que quería decir. Lo que en realidad quiero decir es que...*
@@ -247,7 +247,7 @@ Shizuka: {
 		Dialogo39: Oye {0}, decidimos que Shizuka irá en una aventura contigo. ¡Ustedes dos solos!
 		Dialogo40: ¡Es cierto! ¿Verdad que quieres ir en una aventura con {0}, Shizuka?
 		Dialogo41: *Teléfono: Quiero hacerlo.*
-		Completacion0: *Teléfono: Esta aventura fue... muy divertida. Una experiencia digna de un OVA*
+		Completacion0: *Teléfono: Esta aventura fue... muy divertida. Una experiencia digna de un OVA.*
 		Completacion1: ¡Sí! Fue increíble, Shizuka. Podemos tener todas las aventuras que quieras, cuando quieras.
 		Completacion2: *Teléfono: Estaré junto a ti en todo momento, donde sea que vayas...*
 		Completacion3: Gracias, Shizuka. Me conmueven tus palabras... Te quiero.
@@ -316,7 +316,7 @@ Nano: {
 		Completacion5: No me dijiste que llevabas una cámara instantánea.
 		Completacion6: ¿Las conoces? Siempre me han gustado estas cámaras, ¿y a ti?
 		Completacion7: Sin negativos ni datos digitales, solo pueden crear una copia de cada fotografía. No son muy útiles que digamos, es algo absurdo.
-		Completacion8: Creo que eso fue un "no"...
+		Completacion8: Esa reseña fue de una estrella.
 		Completacion9: ¡Bueno, eso da igual por ahora!
 		Completacion10: Míralas, eres muy fotogénica, ¿ves?
 		Completacion11: Qué absurdo eres.

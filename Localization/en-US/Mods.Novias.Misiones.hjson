@@ -40,17 +40,17 @@ Karane: {
 	Mision1: {
 		Titulo: The Tsundere's Forgiveness
 		Descripcion: Get Karane a cute kitty plushie.
+		Bloqueado: The Tsundere's Forgiveness: Required: Complete Hakari's 'An Indirect Kiss'.
 		Dialogo0: You idiot! Why are you letting Hakari take the lead?!
 		Dialogo1: Don't go thinking that I like you or anything like that, okay?!
 		Dialogo2: This adaptation isn't 100% faithful to the anime, so don't think I'll forgive you that easily.
 		Dialogo3: You'll have to work hard so I'm not mad at you anymore.
-		Bloqueado: Required: Complete Hakari's 'An Indirect Kiss'.
 		Completacion0: Here you go, I got you something I think you'll like.
 		Completacion1: A-a kitty plushie...? I-it's not like it makes me happy or anything...
-		Completacion2: Hmph! But, if you really insist, then I suppose I could be yout girlfriend, if you beg me or whatever.
-		Completacion3: That was the most passive aggresive confession in the history of mankind
+		Completacion2: Hmph! But, if you really insist, then I suppose I could be your girlfriend, if you beg me or whatever.
+		Completacion3: That was the most passive aggressive confession in the history of mankind.
 		Completacion4: Argh, what I'm trying to say is if...
-		Completacion5: I-If I was in live with you, too, then, {0}, would you go out with me?
+		Completacion5: I-If I was in love with you, too, then, {0}, would you go out with me?
 	}
 
 	Mision2: {
@@ -67,7 +67,7 @@ CompartidaHakariKarane: {
 	Mision1: {
 		Titulo: You must choose only one, or maybe not?
 		Descripcion: Get a special gift for both girls; using a scythe on the grass might help.
-		Bloqueado: Requires: Complete Karane's "The Tsundere's Forgiveness." Hakari and Karane must be following the player. Progress is shared by both.
+		Bloqueado: You must choose only one, or maybe not?: Requires: Complete Karane's "The Tsundere's Forgiveness." Hakari and Karane must be following the player. Progress is shared by both.
 		Dialogo0: Well {0}... Who will you fall madly in love with?
 		Dialogo1: Huh? You...
 		Dialogo2: can find out after this short break!
@@ -111,7 +111,7 @@ CompartidaHakariKarane: {
 	Mision2: {
 		Titulo: A three-way kiss
 		Descripcion: Have an incredible adventure with your first girlfriends!
-		Bloqueado: Requires: Complete "You must choose only one, or maybe not?". Hakari and Karane must be following the player. Progress is shared by both.
+		Bloqueado: A three-way kiss: Requires: Complete "You must choose only one, or maybe not?". Hakari and Karane must be following the player. Progress is shared by both.
 		Dialogo0: Uh, weird but... speaking of kissing, you have had your first kiss, have you not?
 		Dialogo1: Huh? Not yet. You two are my first-ever girlfriends, y'know.
 		Dialogo2: *Thoughts: That means whoever acts first won't only be the first to kiss him, but his first kiss of all time!*
@@ -138,126 +138,126 @@ CompartidaHakariKarane: {
 
 Shizuka: {
 	Mision1: {
-		Titulo: La princesa muda y el terrariano
-		Descripcion: Parece que a ella le cuesta hablar con los demás, encuentra una forma de ayudarla a comunicarse.
-		Bloqueado: La princesa muda y el terrariano: Requiere: Completar "Un beso de tres".
+		Titulo: The Silent Princess and the Terrarian
+		Descripcion: It seems she has a hard time talking to others, find a way to help her communicate.
+		Bloqueado: The Silent Princess and the Terrarian: Requires: Completing "A Kiss of Three".
 		Dialogo0: ...
 		Dialogo1: ":)"
 		Dialogo2: (⸝⸝O-O⸝⸝)
 		Dialogo3: (⸝⸝>-<⸝⸝)
-		Dialogo4: Qué increíbles diálogos fueron implementados en este personaje...
-		Dialogo5: ¿Por qué no solo me hablas con claridad?
+		Dialogo4: Such incredible dialogue was implemented for this character...
+		Dialogo5: Why don't you just speak clearly to me?
 		Dialogo6: (｡Ó-Ò｡)
 		Dialogo7: (◞‸ ◟)
-		Dialogo8: Entiendo...
-		Completacion0: Ten, es para ti. Es un teléfono con reproductor de voz que reproducirá lo que escribas en él.
-		Completacion1: No puedo imaginarme lo difícil que puede ser para ti tener que hablar en voz alta.
-		Completacion2: Sé que debes tener tus razones... Por eso no quiero que te sientas presionada.
-		Completacion3: Pero para serte sincero, me gustaría ayudarte con esto para que puedas hablar con los demás.
-		Completacion4: Espero que esto te ayude... Bueno, ¿por qué no intentas usarlo?
+		Dialogo8: I see...
+		Completacion0: Here, this is for you. It's a phone with a text-to-speech app that will read out whatever you type.
+		Completacion1: If speaking out loud can be scary for me sometimes, I can't begin to imagine how hard it must be for you.
+		Completacion2: I'd never want to make you talk if you don't want to, but I wanted to help you.
+		Completacion3: So, you can have an easier way to communicate with others. I really hope that this phone can do you some good.
+		Completacion4: Now, why don't we give this thing a shot? Is there anything that you would like to say to me?
 		Completacion5: ...
-		Completacion6: *Teléfono: Te quiero...*
+		Completacion6: *Cellphone: I love you.*
 		Completacion7: ...
-		Completacion8: *Teléfono: Lo siento... ¿Puedes ignorar lo que te acabo de decir?*
-		Completacion9: *Teléfono: No te pido una respuesta al respecto.*
-		Completacion10: *Teléfono: Soy consciente de que tu corazón le pertenece a otra doncella.*
-		Completacion11: *Teléfono: Pero quería confesar mis sentimientos antes de...*
-		Completacion12: Escúchame... ¡Yo también te quiero mucho!
-		Completacion13: *Teléfono: Pero nuestro destino no nos permitirá estar juntos...*
-		Completacion14: Si el destino se opone...
-		Completacion15: ¡Tendremos que cambiarlo!
-		Completacion16: ¡Caminemos juntos, Shizuka!
+		Completacion8: *Cellphone: I apologize. Pray, pay it no heed.*
+		Completacion9: *Cellphone: I ask not for an answer.*
+		Completacion10: *Cellphone: I know there is already a maiden promised to you.*
+		Completacion11: *Cellphone: I only wish to make my feelings known.*
+		Completacion12: Praise be, for I am in love with you, too!
+		Completacion13: *Cellphone: Though our love be strong, our paths are destined never to converge.*
+		Completacion14: If fate's walls separate us.
+		Completacion15: We need only to break them down!
+		Completacion16: Let's go forth together, Shizuka!
 	}
 
 	Mision2: {
-		Titulo: ¿Una más? ¿Qué más da?
-		Descripcion: Preséntale a Shizuka a tus novias.
-		Bloqueado: ¿Una más? ¿Qué más da?: Requiere: Hakari y Karane deben estar siguiendo al jugador.
-		Dialogo0: Supongo que debo presentarles mi nueva novia a mis otras novias...
-		Dialogo1: ¡Ay, qué miedito!
-		Completacion0: Hola chicas... Les quería hacer una pregunta.
-		Completacion1: ¿Qué sucede, {0}?
-		Completacion2: Acabo de completar la misión 1 de Shizuka Yoshimoto y...
-		Completacion3: Quiero que dejen que Shizuka Yoshimoto sea mi nueva novia y esté con nosotros tres en una relación...
-		Completacion4: ¡ME NIEGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO! ¡ROTUNDAMENTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!
-		Completacion5: Cómo es posible, {0}...
-		Completacion6: Encontraste un nuevo amor, pero fuiste muy considerado en no querer abandonarnos. ¡No puedo creer cuánta bondad hay en tu ser!
-		Completacion7: ¡¿Y ahora a esta se le pudrió el cerebro o qué?!
-		Completacion8: ¡No! ¡Que Shizuka se integre no cambia lo que ya sentía por ustedes!
-		Completacion9: ¡Que quede claro! ¡Seguiré queriéndolas a todas y cuidando de ustedes como siempre!
-		Completacion10: ¡NO! ¡PROMETO AMARLAS MUCHO MÁS QUE ANTES! ¡DENME LA OPORTUNIDAD!
-		Completacion11: ¿Mucho más que antes...?
-		Completacion12: Sí... Y si alguna vez no les llego a cumplir, solo háganmelo saber...
-		Completacion13: Y voy a expiar mis pecados... bebiendo poción roja.
-		Completacion14: ¡¿Cómo planeas conseguir una en un mundo vanilla?!
-		Completacion15: ¡Pero qué basado, eres el mejor, mi {0}!
-		Completacion16: Muy bien. Puede que las hayas visto antes, Shizuka; ellas son mis novias, Hakari Hanazono y Karane Inda.
-		Completacion17: Encantada de conocerte.
-		Completacion18: Sí... es un placer...
-		Completacion19: Ella es Shizuka Yoshimoto, también será mi novia, se las presento, chicas.
-		Completacion20: ¿Cómo estará programada?
-		Completacion21: Según su código no tiene diálogos integrados.
-		Completacion22: *Teléfono: El gusto es mío, espero podamos llevarnos muy bien.*
-		Completacion23: ¡ES COMO UNA IA!
+		Titulo: One more? Who cares?
+		Descripcion: Introduce Shizuka to your girlfriends.
+		Bloqueado: One more? Who cares?: Requires: Hakari and Karane must be following the player.
+		Dialogo0: I guess I have to introduce my new girlfriend to my other girlfriends...
+		Dialogo1: Oh, I'm so scared!
+		Completacion0: Hi girls... I wanted to ask you a question.
+		Completacion1: What's wrong, {0}?
+		Completacion2: I just completed Shizuka Yoshimoto's mission 1 and...
+		Completacion3: Could I please have your permission to make Shizuka my newest girlfriend?
+		Completacion4: DID YOU ALREADY DUMB BRAIN ROT AWAY? IT'S EITHER THAT OR YOU WANNA DIEEEEEEEEEEEEEEEEEEEEE!
+		Completacion5: My darling, it can't be...
+		Completacion6: You have found a new love, yet in your endless kindness, you have the immense grace not to put us out in a cardboard box on the sidewalk!
+		Completacion7: It's a freakin' brain rot epidemic up in here!
+		Completacion8: No! My feelings for you two haven't shifted away toward Shizuka!
+		Completacion9: Let me explain. You won't be sharing the spoils from the same old oil field. I'm gonna cherish you two plus Shizuka as much as I always have. It'll be just the same.
+		Completacion10: NO! IT'LL BE EVEN MORE LOVE AND TEN TIMES BETTER!
+		Completacion11: Do you think you're capable of that?
+		Completacion12: Yeah, and if I'm ever not living up to my vow, I need you to tell me at once.
+		Completacion13: I swear to atone for it by... Drinking red potion.
+		Completacion14: How do you even plan to get one in a vanilla world?!
+		Completacion15: Oh, how manly! Sweep me up into your warrior's arms, my love!
+		Completacion16: Alright. These ladies are my girlfriends Hakari Hanazono and Karane Inda.
+		Completacion17: It is an honor to meet you.
+		Completacion18: Yeah. What's up dude?
+		Completacion19: As for the two of you meet my new girlfriend. Shizuka Yoshimoto.
+		Completacion20: How is she programmed?
+		Completacion21: According to her code, she has no built-in dialogue.
+		Completacion22: *Cellphone: Oh, happy day. 'Tis a pleasure to make thine acquaintance.
+		Completacion23: SHE IS LIKE AN AI!
 	}
 
 	Mision3: {
-		Titulo: No hay por qué contenerse
-		Descripcion: ¡Ten una aventura asombrosa solo con Shizuka! Elimina enemigos en el bioma maldito. Para que el contador avance, Hakari y Karane ya no deben seguirte.
-		Bloqueado: No hay por qué contenerse: Requiere: Hakari, Karane y Shizuka siguen al jugador.
-		Dialogo0: Chicas, lo siento. Debo irme un momento, estaré AFK unos minutos.
+		Titulo: No Holding Back
+		Descripcion: Have an amazing adventure with Shizuka alone! Eliminate enemies in the cursed biome. For the counter to progress, Hakari and Karane must no longer be following you.
+		Bloqueado: No Holding Back: Requires: Hakari, Karane and Shizuka are following the player.
+		Dialogo0: Girls, sorry. I gotta step away for a sec, I'll be AFK for a bit.
 		Dialogo1: ...
-		Dialogo2: Oye... dime, Yoshimoto. ¿Qué pretendes? ¿Por qué te contienes con {0}?
+		Dialogo2: We gotta talk, Yoshimoto. What the heck is your deal?
 		Dialogo3: ...
-		Dialogo4: ¡Habla! Deja de fingir. ¡Eres la única que mantiene distancia con {0}! ¿Por qué no dices lo que pretendes?
-		Dialogo5: Tal vez es porque das mucho miedo, Karane, y encima de eso te pones a gritar como loca.
-		Dialogo6: ¿¡Qué!? ¿¡Yo loca!? ¿Cuándo me has escuchado gritarle a alguien?
-		Dialogo7: *Teléfono: Soy la tercera novia de {0}. Fui la última en llegar... no quería interponerme...*
-		Dialogo8: ¡Bah! Sabía que ibas a decir algo así. Pero ¿sabes qué? Ahora tú también eres novia de {0}, te guste o no.
-		Dialogo9: Tienes que dejar de comportarte así. Deja de fingir algo que no eres. Deja de fingir que no dices lo que sientes por nervios.
-		Dialogo10: Mira quién lo dice... la señorita que ni por error admite lo que piensa o siente.
-		Dialogo11: ¡¡TÚ CIERRA LA BOCA, QUE NADIE ESTÁ HABLANDO CONTIGO!!
-		Dialogo12: *Teléfono: Tienes razón... lo siento mucho...*
-		Dialogo13: ¡¡A ESTO ME REFERÍA!! ¿¡Por qué siempre das la razón y no discutes!? ¡UYYYY!
-		Dialogo14: *Teléfono: Por favor, escuchen... voy a sincerarme con ustedes. En realidad... el miedo me paraliza por completo*
-		Dialogo15: ¿Qué? ¿En verdad doy tanto miedo cuando me enojo? T_T
-		Dialogo16: ¿En serio? Me sorprende que no lo hayas notado.
-		Dialogo17: *Teléfono: Eso no es lo que quería decir. Lo que en realidad quiero decir es que...*
-		Dialogo18: *Teléfono: Hanazono se comporta con mucha gracia y elegancia. Es una señorita con mucho encanto y mucho estilo.*
-		Dialogo19: *Teléfono: Inda es... una belleza con facciones muy estilizadas y, además, alguien que rebosa mucha confianza.*
-		Dialogo20: *Teléfono: Yo no sé si pueda llegar a ser, aunque sea un poco, como ellas. Y lo más probable es que {0} nos compare... eso es lo que más temo...*
-		Dialogo21: ¿Qué demonios...?
-		Dialogo22: Lo que dijo...
-		Dialogo23: ¡ES SÚPER ADORABLE!
-		Dialogo24: *Teléfono: Yo solo soy una chica normal y sencilla, con un cuerpo similar al de una niña, con una personalidad triste y reservada...*
-		Dialogo25: *Teléfono: A su lado, la diferencia es como el día y la noche...*
-		Dialogo26: Mmm... no. A mí también me pareces una chica bastante linda. Eres pequeña y delicada. Creo que son muy buenas cualidades.
-		Dialogo27: Lamento haber sido tan agresiva. No fue mi intención ser así, lo siento...
-		Dialogo28: ¡Es cierto! Tienes que disculparla, por favor. Karane siempre ha sido muy enojona y de mal carácter.
-		Dialogo29: ¿¡Ahhh!?
-		Dialogo30: Sin embargo, el amor de {0} es más profundo de lo que puedas imaginar.
-		Dialogo31: ¡Ya te lo dije! No tienes que contener tus sentimientos ni preocuparte por nosotras. Si quieres hablar con {0} o quieres que haga algo, se lo dices y punto final.
-		Dialogo32: ¡Mi plan resultó mejor de lo que pensaba!
-		Dialogo33: Como Karane parecía furiosa con Shizuka, fingí irme AFK. Si quiero que las chicas se lleven bien, no debo entrometerme.
-		Dialogo34: Como pensaba, Karane no estaba enojada, solo frustrada.
-		Dialogo35: Hakari intercedió para evitar que Shizuka recibiera toda su ira sin filtros.
-		Dialogo36: ¡Y luego Shizuka aceptó lo que le dijo Karane y les contó lo que sentía de verdad!
-		Dialogo37: ¡AYYY, MIS CHICAAASSS!
-		Dialogo38: ¡Ya volví!
-		Dialogo39: Oye {0}, decidimos que Shizuka irá en una aventura contigo. ¡Ustedes dos solos!
-		Dialogo40: ¡Es cierto! ¿Verdad que quieres ir en una aventura con {0}, Shizuka?
-		Dialogo41: *Teléfono: Quiero hacerlo.*
-		Completacion0: *Teléfono: Esta aventura fue... muy divertida. Una experiencia digna de un OVA*
-		Completacion1: ¡Sí! Fue increíble, Shizuka. Podemos tener todas las aventuras que quieras, cuando quieras.
-		Completacion2: *Teléfono: Estaré junto a ti en todo momento, donde sea que vayas...*
-		Completacion3: Gracias, Shizuka. Me conmueven tus palabras... Te quiero.
-		Completacion4: *Teléfono: Yo también te quiero, mi señor...*
+		Dialogo4: Be real! You would've gotten all up in there if we weren't here! Why are you acting so freakin' dumb?
+		Dialogo5: I doubt she can hear her own thoughts over your yelling. If she had gone all in, you would've yelled at her then, too.
+		Dialogo6: Fat chance! I've never yelled at anybody in my entire life, stupid!
+		Dialogo7: *Cellphone: The two of you were spoken for by... {0}. Long before I was. As a newcomer, I must stay out of your way.*
+		Dialogo8: I had a feeling you'd say something like that. Well, wake up! You're just as much his girlfriend as the two of us, Lady Bookworm!
+		Dialogo9: So stop hesitating and do what you wanna do! I've got no patience for this crap! It makes me sick watching you fumble around instead of just admitting how you feel!
+		Dialogo10: Says the girlfriend who would much rather pick a fight than admit how she feels at any given moment.
+		Dialogo11: SHUT YOUR MOUTH OR I'LL SHUT IT FOR YOU!! ARE YOU TRYING TO PICK A FIGHT OR WHAT??!!
+		Dialogo12: *Cellphone: I apologize. You are correct.*
+		Dialogo13: That's exactly what I'm talking about! Don't let me walk all over you. Fight back!
+		Dialogo14: If that is the case, I will speak from the heart. In truth, I am quite petrified with fear.
+		Dialogo15: Well that hurts... do you guys really think I'm so scary? T_T
+		Dialogo16: Interesting that you care after all.
+		Dialogo17: *Cellphone: Forgive me. I have misspoken. What I fear is...*
+		Dialogo18: *Cellphone: Hanazono... she carries herself with elegance and grace. She is the very picture of a lady, and her charm is undeniable.*
+		Dialogo19: *Cellphone: Inda... she is a beauty blessed with the face of an angel, and she carries herself with the confidence of a queen.*
+		Dialogo20: *Cellphone: If I were to stand beside you as an equal, {0} will surely compare us. I fear that most of all.*
+		Dialogo21: What the heck?
+		Dialogo22: Oh my goodness.
+		Dialogo23: That's the most adorable thing I've ever heard in my life!
+		Dialogo24: *Cellphone: I am ordinary. Plain as they come. My form is more that of a child than a woman. My personality... quiet and gloomy.*
+		Dialogo25: *Cellphone: In your company, the difference is night and day.*
+		Dialogo26: Hey. Stop, don't be like that. I think you're plenty cute yourself. You're dainty and gentle. Those are awesome qualities for a girl to have.
+		Dialogo27: I'm sorry for getting all pissed off at you.
+		Dialogo28: As she should be! You have nothing to worry about. She has been pissed off as long as I have known her!
+		Dialogo29: Hey.
+		Dialogo30: Also, I don't know how he does it, but {0}'s love runs deeper than we could ever possibly imagine. I'm sure he could list dozens of things he likes about you.
+		Dialogo31: Like I was saying, you've gotta stop holding back with him just 'cause you're scared of us! If you've ever got something to say or do, you have our blessing to go for it! Ya got that?
+		Dialogo32: Amazing. That went better than I ever expected.
+		Dialogo33: Since Karane seemed furious at Shizuka, I pretended to go AFK. If I want the girls to get along, I can't be getting in the way.
+		Dialogo34: Just like I thought, Karane wasn't mad, just frustrated.
+		Dialogo35: But I'm glad Hakari's there to deflect some of that rage.
+		Dialogo36: It looks like Shizuka's gonna take Karane's advice and let her wants and wishes flow free!
+		Dialogo37: MY HEARTTTT!
+		Dialogo38: Did you miss me??!!
+		Dialogo39: Hey {0}, we decided Shizuka's going on an adventure with you. Just the two of you!
+		Dialogo40: That's right! You wanna go on an adventure with {0}, don't you Shizuka?
+		Dialogo41: *Cellphone: I want to do it.*
+		Completacion0: *Cellphone: This adventure was... so much fun. The kind of experience worthy of an OVA.*
+		Completacion1: Yes! It was incredible, Shizuka. We can go on as many adventures as you want, whenever you want.
+		Completacion2: *Cellphone: I will be by your side at all times, wherever you go...*
+		Completacion3: Thank you, Shizuka. That really means a lot to me... I love you.
+		Completacion4: *Cellphone: I love you too, my lord...*
 		Completacion5: ...
-		Completacion6: ¿Oh? ¿Qué sucede, Shizuka?
-		Completacion7: *Teléfono: Quiero que me beses...*
-		Completacion8: ¿¡Qué!?
-		Completacion9: *Teléfono: En el fondo de mi corazón... deseo compartir un beso contigo...*
-		Completacion10: Muchas gracias... Eso me hace muy feliz.
+		Completacion6: Oh? What's up, Shizuka?
+		Completacion7: *Cellphone: I wish to be kissed.*
+		Completacion8: Huh!?
+		Completacion9: *Cellphone: Deep in her heart bubbled the urge to lay her lips upon his.*
+		Completacion10: I'm truly honored. Jeez, I can't wait!
 	}
 
 	Mision4: {
@@ -272,130 +272,130 @@ Shizuka: {
 
 Nano: {
 	Mision1: {
-		Titulo: La novia más eficaz
-		Descripcion: Parece que Nano Eiai tiene algo que decirte.
-		Bloqueado: La novia más eficaz: Requiere completar "No hay por qué contenerse" de Shizuka.
-		Dialogo0: Parece que eres nueva por aquí. Te había estado observando. Tu nombre es Nano Eiai, ¿verdad?
-		Dialogo1: Exactamente. Tú debes ser {0}. Ya había escuchado sobre ti.
-		Dialogo2: ¿Por qué siento como si una gran fuerza me estuviera aplastando?
-		Completacion0: Escucha, {0}. Desde que aparecí en este mundo he tenido la sensación de que me gustas.
-		Completacion1: Me gustaría... que empecemos una relación.
-		Completacion2: Oh... Por supuesto. Tú también me gustas mucho, Eiai. Será un placer salir contigo.
-		Completacion3: Debo negarme.
-		Completacion4: ¡¿AHORA QUÉ FUE LO QUE HICE MAL?!?
-		Completacion5: El resultado ideal era que tú te negaras a salir conmigo. Como no fue de ese modo, tuve que negarme yo.
-		Completacion6: Escúchame. Vine a terminar con este amor.
-		Completacion7: El romance solo conduce al matrimonio y a los hijos, y en este momento no deseo nada de eso.
-		Completacion8: El romance es inútil. Una pérdida de tiempo total.
-		Completacion9: Entre nosotros dos nunca habrá una relación amorosa.
+		Titulo: The Hyper-Efficient Girl
+		Descripcion: It seems Nano Eiai has something to tell you.
+		Bloqueado: The Hyper-Efficient Girl: Requires completing Shizuka's "No Holding Back".
+		Dialogo0: Looks like you're new around here. I've been watching you. Your name is Nano Eiai, right?
+		Dialogo1: Correct. You must be {0}. I've already heard about you.
+		Dialogo2: Why do I feel like some massive force is crushing me?
+		Completacion0: "{0}. Ever since I appeared in this world, I've concluded that I love you."
+		Completacion1: With that said, let's enter a relationship.
+		Completacion2: That's perfect. 'Cause I'm in love with you too, Eiai. I would be honored to go out with you.
+		Completacion3: I must decline.
+		Completacion4: WHAT IN THE PUNKED IS THIS CRAP??!!
+		Completacion5: The ideal outcome would've been for you to deny my request and leave me in peace, but no, you've ruined my plan and left me with no choice. I had to do it myself.
+		Completacion6: The reason I came here is to put an end to this love.
+		Completacion7: Matrimony and then childbirth. That's what romance brings. And at this moment, I'm in no need of either.
+		Completacion8: Romance is meaningless. A complete waste of time.
+		Completacion9: So let me be clear, I am never going to go out with you.
 		Completacion10: ...
-		Completacion11: Me tengo que ir.
-		Completacion12: Espera, Eiai. ¡No pienso permitir que acabes con este amor rechazándome!
-		Completacion13: Eso no me importa.
-		Completacion14: ¡Claro que importa! ¡Porque estoy enamorado! No depende de ti que deje de sentir esto. ¡No me rendiré tan fácil!
-		Completacion15: "{0} está enamorado de mí... 3,141592653589793..."
-		Completacion16: Tenías que saberlo. Además, yo no puedo... soltar a las personas tan fácil...
-		Completacion17: Te lo pido. ¡Ten una cita conmigo! Y después decide qué es lo que harás.
-		Completacion18: Eso sería algo...
-		Completacion19: Te prometo que si no te convence, dejaré de insistir. Tienes mi palabra.
+		Completacion11: Goodbye.
+		Completacion12: Bad news! I'm sorry to break it to you. But unlike you, my heart is stronger. It takes more than a breakup to end this love!
+		Completacion13: Fine, but that's irrelevant to me.
+		Completacion14: If I refuse to fall out of love, your rejection isn't exactly ending this romance once and for all, is it?
+		Completacion15: "{0} is in love with me! 3.141592653589793..."
+		Completacion16: You're tough. But I'm not gonna give up. I can't just draw a line in the sand like you.
+		Completacion17: Humor me. Let's go out on a date. One day's all I'm asking for!
+		Completacion18: That would be...
+		Completacion19: If I really can't win you over, I promise I'll be out of your hair for good!
 	}
 
 	Mision2: {
-		Titulo: Un paseo termal
-		Descripcion: Pásala bien en tu cita con Nano; usa una cámara para capturar fotos junto a Nano en el infierno y la nieve.
-		Bloqueado: Un paseo termal: Requiere: Nano debe seguir al jugador, ninguna otra novia debe seguirte.
-		Dialogo0: ¿Dónde será nuestra cita, {0}?
-		Dialogo1: He planeado varios lugares muy excepcionales.
-		Dialogo2: Hoy debo conseguir que Eiai se divierta como nunca...
-		Dialogo3: Que sepa que pasar tiempo con quien aprecias tiene sentido y no es un desperdicio.
-		Completacion0: Bueno Eiai, estamos a la mitad de nuestra cita, ¿cómo lo has estado pasando hasta ahora?
-		Completacion1: No he conseguido nada de valor hasta ahora.
-		Completacion2: La nieve es simplemente agua en estado sólido cristalizado.
-		Completacion3: Por otra parte, ir al infierno es una decisión carente de lógica. El calor es tan extremo que apreciar las vistas es simplemente imposible.
-		Completacion4: ¡Es parte del encanto del mundo, estamos desafiando la lógica juntos!
-		Completacion5: No me dijiste que llevabas una cámara instantánea.
-		Completacion6: ¿Las conoces? Siempre me han gustado estas cámaras, ¿y a ti?
-		Completacion7: Sin negativos ni datos digitales, solo pueden crear una copia de cada fotografía. No son muy útiles que digamos, es algo absurdo.
-		Completacion8: Creo que eso fue un "no"...
-		Completacion9: ¡Bueno, eso da igual por ahora!
-		Completacion10: Míralas, eres muy fotogénica, ¿ves?
-		Completacion11: Qué absurdo eres.
+		Titulo: A Thermal Stroll
+		Descripcion: Have a great time on your date with Nano; use a camera to capture photos with Nano in hell and the snow.
+		Bloqueado: A Thermal Stroll: Requires: Nano must be following the player, no other girlfriend must be following you.
+		Dialogo0: Where will our date be, {0}?
+		Dialogo1: I have planned several quite exceptional locations.
+		Dialogo2: I have a clear mission today, show Eiai the time of her life!
+		Dialogo3: I need her to realize how important fun can be. And that love is the most meaningful thing on this planet!
+		Completacion0: So Eiai, we're halfway through our date. How have you been enjoying it so far?
+		Completacion1: I have not obtained anything of value so far.
+		Completacion2: Snow is simply water in a crystallized solid state.
+		Completacion3: On the other hand, going to hell is a decision devoid of logic. The heat is so extreme that appreciating the scenery is simply impossible.
+		Completacion4: That's part of the world's charm, we're defying logic together!
+		Completacion5: You didn't tell me you had an instant camera.
+		Completacion6: You know about these? I've always had a thing for them for some reason. You, too?
+		Completacion7: They retain neither film negatives nor digital data. Therefore if the photograph is lost, so too is all record of the event. Quite illogical.
+		Completacion8: A one-star review.
+		Completacion9: Well, moving right along from that hiccup.
+		Completacion10: Look at these, you look super pretty here. Check it.
+		Completacion11: How very illogical.
 	}
 
 	Mision3: {
-		Titulo: NanUp : una isla en altura
-		Descripcion: Consigue un último recuerdo en una isla flotante, debes hablar con Nano en la isla flotante para continuar.
-		Bloqueado: NanUp : una isla en altura: Requiere: Nano debe seguir al jugador, ninguna otra novia debe seguirte.
-		Dialogo0: ¿Qué es lo que haremos ahora?
-		Dialogo1: Iremos a un último lugar, como es una cita, este lugar especial no podría faltar.
-		Dialogo2: Es lo único que me queda, ¡ojalá Nano disfrute de esto, es mi última oportunidad!
-		Completacion0: ¡Por fin hemos llegado! Lástima que hay límite de altura, las vistas son increíbles.
+		Titulo: NanUp: A High-Rise Adventure
+		Descripcion: Get one last memory on a floating island. You must talk to Nano on the floating island to continue.
+		Bloqueado: NanUp: A High-Rise Adventure: Requires: Nano must be following the player, no other girlfriend must be following you.
+		Dialogo0: What are we doing now?
+		Dialogo1: We're heading to one last place. Since this is a date, a special spot like this couldn't be left out.
+		Dialogo2: This is all I've got left. I really hope Nano enjoys this, it's my last shot!
+		Completacion0: We finally made it! Too bad there's a height limit, the views up here are incredible.
 		Completacion1: ...
-		Completacion2: Sí... Se puede apreciar muy eficientemente el paisaje desde aquí arriba...
+		Completacion2: Yes... The scenery can be appreciated very efficiently from up here...
 		Completacion3: ...
-		Completacion4: Oye, ¿te sientes bien, Eiai? ¿Te dan miedo las alturas?
-		Completacion5: Sí... Es normal tener miedo a la elevación que pone tan fácil la vida en peligro...
-		Completacion6: Tranquila, Eiai, es hora de que volvamos, me quedaré a tu lado hasta que estemos abajo.
+		Completacion4: Wait a second, your hand is shaking. Does that mean you're afraid of heights?
+		Completacion5: Please, it's only natural to fear life-threatening elevations. It's a mere survival instinct I can't overwrite. Gosh, my bad.
+		Completacion6: Don't worry, Eiai, it's time we headed back. I'll stay right by your side until we're back on the ground.
 	}
 
 	Mision4: {
-		Titulo: Algo que vale la pena
-		Descripcion: Nano Eiai tiene unas últimas cosas que decirte.
-		Bloqueado: Algo que vale la pena: Requiere: Tener las 3 fotos (Inframundo, nieve y cielo). Baja de la isla flotante si es que sigues en ella.
-		Dialogo0: Ya estamos abajo, Eiai. Por fin pisamos tierra firme.
-		Dialogo1: Después de estar allá arriba, el suelo se siente mucho más seguro.
-		Dialogo2: Fue un recorrido bastante loco, ¿verdad? Desde el frío extremo hasta ese calor insoportable...
-		Dialogo3: Sí, aunque no estoy acostumbrada a experimentar tantas cosas distintas en tan poco tiempo.
-		Completacion0: Y bien, ¿te divertiste?
-		Completacion1: Sí, me divertí mucho, más de lo que esperaba.
-		Completacion2: ¡¿En serio?! Eso significa...
-		Completacion3: Pero eso es todo, fue divertido, nada más.
-		Completacion4: No conseguí nada de valor con esto. Fue un día sin utilidad...
-		Completacion5: Perdóname...
-		Completacion6: No... no tienes por qué disculparte, no siempre se logra lo que se quiere.
-		Completacion7: Gracias por ser sincera, es preferible la verdad que una mentira solo para no lastimarme.
-		Completacion8: Entonces... es una pena, pero ya que fue un día inútil y no valió la pena la experiencia...
-		Completacion9: Acabemos con esto... Pondré las fotos en el slot de basura.
+		Titulo: Something Worth It
+		Descripcion: Nano Eiai has a few last things to tell you.
+		Bloqueado: Something Worth It: Requires: Have all 3 photos (Underworld, snow and sky). Get off the floating island if you're still on it.
+		Dialogo0: We're back down, Eiai. Solid ground at last.
+		Dialogo1: After being up there, the ground feels a whole lot safer.
+		Dialogo2: That was one crazy ride, wasn't it? From extreme cold to that unbearable heat...
+		Dialogo3: Yes, though I am not used to experiencing so many different things in such a short amount of time.
+		Completacion0: What'd you think of the day overall?
+		Completacion1: It's true that I enjoyed myself. Far more than expected.
+		Completacion2: Really? Does that mean...
+		Completacion3: However, enjoyment was all it was. A great example of useless fun.
+		Completacion4: I'm no closer to success than before. It was just a meaningless day.
+		Completacion5: I'm sorry...
+		Completacion6: C'mon, no need to apologize for that. We're all entitled to our opinions.
+		Completacion7: I'm happy you told me. A lot of folks would've found it easier to smile and lie.
+		Completacion8: Well, it's a shame. But since it was a meaningless day, there's no point in looking back on it down the road.
+		Completacion9: Let's erase the whole thing... I'll toss the photos in the trash slot.
 		Completacion10: ...
-		Completacion11: ¡Ah! ¡Espera!
-		Completacion12: Lo siento... Pensé que como dicen que no se puede perder lo que no se tiene, creí que no te importaría.
-		Completacion13: Pero veo que no es así... Supongo que esto es una prueba de que ahora tienes algo que no tenías antes y que lo quieres proteger.
-		Completacion14: Hoy pudiste conseguir algo con valor, es algo... que no puede definirse con palabras o calificarse con números en una escala.
-		Completacion15: Puede que no te sirva para el futuro que deseas... pero es algo tan valioso que no quieres perderlo.
-		Completacion16: Y ahora es tuyo, permítete sentirlo...
+		Completacion11: Ah! Wait!
+		Completacion12: Thought so. We both understand you can't lose something that you don't have. But just a second ago, you were certainly afraid of losing something.
+		Completacion13: Then today, you gained something you didn't have before going on this date with me! Any gain is value, isn't it?
+		Completacion14: Don't you see where I'm coming from? We made something new! Sure, it might not be able to be defined in words or given a numerical score.
+		Completacion15: And yeah, it probably won't be anything for your future. But it's something of so much value that you're already scared of losing it.
+		Completacion16: That thing is yours!
 		Completacion17: ...
-		Completacion18: ¿Qué es...? ¿Por qué estoy llorando...?
-		Completacion19: Lo siento... pero quiero que sepas que los ratos felices tienen sentido.
-		Completacion20: Y que esos ratos son los que le dan sentido a la vida, aunque parezca que carezcan de valor o no sean productivos, aún valen la pena vivirlos.
-		Completacion21: ¿Te sientes mejor?
-		Completacion22: Sí... Escúchame {0}, realmente me gustas mucho, me gustaría comenzar una relación.
-		Completacion23: Con este nuevo romance quiero conseguir todo lo que me he perdido.
-		Completacion24: Quiero hacer contigo las cosas que menospreciaba... En las que nunca había pensado...
-		Completacion25: Es mutuo, tú también me gustas mucho Eiai. ¡Sé mi novia, por favor acéptame!
+		Completacion18: What is this...? Why am I... Crying...
+		Completacion19: Sorry, I know that might've been hard, but I think you learned something important. Carving out special times to have fun is a really big deal.
+		Completacion20: And at the end of the day, enjoying those moments and the people we share them with is what makes our lives meaningful.
+		Completacion21: Feeling any better?
+		Completacion22: Yes... Please, {0}. Enter into a relationship with me. I love you. I hope you feel the same way.
+		Completacion23: I want to learn through this romance, to see all that I've been missing out on.
+		Completacion24: All those meaningful times, I think I'm ready for them. If I can share them with you, that is.
+		Completacion25: Eiai, I love you and feel the same way! Let's do this. Let's go out for real!
 		Completacion26: ...
-		Completacion27: A partir de ahora cumpliré mis deseos sin preocuparme por los detalles, ¿eso será eficiente? ¿Te importa?
-		Completacion28: No... claro... no hay problema...
-		Completacion29: Me quedaré con las fotos.
+		Completacion27: I believe in fulfilling my desires without fretting over the means. It's efficient. Did you mind?
+		Completacion28: No... Frankly, the opposite.
+		Completacion29: I'll be keeping the photos.
 	}
 
 	Mision5: {
-		Titulo: ¿Cuántas faltan?
-		Descripcion: Preséntale a Nano a tus novias.
-		Bloqueado: ¿Cuántas faltan?: Requiere: Todas las otras novias deben estar siguiéndote.
-		Dialogo0: Bueno, aquí vamos otra vez...
-		Dialogo1: Aunque ya no estoy tan nervioso como la primera vez.
-		Dialogo2: ¡Hola chicas!
-		Completacion0: Tuve un paseo con Nano y... me preguntaba si aceptarían que se convirtiera en mi nueva novia.
-		Completacion1: ¡Ya no me sorprende nada de ti en este punto! Haz lo que se te venga en gana.
-		Completacion2: Si tú aún consideras que soy digna de seguir contigo, yo no tengo ningún problema, {0}.
-		Completacion3: *Teléfono: Yo misma llegué con los refuerzos, no puedo negarme.*
-		Completacion4: ¡Muchas gracias! ¡Beberé poción roja si no las trato bien, es una promesa!
-		Completacion5: Ese método de suicidio es poco eficaz. ¿De dónde planeas conseguir una poción roja?
-		Completacion6: Invocar a la emperatriz de la luz de día sería más eficaz.
-		Completacion7: ¡Deja de optimizar hasta las formas de desvivirse!
-		Completacion8: ¡A mí me interesa más la cita que tuvieron! ¡Ese es uno de mis objetivos también!
-		Completacion9: ¡Yo no estoy muy ocupada, hubiera ido aunque no me lo hubieras pedido!
-		Completacion10: *Teléfono: ¡Una fiesta para los enamorados!*
-		Completacion11: Tranquilas, ¡podemos ir juntos a algún lugar en la próxima misión!
+		Titulo: How Many Are Left?
+		Descripcion: Introduce Nano to your girlfriends.
+		Bloqueado: How Many Are Left?: Requires: All other girlfriends must be following you.
+		Dialogo0: Well, here we go again...
+		Dialogo1: Though I'm not nearly as nervous as the first time.
+		Dialogo2: Hey girls!
+		Completacion0: I went on a date with Nano... So, could I pretty please have you wonderful ladies' permission to make Nano Eiai my newest girlfriend?
+		Completacion1: Quit the puppy dog act, you're not fooling anybody anymore, jerk! Do whatever you want, I don't care!
+		Completacion2: Of course you can, I am simply overjoyed that you continue to deem me worthy enough to keep around, darling!
+		Completacion3: *Cellphone: As I myself am but reinforcement, I have no grounds to object.*
+		Completacion4: Thank you, girls! If I'm not the best boyfriend a guy can be, I'll drink a red potion!
+		Completacion5: That method of suicide is highly inefficient. Where do you even plan on obtaining a red potion?
+		Completacion6: Summoning the empress of daylight would be far more efficient.
+		Completacion7: Why the heck are you trying to help him optimize his death?!
+		Completacion8: I am far more concerned about that date you two had! A sweet outing like that was one of my goals!
+		Completacion9: It's not like I've been busy either. I totally would've gone for the ride and that junk.
+		Completacion10: *Cellphone: How I wish to enter that cove of everlasting romantic bliss!*
+		Completacion11: Easy girls, we can all go somewhere together on the next mission!
 	}
 }

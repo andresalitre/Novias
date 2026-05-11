@@ -38,11 +38,11 @@ LecheHakariMunicion: {
 
 ElRomanceDeLaDiadema: {
 	DisplayName: Circlet Love Story
-	Tooltip: Magically imbued with the song of a angelic voice
+	Tooltip: Magically imbued with the song of an angelic voice
 }
 
 TelefonoDeShizuka: {
-	DisplayName: Shizuka's Phone
+	DisplayName: Shizuka's cellphone
 	Tooltip:
 		'''
 		Technology from another world! Apparently not
@@ -113,27 +113,43 @@ TrebolDe4Hojas: {
 	Tooltip:
 		'''
 		According to legend, ask someone out with it, they'll for sure say yes!
-		"That sound like a dumb story for little kids!"
+		"That sounds like a dumb story for little kids!"
 		'''
 	DisplayName: Pink four-leaf clover
 }
 
 Camara: {
-	DisplayName: Camara
-	Tooltip: ""
+	DisplayName: Instant Camera
+	Tooltip:
+		'''
+		"Retains neither film negatives nor digital data."
+		If the photo is lost, so too is all record. Quite illogical.
+		'''
 }
 
 FotoCielo: {
-	DisplayName: Foto Cielo
-	Tooltip: ""
+	DisplayName: Sky Island Photo
+	Tooltip:
+		'''
+		"A photo taken on the floating island."
+		If you're afraid of heights, better not look down.
+		'''
 }
 
 FotoInframundo: {
-	DisplayName: Foto Inframundo
-	Tooltip: ""
+	DisplayName: Underworld Photo
+	Tooltip:
+		'''
+		"A photo taken in the Underworld."
+		It's so hot down here.
+		'''
 }
 
 FotoNieve: {
-	DisplayName: Foto Nieve
-	Tooltip: ""
+	DisplayName: Snow Photo
+	Tooltip:
+		'''
+		"A photo taken in the snow."
+		Just looking at it gives me chills!
+		'''
 }

@@ -1,29 +1,25 @@
 The Girlfriends Who Really Really Love You!
 
-Adds the girlfriends who really REALLY love you as interactive NPCs, you can buy new items like weapons or potions with new effects. They will also give you new buffs when they accompany you!
+Add The Girlfriends Who Really Really Love You! as interactive NPCs, each with unique missions (almost unique...)
+The NPCs can follow the player and join them on their adventure, and you can also kiss them and obtain new buffs!
 
-Hakari Hanazono arrives after defeating the Eye of Cthulhu, she is really thirsty, help her drink a soda.
+How to get started:
 
-Karane Inda arrives after defeating the evil biome boss, she is looking for something small and soft to hug, apparently she likes kitties.
+Build a house for Hakari Hanazono, no additional conditions required.
+Karane Inda will arrive after completing Hakari Hanazono's first mission.
+As you progress through Hakari and Karane's missions, Shizuka Yoshimoto will arrive.
+As you complete Shizuka's missions, Nano Eiai will arrive in your world.
+In short: Complete missions to unlock all the girlfriends!
+More missions coming soon!
 
-Shizuka Yoshimoto arrives after 2 girlfriends have moved in and the player has 5 books, apparently she lost her phone and is unable to talk to us.
-
-Nano Eiai arrives after 2 girlfriends have moved in, she will be found scared on a sky island, go help her!
-
-Version 2.2.0
-
-Adds:
--Nano Eiai
-
-Changes:
--Minor changes oriented towards multiplayer compatibility
+Version 2.3.0
 
 Future plans:
--Add Kusuri Yakuzen
--Sprite Fixes
+- Add Kusuri Yakuzen
+- Rework Hakari Hanazono and Karane Inda's mission 3
+- Rework Shizuka Yoshimoto's mission 3
 
 Credits:
-
 Nakamura Rikito - Original manga author
 Nozawa Yukiko - Original manga illustrator
 Thank you for creating the 100 goddesses

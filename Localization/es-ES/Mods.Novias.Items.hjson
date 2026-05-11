@@ -1,6 +1,6 @@
 GatitoMenso: {
 	DisplayName: Gatito Menso
-	Tooltip: No quiere que lo lances... O eso dice
+	Tooltip: No quiere que lo lances... o eso dice
 }
 
 GatitoDePeluche: {
@@ -115,21 +115,37 @@ TrebolDe4Hojas: {
 }
 
 Camara: {
-	// DisplayName: Camara
-	// Tooltip: ""
+	DisplayName: Cámara instantánea
+	Tooltip:
+		'''
+		"No retiene negativos ni datos digitales".
+		Si la foto se pierde, se pierde todo registro. Es absurdo.
+		'''
 }
 
 FotoCielo: {
-	// DisplayName: Foto Cielo
-	// Tooltip: ""
+	DisplayName: Foto en la Isla Flotante
+	Tooltip:
+		'''
+		"Una foto tomada en la isla flotante."
+		Si tienes miedo a las alturas es mejor que no mires abajo
+		'''
 }
 
 FotoInframundo: {
-	// DisplayName: Foto Inframundo
-	// Tooltip: ""
+	DisplayName: Foto en el Inframundo
+	Tooltip:
+		'''
+		"Una foto tomada en el Inframundo."
+		Qué calor hace aquí abajo
+		'''
 }
 
 FotoNieve: {
-	// DisplayName: Foto Nieve
-	// Tooltip: ""
+	DisplayName: Foto en la Nieve
+	Tooltip:
+		'''
+		"Una foto tomada en la nieve."
+		¡Qué frío me da solo con verla!
+		'''
 }
