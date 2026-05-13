@@ -67,6 +67,7 @@ namespace Novias.NPCs.Misiones
                 {
                     string nj = Main.LocalPlayer.name;
                     Main.NewText(Language.GetTextValue("Mods.Novias.UI.SeguimientoDesbloqueado", nj, "Nano"), 180, 80, 220);
+                    Main.NewText(Language.GetTextValue("Mods.Novias.UI.TiendaDesbloqueada", nj, "Shizuka"), 255, 215, 0);
                 },
             },
 

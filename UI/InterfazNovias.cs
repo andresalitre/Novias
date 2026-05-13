@@ -190,6 +190,7 @@ namespace Novias.UI
 
         private void CargarLinea(LineaDialogo l)
         {
+            l.OnMostrar?.Invoke();
             string txt = Language.GetTextValue(l.Key, Main.LocalPlayer.name, NombreNPC);
             string pre = l.EsJugador
                 ? (string.IsNullOrEmpty(l.NombreNPC) ? Main.LocalPlayer.name : l.NombreNPC)

@@ -9,5 +9,6 @@ namespace Novias.Systems
         public string NombreNPC { get; init; } = "";
         public Color? ColorNombre { get; init; } = null;
         public int[] ItemsMostrar { get; init; } = System.Array.Empty<int>();
+        public System.Action OnMostrar { get; init; } = null;
     }
 }

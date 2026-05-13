@@ -9,23 +9,25 @@ using Novias.Projectiles;
 using Novias.Effects;
 using Novias.NPCs.Misiones;
 using Novias.UI;
-using Novias.Items.GirlfriendsItems.Nano;
 using Novias.Items.Potions;
 using Novias.Items.Weapons.Ranged;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
+using ReLogic.Content;
 
 namespace Novias.NPCs.Novias
 {
     [AutoloadHead]
-    public class NanoEiai : ComportamientoNovia
+    public class KusuriYakuzen : ComportamientoNovia
     {
-        protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<NanoPlayer>().EstaSiguiendo;
-        protected override Color ColorPolvo => new Color(210, 180, 255);
-        protected override int CooldownAtaque => 25;
+        protected override bool EstaSiguiendo => Main.LocalPlayer.GetModPlayer<KusuriPlayer>().EstaSiguiendo;
+        protected override Color ColorPolvo => new Color(255, 0, 0);
+        protected override int CooldownAtaque => 45;
         protected override int EfectoNovia => ModContent.ProjectileType<Corazon>();
         protected override int RegeneracionVida => 8;
 
         protected override bool EstaHablandoConInterfaz =>
-            InterfazNovias.InterfazAbierta<NanoInterfaz>();
+            InterfazNovias.InterfazAbierta<KusuriInterfaz>();
 
         protected override void LanzarAtaque(Vector2 direccion)
         {
@@ -55,8 +57,8 @@ namespace Novias.NPCs.Novias
             NPC.width = 20;
             NPC.height = 38;
             NPC.aiStyle = NPCAIStyleID.Passive;
-            NPC.lifeMax = 2500;
-            NPC.defense = 65;
+            NPC.lifeMax = 2000;
+            NPC.defense = 75;
             NPC.knockBackResist = 0.8f;
             NPC.HitSound = SoundID.NPCHit18;
             NPC.DeathSound = SoundID.NPCDeath20;
@@ -68,7 +70,7 @@ namespace Novias.NPCs.Novias
         {
             var tienda = new NPCShop(Type, "Shop");
             tienda.Add(ModContent.ItemType<Cutter>());
-            tienda.Add(ModContent.ItemType<PocionDeEficiencia>(), new Condition("Mods.Novias.Condiciones.MisionCompletada", () => Main.LocalPlayer.GetModPlayer<NanoPlayer>().MisionActual >= 1));
+            tienda.Add(ModContent.ItemType<PocionDeEficiencia>(), new Condition("Mods.Novias.Condiciones.MisionCompletada", () => Main.LocalPlayer.GetModPlayer<KusuriPlayer>().MisionActual >= 2));
             tienda.Register();
         }
 
@@ -87,7 +89,7 @@ namespace Novias.NPCs.Novias
 
         public override string GetChat()
         {
-            NanoInterfaz.Instance._state?.IniciarConNPC(NPC);
+            KusuriInterfaz.Instance._state?.IniciarConNPC(NPC);
             return " ";
         }
 
@@ -99,50 +101,24 @@ namespace Novias.NPCs.Novias
             });
         }
 
-        public override void AI()
+        public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
-            base.AI();
+            var p = Main.LocalPlayer.GetModPlayer<KusuriPlayer>();
+            if (!p.EsMayor) return true;
 
-            bool enElCielo = NPC.Center.Y < Main.worldSurface * 16 * 0.35f;
-            bool enSuelo = EstaEnSuelo(NPC);
+            var textura = ModContent.Request<Texture2D>("Novias/NPCs/Novias/KusuriYakuzen_Mayor").Value;
+            int frameH = textura.Height / Main.npcFrameCount[NPC.type];
+            int frameIndex = NPC.frame.Y / (TextureAssets.Npc[NPC.type].Value.Height / Main.npcFrameCount[NPC.type]);
+            Rectangle frame = new Rectangle(0, frameIndex * frameH, textura.Width, frameH);
 
-            NPC.ai[2] = (enElCielo && enSuelo) ? 1f : 0f;
-        }
-
-        private static bool EstaEnSuelo(NPC npc)
-        {
-            int tileX = (int)(npc.Center.X / 16);
-            int tileY = (int)((npc.position.Y + npc.height + 4) / 16);
-            Tile tile = Main.tile[tileX, tileY];
-            return tile != null && tile.HasTile && Main.tileSolid[tile.TileType];
-        }
-
-
-        public override void DrawEffects(ref Color drawColor)
-        {
-            var p = Main.LocalPlayer.GetModPlayer<NanoPlayer>();
-
-            bool mision2Activa = p.MisionActual == 1 && p.UIAbierta;
-            bool mision3Activa = p.MisionActual == 2 && p.UIAbierta;
-
-            bool condicionMision2 = mision2Activa
-                && Main.LocalPlayer.HasItem(ModContent.ItemType<FotoInframundo>())
-                && Main.LocalPlayer.HasItem(ModContent.ItemType<FotoNieve>());
-
-            bool condicionMision3 = mision3Activa
-                && NPC.ai[2] == 1f
-                && Main.LocalPlayer.HasItem(ModContent.ItemType<FotoCielo>());
-
-            if ((condicionMision2 || condicionMision3) && NPC.localAI[0]++ % 40 == 0)
-            {
-                CombatText.NewText(
-                    new Rectangle((int)NPC.position.X, (int)NPC.position.Y - 20, NPC.width, NPC.height),
-                    Color.Yellow, "!", dramatic: true
-                );
-            }
+            SpriteEffects efecto = NPC.spriteDirection == 1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+            Vector2 pos = NPC.Center - screenPos + new Vector2(0f, NPC.gfxOffY + NPC.height - 15f);
+            Vector2 origen = new Vector2(textura.Width / 2f, frameH);
+            spriteBatch.Draw(textura, pos, frame, drawColor, NPC.rotation, origen, NPC.scale, efecto, 0f);
+            return false;
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs) =>
-            Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().MisionActual >= 2; //llega luego de la mision 2 shizuka, osea la presentacion
+            Main.LocalPlayer.GetModPlayer<ShizukaPlayer>().MisionActual >= 2;
     }
 }
